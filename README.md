@@ -15,6 +15,7 @@ Protože většina pinů procesoru lze použít jako vstup nebo jako výstup, mu
 To, zda je na pinu +5V (logická 1) nebo 0V (logická 0) lze nastavit pomocí registru **PORTx**, kde x je písmeno portu. V našem případě tedy **PORTF**
 
 **Příklad stavu registru PORTF a stavu LEDek:**
+
 |Pořadí bitu| 7    | 6    | 5    | 4    | 3    | 2    | 1    | 0    | 
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:| 
 |**Název**|  **PORTF7** | **PORTF6** | **PORTF5** |  **PORTF4** | **PORTF3** | **PORTF2** | **PORTF1** | **PORTF0** | 
@@ -109,6 +110,7 @@ Když tuto hodnotu logicky přičteme k registru PORTF, všechny bity zůstanou 
 ### Nastavení jednotlivých bitů do 0 (clear bit)
 
 Pokud chceme nastavit bit 2 do nuly, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický součin. 
+
 | A   | B   | A & B | 
 |:---:|:---:|:-----:| 
 | 0   | 0   | 0     | 
