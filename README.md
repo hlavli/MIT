@@ -118,6 +118,7 @@ Pokud chceme nastavit bit 2 do nuly, ale neovlivnit přitom ostatní bity regist
 | 1   | 0   | 0     | 
 | 1   | 1   | 1     | 
 
+
 Pozice bitů, které nechceme změnit vynásobíme jedničkou, pozice bitů, které chceme vynulovat vynásobíme nulou.
 
 ``` PORTF = PORTF & 0b11111011; ``` Můžeme v jazyce C napsat kratší formou:
