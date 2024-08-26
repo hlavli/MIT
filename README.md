@@ -1,6 +1,4 @@
-# Obsah
-
-## [Úvod](uvod.md)
+# Cvičení z předmětu MIT
 
 ## Lekce
 
