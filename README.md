@@ -1,7 +1,7 @@
 # Blikání LEDkou, práce s registry
 Začneme jednoduchým úkolem - chceme blikat LEDkami na výukové desce. Nejprve se podíváme do schématu desky, jak jsou LEDky připojeny k procesoru.
 
-![image](https://github.com/user-attachments/assets/36698eae-8251-4716-a41f-be2069ae782f)
+![image](https://github.com/user-attachments/assets/c65df3c2-af64-4412-8f52-a94575112aa8)
 
 Ze schématu  vidíme, že LEDky jsou připojeny k portu F. Kladné elektrody jsou přes odpor připojené k Vcc (+5V), záporné elektrody jsou připojeny k pinům procesoru. Tedy když je na pinu procesoru logická 0, LEDKa svítí, pokud je na pinu logická 1, LEDka nesvítí. 
 
