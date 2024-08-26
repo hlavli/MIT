@@ -158,5 +158,5 @@ Chceme-li konkrétní **bit nastavit do nuly** (např. pin 5 portu A):
 
 ``` PORTA &= ~(1<<5); ```
 
-
+## [Zpět na obsah](readme.md)
 
