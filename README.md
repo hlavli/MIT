@@ -1,5 +1,4 @@
 # Cvičení z předmětu MIT
 
-## Lekce
-
 1. [Blikání LEDkou, práce s registry](01_Blikani_LED.md)
+2. [Tlačítka, Sedmisegmentový displej]()
