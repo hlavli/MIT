@@ -24,6 +24,11 @@ Kromě samotného mikrokontroleru a nutných obvodů jako napájeníá, zdroj ho
 
 ![image](https://github.com/user-attachments/assets/de16f7ad-a684-4414-b524-4fa95ec349ab)
 
-[Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
+## Materiály
 
-## [Zpět na obsah](readme.md)
+[Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
+[Schema vývojové desky](files/Development_board_schematics.pdf)
+[Návod k vývojové desce](files/Development_board_manual.pdf)
+[Kniha programujeme AVR v jazyku C](files/Programujeme_AVR_kniha.pdf)
+
+## [Zpět na obsah](README.md)
