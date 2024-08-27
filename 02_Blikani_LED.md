@@ -44,6 +44,7 @@ Program pro blikání všemi LEDKami najednou může tedy vypadat třeba takto:
 
 ```c
 #include <avr/io.h> // soubor definicemi adres registru, abychom mohli pouzivat symbolicke nazvy jako "PORTB" namisto ciselne adresy registru
+#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
 #include <util/delay.h> // pridani knihovny s funkci delay
 
 int main(void)
