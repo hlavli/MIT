@@ -151,11 +151,11 @@ Pro ovládání pinů procesoru AVR slouží tyto registry:
 | PINx    | Přečte stav pinu (pokud ho používáme jako vstup)   | 
 
 
-Chceme-li konkrétní **bit nastavit do jedničky** (např. pin 5 portu A):
+Chceme-li konkrétní **bit nastavit do jedničky** (např. pin 5 portu A) lze to přehledně zapsat pomocí funkce OR a bitové rotace:
 
 ``` PORTA |= 1<<5; ``` 
 
-Chceme-li konkrétní **bit nastavit do nuly** (např. pin 5 portu A):
+Chceme-li konkrétní **bit nastavit do nuly** (např. pin 5 portu A) lze to přehledně zapsat pomocí funkce AND, negace a bitové rotace:
 
 ``` PORTA &= ~(1<<5); ```
 
