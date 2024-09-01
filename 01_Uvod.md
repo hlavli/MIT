@@ -1,12 +1,13 @@
 # Cvičení z mikroprocesové techniky
 
+## Co je mikrokontroler
 Mikrokontroler nebo jednočipový počítač je univerzální programovatelný obvod, který v jedné součástce obsahuje nejen CPU, ale i paměť FLASH, RAM a další periferie, např. timery, komunikační drivery atd. 
 Používá se v takřka veškeré elektronice - mobilních telefonech, autech, průmyslových strojích, kuchyňských spotřebičích, atd.
 
 
 ## Vývojová deska
 Na cvičení budeme používat vývojovou desku s mikrokontrolerem ATMEGA 2560, tedy stejným jako je použit v známé desce Arduino MEGA. 
-Kromě samotného mikrokontroleru a nutných obvodů jako napájeníá, zdroj hodinového signálu atd. obsahuje deska mnoho periferií
+Kromě samotného mikrokontroleru a nutných obvodů jako napájení, zdroj hodinového signálu atd. obsahuje deska mnoho periferií
 - Sadu tlačítek
 - Sadu LEDek
 - Potenciometr
