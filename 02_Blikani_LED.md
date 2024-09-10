@@ -26,19 +26,19 @@ To, zda je na pinu +5V (logická 1) nebo 0V (logická 0) lze nastavit pomocí re
 Slouží pro čtení stavu pinu, pokud je použit jako vstupní. Pro blikání LEDkami ho potřebovat nebudeme, ale využijeme ho hned až k LEDkám přidáme tlačítka.
 
 ## Blikání LEDkami
-Začneme jednoduše a budeme blikat všemi LEDkami zároveň. Nastavíme všech 8 pinů portu F jako výstupní. Abychom nemuseli dlouze psát 0b11111111, použijeme hexa zápis 0xff:
+Začneme jednoduše a budeme blikat všemi LEDkami zároveň. Nastavíme všech 8 pinů portu F jako výstupní, tedy do každého bitu zapíšeme jedničku:
 
-``` DDRF = 0xff; ```
+``` DDRF = 0b11111111; ```
 
 Teď když jsou piny nastavené jako výstup, můžeme měnit jejich stav. K tomu slouží registr **PORTx**, v našem případě tedy **PORTF**.
 
 Ze schématu víme, že LEDky rozsvítíme, pokud na všechny piny nastavíme logickou 0:
 
-``` PORTF = 0x00; ```
+``` PORTF = 0b00000000; ```
 
 A LEDKy zhasneme zápisem logické 1 na všechny piny:
 
-``` PORTF = 0xff; ```
+``` PORTF = 0b11111111; ```
 
 Program pro blikání všemi LEDKami najednou může tedy vypadat třeba takto:
 
@@ -53,10 +53,10 @@ int main(void)
   
   while (1) //nekonecna smycka
   {
-    PORTF = 0x0; // vsechny piny portu F nastavi jako 0 ->LEDky se rozsviti
+    PORTF = 0b00000000; // vsechny piny portu F nastavi jako 0 ->LEDky se rozsviti
     _delay_ms(500); // cekani 500ms
 
-    PORTF = 0xff; // vsechny piny portu F nastavi jako 1 ->LEDky zhasnou
+    PORTF = 0b11111111;; // vsechny piny portu F nastavi jako 1 ->LEDky zhasnou
     _delay_ms(500); // cekani 500ms
   }
 }
