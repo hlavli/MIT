@@ -36,7 +36,7 @@ Spusťe Microchip Studio (dříve Atmel Studio), v menu v horní liště zvolte 
 ![image](https://github.com/user-attachments/assets/aa919c1f-594a-49fd-a912-9b61d87441b2)
 
 Budeme zpravidla tvořit spustitelný program v C, zvolte tedy "GCC C Executable Project". 
-**Pojmenujte si svůj projekt** (tématem cvičení nebo alespoň pořadovým číslem cvičení).
+**Pojmenujte si svůj projekt** (tématem cvičení nebo alespoň pořadovým číslem cvičení) **V názvu nepoužívejte diakritiku**, způsobuje to pak problémy při překladu kódu..
 
 ![image](https://github.com/user-attachments/assets/5c640afd-3f97-4828-8b5d-d5ffea3616b7)
 
