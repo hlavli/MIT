@@ -49,14 +49,14 @@ Program pro blikání všemi LEDKami najednou může tedy vypadat třeba takto:
 
 int main(void)
 {
-  DDRF = 0x11111111; //nastavi vsechny piny portu F jako vystupy
+  DDRF = 0b11111111; //nastavi vsechny piny portu F jako vystupy
   
   while (1) //nekonecna smycka
   {
     PORTF = 0b00000000; // vsechny piny portu F nastavi jako 0 ->LEDky se rozsviti
     _delay_ms(500); // cekani 500ms
 
-    PORTF = 0b11111111;; // vsechny piny portu F nastavi jako 1 ->LEDky zhasnou
+    PORTF = 0b11111111; // vsechny piny portu F nastavi jako 1 ->LEDky zhasnou
     _delay_ms(500); // cekani 500ms
   }
 }
