@@ -7,7 +7,8 @@ Protože počítače používají binární soustavu, mohli bychom vše psát bi
 
 V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do patnácti. Číslice 0-9 jsou stejné jako jsme zvyklí z desítkové soustavy, dále pak 10 píšeme jako A, 11 jako B, atd až 15 jako F.
 
-![image](https://github.com/user-attachments/assets/fc81c9b1-2c7e-4e2f-af34-9c7cb8119612)
+![image](https://github.com/user-attachments/assets/382d4031-f81d-41f9-8409-caab575779a9)
+
 
 ```
       8 4 2 1
@@ -66,7 +67,8 @@ bin:  1 1 1 0  1 1 0 0 = 0x7C
 0xD7 << 2 =  0101 1100
 ```
 
-![image](https://github.com/user-attachments/assets/92993e26-e48e-49ba-be2d-335b509aef73)
+![image](https://github.com/user-attachments/assets/59e0e6ec-3ca1-44f2-bdc5-428ca1057cc1)
+
 
 
 ## Logický součet OR |
@@ -78,7 +80,7 @@ bin:  1 1 1 0  1 1 0 0 = 0x7C
 | 1   | 0   | 1      | 
 | 1   | 1   | 1      | 
 
-![image](https://github.com/user-attachments/assets/1d953ca4-169a-480a-b674-295afb191402)
+![image](https://github.com/user-attachments/assets/46fdfcb4-a01c-49ec-9f11-6813471c3cad)
 
 ```
   0x15   =>  0001 0101
@@ -97,7 +99,8 @@ bin:  1 1 1 0  1 1 0 0 = 0x7C
 | 1   | 1   | 1     | 
 
 
-![image](https://github.com/user-attachments/assets/3e5e4b83-f114-4e0e-8f50-850c25358692)
+![image](https://github.com/user-attachments/assets/78be4130-0ed2-4fa6-be46-073bf29692d8)
+
 
 ```
   0x15   =>  0001 0101
