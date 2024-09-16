@@ -7,7 +7,8 @@ Protože počítače používají binární soustavu, mohli bychom vše psát bi
 
 V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do patnácti. Číslice 0-9 jsou stejné jako jsme zvyklí z desítkové soustavy, dále pak 10 píšeme jako A, 11 jako B, atd až 15 jako F.
 
-![image](https://github.com/user-attachments/assets/382d4031-f81d-41f9-8409-caab575779a9)
+![image](https://github.com/user-attachments/assets/07eff5d5-d405-4caa-a664-ae9a075abdff)
+
 
 
 ```
