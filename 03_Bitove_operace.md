@@ -49,23 +49,25 @@ bin:  1 0 1 0  1 1 1 0  1 1 0 0 = 0xA7C
 
 ## Bitová negace ~
 
-Negace
+Operátorem ~ (na české klávesnici ALT+126) zapisujeme bitovou negaci. Výsledkem této operace je, že každá jednička se změní na nulu a opačně, každá nula na jedničku
+
 ```
 0xD7 =  1101 0111
-
 ~0xD7 = 0010 1000 = 0x28 
 ```
 
-## Bitová rotace << nebo >>
+## Bitová rotace levá << nebo pravá >>
 
-```
-0x58      =  0101 1000
-0xD7 << 1 =  1011 0000
-```
+Bitová rotace nám binární číslo "posune" neboli orotuje o daný počet míst doleva nebo doprava. Na uvolněná místa doplňujeme vždy nuly.
 
 ```
 0xD7      =  1101 0111
 0xD7 << 2 =  0101 1100
+```
+
+```
+0x8C      =  1000 1100
+0x8C >> 2 =  0010 0011
 ```
 
 ![image](https://github.com/user-attachments/assets/59e0e6ec-3ca1-44f2-bdc5-428ca1057cc1)
