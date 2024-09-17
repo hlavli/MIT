@@ -180,24 +180,11 @@ Když touto hodnotou logicky vynásobíme registr PORTF, všechny bity zůstanou
 
 # Shrnutí
 
-Pro ovládání pinů procesoru AVR slouží tyto registry:
-
-| Registr | Popis                                              | 
-|:-------:| :------------------------------------------------ | 
-| DDRx    | Nastaví piny daného portu jako vstup nebo výstup   | 
-| PORTx   | Nastaví na pinech portu log 1 nebo 0 (+5V nebo 0V) | 
-| PINx    | Přečte stav pinu (pokud ho používáme jako vstup)   | 
-
-
-Chceme-li konkrétní **bit nastavit do jedničky** (např. pin 5 portu A):
-
-``` PORTA |= 1<<5; ``` 
-
-Chceme-li konkrétní **bit nastavit do nuly** (např. pin 5 portu A):
-
-``` PORTA &= ~(1<<5); ```
-
-
+| Akce                            | Příklad                                          | Popis    |
+|:-------------------------------:|:-------------------------------------------------|:---------|
+| Nastavení x-tého bitu do 1    | PORTF \|= 1 << 3;   | nastaví 3.bit portu F do 1   |
+| Nastavení x-tého bitu do 0    | PORTF &= ~(1 << 3);  |nastaví 3.bit portu F do 0 |
+| Otestování x-tého bitu        | (PINK & (1<<3) != 0); |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
 
 
 ## [Zpět na obsah](README.md)
