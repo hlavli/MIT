@@ -50,6 +50,7 @@ bin:  1 1 1 0  1 1 0 0 = 0x7C
 
 ## Bitová negace ~
 
+Negace
 ```
 0xD7 =  1101 0111
 
