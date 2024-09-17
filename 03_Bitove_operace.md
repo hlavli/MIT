@@ -37,6 +37,7 @@ bin:  1 0 1 0  1 1 1 0  1 1 0 0 = 0xA7C
 
 ## Převod z hexadecimální do binární soustavy
 
+Provedeme přesně opačně. Pro každou hexadecimální číslici si napíšeme (nebo jen představíme) váhy 8-4-2-1. A podíváme se, kteér váhy musíme sečíst abychom dostali danou číslici. Např 5 napíšeme jako 1+4, tedy pod váhami 1 a 4 budou jedničky, pod zbylými vahami nuly. 
 ```
         8 4 2 1  8 4 2 1
 0x52 =  0 1 0 1  0 0 1 0
@@ -76,6 +77,8 @@ Bitová rotace nám binární číslo "posune" neboli orotuje o daný počet mí
 
 ## Logický součet OR |
 
+Při logickém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmetického součtu, který znáte z matematiky tady není žádný převod do vyššího řádu. Podle pravdivostní tabulky vidíme, že pokud je alespoň jeden z bitů 1, výsledek je 1.
+
 | A   | B   | A \| B | 
 |:---:|:---:|:------:| 
 | 0   | 0   | 0      | 
@@ -93,6 +96,7 @@ Bitová rotace nám binární číslo "posune" neboli orotuje o daný počet mí
 ```
 
 ## Logický součin AND &
+Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alespoň jeden z bitů 0, výsledek je nula.
 
 | A   | B   | A & B | 
 |:---:|:---:|:-----:| 
