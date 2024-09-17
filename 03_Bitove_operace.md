@@ -1,5 +1,5 @@
 # Převody číselných soustav, bitové operace
-V mikroprocesorové technice potřebujeme často pracovat s čísly na úrovni bitů - když chceme přečíst stav jen jednoho tlačíka a ne všech osmi, když chceme zhasnout jen jednu LEDku a ostatní nechat svítit, atd. Proto je dobré ovládat základní převody mezi desítkovou (neboli decimální), šestnáctkovou (neboli hexadecimální) a dvojkovou (neboli binární). Složitější počty a převody je samozřejmě běžné dělat na kalkulačce, ale zíkladní operace budeme používat natoli k často, že se vyplatí je umět z hlavy.
+V mikroprocesorové technice potřebujeme často pracovat s čísly na úrovni bitů - když chceme přečíst stav jen jednoho tlačíka a ne všech osmi, když chceme zhasnout jen jednu LEDku a ostatní nechat svítit, atd. Proto je dobré ovládat základní převody mezi desítkovou (neboli decimální), šestnáctkovou (neboli hexadecimální) a dvojkovou (neboli binární). Složitější počty a převody je samozřejmě běžné dělat na kalkulačce, ale základní operace budeme používat natoli k často, že se vyplatí je umět z hlavy.
 
 Protože počítače používají binární soustavu, mohli bychom vše psát binárně. Ovšem u větších čísel je binární zápis dlouhý a nepřehledný. Proto se v praxi používá obvykle hexadecimální zápis, který lze do binárního snadno z hlavy převést.
 
