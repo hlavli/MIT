@@ -180,11 +180,13 @@ Když touto hodnotou logicky vynásobíme registr PORTF, všechny bity zůstanou
 
 # Shrnutí
 
-| Akce                            | Příklad                                          | Popis    |
-|:-------------------------------:|:-------------------------------------------------|:---------|
-| Nastavení x-tého bitu do 1    | PORTF \|= 1 << 3;   | nastaví 3.bit portu F do 1   |
-| Nastavení x-tého bitu do 0    | PORTF &= ~(1 << 3);  |nastaví 3.bit portu F do 0 |
-| Otestování x-tého bitu        | (PINK & (1<<3) != 0); |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
+
+| Operace                         | Příklad                                          | Popis příkladu |
+|:-------------------------------:|:-------------------------------------------------|:---------      |
+| Nastavení bitu do 1    | PORTF \|= 1 << 3;   | nastaví 3.bit portu F do 1   |
+| Nastavení bitu do 0    | PORTF &= ~(1 << 3);  |nastaví 3.bit portu F do 0   |
+| Otestování bitu        | (PINK & (1<<3) != 0); |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
+
 
 
 ## [Zpět na obsah](README.md)
