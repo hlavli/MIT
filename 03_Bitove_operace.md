@@ -9,31 +9,30 @@ V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do 
 
 ![image](https://github.com/user-attachments/assets/07eff5d5-d405-4caa-a664-ae9a075abdff)
 
+Při převodu z binární do hexadecimální soustavy si binární číslo rozdělíme na čtveřeice (začneme zprava. Nad číslice v každé čtveřici si napíšeme "váhy" jednotlivých cifer, 8-4-2-1. Každá bitová čtveřice nám vytvoří jednu hexadecimální číslici. Abychom ji získali, sečteme jen ty váhy, pod kterými je jednička. V příkladu níže tedy sečteme váhy 1 + 4. Výsledek je 0x5.
 
 
 ```
       8 4 2 1
-bin:  0 0 0 1 = 1 
+bin:  0 1 0 1 = 4 + 1 = 0x5 
 ```
 
-```
-      8 4 2 1
-bin:  0 1 0 1 = 4 + 1 = 5 
-```
+V dalším příkladu je součet vah 15, tedy v hexadecimální soustavě 0xF.
 
 ```
       8 4 2 1
 bin:  1 1 1 1 = 8 + 4 + 2 + 1 = 15 = 0xF
 ```
 
+Pokud máme více čtveřic bitů, postup je stále stejný - každou čtveřici bitů převedeme na jednu hexadecimální číslici:
 ```
       8 4 2 1  8 4 2 1
 bin:  1 1 1 1  0 1 0 1 = 0xF5
 ```
 
 ```
-      8 4 2 1  8 4 2 1
-bin:  1 1 1 0  1 1 0 0 = 0x7C
+      8 4 2 1  8 4 2 1  8 4 2 1
+bin:  1 0 1 0  1 1 1 0  1 1 0 0 = 0xA7C
 ```
 
 ## Převod z hexadecimální do binární soustavy
