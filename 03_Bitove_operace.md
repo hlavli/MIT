@@ -111,9 +111,30 @@ Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alesp
 
 ```
   0x15   =>  0001 0101
-& 0xF0   =>  0101 0000
+& 0xF0   =>  1111 0000
 ------      ----------
   0x10   <=  0001 0000 
+```
+
+## Logický exkluzivní součet  XOR ^
+Exkluzivní logický součet XOR vrací jedničku, pokud jsou oba operandy vzájemně různé. Pokud jsou oba stejné, vrací jedničku. Dá se dobře použít, když chceme nějaký bit znegovat (změnit na opačnou hodnotu). 
+
+| A   | B   | A ^ B | 
+|:---:|:---:|:-----:| 
+| 0   | 0   | 0     | 
+| 0   | 1   | 1     | 
+| 1   | 0   | 1     | 
+| 1   | 1   | 0     | 
+
+
+![image](https://github.com/user-attachments/assets/9dadc75d-81ae-40b2-9056-95909a60a69a)
+
+
+```
+  0x15   =>  0001 0101
+^ 0xF0   =>  1111 0000
+------      ----------
+  0xE5   <=  1110 0101 
 ```
 
 ## Práce s jednotlivými bity
@@ -178,13 +199,24 @@ Když tuto hodnotu bitově znegujeme, získáme masku, kterou potřebujeme.
 
 Když touto hodnotou logicky vynásobíme registr PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 0.
 
+### Negace jednotlivých bitů (toggle bit)
+
+Pokud chceme znegovat bit 2, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický exkluzivní součet XOR. 
+
+Na pozice bitů, které nechceme změnit dáme nulu, pozice bitů, které chceme znegovat dáme jako jedničku.
+
+``` PORTF = PORTF ^ 0b00000100; ``` Můžeme napsat kratší formou:
+
+``` PORTF ^= 1<<2; ``` Tento zápis je v praxi nejčastější.
+
 # Shrnutí
 
 
 | Operace                         | Příklad                                          | Popis příkladu |
 |:-------------------------------:|:-------------------------------------------------|:---------      |
-| Nastavení bitu do 1    | PORTF \|= 1 << 3;   | nastaví 3.bit portu F do 1   |
-| Nastavení bitu do 0    | PORTF &= ~(1 << 3);  |nastaví 3.bit portu F do 0   |
+| Nastavení bitu do 1    | PORTF \|= 1 << 3;     | nastaví 3.bit portu F do 1   |
+| Nastavení bitu do 0    | PORTF &= ~(1 << 3);   |nastaví 3.bit portu F do 0   |
+| Negace bitu            | PORTF ^= 1 << 3;      |změní 3.bit portu F na opačnou hodnotu   |
 | Otestování bitu        | (PINK & (1<<3) != 0); |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
 
 
