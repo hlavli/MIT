@@ -63,83 +63,6 @@ int main(void)
 
 ```
 
-## Práce s jednotlivými bity
-Doteď jsme nastavovali všechny piny společně. V praxi ale většinou chceme ovládat jednotlivé piny každý zvlášť.
-Dejme tomu, že chceme blikat pouze třetí LEDkou (LED2 připojená na PF.2, protože číslujeme od 0)
-
-Mohli bychom to udělat takto
-
-```c
-DDRF = 0b00000100; //Pin 2 jako výstup, piny 1-7 jako vstup
-PORTF = 0b00000000; // Pin 2 = 0 -> LED ON
-PORTF = 0b00000100; // Pin 2 = 1 -> LED OFF
-``` 
-
-Nevýhoda ale je, že kromě pinu 0 ovlivňujeme i všechny ostatní piny. A pokud by například na pinu 5 byla jiná LEDka, kterou ovládat nechceme, musíme na to jít jinak.
-
-### Nastavení jednotlivých bitů do 1 (set bit)
-
-Pokud chceme nastavit bit 2 do jedničky, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický součet. 
-
-| A   | B   | A \| B | 
-|:---:|:---:|:------:| 
-| 0   | 0   | 0      | 
-| 0   | 1   | 1      | 
-| 1   | 0   | 1      | 
-| 1   | 1   | 1      | 
-
-K pozicím bitů. které nechceme změnit přičteme 0, k těm, které chceme nastavit do 1 přičteme jedničku.
-
-Všechny tři zápisy níže jsou ekvivaletní, ale v praxi používáme ten poslední, protože je krátký a přehledný
-
-``` PORTF = PORTF | 0b00000100; ``` Můžeme v jazyce C napsat kratší formou:
-
-``` PORTF |= 0b00000100; ``` Abychom nemuseli odpočítávat nuly, můžeme použít operaci rotace:
-
-``` PORTF |= 1<<2; ``` Tento zápis je v praxi nejčastější.
-
-
-Číslu, které logický součtem přičítáme k hodnotě registru se říká maska. Masku můžeme vytvořit pomocí operátoru << tedy rotace doleva. 
-
-V našem případě chceme nastavit bit 2, tedy vezmeme jedničku a posuneme ji dvakrát doleva:
-
-``` 1<<2 = 0b00000100```
-
-Když tuto hodnotu logicky přičteme k registru PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 1.
-
-
-### Nastavení jednotlivých bitů do 0 (clear bit)
-
-Pokud chceme nastavit bit 2 do nuly, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický součin. 
-
-| A   | B   | A & B | 
-|:---:|:---:|:-----:| 
-| 0   | 0   | 0     | 
-| 0   | 1   | 0     | 
-| 1   | 0   | 0     | 
-| 1   | 1   | 1     | 
-
-
-Pozice bitů, které nechceme změnit vynásobíme jedničkou, pozice bitů, které chceme vynulovat vynásobíme nulou.
-
-``` PORTF = PORTF & 0b11111011; ``` Můžeme v jazyce C napsat kratší formou:
-
-``` PORTF &= 0b11111011; ``` Abychom nemuseli odpočítávat jedničky, můžeme použít operaci rotace:
-
-``` PORTF &= ~(1<<2); ``` Tento zápis je v praxi nejčastější.
-
-Kromě operace rotace, kterou jsme popsali výše zde přibyl operátor bitové negace ~. Ten změní každý bit na opačnou hodnotu. 
-
-Nejprve pomocí rotace získáme hodnotu:
-
-``` 1<<2 = 0b00000100``` 
-
-Když tuto hodnotu bitově znegujeme, získáme masku, kterou potřebujeme.
-
-``` ~(1<<2) = 0b11111011; ```
-
-Když touto hodnotou logicky vynásobíme registr PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 0.
-
 # Shrnutí
 
 Pro ovládání pinů procesoru AVR slouží tyto registry:
@@ -150,14 +73,7 @@ Pro ovládání pinů procesoru AVR slouží tyto registry:
 | PORTx   | Nastaví na pinech portu log 1 nebo 0 (+5V nebo 0V) | 
 | PINx    | Přečte stav pinu (pokud ho používáme jako vstup)   | 
 
-
-Chceme-li konkrétní **bit nastavit do jedničky** (např. pin 5 portu A) lze to přehledně zapsat pomocí funkce OR a bitové rotace:
-
-``` PORTA |= 1<<5; ``` 
-
-Chceme-li konkrétní **bit nastavit do nuly** (např. pin 5 portu A) lze to přehledně zapsat pomocí funkce AND, negace a bitové rotace:
-
-``` PORTA &= ~(1<<5); ```
+Každý bit odpovídá jednomu pinu procesoru.
 
 ## [Zpět na obsah](README.md)
 
