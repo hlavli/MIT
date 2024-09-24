@@ -29,6 +29,14 @@ Kromě samotného mikrokontroleru a nutných obvodů jako napájení, zdroj hodi
 
 [Kniha programujeme AVR v jazyku C](files/Programujeme_AVR_kniha.pdf)
 
+
+## Template projektu
+Abyste nemuseli pro každý nový projekt opakovat kroky popsané níže, můžete si do Microchip studia naimportovat template projektu.
+[Template projekt pro Microchip studio](files/MIT_AVR_Project.zip)
+
+![image](https://github.com/user-attachments/assets/750a2213-3503-404b-88f4-4c94a9bbac1a)
+
+
 ## Vytvoření projektu v Microchip studiu, nahrání programu
 
 Spusťe Microchip Studio (dříve Atmel Studio), v menu v horní liště zvolte File -> New -> Project
