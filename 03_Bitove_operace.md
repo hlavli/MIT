@@ -116,8 +116,8 @@ Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alesp
   0x10   <=  0001 0000 
 ```
 
-## Logický exkluzivní součet  XOR ^
-Exkluzivní logický součet XOR vrací jedničku, pokud jsou oba operandy vzájemně různé. Pokud jsou oba stejné, vrací nulu. Dá se dobře použít, když chceme nějaký bit znegovat (změnit na opačnou hodnotu). 
+## Logická nonekvivalence XOR ^
+Logická nonekvivalence XOR vrací jedničku, pokud jsou oba operandy vzájemně různé. Pokud jsou oba stejné, vrací nulu. Dá se dobře použít, když chceme nějaký bit znegovat (změnit na opačnou hodnotu). 
 
 | A   | B   | A ^ B | 
 |:---:|:---:|:-----:| 
