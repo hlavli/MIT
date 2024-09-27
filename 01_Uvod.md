@@ -39,6 +39,9 @@ File ->Import -> Project Template a vyberte stažený zip. soubor. Pokud ve vaš
 
 Pokud pak kliknete na File -> New -> Project tak byste měli v nabídce vidět i "MIT AVR Project". Když ho zvolíte tak všechny níže popsané natsavení budete mít automaticky.
 
+![image](https://github.com/user-attachments/assets/e6b57f76-c244-42da-83e2-a8e1f39aa02f)
+
+
 ## Vytvoření projektu v Microchip studiu, nahrání programu
 
 Spusťe Microchip Studio (dříve Atmel Studio), v menu v horní liště zvolte File -> New -> Project
