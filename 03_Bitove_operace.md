@@ -90,9 +90,9 @@ Při logickém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmet
 
 ```
   0x15   =>  0001 0101
-| 0xF0   =>  0101 0000
+| 0xF0   =>  1111 0000
 ------      ----------
-  0x55   <=  0101 0101 
+  0xF5   <=  1111 0101 
 ```
 
 ## Logický součin AND &
