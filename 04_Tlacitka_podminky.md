@@ -9,9 +9,16 @@ Pokud ovšem tlačítko stiskneme, pin tím připojíme bez odporu přímo na ze
 ![image](https://github.com/user-attachments/assets/6151bb0e-39b5-4151-88ce-77ba36529f5d)
 
 
-## Jak číst stav pinu
+## Čtení stavu pinu
 
-Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7). Po
+Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
+
+
+○ Pin jako vstup, pullup/pulldown
+
+ ```c
+DDRK = 0xff;
+```
 
 
  ```c
@@ -27,9 +34,46 @@ if(!(PINK & (1<<7))){
 }  
 ```
 
+
 ○ Cyklus while - čekání na stisk tlačítka
 
-○ Pin jako vstup, pullup/pulldown
+
+
 ○ Čtení z registru PINx PORTx na pullup
-	○ Vymaskovat do podmínky if ((PINK & (1<<7))==0)
-Debouncing
+
+ 
+## Ošetření zákmitů - debouncing
+Při stisku mechanických tlačíek zpravidla dochází k něžádoucímu jevu zákmitů, anglicky bouncing. To se projeví tak, že změna stavu nízké do vysoké úrovně neproběhne jednorázovým skokem, ale po krátkou dodu může úroveň "přeskakovat" tam a zpět. Je to způsobeno mechanickými vlastnostmi kontaktů tlačítka, má na to vliv např. síla a rychlost stisku. 
+
+![image](https://www.nuvation.com/sites/default/files/blog/Switch%20Debouncing%20for%20Electronic%20Product%20Designs/Switch_Debouncing_Circuit_Waveform.jpg)
+
+*Zdroj obrázku : https://www.nuvation.com/resources/article/switch-debouncing-electronic-product-designs*
+
+Tento jev nám působí problémy, protože pokud například chceme programme detekovat stisk tlačítka, jako změnu z 1 do 0, pak kvůli zákmitům můžeme namísto jednoho stisku tlačítka detekovat falešně třebba deset stisků. Proto musíme tento jev ošetřit tak, aby nám nepůsobil problémy. To lze buď hardwarově, nejčastěji připojením kondenzátoru paralelně k tlačítku. Kondenzátor způsobí, že napětí na tlačítku se bude měnit pomaleji (zaoblí se hrana). Nebo lze zákmity odfiltrovat softwarově.
+
+```c
+void loop() {
+
+  // Read the button value. We assume a pull-down resistor button configuration so
+  // the button will be HIGH when pressed and LOW when not pressed
+  int buttonVal = digitalRead(BUTTON_INPUT_PIN);
+
+  // Wait to check the button state again
+  delay(DEBOUNCE_WINDOW);
+
+  // read the button value again
+  int buttonVal2 = digitalRead(BUTTON_INPUT_PIN);
+
+  // If buttonVal and buttonVal2 are the same, then we are in steady state
+  // If this stead state value does not match our _lastButtonVal, then
+  // a transition has occurred and we should save the new buttonVal
+  // This works both for open-to-close transitions and close-to-open transitions
+  if(buttonVal == buttonVal2 && _savedButtonVal != buttonVal){
+    _savedButtonVal = buttonVal;
+  }
+
+  // Write out HIGH or LOW
+  digitalWrite(LED_OUTPUT_PIN, _savedButtonVal);
+}
+```
+
