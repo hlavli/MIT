@@ -52,17 +52,20 @@ while(PINK & (1<<7) != 0){
 #define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
 #include <util/delay.h> // pridani knihovny s funkci delay
 
-int main() {
+int main()
+{
  DDRK = 0b00000000; // vsechny piny portu K jako vstupy
  DDRF = 0b11111111; // vsechny piny portu F jako vystupy
 
  // nekonecna smycka
- while(1){
-  if(PINK & (1<<7) != 0){ // pokud je tlacitko SW7 stisknute
+ while(1)
+ {
+  if(PINK & (1<<7) != 0) // pokud je tlacitko SW7 stisknute
+  { 
   PORTF |= (1 << 7); // rozsvit LED7
   }
-  else {
-   PORTD &= ~(1 << PD6); // zhasni LED
+  else { // pokud tlacitko neni stisknuto
+   PORTD &= ~(1 << PD6); // zhasni LEDku
   }
  }
 }
