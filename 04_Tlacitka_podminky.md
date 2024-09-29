@@ -13,33 +13,37 @@ Pokud ovšem tlačítko stiskneme, pin tím připojíme bez odporu přímo na ze
 
 Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
 
-
-○ Pin jako vstup, pullup/pulldown
+○ Pin jako vstup
 
  ```c
 DDRK = 0xff;
 ```
 
 
- ```c
-if(PINK & (1<<7)){ 
-// udělej něco když je na PK7 log.1 
-}
-```
 
-nebo opačnou:
  ```c
-if(!(PINK & (1<<7))){ 
+if((PINK & (1<<7))==0){ 
 // udělej něco když je na PK7 log.0         
 }  
 ```
 
+nebo opačnou:
 
-○ Cyklus while - čekání na stisk tlačítka
+ ```c
+if(PINK & (1<<7) != 0){ 
+// udělej něco když je na PK7 log.1 
+}
+```
 
 
+Cyklus while - čekání na stisk tlačítka
 
-○ Čtení z registru PINx PORTx na pullup
+ ```c
+while(PINK & (1<<7) != 0){ 
+// čekej, dokud je na PK7 log.1 tedy čekej, dokud tlačítko není stisknuto
+//po stisku tlačítka tato smyčka končí a vykoná se program pod ní
+}
+```
 
  
 ## Ošetření zákmitů - debouncing
