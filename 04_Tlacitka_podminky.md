@@ -13,13 +13,13 @@ Pokud ovšem tlačítko stiskneme, pin tím připojíme bez odporu přímo na ze
 
 Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
 
-○ Pin jako vstup
+Nastavíme všechny piny portu K jako vstupy
 
  ```c
-DDRK = 0xff;
+DDRK = 0x00;
 ```
 
-
+Abychom z celého registru PINK vybrali pouze stav jednoho tlačítka, můžeme použít známý výraz s logickým součinem a rotací:
 
  ```c
 if((PINK & (1<<7))==0){ 
@@ -27,7 +27,7 @@ if((PINK & (1<<7))==0){
 }  
 ```
 
-nebo opačnou:
+nebo opačně:
 
  ```c
 if(PINK & (1<<7) != 0){ 
@@ -36,13 +36,37 @@ if(PINK & (1<<7) != 0){
 ```
 
 
-Cyklus while - čekání na stisk tlačítka
+Pokud chceme někde náš program zastavit a pokračovat až po stisku tlačítka, můžeme použít prázdný cyklu while:
 
  ```c
 while(PINK & (1<<7) != 0){ 
 // čekej, dokud je na PK7 log.1 tedy čekej, dokud tlačítko není stisknuto
 //po stisku tlačítka tato smyčka končí a vykoná se program pod ní
 }
+```
+
+## Příklad s rozsvěcením LEDky
+
+```c
+#include <avr/io.h> // soubor definicemi adres registru, abychom mohli pouzivat symbolicke nazvy jako "PORTB" namisto ciselne adresy registru
+#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
+#include <util/delay.h> // pridani knihovny s funkci delay
+
+int main() {
+ DDRK = 0b00000000; // vsechny piny portu K jako vstupy
+ DDRF = 0b11111111; // vsechny piny portu F jako vystupy
+
+ // nekonecna smycka
+ while(1){
+  if(PINK & (1<<7) != 0){ // pokud je tlacitko SW7 stisknute
+  PORTF |= (1 << 7); // rozsvit LED7
+  }
+  else {
+   PORTD &= ~(1 << PD6); // zhasni LED
+  }
+ }
+}
+
 ```
 
  
