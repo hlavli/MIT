@@ -60,7 +60,7 @@ int main()
  // nekonecna smycka
  while(1)
  {
-  if(PINK & (1<<7) != 0) // pokud je tlacitko SW7 stisknute
+  if(PINK & (1<<7) == 0) // pokud je tlacitko SW7 stisknute
   { 
   PORTF |= (1 << 7); // rozsvit LED7
   }
