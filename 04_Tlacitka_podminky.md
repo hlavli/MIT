@@ -91,28 +91,31 @@ Při stisku mechanických tlačíek zpravidla dochází k něžádoucímu jevu z
 Tento jev nám působí problémy, protože pokud například chceme programme detekovat stisk tlačítka, jako změnu z 1 do 0, pak kvůli zákmitům můžeme namísto jednoho stisku tlačítka detekovat falešně třebba deset stisků. Proto musíme tento jev ošetřit tak, aby nám nepůsobil problémy. To lze buď hardwarově, nejčastěji připojením kondenzátoru paralelně k tlačítku. Kondenzátor způsobí, že napětí na tlačítku se bude měnit pomaleji (zaoblí se hrana). Nebo lze zákmity odfiltrovat softwarově.
 
 ```c
-void loop() {
+#include <avr/io.h> // soubor definicemi adres registru, abychom mohli pouzivat symbolicke nazvy jako "PORTB" namisto ciselne adresy registru
+#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
+#include <util/delay.h> // pridani knihovny s funkci delay
 
-  // Read the button value. We assume a pull-down resistor button configuration so
-  // the button will be HIGH when pressed and LOW when not pressed
-  int buttonVal = digitalRead(BUTTON_INPUT_PIN);
+int main()
+{
+	DDRK = 0; // všechny piny portu K jako vstupy (jsou k nim připojeny LEDky)
+	DDRF = 0xFF; // všechny piny portu F jako výstupy (jsou k nim připojena tlačítka)
 
-  // Wait to check the button state again
-  delay(DEBOUNCE_WINDOW);
-
-  // read the button value again
-  int buttonVal2 = digitalRead(BUTTON_INPUT_PIN);
-
-  // If buttonVal and buttonVal2 are the same, then we are in steady state
-  // If this stead state value does not match our _lastButtonVal, then
-  // a transition has occurred and we should save the new buttonVal
-  // This works both for open-to-close transitions and close-to-open transitions
-  if(buttonVal == buttonVal2 && _savedButtonVal != buttonVal){
-    _savedButtonVal = buttonVal;
-  }
-
-  // Write out HIGH or LOW
-  digitalWrite(LED_OUTPUT_PIN, _savedButtonVal);
+	PORTF = 0xFE; // na začátku svítí jen levá krajní LEDka
+	
+	// nekonečná smyčka
+	while(1)
+	{
+		if((PINK & (1<<7)) == 0) // pokud je tlačítko stisknuto
+		{
+			_delay_ms(100); // počkáme, abychom odfiltrovali zákmity
+			
+			if((PINK & (1<<7)) == 0) // pokud je i po čekání tlačítko stisknuto
+			{
+				PORTF ^= 0x1; // změň stav LEDky na opačný 
+			}
+				while ((PINK & (1<<7)) == 0){} // dokud je tlačítko pořád stisknuto, budeme čekat
+		}
+	}
 }
 ```
 
