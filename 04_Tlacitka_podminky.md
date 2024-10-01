@@ -62,20 +62,20 @@ while(PINK & (1<<7) == 0){
 
 int main()
 {
- DDRK = 0b00000000; // vsechny piny portu K jako vstupy
- DDRF = 0b11111111; // vsechny piny portu F jako vystupy
+	DDRK = 0b00000000; // vsechny piny portu K jako vstupy
+	DDRF = 0b11111111; // vsechny piny portu F jako vystupy
 
- // nekonecna smycka
- while(1)
- {
-  if(PINK & (1<<7) == 0) // pokud je tlacitko SW7 stisknute
-  { 
-  PORTF |= (1 << 7); // rozsvit LED7
-  }
-  else { // pokud tlacitko neni stisknuto
-   PORTD &= ~(1 << PD6); // zhasni LEDku
-  }
- }
+	// nekonecna smycka
+	while(1)
+	{
+		if((PINK & (1<<7)) == 0) // pokud je tlacitko SW7 stisknute
+		{
+			PORTF |= (1 << 7); // rozsvit LED7
+		}
+		else { // pokud tlacitko neni stisknuto
+			PORTF &= ~(1 << 7); // zhasni LEDku
+		}
+	}
 }
 
 ```
