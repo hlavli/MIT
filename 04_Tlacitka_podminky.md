@@ -103,7 +103,7 @@ int main()
 
  
 ## Ošetření zákmitů - debouncing
-Při stisku mechanických tlačíek zpravidla dochází k něžádoucímu jevu zákmitů, anglicky bouncing. To se projeví tak, že změna stavu nízké do vysoké úrovně neproběhne jednorázovým skokem, ale po krátkou dodu může úroveň "přeskakovat" tam a zpět. Je to způsobeno mechanickými vlastnostmi kontaktů tlačítka, má na to vliv např. síla a rychlost stisku. 
+Při stisku mechanických tlačíek zpravidla dochází k něžádoucímu jevu zákmitů, anglicky bouncing. To se projeví tak, že změna stavu z jedné do druhé úrovně neproběhne jednorázovým skokem, ale po krátkou dodu může úroveň "přeskakovat" tam a zpět. Je to způsobeno mechanickými vlastnostmi kontaktů tlačítka, má na to vliv např. síla a rychlost stisku. 
 
 ![image](https://www.nuvation.com/sites/default/files/blog/Switch%20Debouncing%20for%20Electronic%20Product%20Designs/Switch_Debouncing_Circuit_Waveform.jpg)
 
