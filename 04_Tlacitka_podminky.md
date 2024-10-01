@@ -45,6 +45,14 @@ while(PINK & (1<<7) != 0){
 }
 ```
 
+Nebo naopak, můžeme něco dělat pouze po dobu, kdy je tlačítko stisknuto. Když tlačítko pustíme,cyklus skončí
+
+ ```c
+while(PINK & (1<<7) == 0){ 
+// příkazy v cyklu se budou vykonávat dokud je pin 7 portu K v logické nule (tlačítko stisknuto) 
+}
+```
+
 ## Příklad s rozsvěcením LEDky
 
 ```c
