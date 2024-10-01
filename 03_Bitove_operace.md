@@ -3,6 +3,15 @@ V mikroprocesorové technice potřebujeme často pracovat s čísly na úrovni b
 
 Protože počítače používají binární soustavu, mohli bychom vše psát binárně. Ovšem u větších čísel je binární zápis dlouhý a nepřehledný. Proto se v praxi používá obvykle hexadecimální zápis, který lze do binárního snadno z hlavy převést.
 
+Pozn. pokud používáte českou klávesnici, budou se vám hodit následující klávesové zkratky pro psaní znamének logických operací:
+
+| Znak   | Kláv. zkratka na CZ klávesnici   | 
+|:---:|:---:|
+| &   | Alt Gr + c   | 
+| \|   | Alt Gr + w   |
+| ^   | Alt Gr + 3   |
+| ~   | Alt + 126   |
+
 ## Převod z binární do hexadecimální soustavy
 
 V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do patnácti. Číslice 0-9 jsou stejné jako jsme zvyklí z desítkové soustavy, dále pak 10 píšeme jako A, 11 jako B, atd až 15 jako F.
