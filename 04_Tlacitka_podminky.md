@@ -11,19 +11,37 @@ Pokud ovšem tlačítko stiskneme, pin tím připojíme bez odporu přímo na ze
 
 ## Čtení stavu pinu
 
-Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
-
-Nastavíme všechny piny portu K jako vstupy
+Na našem přípravku míme tlačítka připojena na portu K, proto všechny piny portu K nastavíme jako vstupy - do registru DDRK zapíšeme samé nuly:
 
  ```c
 DDRK = 0x00;
 ```
 
+Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
+
 Abychom z celého registru PINK vybrali pouze stav jednoho tlačítka, můžeme použít známý výraz s logickým součinem a rotací:
 
  ```c
+(PINK & (1<<7))
+```
+
+Tento výraz nám vynuluje všechny bity, které nás nezajímají (tedy všechny kromě bitu 7.
+
+Pokud je bit 7 jednička (tlačítko není stisknuto), tak výsledek bude:
+
+![image](https://github.com/user-attachments/assets/db1853ff-8b55-4edf-9e26-98cb1f7b5c27)
+
+Pokud je bit 7 nula (tlačítko je stisknuto), tak výsledek bude:
+
+![image](https://github.com/user-attachments/assets/da47d9f7-70a0-4cb3-bc16-10656fd655df)
+
+Všimněte si, že pokud je tlačíko stisknuto, výsledek výrazu je vždy nula. Ale pokud tlačítko stisknuto není, hodnota výsledku závisí na tom, který bit testujeme. Např. kdybychom testovali bit 3 tak výraz bude ```PINK & (1<<3)``` a pokud bude bit 3 jednička, tak výsledek bude 0b0000 1000. Proto při psaní podmínky používáme buď ```PINK & (1<<x) == 0``` a nebo ```PINK & (1<<x) != 0```
+
+Podmínku, aby se chování programu měnilo podle stisku tlačítka tedy můžeme napsat třeba takto:
+
+ ```c
 if((PINK & (1<<7))==0){ 
-// udělej něco když je na PK7 log.0         
+// udělej něco když je na PK7 log.0 (tlačítko stisknuto)       
 }  
 ```
 
@@ -56,23 +74,23 @@ while(PINK & (1<<7) == 0){
 ## Příklad s rozsvěcením LEDky
 
 ```c
-#include <avr/io.h> // soubor s definicemi adres registru, abychom mohli pouzivat symbolicke nazvy jako "PORTB" namisto ciselne adresy registru
-#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
-#include <util/delay.h> // pridani knihovny s funkci delay
+#include <avr/io.h> // soubor s definicemi adres registru, abychom mohli používat symbolické názvy jako "PORTB" namísto číselné adresy registru
+#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby správně fungovala funkce delay
+#include <util/delay.h> // přidání knihovny s funkcí delay
 
 int main()
 {
-	DDRK = 0b00000000; // vsechny piny portu K jako vstupy
-	DDRF = 0b11111111; // vsechny piny portu F jako vystupy
+	DDRK = 0b00000000; // všechny piny portu K jako vstupy
+	DDRF = 0b11111111; // všechny piny portu F jako výstupy
 
 	// nekonecna smycka
 	while(1)
 	{
-		if((PINK & (1<<7)) == 0) // pokud je tlacitko SW7 stisknute
+		if((PINK & (1<<7)) == 0) // pokud je tlačítko SW7 stisknuto
 		{
-			PORTF |= (1 << 7); // rozsvit LED7
+			PORTF |= (1 << 7); // rozsviť LED7
 		}
-		else { // pokud tlacitko neni stisknuto
+		else { // pokud tlačítko není stisknuto
 			PORTF &= ~(1 << 7); // zhasni LEDku
 		}
 	}
