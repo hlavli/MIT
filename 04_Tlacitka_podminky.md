@@ -109,9 +109,9 @@ Při stisku mechanických tlačíek zpravidla dochází k něžádoucímu jevu z
 Tento jev nám působí problémy, protože pokud například chceme programme detekovat stisk tlačítka, jako změnu z 1 do 0, pak kvůli zákmitům můžeme namísto jednoho stisku tlačítka detekovat falešně třebba deset stisků. Proto musíme tento jev ošetřit tak, aby nám nepůsobil problémy. To lze buď hardwarově, nejčastěji připojením kondenzátoru paralelně k tlačítku. Kondenzátor způsobí, že napětí na tlačítku se bude měnit pomaleji (zaoblí se hrana). Nebo lze zákmity odfiltrovat softwarově.
 
 ```c
-#include <avr/io.h> // soubor definicemi adres registru, abychom mohli pouzivat symbolicke nazvy jako "PORTB" namisto ciselne adresy registru
-#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby spravne fungovala funkce delay
-#include <util/delay.h> // pridani knihovny s funkci delay
+#include <avr/io.h> // soubor s definicemi adres registru, abychom mohli používat symbolické názvy jako "PORTB" namísto číselné adresy registru
+#define F_CPU 16000000 // definice frekvence procesoru, v nasem pripade 16MHz aby správně fungovala funkce delay
+#include <util/delay.h> // přidání knihovny s funkcí delay
 
 int main()
 {
