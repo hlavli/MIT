@@ -130,9 +130,9 @@ int main()
 		{
 			_delay_ms(100); // počkáme, abychom odfiltrovali zákmity
 			
-			if((PINK & (1<<7)) == 0) // pokud je i po čekání tlačítko stisknuto
+			if((PINK & (1<<7)) == 0) // přečteme tlačítko znovu, pokud je i po čekání stisknuto
 			{
-				PORTF ^= 0x1; // změň stav LEDky na opačný 
+				PORTF ^= 0x1; // změníme stav LEDky na opačný 
 			}
 				while ((PINK & (1<<7)) == 0){} // dokud je tlačítko pořád stisknuto, budeme čekat
 		}
