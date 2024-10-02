@@ -91,10 +91,10 @@ int main()
 	{
 		if((PINK & (1<<7)) == 0) // pokud je tlačítko SW7 stisknuto
 		{
-			PORTF |= (1 << 7); // rozsviť LED7
+			PORTF |= (1 << 7); // zhasni LED7
 		}
 		else { // pokud tlačítko není stisknuto
-			PORTF &= ~(1 << 7); // zhasni LEDku
+			PORTF &= ~(1 << 7); // rozsviť LEDku
 		}
 	}
 }
