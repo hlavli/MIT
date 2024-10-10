@@ -50,7 +50,7 @@ if((PINK & (1<<7))==0){
 nebo opačně:
 
  ```c
-if(PINK & (1<<7) != 0){ 
+if((PINK & (1<<7)) != 0){ 
 // udělej něco když je na PK7 log.1 
 }
 ```
