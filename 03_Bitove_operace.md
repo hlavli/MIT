@@ -66,9 +66,9 @@ Operátorem ~ (na české klávesnici ALT+126) zapisujeme bitovou negaci. Výsle
 ~0xD7 = 0010 1000 = 0x28 
 ```
 
-## Bitová rotace levá << nebo pravá >>
+## Bitový posun levý << nebo pravý >> 
 
-Bitová rotace nám binární číslo "posune" neboli orotuje o daný počet míst doleva nebo doprava. Na uvolněná místa doplňujeme vždy nuly.
+Bitový posun (anglicky bit shift) nám binární číslo "posune" o daný počet míst doleva nebo doprava. Na uvolněná místa doplňujeme vždy nuly.
 
 ```
 0xD7      =  1101 0111
@@ -170,12 +170,12 @@ Všechny tři zápisy níže jsou ekvivaletní, ale v praxi používáme ten pos
 
 ``` PORTF = PORTF | 0b00000100; ``` Můžeme v jazyce C napsat kratší formou:
 
-``` PORTF |= 0b00000100; ``` Abychom nemuseli odpočítávat nuly, můžeme použít operaci rotace:
+``` PORTF |= 0b00000100; ``` Abychom nemuseli odpočítávat nuly, můžeme použít operaci bitového posuvu:
 
 ``` PORTF |= 1<<2; ``` Tento zápis je v praxi nejčastější.
 
 
-Číslu, které logický součtem přičítáme k hodnotě registru se říká maska. Masku můžeme vytvořit pomocí operátoru << tedy rotace doleva. 
+Číslu, které logický součtem přičítáme k hodnotě registru se říká maska. Masku můžeme vytvořit pomocí operátoru << tedy bitového posuvu doleva. 
 
 V našem případě chceme nastavit bit 2, tedy vezmeme jedničku a posuneme ji dvakrát doleva:
 
@@ -192,13 +192,13 @@ Pozice bitů, které nechceme změnit vynásobíme jedničkou, pozice bitů, kte
 
 ``` PORTF = PORTF & 0b11111011; ``` Můžeme v jazyce C napsat kratší formou:
 
-``` PORTF &= 0b11111011; ``` Abychom nemuseli odpočítávat jedničky, můžeme použít operaci rotace:
+``` PORTF &= 0b11111011; ``` Abychom nemuseli odpočítávat jedničky, můžeme použít operaci bitového posuvu:
 
 ``` PORTF &= ~(1<<2); ``` Tento zápis je v praxi nejčastější.
 
-Kromě operace rotace, kterou jsme popsali výše zde přibyl operátor bitové negace ~. Ten změní každý bit na opačnou hodnotu. 
+Kromě operace bitového posuvu, kterou jsme popsali výše zde přibyl operátor bitové negace ~. Ten změní každý bit na opačnou hodnotu. 
 
-Nejprve pomocí rotace získáme hodnotu:
+Nejprve pomocí bitového posuvu získáme hodnotu:
 
 ``` 1<<2 = 0b00000100``` 
 
