@@ -21,7 +21,7 @@ DDRK = 0x00;
 
 Pro nastavení logické úrovně pinu procesoru jsme používali registr PORTx. Ovšem pozor, tento registr je pouze výstupní, tedy slouží k zápisu na pin, ale ne k jeho čtení! Ke čtení stavu pinu slouží jiný registr - PINx. V našem případě chceme číst stav tlačítek na portu K, tedy použijeme registr PINK. Jeho přečtením získáme stav všech pinů. Nás ale obvykle zajímá stav pinů jednotlivě, např. chceme zjistit, zda je stisknuto tlačítko úplně vlevo na přípravku (SW7).
 
-Abychom z celého registru PINK vybrali pouze stav jednoho tlačítka, můžeme použít známý výraz s logickým součinem a rotací:
+Abychom z celého registru PINK vybrali pouze stav jednoho tlačítka, můžeme použít známý výraz s logickým součinem a bitovým posunem:
 
  ```c
 (PINK & (1<<7))
