@@ -58,9 +58,9 @@ Zkuste si ho sami modifikovat:
 unsigned char znaky[]={0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e}; // pole kombinací segmentů (a, b, c, d, e, f)
 
 int main(void)
-{	DDRB=0xff; // Nastaví port B, jako výstup (je připojen k segmentům)
-	DDRD=0xff; // Nastaví port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
-	PORTD=0xDF; // Otevře tranzistor, který napájí anodu číslice vlevo
+{	DDRB = 0xff; // Nastaví port B, jako výstup (je připojen k segmentům)
+	DDRD = 0xff; // Nastaví port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
+	PORTD = 0xDF; // Otevře tranzistor, který napájí anodu číslice vlevo
 	
 	while (1)
 	{
