@@ -1,7 +1,7 @@
 # Sedmisegmentový displej
 
 
-Sedmisegmentový displej je po LEDkách a tlačítkách další jednoduchá periferie na našem přípravku, se kterou se naučíme pracovat. Je to vcelku primitivní - sedmisegmentový displej není nic jiného, než LEDky ve tvaru podlouhlých segmentů, které jsou rozestaveny tak, aby se z nich dala skládat čísla.
+Sedmisegmentový displej je po LEDkách a tlačítkách další periferie na našem přípravku, se kterou se naučíme pracovat. Je to vcelku jednoduché - sedmisegmentový displej není nic jiného, než LEDky ve tvaru podlouhlých segmentů, které jsou rozestaveny tak, aby se z nich daly skládat číslice.
 
 ## Princip funkce
 Protože je pro každou číslici těchto LEDek osm (sedm segmentů plus desetinná tečka), můžeme je všechny připojit na jeden port mikroprocesoru a potom jedním zapsáním do registru portu, kde jsou LEDky připojeny nastavíme požadovoanou číslici.
@@ -45,7 +45,7 @@ V našem přípravku není sedmisegmentový displej připojen k procesoru trvale
 Jednoduchý program, který na jedné pozici sedmisegmentového displeje bude střídavě zobrazovat písmena a,b,c,d,e,f. 
 
 Projděte si jej a zopakujte si
- - K čemu slouží pole, jak se v jazyce C deklaruje a jak z nějk získáme konkrétní prvek
+ - K čemu slouží pole, jak se v jazyce C deklaruje a jak z něj získáme konkrétní prvek
  - K čemu slouží a jak se v jazyce C zapisuje for cyklus
 
 
