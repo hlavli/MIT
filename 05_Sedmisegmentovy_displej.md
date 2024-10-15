@@ -46,14 +46,8 @@ Jednoduchý program, který na jedné pozici sedmisegmentového displeje bude st
 
 Projděte si jej a zopakujte si
  - K čemu slouží pole, jak se v jazyce C deklaruje a jak z nějk získáme konkrétní prvek
- - K čemu lsoží a jak se v jazyce C zapisuje for cyklus
+ - K čemu slouží a jak se v jazyce C zapisuje for cyklus
 
-
-Zkuste si příklad sami modifikovat:
-- aby vypisoval čísla 0-9
-- aby vypisoval čísla na jiné pozici displeje
-- aby počítal pouze 1-5
-- aby displej zhasnul, pokud budeme držet tlačítko
 
 ```C
 #include <avr/io.h>
@@ -77,3 +71,10 @@ int main(void)
 	}
 }
 ```
+
+
+Zkuste si příklad sami modifikovat:
+- aby vypisoval čísla 0-9
+- aby vypisoval čísla na jiné pozici displeje
+- aby počítal pouze 1-5
+- aby displej zhasnul, pokud budeme držet tlačítko
