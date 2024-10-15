@@ -42,6 +42,13 @@ V našem přípravku není sedmisegmentový displej připojen k procesoru trvale
 ![image](https://github.com/user-attachments/assets/1320cb6d-6883-4c99-9c53-15064df9df56)
 
 ## Příklad programu
+Jednoduchý program, který na jedné pozici sedmisegmentového displeje bude střídavě zobrazovat písmena a,b,c,d,e,f. 
+
+Zkuste si ho sami modifikovat:
+- aby vypisoval čísla 0-9
+- aby vypisoval čísla na jiné pozici displeje
+- aby počítal pouze 1-5
+- aby displej zhasnul, pokud budeme držet tlačítko
 
 ```C
 #include <avr/io.h>
