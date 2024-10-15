@@ -1,7 +1,7 @@
 # Sedmisegmentový displej
 
 
-Sedmisegmentový displej je po LEDkách a tlačítcích další jednoduchá periferie na našem přípravku, se kterou se naučíme pracovat. Je to vcelku primitivní - sedmisegmentový displej není nic jiného, než LEDky, ve tvaru podlouhlých segmentů, které jsou rozestaveny tak, aby se z nich dala skládat čísla.
+Sedmisegmentový displej je po LEDkách a tlačítkách další jednoduchá periferie na našem přípravku, se kterou se naučíme pracovat. Je to vcelku primitivní - sedmisegmentový displej není nic jiného, než LEDky ve tvaru podlouhlých segmentů, které jsou rozestaveny tak, aby se z nich dala skládat čísla.
 
 ## Princip funkce
 Protože je pro každou číslici těchto LEDek osm (sedm segmentů plus desetinná tečka), můžeme je všechny připojit na jeden port mikroprocesoru a potom jedním zapsáním do registru portu, kde jsou LEDky připojeny nastavíme požadovoanou číslici.
