@@ -4,7 +4,7 @@
 Sedmisegmentový displej je po LEDkách a tlačítkách další periferie na našem přípravku, se kterou se naučíme pracovat. Je to vcelku jednoduché - sedmisegmentový displej není nic jiného, než LEDky ve tvaru podlouhlých segmentů, které jsou rozestaveny tak, aby se z nich daly skládat číslice.
 
 ## Princip funkce
-Protože je pro každou pozici displeje těchto LEDek osm (sedm segmentů plus desetinná tečka), můžeme je všechny připojit na jeden port mikroprocesoru a potom jedním zapsáním do registru portu, kde jsou LEDky připojeny nastavíme požadovoanou číslici.
+Protože je pro každou pozici displeje těchto LEDek osm (sedm segmentů plus desetinná tečka), můžeme je všechny připojit na jeden port mikroprocesoru a potom jedním zapsáním do registru portu, kde jsou LEDky připojeny nastavíme požadovanou číslici.
 
 ![image](https://github.com/user-attachments/assets/4ca40da4-f47b-48d5-8bcc-c5c16d119e3e)
 
@@ -29,7 +29,7 @@ Sedmisegmentové displeje mohou být buď se společnou katodou (všechny katody
 
 ![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
 
-Na přípravku máme celkem šest sedmisegmentových číslic. Jak zobrazovat čísla na různých pozicích najednou, si ukážeme až v některém z dalších cvičení. Pro teď si vystačíme s jednou pozicí, například tou nejvíce vlevo. Ta je napájena anodou AN6. Pomocí Portu D k ní připojíme napětí, zatímco všechny ostatní necháme vypnuté - nulou otevřeme tranzistor, který jí napájí, jedničkou na všech ostatních pozicíh ostatní anody vypneme. 
+Na přípravku máme celkem šest sedmisegmentových číslic. Jak zobrazovat čísla na různých pozicích najednou, si ukážeme až v některém z dalších cvičení. Pro teď si vystačíme s jednou pozicí, například tou nejvíce vlevo. Ta je napájena anodou AN6. Pomocí Portu D k ní připojíme napětí, zatímco všechny ostatní necháme vypnuté - nulou otevřeme tranzistor, který jí napájí, jedničkou na všech ostatních pozicích ostatní anody vypneme. 
 
 Tranzistory na anodách jsou proto, že pokud by svítilo více segmentů zároveň, celkový proud by přesáhl maximální proud pinu procesoru a ten by se mohl zničit.
 
