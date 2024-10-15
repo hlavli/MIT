@@ -18,7 +18,7 @@ Například pokud budeme mít displej připojen k portu B a budeme chtít zapsat
 
 |Segment| DP    | g    | f    | e    | d    | c    | b    | a    | 
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:| 
-|**Bit**|  **1**| **1**| **0**|  **0** | **0** | **0** | **0** | **0** | 
+|**Hodnota bitu**|  **1**| **1**| **0**|  **0** | **0** | **0** | **0** | **0** | 
 
 ```C
 PORTB = 0b11000000; // Zobrazíme na displeji nulu
