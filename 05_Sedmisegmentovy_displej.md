@@ -77,4 +77,4 @@ Zkuste si příklad sami modifikovat:
 - aby vypisoval čísla 0-9
 - aby vypisoval čísla na jiné pozici displeje
 - aby počítal pouze 1-5
-- aby displej zhasnul, pokud budeme držet tlačítko
+- aby při stisku tlačítka SW0 se zobrazila na displeji nula, při stisku SW1 jednička, atd.
