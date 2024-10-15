@@ -21,13 +21,17 @@ Například pokud budeme mít displej připojen k portu B a budeme chtít zapsat
 |**Bit**|  **1**| **1**| **0**|  **0** | **0** | **0** | **0** | **0** | 
 
 ```C
-PORTB = 0xC0; // Zobrazíme na displeji nulu
+PORTB = 0b11000000; // Zobrazíme na displeji nulu
 ```
 
 ### Zapojení v přípravku
 Sedmisegmentové displeje mohou být buď se společnou katodou (všechny katody jsou spojeny a připojeny k zemi, anody jsou vyvedeny pro každý segment zvlášť) nebo naopak se společnou anodou. Pohledem do schématu našeho přípravku zjistíme, že ten náš je se společnou anodou.
 
 ![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
+
+```C
+PORTD = 0b11011111; // Otevřeme tranzistor, který připojí 5V na anodu AN6 (na přípravku nejvíc vlevo).
+```
 
 V našem přípravku není sedmisegmentový displej připojen k procesoru trvale, ale je vyveden na pinovou lištu. Pokud chceme displej používat, musíme ho připojit kablíky viz. obrázek níže.
 
