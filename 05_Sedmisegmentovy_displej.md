@@ -24,7 +24,7 @@ Například pokud budeme mít displej připojen k portu B a budeme chtít zapsat
 PORTB = 0b11000000; // Zobrazíme na displeji nulu
 ```
 
-### Zapojení v přípravku
+### Zapojení displeje v našem  přípravku
 Sedmisegmentové displeje mohou být buď se společnou katodou (všechny katody jsou spojeny a připojeny k zemi, anody jsou vyvedeny pro každý segment zvlášť) nebo naopak se společnou anodou. Pohledem do schématu našeho přípravku zjistíme, že ten náš je se společnou anodou.
 
 ![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
@@ -37,4 +37,27 @@ V našem přípravku není sedmisegmentový displej připojen k procesoru trvale
 
 ![image](https://github.com/user-attachments/assets/1320cb6d-6883-4c99-9c53-15064df9df56)
 
+## Příklad programu
 
+```C
+#include <avr/io.h>
+#define F_CPU 16000000
+#include <util/delay.h>
+
+unsigned char znaky[]={0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e}; // pole kombinací segmentů (a, b, c, d, e, f)
+
+int main(void)
+{	DDRB=0xff; // Nastaví port B, jako výstup (je připojen k segmentům)
+	DDRD=0xff; // Nastaví port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
+	PORTD=0xDF; // Otevře tranzistor, který napájí anodu číslice vlevo
+	
+	while (1)
+	{
+		for (int i=0;i<6;i++) //cyklus bude zvyšovat proměnnou "i" od 0 do 5
+		{
+			PORTB=znaky[i];	// Zapíše na displej i-tý prvek z pole
+			_delay_ms(500); // Program se na 500ms zastaví, abychom stihli okem vnímat změnu
+		}
+	}
+}
+```
