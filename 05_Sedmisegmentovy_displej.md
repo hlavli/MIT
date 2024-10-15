@@ -29,6 +29,8 @@ Sedmisegmentové displeje mohou být buď se společnou katodou (všechny katody
 
 ![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
 
+Na přípravku máme celkem šest sedmisegmentových číslic. Jak zobrazovat čísla na různých pozicích najednou, si ukážeme až v některém z dalších cvičení. Pro teĎ si vystačíme s jendou pozicí, například tou nejvíc vlevo. Ta je napájena anodou AN6. Pomocí Portu D k ní připojíme napětí, zatímco všechny ostatní necháme vypnuté - nulou otevřeme tranzistor, který jí napájí, jednočkou na všech ostatních pozicíh ostatní anody vypneme. Tranzistory na anodách jsou proto, že pokud by svítilo více segmentů zároveň, celkový proud by přesáhl maximální proud pinu procesoru a ten by se mohl zničit.
+
 ```C
 PORTD = 0b11011111; // Otevřeme tranzistor, který připojí 5V na anodu AN6 (na přípravku nejvíc vlevo).
 ```
