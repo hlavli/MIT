@@ -44,7 +44,12 @@ V našem přípravku není sedmisegmentový displej připojen k procesoru trvale
 ## Příklad programu
 Jednoduchý program, který na jedné pozici sedmisegmentového displeje bude střídavě zobrazovat písmena a,b,c,d,e,f. 
 
-Zkuste si ho sami modifikovat:
+Projděte si jej a zopakujte si
+ - K čemu slouží pole, jak se v jazyce C deklaruje a jak z nějk získáme konkrétní prvek
+ - K čemu lsoží a jak se v jazyce C zapisuje for cyklus
+
+
+Zkuste si příklad sami modifikovat:
 - aby vypisoval čísla 0-9
 - aby vypisoval čísla na jiné pozici displeje
 - aby počítal pouze 1-5
