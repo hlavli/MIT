@@ -18,7 +18,7 @@ V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do 
 
 ![image](https://github.com/user-attachments/assets/07eff5d5-d405-4caa-a664-ae9a075abdff)
 
-Při převodu z binární do hexadecimální soustavy si binární číslo rozdělíme na čtveřeice (začneme zprava. Nad číslice v každé čtveřici si napíšeme "váhy" jednotlivých cifer, 8-4-2-1. Každá bitová čtveřice nám vytvoří jednu hexadecimální číslici. Abychom ji získali, sečteme jen ty váhy, pod kterými je jednička. V příkladu níže tedy sečteme váhy 1 + 4. Výsledek je 0x5.
+Při převodu z binární do hexadecimální soustavy si binární číslo rozdělíme na čtveřice (začneme zprava. Nad číslice v každé čtveřici si napíšeme "váhy" jednotlivých cifer, 8-4-2-1. Každá bitová čtveřice nám vytvoří jednu hexadecimální číslici. Abychom ji získali, sečteme jen ty váhy, pod kterými je jednička. V příkladu níže tedy sečteme váhy 1 + 4. Výsledek je 0x5.
 
 
 ```
@@ -41,12 +41,12 @@ bin:  1 1 1 1  0 1 0 1 = 0xF5
 
 ```
       8 4 2 1  8 4 2 1  8 4 2 1
-bin:  1 0 1 0  1 1 1 0  1 1 0 0 = 0xA7C
+bin:  1 0 1 0  1 1 1 0  1 1 0 0 = 0xAEC
 ```
 
 ## Převod z hexadecimální do binární soustavy
 
-Provedeme přesně opačně. Pro každou hexadecimální číslici si napíšeme (nebo jen představíme) váhy 8-4-2-1. A podíváme se, kteér váhy musíme sečíst abychom dostali danou číslici. Např 5 napíšeme jako 1+4, tedy pod váhami 1 a 4 budou jedničky, pod zbylými vahami nuly. 
+Provedeme přesně opačně. Pro každou hexadecimální číslici si napíšeme (nebo jen představíme) váhy 8-4-2-1. A podíváme se, které váhy musíme sečíst abychom dostali danou číslici. Např 5 napíšeme jako 1+4, tedy pod váhami 1 a 4 budou jedničky, pod zbylými vahami nuly. 
 ```
         8 4 2 1  8 4 2 1
 0x52 =  0 1 0 1  0 0 1 0
