@@ -34,7 +34,7 @@ Na přípravku máme celkem šest sedmisegmentových číslic. Jak zobrazovat č
 Tranzistory na anodách jsou proto, že pokud by svítilo více segmentů zároveň, celkový proud by přesáhl maximální proud pinu procesoru a ten by se mohl zničit.
 
 ```C
-PORTD = 0b11011111; // Otevřeme tranzistor, který připojí 5V na anodu AN6 (na přípravku nejvíc vlevo).
+PORTD = 0b11011111; // Otevřeme tranzistor, který připojí 5V na anodu AN6 (na přípravku nejvíc vpravo).
 ```
 
 V našem přípravku není sedmisegmentový displej připojen k procesoru trvale, ale je vyveden na pinovou lištu. Pokud chceme displej používat, musíme ho připojit kablíky viz. obrázek níže.
@@ -59,7 +59,7 @@ unsigned char znaky[]={0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e}; // pole kombinací s
 int main(void)
 {	DDRB = 0xff; // Nastaví port B, jako výstup (je připojen k segmentům)
 	DDRD = 0xff; // Nastaví port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
-	PORTD = 0xDF; // Otevře tranzistor, který napájí anodu číslice vlevo
+	PORTD = 0b11011111; // Otevře tranzistor, který napájí anodu číslice vpravo
 	
 	while (1)
 	{
