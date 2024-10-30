@@ -79,3 +79,6 @@ Zkuste si příklad sami modifikovat:
 2. Aby vypisoval čísla na jiné pozici displeje
 3. Aby počítal pouze 1-5
 4. Aby při stisku tlačítka SW0 se zobrazila na displeji nula, při stisku SW1 jednička, atd.
+
+
+### [Zpět na obsah](README.md)
