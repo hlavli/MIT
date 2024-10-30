@@ -60,11 +60,11 @@ unsigned char cti_klavesnici()
 
 		for(int sloupce=4; sloupce<8; sloupce++) // Otestuj postupně všechny sloupce
 		{
-			if(~PINE & (1<<sloupce)) //Otestuj, zda je aktuální sloupec 0
+			if(~PINE & (1<<sloupce)) // Otestuj, zda je aktuální sloupec 0 (klávesa stisknuta)
 			{
 				return(vystup[index]); //vrať číslo stisknuté klávesy
 			}
-			else
+			else // Pokud není klávesa stisknuta
 			{
 				index++; // Zvýšíme index aktuálně testované klávesy
 			}
