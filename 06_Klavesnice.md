@@ -78,8 +78,13 @@ TODO - program, který volá funkci klávesnice a když je stisknuto číslo men
 
 ## Úkoly
 
-- Napište program, který číslo stisknuté klávesy zobrazí binárně pomocí LEDek
-- Napište program, který číslo stisknuté klávesy zobrazí na sedmisegmentovém displeji
-- Bonusový úkol za jedničku: Napište program, který po stisku klávesy začne odpočítávání na sedmisegmentovém displeji. Např. pokud stisknu klávesu 6, rozběhne se na 7seg displeji odpočet od 6 do 0 po 500ms.
+1. Napište program, který číslo stisknuté klávesy zobrazí binárně pomocí LEDek
+    - Nastavte port, kde jsou připojeny LEDky jako výstupní (pomocí zápisu do registru DDRF - vstup je 0, výstup 1)
+    - Zavolejte funkci pro čtení klávesnice
+    - Číslo, které funkce vrátí zapiště do registru PORTF
+ 
+2. Napište program, který číslo stisknuté klávesy zobrazí na sedmisegmentovém displeji
+
+3. Napište program, který po stisku klávesy začne odpočítávání na sedmisegmentovém displeji. Např. pokud stisknu klávesu 6, rozběhne se na 7seg displeji odpočet od 6 do 0 po 500ms.
 
 
