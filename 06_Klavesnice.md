@@ -9,6 +9,41 @@ Tlačítka na klávesnici, kterou máme na našem přípravku jsou elektricky za
 ![image](https://github.com/user-attachments/assets/0a66df32-db48-4a86-8e6b-3db6a08fab85)
 
 ## Princip detekce stisknuté klávesy
-Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů, v našem případě na portu E. Piny které jsou připojeny k řádkům (rows) jsou nastaveny jako výstupní. Vždy jeden z nich nastavíme do nuly a ostatní do jedničky. Piny připojené ke sloupcům (columns) nastavíme jako vstupní - budeme číst jejich stav.
+Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů, v našem případě na portu E. Piny R1-R4 které jsou připojeny k řádkům (rows) jsou nastaveny jako výstupní. Vždy jeden z nich nastavíme do nuly a ostatní do jedničky. Piny C1-C4 připojené ke sloupcům (columns) nastavíme jako vstupní - budeme číst jejich stav. Budeme klávesnici kontrolovat řádek po řádku. Vždy příslušný řádek nastavíme do nuly a přečteme hodnoty ze sloupců. Pokud žádné tlačítko není stisknuto, všechny sloupce budou v logické 1 (drží je v ní pullup odpory uvnitř procesoru). Pokud je ale nějaké klávesa stisknuta, pin příslušného sloupce bude v logické 0 (protože ho stisknuté tlačítko propojilo s nulou, ketrou jsme nastavili na daný řádek.
 
 ![image](https://github.com/user-attachments/assets/ff58be03-664f-4d2c-b101-17b8e55cfdcb)
+
+## Program pro detekci stisknuté klávesy
+
+
+
+```c
+unsigned char klav()
+{
+	// Pole s definicí hodnot kláves * jsme určili jako 14 a # jako 15
+	unsigned char vystup[16]={1,2,3,10, 
+                                  4,5,6,11,
+                                  7,8,9,12,
+                                  14,0,15,13};
+							  
+	int index=0;
+	
+	for(int radky=3;radky>=0;radky--) // Otestuj postupně všechny řádky
+	{
+		PORTE=~(1<<radky); //Zapiš nulu na aktuální řádek
+		_delay_us(1);
+		for(int sloupce=4; sloupce<8; sloupce++) // Otestuj postupně všechny sloupce
+		{
+			if(~PINE & (1<<sloupce)) //Otestuj, zda je aktuální sloupec 0
+			{
+				return(vystup[index]); //vrať číslo stisknuté klávesy
+			}
+      else
+      {
+			index++; // Zvýšíme index aktuálně testované klávesy
+      }
+		}
+	}
+	return 255; // Pokud není stisknuta žádná klávesa, vrať 255
+}
+```
