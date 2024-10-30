@@ -50,13 +50,13 @@ unsigned char get_key()
                                   7,8,9,12,
                                   14,0,15,13};
 							  
-	int index=0;
+	int index = 0; // Proměnná pro počítání, kolikátou klávesu testujeme
 	
 	for(int radky=3;radky>=0;radky--) // Otestuj postupně všechny řádky
 	{
 		PORTE=~(1<<radky); //Zapiš nulu na aktuální řádek
 
-		_delay_us(1);
+		_delay_us(1); 
 
 		for(int sloupce=4; sloupce<8; sloupce++) // Otestuj postupně všechny sloupce
 		{
