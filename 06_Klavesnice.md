@@ -106,10 +106,7 @@ int main(void)
 
 ## Úkoly
 
-1. Napište program, který číslo stisknuté klávesy zobrazí binárně pomocí LEDek
-    - Nastavte port, kde jsou připojeny LEDky jako výstupní (pomocí zápisu do registru DDRF - vstup je 0, výstup 1)
-    - Zavolejte funkci pro čtení klávesnice
-    - Číslo, které funkce vrátí zapiště do registru PORTF
+1. Napište program, který číslo stisknuté klávesy zobrazí binárně pomocí LEDek (zapište ho do registru PORTF)
  
 2. Napište program, který číslo stisknuté klávesy zobrazí na sedmisegmentovém displeji
 
