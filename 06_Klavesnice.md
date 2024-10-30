@@ -11,7 +11,20 @@ Tlačítka na klávesnici, kterou máme na našem přípravku jsou elektricky za
 ## Princip detekce stisknuté klávesy
 Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů. Piny R1-R4 které jsou připojeny k řádkům (rows) jsou nastaveny jako výstupní. Vždy jeden z nich nastavíme do nuly a ostatní do jedničky. Piny C1-C4 připojené ke sloupcům (columns) nastavíme jako vstupní - budeme číst jejich stav. Budeme klávesnici kontrolovat řádek po řádku. Vždy příslušný řádek nastavíme do nuly a přečteme hodnoty ze sloupců. Pokud žádné tlačítko není stisknuto, všechny sloupce budou v logické 1 (drží je v ní pullup odpory uvnitř procesoru). Pokud je ale nějaké klávesa stisknuta, pin příslušného sloupce bude v logické 0 (protože ho stisknuté tlačítko propojilo s nulou, ketrou jsme nastavili na daný řádek.
 
-![image](https://github.com/user-attachments/assets/ff58be03-664f-4d2c-b101-17b8e55cfdcb)
+### Stav bez stisku klávesy 
+
+Na obrázku je zobrazen stav, kdy testujeme první řádek - zapíšeme do pinu R1 logickou 0 a přečteme stav všech sloupců. Protože jsou všechny sloupce v logické 1, víme, že není v daném řádku stisknuta žádná klávesa.
+
+![image](https://github.com/user-attachments/assets/1f9f4d0b-9065-4295-a417-e351b2a86bfc)
+
+
+### Stav při stisknu klávesy
+
+Opět testujeme první řádek zapsáním nuly do R1. Tentokrát ale na pinu sloupce C3 přečteme logickou 0. Víme tedy, že klávesa na prvním řádku a třetím sloupci je stisknuta.
+
+![image](https://github.com/user-attachments/assets/a8ab22fb-e91f-460c-a935-10f00090eb9a)
+
+
 
 ## Program pro detekci stisknuté klávesy
 
