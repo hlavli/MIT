@@ -1,6 +1,6 @@
 # Klávesnice
 
-Další periferií, kterou se naučíme využívat spolu s mikroprocesorem je klávesnice. Tedy vstupní zařízení, kterým uživatel zadává údaje. Už umíme pracovat s jednotlivými tlačítky. Mohli bychom si tedy jednoduchou 4x4 klávesnici vyrobit tak, že bychom k procesoru připojili 16 tlačítek. To by šlo, ale zabrali bychom tím 16 vstupních pinů procesoru, což je hodně. V praxi se používá maticové uspořádání klávesnice, kde si vystačíme jen s polovičním počtem pinů.
+Další periferií, kterou se naučíme využívat spolu s mikroprocesorem je klávesnice. Už umíme pracovat s jednotlivými tlačítky. Mohli bychom si tedy jednoduchou 4x4 klávesnici vyrobit tak, že bychom k procesoru připojili 16 tlačítek. To by šlo, ale zabrali bychom tím 16 vstupních pinů procesoru, což je hodně. V praxi se používá maticové uspořádání klávesnice, kde si vystačíme jen s polovičním počtem pinů.
 
 
 ## Elektrické schéma klávesnice
