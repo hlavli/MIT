@@ -56,8 +56,6 @@ unsigned char cti_klavesnici()
 	{
 		PORTE=~(1<<radky); //Zapiš nulu na aktuální řádek
 
-		_delay_us(1); 
-
 		for(int sloupce=4; sloupce<8; sloupce++) // Otestuj postupně všechny sloupce
 		{
 			if(~PINE & (1<<sloupce)) // Otestuj, zda je aktuální sloupec 0 (klávesa stisknuta)
