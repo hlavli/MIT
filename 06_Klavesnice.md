@@ -16,7 +16,7 @@ Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů. Piny R1-R4 kt
 
 Na obrázku je zobrazen stav, kdy testujeme první řádek - zapíšeme do pinu R1 logickou 0 a přečteme stav všech sloupců. Protože jsou všechny sloupce v logické 1, víme, že není v daném řádku stisknuta žádná klávesa.
 
-![image](https://github.com/user-attachments/assets/1f9f4d0b-9065-4295-a417-e351b2a86bfc)
+![image](https://github.com/user-attachments/assets/7c8b29f0-6e94-4dac-a319-7170a987fe7b)
 
 
 ### Stav při stisknu klávesy
@@ -24,7 +24,6 @@ Na obrázku je zobrazen stav, kdy testujeme první řádek - zapíšeme do pinu 
 Opět testujeme první řádek zapsáním nuly do R1. Tentokrát ale na pinu sloupce C3 přečteme logickou 0. Víme tedy, že klávesa na prvním řádku a třetím sloupci je stisknuta.
 
 ![image](https://github.com/user-attachments/assets/a8ab22fb-e91f-460c-a935-10f00090eb9a)
-
 
 
 ## Program pro detekci stisknuté klávesy
