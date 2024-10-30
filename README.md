@@ -5,3 +5,4 @@
 3. [Převody soustav, bitové operace](03_Bitove_operace.md)
 4. [Práce s tlačítky](04_Tlacitka_podminky.md)
 5. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
+6. [Klávesnice](06_Klavesnice.md)
