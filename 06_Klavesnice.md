@@ -1,6 +1,6 @@
 # Klávesnice
 
-Další periferií, kterou se naučíme využívat spolu s mikroprocesorem je klávesnice. Tedy vstupní zařízení, kterým uživatel zadává údaje. Už umíme pracovat s jednotlivými tlačítko. Mohli bychom si tedy jednoduchou 4x4 klávesnici vyrobit tak, že bychom k procesoru připojili 16 tlačítek. To by šlo, ale zabrali bychom tím 16 vstupních pinů procesoru, což je hodně. V praxi se používá maticové uspořádání klávesnice, kde si vystačíme jen s polovičním počtem pinů.
+Další periferií, kterou se naučíme využívat spolu s mikroprocesorem je klávesnice. Tedy vstupní zařízení, kterým uživatel zadává údaje. Už umíme pracovat s jednotlivými tlačítky. Mohli bychom si tedy jednoduchou 4x4 klávesnici vyrobit tak, že bychom k procesoru připojili 16 tlačítek. To by šlo, ale zabrali bychom tím 16 vstupních pinů procesoru, což je hodně. V praxi se používá maticové uspořádání klávesnice, kde si vystačíme jen s polovičním počtem pinů.
 
 
 ## Elektrické schéma klávesnice
@@ -15,7 +15,7 @@ Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů. Piny R1-R4 kt
 
 ## Program pro detekci stisknuté klávesy
 
-Nejprve se podíváme, jak mám klávesnici v našem přípravku zapojenu, pohledem do schématu vidíme, že je připojena na port E. Spodní čtyři bity (0-3) jsou připojeny k řádkům, horní čtyři bity (4-7) ke sloupcům. 
+Nejprve se podíváme, jak máme klávesnici v našem přípravku zapojenu, pohledem do schématu vidíme, že je připojena na port E. Spodní čtyři bity (0-3) jsou připojeny k řádkům, horní čtyři bity (4-7) ke sloupcům. 
 
 ![image](https://github.com/user-attachments/assets/86e60758-4c55-4c5a-b7b1-20985e18c317)
 
@@ -24,7 +24,7 @@ Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Pro
 ```DDRE=0x0f;  //=0b00001111; ```
 
 
-Protože kód pro detekci kávesy už je docela dlouhý, je lepší si pro něj vytvořit vlastní funkci, kterou pak můžeme kdekoli v programu zavolat.
+Protože kód pro detekci klávesy už je docela dlouhý, je lepší si pro něj vytvořit vlastní funkci, kterou pak můžeme kdekoli v programu zavolat.
 
 ```c
 unsigned char get_key()
@@ -67,6 +67,6 @@ TODO - program, který volá funkci klávesnice a když je stisknuto číslo men
 
 - Napište program, který číslo stisknuté klávesy zobrazí binárně pomocí LEDek
 - Napište program, který číslo stisknuté klávesy zobrazí na sedmisegmentovém displeji
-- Bonusový úkol za jedničku: Napište program, který po stisku klávesy začne odpočítávání na sedmisegmentovém displeji. Např pokud stisknu klávesu 6, rozběhne se na 7seg displeji odpočet od 6 do 0 po 500ms.
+- Bonusový úkol za jedničku: Napište program, který po stisku klávesy začne odpočítávání na sedmisegmentovém displeji. Např. pokud stisknu klávesu 6, rozběhne se na 7seg displeji odpočet od 6 do 0 po 500ms.
 
 
