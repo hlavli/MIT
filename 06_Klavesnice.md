@@ -42,7 +42,7 @@ Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Pro
 Protože kód pro detekci klávesy už je docela dlouhý, je lepší si pro něj vytvořit vlastní funkci, kterou pak můžeme kdekoli v programu zavolat.
 
 ```c
-unsigned char get_key()
+unsigned char cti_klavesnici()
 {
 	// Pole s definicí hodnot kláves * jsme určili jako 14 a # jako 15
 	unsigned char vystup[16]={1,2,3,10, 
@@ -74,8 +74,34 @@ unsigned char get_key()
 }
 ```
 
+Zkusíme naši funkci pro čtení klávesnice použít. Ukázkový program čte klávesnici, pokud je stisknuta klávesa menší než 5, rozsvítí spodní čtyři LEDky, pokud je stisknuta vyšší klávesa, rozsvítí horní čtyři LEDky.
+
 ```c
-TODO - program, který volá funkci klávesnice a když je stisknuto číslo menší než 10, rozsvítí LEDku
+int main(void)
+{
+	DDRF=0xFF; // Port F s LEDkami nastavíme jako výstup
+	DDRE=0x0f; // Port E, kde je připojena klávesnice - bity s řádky jsou výstupy, bity se sloupci vstupy
+	PORTF=0xff; // Na začátku všechny LEDky zhasneme
+	
+	unsigned char cislo; // Proměnná, do které si uložíme číslo stisknuté klávesy
+	
+	while (1) // Nekonečná smyčka
+	{
+		cislo=cti_klavesnici(); // Do proměnné uložím výsledek funkce
+		
+		if (cislo != 255) // Kód níže se provede pouze poku funkce vrátila něco jiného než 255 (pouze pokud je nějaká klávesa stisknutá)
+		{ 
+			if (cislo < 5)	// Pokud je stisknutá klávesa menší než 5
+			{
+				PORTF = 0xF0; // Rozsvítíme dolní 4 LEDky
+			}
+			else
+			{
+				PORTF = 0x0F; // Pokud ne, rozsvítíme horní 4 LEDky
+			}
+		}
+	}
+}
 ```
 
 ## Úkoly
