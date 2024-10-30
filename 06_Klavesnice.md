@@ -32,6 +32,9 @@ Nejprve se podíváme, jak máme klávesnici v našem přípravku zapojenu, pohl
 
 ![image](https://github.com/user-attachments/assets/86e60758-4c55-4c5a-b7b1-20985e18c317)
 
+
+![image](https://github.com/user-attachments/assets/316319f9-be80-4a47-89b3-efac81778e2c)
+
 Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Proto spodní polovinu portu E nastavíme jako výstup, horní jako vstup:
 
 ```DDRE=0x0f;  //=0b00001111; ```
