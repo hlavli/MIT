@@ -9,6 +9,8 @@ Tlačítka na klávesnici, kterou máme na našem přípravku jsou elektricky za
 
 ![image](https://github.com/user-attachments/assets/0a66df32-db48-4a86-8e6b-3db6a08fab85)
 
+*Zdroj obrázku: https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/*
+
 ## Princip detekce stisknuté klávesy
 Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů. Piny R1-R4 které jsou připojeny k řádkům (rows) jsou nastaveny jako výstupní. Vždy jeden z nich nastavíme do nuly a ostatní do jedničky. Piny C1-C4 připojené ke sloupcům (columns) nastavíme jako vstupní - budeme číst jejich stav. Budeme klávesnici kontrolovat řádek po řádku. Vždy příslušný řádek nastavíme do nuly a přečteme hodnoty ze sloupců. Pokud žádné tlačítko není stisknuto, všechny sloupce budou v logické 1 (drží je v ní pullup odpory uvnitř procesoru). Pokud je ale nějaké klávesa stisknuta, pin příslušného sloupce bude v logické 0 (protože ho stisknuté tlačítko propojilo s nulou, ketrou jsme nastavili na daný řádek.
 
