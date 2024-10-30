@@ -30,10 +30,7 @@ Opět testujeme první řádek zapsáním nuly do R1. Tentokrát ale na pinu slo
 
 Nejprve se podíváme, jak máme klávesnici v našem přípravku zapojenu, pohledem do schématu vidíme, že je připojena na port E. Spodní čtyři bity (0-3) jsou připojeny k řádkům, horní čtyři bity (4-7) ke sloupcům. 
 
-![image](https://github.com/user-attachments/assets/86e60758-4c55-4c5a-b7b1-20985e18c317)
-
-
-![image](https://github.com/user-attachments/assets/316319f9-be80-4a47-89b3-efac81778e2c)
+<img src="https://github.com/user-attachments/assets/0b3bf3f7-2e96-4640-97b6-f54a5a5763b9" width="250"/>
 
 Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Proto spodní polovinu portu E nastavíme jako výstup, horní jako vstup:
 
