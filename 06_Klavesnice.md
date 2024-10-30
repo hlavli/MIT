@@ -77,15 +77,15 @@ Zkusíme naši funkci pro čtení klávesnice použít. Ukázkový program čte 
 ```c
 int main(void)
 {
-	DDRF=0xFF; // Port F s LEDkami nastavíme jako výstup
-	DDRE=0x0f; // Port E, kde je připojena klávesnice - bity s řádky jsou výstupy, bity se sloupci vstupy
-	PORTF=0xff; // Na začátku všechny LEDky zhasneme
+	DDRF = 0xff; // Port F s LEDkami nastavíme jako výstup
+	DDRE = 0x0f; // Port E, kde je připojena klávesnice - bity s řádky jsou výstupy, bity se sloupci vstupy
+	PORTF = 0xff; // Na začátku všechny LEDky zhasneme
 	
 	unsigned char cislo; // Proměnná, do které si uložíme číslo stisknuté klávesy
 	
 	while (1) // Nekonečná smyčka
 	{
-		cislo=cti_klavesnici(); // Do proměnné uložím výsledek funkce
+		cislo = cti_klavesnici(); // Do proměnné uložím výsledek funkce
 		
 		if (cislo != 255) // Kód níže se provede pouze poku funkce vrátila něco jiného než 255 (pouze pokud je nějaká klávesa stisknutá)
 		{ 
