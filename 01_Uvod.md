@@ -1,5 +1,5 @@
 # Výukový přípravek, nahrání programu
-Na této stránce najdete základní informace k tomu, jak používat výukový přípravek. Cíže jsou odkazy na jeho schema a datasheet k použitému mikrokontoleru. Dále je zde návod, jak vytvořit pro desku nový projekt v Michrochip studiu a jak pak program nahrát do přípravku.
+Na této stránce najdete základní informace k tomu, jak používat výukový přípravek. Níže jsou odkazy na jeho schéma a datasheet k použitému mikrokontoleru. Dále je zde návod, jak vytvořit pro desku nový projekt v Michrochip studiu a jak pak program nahrát do přípravku.
 
 ## Vývojová deska
 Na cvičení budeme používat vývojovou desku s mikrokontrolerem ATMEGA 2560, tedy stejným jako je použit v známé desce Arduino MEGA. 
