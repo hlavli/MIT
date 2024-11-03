@@ -36,7 +36,7 @@ Nejprve se podíváme, jak máme klávesnici v našem přípravku zapojenu, pohl
 
 Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Proto spodní polovinu portu E nastavíme jako výstup, horní jako vstup:
 
-```DDRE=0x0f;  //=0b00001111; ```
+```DDRE = 0x0f;  //=0b00001111; ```
 
 
 Protože kód pro detekci klávesy už je docela dlouhý, je lepší si pro něj vytvořit vlastní funkci, kterou pak můžeme kdekoli v programu zavolat.
@@ -56,11 +56,11 @@ unsigned char cti_klavesnici()
 	{
 		PORTE=~(1<<radky); //Zapiš nulu na aktuální řádek
 
-		for(int sloupce=4; sloupce<8; sloupce++) // Otestuj postupně všechny sloupce
+		for(int sloupec=4; sloupec<8; sloupec++) // Otestuj postupně všechny sloupce
 		{
-			if(~PINE & (1<<sloupce)) // Otestuj, zda je aktuální sloupec 0 (klávesa stisknuta)
+			if((PINE &(1<<sloupec))==0) // Otestuj, zda je aktuální sloupec 0 (klávesa stisknuta)
 			{
-				return(vystup[index]); //vrať číslo stisknuté klávesy
+				return(vystup[index]); //Vrať číslo stisknuté klávesy
 			}
 			else // Pokud není klávesa stisknuta
 			{
