@@ -74,11 +74,11 @@ int main(void)
 ```
 
 
-Zkuste si příklad sami modifikovat:
-1. Aby vypisoval čísla 0-9
-2. Aby vypisoval čísla na jiné pozici displeje
-3. Aby počítal pouze 1-5
-4. Aby při stisku tlačítka SW0 se zobrazila na displeji nula, při stisku SW1 jednička, atd.
+## Úkoly:
+1. Upravte příklad, aby vypisoval čísla 0-9
+2. Upravte příklad, aby vypisoval čísla na jiné pozici displeje
+3. Upravte příklad, aby počítal pouze 1-5
+4. Upravte příklad, aby při stisku tlačítka SW0 se zobrazila na displeji nula, při stisku SW1 jednička, atd.
 
 
 ### [Zpět na obsah](README.md)
