@@ -12,7 +12,7 @@ Budeme muset použít techniku, které se říká multiplexování. Multiplexov�
 
 
 ## Ukázka vlivu časování multiplexingu na lidské oko
-Zkuste si do přípravku nahrát program níže.
+Zkuste si do přípravku nahrát program níže.Je to jednoduchá ukázka časového multiplexu displeje. Potenciometrem na přípravku můžete nastavit dobu, po kterou je rozsvícena jedna pozice. Měli byste vidět, že od určité rychlosti už lidské oko přestane vidět blikání, ale zdá se mu, že všechny pozice svítí stabilně.
 
 ```c
 #include <avr/io.h>
@@ -55,6 +55,7 @@ int main(void)
 ```
 
 ## Úkoly:
+Doporučuju nesnažit se upravovat příklad výše, raději si založte nový projekt a jen si zkopírujte pole s nastavením segmentů.
 
 1. Napište program, který zobrazí trojciferné číslo
     - Nastavit vstupy/výstupy pro 7seg displej  
