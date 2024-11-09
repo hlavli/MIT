@@ -66,8 +66,9 @@ Doporučuju nesnažit se upravovat příklad výše, raději si založte nový p
 
 2. Rozšiřte program tak, aby zobrazoval šesticiferné číslo
 
-3. Vytvořte funkci void zobraz_cislo(int cislo), která dostane jako vstup 1-6 ciferné číslo. Toto vstupní číslo sama rozloží na jednotlivé číslice a zobrazí je na displeji
+3. Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Toto vstupní číslo sama rozloží na jednotlivé číslice a zobrazí je na displeji
 
+4. Zobrazte na displeji odpocet od sta do nuly.
 
 
 ### [Zpět na obsah](README.md)
