@@ -28,9 +28,9 @@ int main(void)
 	DDRD = 0xff; // Nastaví port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
 
 	// Nastavení AD převodníku, abychom mohli potenciometrem nastavovat rychlost displeje
-	ADMUX =0x40;
+	ADMUX = 0x40;
 	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
-	ADCSRB =0x08;
+	ADCSRB = 0x08;
 
 	// Nekonečná smyčka	
 	while(1)
