@@ -2,6 +2,8 @@
 
 V mikroprocesorové technice je nejrozšířenější programování v jazyce C. S tím jste se seznámili ve druhém ročníku v předmětu ICT.
 
+Protože na cvičeních z MIT budeme alespoň základní konstrukce jazyka C potřebovat, projděte si materiály odkazované níže.
+
 - [Co je proměnná, jak ji definovat a zapsat do ní](https://mrlvsb.github.io/upr-skripta/c/promenne/promenne.html)
 
 - [Co je to pole, jak ho vytvořit a jak přistupovat k jednotlivým prvkům v něm](https://mrlvsb.github.io/upr-skripta/c/pole/staticka_pole.html)
