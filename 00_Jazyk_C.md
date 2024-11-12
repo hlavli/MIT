@@ -8,7 +8,7 @@ V mikroprocesorové technice je nejrozšířenější programování v jazyce C.
  
 - [Jak napsat podmínku - příkaz if-else](https://mrlvsb.github.io/upr-skripta/c/rizeni_toku/if.html)
   
-- [Jak napsat cyklus for] (https://mrlvsb.github.io/upr-skripta/c/rizeni_toku/for.html)
-- 
-- [Jka si nadefinovat vlastní fuknci a jak ji pak zavolat] (https://mrlvsb.github.io/upr-skripta/c/funkce/funkce.html)
+- [Jak napsat cyklus for](https://mrlvsb.github.io/upr-skripta/c/rizeni_toku/for.html)
+  
+- [Jak si nadefinovat vlastní fuknci a jak ji pak zavolat](https://mrlvsb.github.io/upr-skripta/c/funkce/funkce.html)
 
