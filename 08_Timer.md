@@ -4,7 +4,29 @@ Timer, česky časovač je v mikroprocesorové technice důležitá periferie. P
 
 
 ## Časovač Timer1 v režimu Normal
+```C
+#include <avr/io.h>
+#define F_CPU 16000000
+#include <util/delay.h>
 
+int main(void)
+{
+    DDRF=0xFF;
+
+	TCCR1A = 0x00; // Normal mode
+	TCCR1B |= 0b00000101; // Prescaler /1024
+
+	while(1)
+	{
+	while((TIFR1 & (1<<OCF1A)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
+	
+	TIFR1|=(1<<OCF0A); // Vynulování příznakového bitu
+	
+	PORTF ^= 0xff; // Negace LEDek
+	}
+}
+
+```
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 Todo
