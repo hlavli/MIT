@@ -2,14 +2,20 @@
 
 Timer, česky časovač je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že neustále počítá, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
 
+TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
+
 ![image](https://github.com/user-attachments/assets/c8ab9daf-110e-46c4-9ba4-a1f7df43ef43)
 
+TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je tu i druhý nastavovací registr, ten v této lekci neppotřebujem
 ![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
 
+TODO - flagy přetečení - když čítač dojde nakonec, nastaví se do 1
 ![image](https://github.com/user-attachments/assets/d9c9c9f0-933f-4f83-bc20-c1f9b1b2ffbf)
 
 
 ## Časovač Timer1 v režimu Normal
+
+TODO zkusíme bliknout ledkou pokaždé, když čítač dojde do konce
 
 ```C
 #include <avr/io.h>
