@@ -53,6 +53,9 @@ int main(void)
 
 TODO - pokud chceme změnit frekvenci časovače, můžeme ho zkrátit tím, že nebude začínat od nuly, ale od vyšší hodnoty
 
+![image](https://github.com/user-attachments/assets/f4b588a7-8e9a-4763-bc06-7d04953222d2)
+
+
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
 TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
@@ -60,14 +63,15 @@ TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou ho
 ## Časovač Timer1 v režimu CTC
 Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
 
+![image](https://github.com/user-attachments/assets/81235363-e831-45a9-a6a9-911a3dbbaa07)
+
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
+
 
 ## Úkoly
 
 1. Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
 2. Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
-
-
 
 
 ### [Zpět na obsah](README.md)
