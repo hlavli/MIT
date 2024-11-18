@@ -8,6 +8,7 @@ TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
 ![image](https://github.com/user-attachments/assets/c8ab9daf-110e-46c4-9ba4-a1f7df43ef43)
 
 ## Důležité registry
+OCR, TCNT
 TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je tu i druhý nastavovací registr, ten v této lekci neppotřebujem
 ![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
 
@@ -51,6 +52,7 @@ TODO - pokud chceme změnit frekvenci časovače, můžeme ho zkrátit tím, že
 
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
+TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
 
 ## Časovač Timer1 v režimu CTC
 Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
