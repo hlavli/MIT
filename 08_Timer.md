@@ -4,7 +4,9 @@ Timer, česky časovač je v mikroprocesorové technice důležitá periferie. P
 
 ![image](https://github.com/user-attachments/assets/c8ab9daf-110e-46c4-9ba4-a1f7df43ef43)
 
-![image](https://github.com/user-attachments/assets/5f4f9e58-a38f-4570-8df4-f526c06c624f)
+![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
+
+![image](https://github.com/user-attachments/assets/d9c9c9f0-933f-4f83-bc20-c1f9b1b2ffbf)
 
 
 ## Časovač Timer1 v režimu Normal
