@@ -9,10 +9,6 @@ Timer, česky časovač je v mikroprocesorové technice důležitá periferie. P
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 Todo
 
-$\sqrt{3x-1}+(1+x)^2$
-
-dd
-
 <img src="https://github.com/user-attachments/assets/ca64838d-951c-4a38-af5d-1aede0d0d429" width="500"/>
 
 ## Časovač Timer1 v režimu CTC
