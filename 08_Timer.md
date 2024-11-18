@@ -25,7 +25,7 @@ int main(void)
 	{
 	while((TIFR1 & (1<<OCF1A)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
 	
-	TIFR1|=(1<<OCF0A); // Vynulování příznakového bitu
+	TIFR1|=(1<<OCF1A); // Vynulování příznakového bitu
 	
 	PORTF ^= 0xff; // Negace LEDek
 	}
