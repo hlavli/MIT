@@ -37,7 +37,7 @@ int main(void)
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 
-![image](https://github.com/user-attachments/assets/ece3c971-7831-4b28-8da7-70ffc9aad4ec)
+![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
 
 ## Časovač Timer1 v režimu CTC
