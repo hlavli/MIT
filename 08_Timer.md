@@ -66,6 +66,7 @@ Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
 
+TODO - popsat symboly ve vzorci
 
 ### Úkol
 Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
@@ -80,6 +81,8 @@ Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. 
 Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
+
+TODO - popsat symboly ve vzorci
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT1 pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
