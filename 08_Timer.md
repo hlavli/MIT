@@ -5,9 +5,11 @@ Timer, česky časovač je v mikroprocesorové technice důležitá periferie. P
 ## Důležité registry
 
 TODO přidat prescaler a hodiny
+
 ![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
 
 TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je tu i druhý nastavovací registr, ten v této lekci neppotřebujem
+
 ![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
 
 TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
@@ -17,6 +19,7 @@ TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
 
 
 TODO - flagy přetečení - když čítač dojde nakonec, nastaví se do 1
+
 ![image](https://github.com/user-attachments/assets/d9c9c9f0-933f-4f83-bc20-c1f9b1b2ffbf)
 
 
@@ -57,6 +60,7 @@ TODO - pokud chceme změnit frekvenci časovače, můžeme ho zkrátit tím, že
 ![image](https://github.com/user-attachments/assets/065ff747-06ff-49ed-b3b2-4533922b9b37)
 
 Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
+
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
 TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
@@ -67,6 +71,7 @@ Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efe
 ![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
 
 Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
+
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
 
 
