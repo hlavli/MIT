@@ -87,7 +87,7 @@ Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. 
 
 ![image](https://github.com/user-attachments/assets/065ff747-06ff-49ed-b3b2-4533922b9b37)
 
-Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
+Hodnotu pro přednsastavení registru TCNT spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
@@ -101,7 +101,7 @@ Prescaler - zvolená hodnota předděličky (/64, /1024 atd)
 
 Bits - počet bitů čítače (8 pro Timer0 a 16 pro Timer1)
 
-Narozdíl od CTC režimu, zde musíme do registru TCNT1 pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
+Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
 ### Úkol
 Použijte Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
