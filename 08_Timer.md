@@ -31,22 +31,20 @@ TODO zkusíme bliknout ledkou pokaždé, když čítač dojde do konce
 
 ```C
 #include <avr/io.h>
-#define F_CPU 16000000
-#include <util/delay.h>
 
 int main(void)
 {
-    DDRF=0xFF;
+	DDRF = 0xff;
 
-	TCCR1B = 0b00000100; // Prescaler 256, Normal mode
+	TCCR1B = 0b0000011; // Prescaler 64, Normal mode
 
 	while(1)
 	{
-	while((TIFR1 & (1<<OCF1A)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
-	
-	TIFR1|=(1<<OCF1A); // Vynulování příznakového bitu
-	
-	PORTF ^= 0xff; // Negace LEDek
+		while((TIFR1 & (1<<TOV1)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
+		
+		TIFR1 |= (1<<TOV1); // Vynulování příznakového bitu
+		
+		PORTF ^= 0xff; // Negace LEDek
 	}
 }
 
