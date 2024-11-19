@@ -56,10 +56,8 @@ int main(void)
 
 ```
 
-
 >### 1. Úkol
 >Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
-
 
 ## Časovač Timer1 v režimu CTC
 Nastavením prescaleru můžeme získat pouze několik málo frekvencí přetečení časovače. Pro jemnější nastavení můžeme použít režim CTC (Clear timer on Compare Match). Funguje tak, že nenecháme časovač počítat od nuly do maxima, ale do registru OCR1A nastavíme novou maximální hodnotu časovače. Když časovač "dopočítá" do této hodnoty (hodnota čítacího registru TCNT1 se bude rovnat hodnotě v compare registru OCR1A) dojde k přetečení čítače, nastaví se příznak přetečení OCF1A a čítač se nastaví opět do nuly. VIz obrázek níže.
