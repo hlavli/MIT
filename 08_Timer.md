@@ -78,7 +78,7 @@ Prescaler - zvolená hodnota předděličky (/64, /1024 atd)
 
 
 >### 2. Úkol 
->Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
+>Nastav časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
 
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
