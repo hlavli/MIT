@@ -50,6 +50,23 @@ int main(void)
 
 ```
 
+### Úkol
+Zkus nastavit jiné hodnoty prescaleru a sleduj jak se změní rychlost blikání LEDek
+
+## Časovač Timer1 v režimu CTC
+Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
+
+![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
+
+Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
+
+![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
+
+
+### Úkol
+Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
+
+
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 
 TODO - pokud chceme změnit frekvenci časovače, můžeme ho zkrátit tím, že nebude začínat od nuly, ale od vyšší hodnoty
@@ -62,20 +79,8 @@ Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
 
 TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
 
-## Časovač Timer1 v režimu CTC
-Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
-
-![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
-
-Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
-
-![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
-
-
-## Úkoly
-
-1. Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
-2. Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
+### Úkol
+Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
 
 
 ### [Zpět na obsah](README.md)
