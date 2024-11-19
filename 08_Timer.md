@@ -4,6 +4,7 @@ Timer, česky časovač je v mikroprocesorové technice důležitá periferie. P
 
 ## Důležité registry
 
+TODO přidat prescaler a hodiny
 ![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
 
 TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je tu i druhý nastavovací registr, ten v této lekci neppotřebujem
