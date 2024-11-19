@@ -68,7 +68,12 @@ Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
 
-TODO - popsat symboly ve vzorci
+fclk - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
+
+Prescaler - zvolená hodnota předděličky (/64, /1024 atd) 
+
+𝑓<sub>target</sub> - žádaná frekvence přetečení čítače
+
 
 ### Úkol
 Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
