@@ -9,6 +9,8 @@ Základní jednotkou časovače je čítací registr, který zvýší svou hodno
 ![image](https://github.com/user-attachments/assets/e81c67d0-bc13-4eca-91cd-75fa19a37643)
 
 ## Důležité registry
+**TCNT** je čítací registr, hodnota v něm se zvyšuje s každou nástupnou hranou hodin
+**TCCRB**
 
 ![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
 
