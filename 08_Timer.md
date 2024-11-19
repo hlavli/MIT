@@ -56,7 +56,7 @@ int main(void)
 
 ```
 
-### Úkol
+### 1. Úkol
 Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
 
 ## Časovač Timer1 v režimu CTC
@@ -77,7 +77,7 @@ Prescaler - zvolená hodnota předděličky (/64, /1024 atd)
 𝑓<sub>target</sub> - žádaná frekvence přetečení čítače
 
 
-### Úkol
+### 2. Úkol 
 Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
 
 
@@ -103,7 +103,7 @@ Bits - počet bitů čítače (8 pro Timer0 a 16 pro Timer1)
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
-### Úkol
+### 3. Úkol
 Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
 
