@@ -68,7 +68,7 @@ Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
 
 
 ### Úkol
-Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
+Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
 
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
@@ -84,7 +84,7 @@ Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
 TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
 
 ### Úkol
-Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každou 1s
+Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každé 2s
 
 
 ### [Zpět na obsah](README.md)
