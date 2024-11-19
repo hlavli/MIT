@@ -34,7 +34,7 @@ TODO zkusíme bliknout ledkou pokaždé, když čítač dojde do konce
 
 int main(void)
 {
-	DDRF = 0xff;
+	DDRF = 0xff; // PORTF nastavíme jako výstupní (LEDky)
 
 	TCCR1B = 0b0000011; // Prescaler 64, Normal mode
 
