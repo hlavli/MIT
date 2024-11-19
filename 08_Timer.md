@@ -2,12 +2,14 @@
 
 Časovač, anglicky Timer je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že po prvotním nastavení počítá sám, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
 
-## Princip časovařče, důležité registry
+## Princip časovače, důležité registry
 
 ![image](https://github.com/user-attachments/assets/e81c67d0-bc13-4eca-91cd-75fa19a37643)
 
+## Důležité registry
 
 ![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
+
 *Zdroj obrázků: https://exploreembedded.com/wiki/AVR_Timer_programming*
 
 V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) . Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
