@@ -10,11 +10,11 @@ Základní jednotkou časovače je čítací registr, který zvýší svou hodno
 
 ## Nastavení časovače
 
-V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) . Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
+V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) .
 
 ![image](https://github.com/user-attachments/assets/03858294-1551-4f8e-a3e9-1179efdfa39f)
 
-Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotlivé bity WGMxx.
+Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotlivé bity WGMxx. Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
 
 ![image](https://github.com/user-attachments/assets/1686f100-b836-415c-a0d4-cf21dd0fff0c)
 
