@@ -2,24 +2,17 @@
 
 Časovač, anglicky Timer je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že po prvotním nastavení počítá sám, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
 
-## Princip časovače
+## Princip časovače, důležité registry
 
 Základní jednotkou časovače je čítací registr, který zvýší svou hodnotu o 1 při každé nástupné hraně hodinového signálu. Pokud dosáhne maximální hodnoty (255 pro 8bitový čítač a 65535 pro 16bitový) při další hraně hodin "přeteče" ->nastaví se opět do 0 a nastaví příznakový bit do 1.
 
-![image](https://github.com/user-attachments/assets/e81c67d0-bc13-4eca-91cd-75fa19a37643)
+![image](https://github.com/user-attachments/assets/c4c13016-1b2d-40f1-81c7-ca5e91862b35)
 
-## Důležité registry
-**TCNT** je čítací registr, hodnota v něm se zvyšuje s každou nástupnou hranou hodin
-**TCCRB**
-
-![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
-
-*Zdroj obrázků: https://exploreembedded.com/wiki/AVR_Timer_programming*
+## Nastavení časovače
 
 V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) . Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
 
 ![image](https://github.com/user-attachments/assets/03858294-1551-4f8e-a3e9-1179efdfa39f)
-
 
 Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotlivé bity WGMxx.
 
@@ -29,8 +22,7 @@ V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz
 
 ![image](https://github.com/user-attachments/assets/1aa90833-aa8f-49f3-bf8b-b20401c2be39)
 
-
-
+## Příznakové bity
 Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde až do maxima, při dalším hraně hodin přeteče (overflow) a nastaví se opět do nuly. Při přetečení se nastaví příznakový bit TOV v registru TIFR1. Registr TIFR1 obsahuje i další příznaky, např v tomto cvičení použijeme ještě příznak OCF1A, který se používá v CTC režimu a nastaví se, když se hodnota čítače rovná hodnotě v compare registru OCR1A. 
 
 ![image](https://github.com/user-attachments/assets/7e6b6389-acac-4013-b738-894638c304be)
