@@ -1,6 +1,6 @@
-# Timer
+# Časovač
 
-Timer, česky časovač je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že po prvotním nastavení počítá sám, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
+Časovač, anglicky Timer je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že po prvotním nastavení počítá sám, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
 
 ## Důležité registry
 
@@ -8,23 +8,25 @@ TODO přidat prescaler a hodiny
 
 ![image](https://github.com/user-attachments/assets/e0050a5c-eaf3-42a2-aa40-e599c1ef03e0)
 
-TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je tu i druhý nastavovací registr, ten v této lekci neppotřebujem
+V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) . Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
 
-![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
+![image](https://github.com/user-attachments/assets/03858294-1551-4f8e-a3e9-1179efdfa39f)
 
-TODO výběr módu
+
+Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotlivé bity WGMxx.
 
 ![image](https://github.com/user-attachments/assets/1686f100-b836-415c-a0d4-cf21dd0fff0c)
 
-TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
+V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz, tedy jeden "tick" trvá 1/f = 1/16*10^6 = 62,5ns . Timer1 je 16bitový, tedy maximální hodnota je 65535. Takže k přetečení čítače by došlo za 65536 *  62,5ns = 4,096ms. Pokud chceme aby perioda časovače byla delší (např. chceme blikat s LEDkou jednou za 500ms) můžeme hodinový signál z krystalu vydělit předděličkou (prescaler). Prescaler můžeme změnit zápisem do bitů CSnx v registru TCCR1B viz tabulka.
 
-![image](https://github.com/user-attachments/assets/c8ab9daf-110e-46c4-9ba4-a1f7df43ef43)
+![image](https://github.com/user-attachments/assets/1aa90833-aa8f-49f3-bf8b-b20401c2be39)
 
 
 
-TODO - flagy přetečení - když čítač dojde nakonec, nastaví se do 1
+Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde až do maxima, při dalším hraně hodin přeteče (overflow) a nastaví se opět do nuly. Při přetečení se nastaví příznakový bit TOV v registru TIFR1. Registr TIFR1 obsahuje i další příznaky, např v tomto cvičení použijeme ještě příznak OCF1A, který se používá v CTC režimu a nastaví se, když se hodnota čítače rovná hodnotě v compare registru OCR1A. 
 
-![image](https://github.com/user-attachments/assets/d9c9c9f0-933f-4f83-bc20-c1f9b1b2ffbf)
+![image](https://github.com/user-attachments/assets/7e6b6389-acac-4013-b738-894638c304be)
+
 
 
 ## Časovač Timer1 v režimu Normal
