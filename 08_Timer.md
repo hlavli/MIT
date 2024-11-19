@@ -56,8 +56,10 @@ int main(void)
 
 ```
 
-### 1. Úkol
-Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
+
+>### 1. Úkol
+>Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
+
 
 ## Časovač Timer1 v režimu CTC
 Nastavením prescaleru můžeme získat pouze několik málo frekvencí přetečení časovače. Pro jemnější nastavení můžeme použít režim CTC (Clear timer on Compare Match). Funguje tak, že nenecháme časovač počítat od nuly do maxima, ale do registru OCR1A nastavíme novou maximální hodnotu časovače. Když časovač "dopočítá" do této hodnoty (hodnota čítacího registru TCNT1 se bude rovnat hodnotě v compare registru OCR1A) dojde k přetečení čítače, nastaví se příznak přetečení OCF1A a čítač se nastaví opět do nuly. VIz obrázek níže.
@@ -77,8 +79,8 @@ Prescaler - zvolená hodnota předděličky (/64, /1024 atd)
 𝑓<sub>target</sub> - žádaná frekvence přetečení čítače
 
 
-### 2. Úkol 
-Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
+>### 2. Úkol 
+>Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení každých 500ms
 
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
@@ -103,8 +105,8 @@ Bits - počet bitů čítače (8 pro Timer0 a 16 pro Timer1)
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
-### 3. Úkol
-Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
+>### 3. Úkol
+>Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
 
 ### [Zpět na obsah](README.md)
