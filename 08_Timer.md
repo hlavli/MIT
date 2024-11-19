@@ -68,7 +68,7 @@ Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
 
-fclk - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
+f<sub>clk</sub>  - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
 
 Prescaler - zvolená hodnota předděličky (/64, /1024 atd) 
 
@@ -89,7 +89,13 @@ Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
-TODO - popsat symboly ve vzorci
+f<sub>clk</sub>  - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
+
+Prescaler - zvolená hodnota předděličky (/64, /1024 atd) 
+
+𝑓<sub>target</sub> - žádaná frekvence přetečení čítače
+
+Bits - počet bitů čítače (8 pro Timer0 a 16 pro Timer1)
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT1 pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
