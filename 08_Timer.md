@@ -51,7 +51,7 @@ int main(void)
 ```
 
 ### Úkol
-Zkus nastavit jiné hodnoty prescaleru a sleduj jak se změní rychlost blikání LEDek
+Zkus nastavit jiné hodnoty prescaleru a sleduj jak se změní rychlost blikání LEDek, spočítejte frekvenci, ověříme měřením
 
 ## Časovač Timer1 v režimu CTC
 Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
