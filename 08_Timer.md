@@ -12,6 +12,10 @@ TODO - control registr - nastavení prscaleru a módu (Normal/CTC)., Note.: je t
 
 ![image](https://github.com/user-attachments/assets/f3b9f741-abce-4b6b-bf90-b0c40e429165)
 
+TODO výběr módu
+
+![image](https://github.com/user-attachments/assets/1686f100-b836-415c-a0d4-cf21dd0fff0c)
+
 TODO - různé možnosti prescaleru (bez něj je to 16MHz -> moc rychlé)
 
 ![image](https://github.com/user-attachments/assets/c8ab9daf-110e-46c4-9ba4-a1f7df43ef43)
