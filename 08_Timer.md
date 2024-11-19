@@ -10,6 +10,10 @@ Základní jednotkou časovače je čítací registr, který zvýší svou hodno
 
 ## Nastavení časovače
 
+V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz, tedy jeden "tick" trvá 1/f = 1/16*10^6 = 62,5ns . Timer1 je 16bitový, tedy maximální hodnota je 65535. Takže k přetečení čítače by došlo za 65536 *  62,5ns = 4,096ms. Pokud chceme aby perioda časovače byla delší (např. chceme blikat s LEDkou jednou za 500ms) můžeme hodinový signál z krystalu vydělit předděličkou (prescaler). Prescaler můžeme změnit zápisem do bitů CSnx v registru TCCR1B viz tabulka.
+
+![image](https://github.com/user-attachments/assets/1aa90833-aa8f-49f3-bf8b-b20401c2be39)
+
 V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) .
 
 ![image](https://github.com/user-attachments/assets/03858294-1551-4f8e-a3e9-1179efdfa39f)
@@ -18,9 +22,7 @@ Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotliv
 
 ![image](https://github.com/user-attachments/assets/1686f100-b836-415c-a0d4-cf21dd0fff0c)
 
-V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz, tedy jeden "tick" trvá 1/f = 1/16*10^6 = 62,5ns . Timer1 je 16bitový, tedy maximální hodnota je 65535. Takže k přetečení čítače by došlo za 65536 *  62,5ns = 4,096ms. Pokud chceme aby perioda časovače byla delší (např. chceme blikat s LEDkou jednou za 500ms) můžeme hodinový signál z krystalu vydělit předděličkou (prescaler). Prescaler můžeme změnit zápisem do bitů CSnx v registru TCCR1B viz tabulka.
 
-![image](https://github.com/user-attachments/assets/1aa90833-aa8f-49f3-bf8b-b20401c2be39)
 
 ## Příznakové bity
 Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde až do maxima, při dalším hraně hodin přeteče (overflow) a nastaví se opět do nuly. Při přetečení se nastaví příznakový bit TOV v registru TIFR1. Registr TIFR1 obsahuje i další příznaky, např v tomto cvičení použijeme ještě příznak OCF1A, který se používá v CTC režimu a nastaví se, když se hodnota čítače rovná hodnotě v compare registru OCR1A. 
