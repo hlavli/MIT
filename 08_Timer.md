@@ -31,9 +31,7 @@ Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde
 
 ## Časovač Timer1 v režimu Normal
 
-Timer1 je 16bitový, tzn max 0-65535
-
-TODO zkusíme bliknout ledkou pokaždé, když čítač dojde do konce
+Zkusme využít časovač pro blikání LEDkami. Použijeme Timer1 v režimu Normal. Čítač spustíme a budeme čekat, až dojde k přetečení (budeme dokola číst bit TOV1). Až dojde k přetečení, musíme příznakový bit ručně vymazat (zapsáním 1). Pak znegujeme stav LEDek na portu F a opět budeme čekat na další přetečení.
 
 ```C
 #include <avr/io.h>
@@ -57,7 +55,7 @@ int main(void)
 ```
 
 ### Úkol
-Zkus nastavit jiné hodnoty prescaleru a sleduj jak se změní rychlost blikání LEDek, spočítejte frekvenci, ověříme měřením
+Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
 
 ## Časovač Timer1 v režimu CTC
 Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
