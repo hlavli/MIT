@@ -2,7 +2,9 @@
 
 Časovač, anglicky Timer je v mikroprocesorové technice důležitá periferie. Použijeme ho například při generování přesného časového signálu, PWM, měření času, ale i počítání vnějších událostí (např. počtu impulzů z nějakého čidla). Je integrován uvnitř pouzdra mikroprocesoru, ale funguje samostatně, to znamená že po prvotním nastavení počítá sám, i když jádro procesoru dělá něco jiného. Tím pádem je časování přesné a navíc jádro procesoru může dělat něco jiného, nemusí být "zabržděno" v čekacích smyčkách (např. funkce _delay_ms()) .
 
-## Princip časovače, důležité registry
+## Princip časovače
+
+Základní jednotkou časovače je čítací registr, který zvýší svou hodnotu o 1 při každé nástupné hraně hodinového signálu. Pokud dosáhne maximální hodnoty (255 pro 8bitový čítač a 65535 pro 16bitový) při další hraně hodin "přeteče" ->nastaví se opět do 0 a nastaví příznakový bit do 1.
 
 ![image](https://github.com/user-attachments/assets/e81c67d0-bc13-4eca-91cd-75fa19a37643)
 
