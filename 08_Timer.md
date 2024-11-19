@@ -38,8 +38,7 @@ int main(void)
 {
     DDRF=0xFF;
 
-	TCCR1A = 0x00; // Normal mode
-	TCCR1B |= 0b00000101; // Prescaler /1024
+	TCCR1B = 0b00000100; // Prescaler 256, Normal mode
 
 	while(1)
 	{
