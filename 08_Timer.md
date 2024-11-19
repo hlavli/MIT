@@ -58,7 +58,7 @@ int main(void)
 Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
 
 ## Časovač Timer1 v režimu CTC
-Režim CTC (Clear timer on Compare Match) nám umožní dosáhnout stejného efektu jako režim Normal s přednastavením. Ovšem 
+Nastavením prescaleru můžeme získat pouze několik málo frekvencí přetečení časovače. Pro jemnější nastavení můžeme použít režim CTC (Clear timer on Compare Match). Funguje tak, že nenecháme časovač počítat od nuly do maxima, ale do registru OCR1A nastavíme novou maximální hodnotu časovače. Když časovač "dopočítá" do této hodnoty (hodnota čítacího registru TCNT1 se bude rovnat hodnotě v compare registru OCR1A) dojde k přetečení čítače, nastaví se příznak přetečení OCF1A a čítač se nastaví opět do nuly. VIz obrázek níže.
 
 ![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
 
@@ -73,7 +73,7 @@ Spočítej v CTC režimu co přednastavit do TCNT aby došlo k přetečení kaž
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 
-TODO - pokud chceme změnit frekvenci časovače, můžeme ho zkrátit tím, že nebude začínat od nuly, ale od vyšší hodnoty
+Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. používáme procesor, jehož čítač CTC režium neumí), můžeme změnit frekvenci časovače tím, že nebude začínat od nuly, ale od vyšší hodnoty.
 
 ![image](https://github.com/user-attachments/assets/065ff747-06ff-49ed-b3b2-4533922b9b37)
 
@@ -81,10 +81,10 @@ Hodnotu pro přednsastavení registru TCNT1 spočítáme podle vzorce:
 
 ![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
 
-TODO Pokaždé, když timer přeteče, nastavíme do něj opět vypočítanou hodnotu.
+Narozdíl od CTC režimu, zde musíme do registru TCNT1 pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
 ### Úkol
-Spočítej v Normal režimu co přednastavit do TCNT aby došlo k přetečení každé 2s
+Použijte Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
 
 ### [Zpět na obsah](README.md)
