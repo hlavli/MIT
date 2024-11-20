@@ -56,7 +56,7 @@ int main(void)
 ```
 
 ## Úkoly:
-Doporučuju nesnažit se upravovat příklad výše, raději si založte nový projekt a jen si zkopírujte pole s nastavením segmentů.
+Doporučuji nesnažit se upravovat příklad výše, raději si založte nový projekt a jen si zkopírujte pole s nastavením segmentů.
 
 1. Napište program, který zobrazí trojciferné číslo
     - Nastavit vstupy/výstupy pro 7seg displej  
