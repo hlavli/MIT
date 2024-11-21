@@ -12,7 +12,7 @@ Budeme muset použít techniku, které se říká časový multiplex. Multiplexo
 *Zdroj obrázku: By Laserlicht, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=115556518* 
 
 
-## Ukázka vlivu časování multiplexingu na lidské oko
+## Vliv frekvence multiplexingu na vnímání lidským okem
 Zkuste si do přípravku nahrát program níže.Je to jednoduchá ukázka časového multiplexu displeje. Potenciometrem na přípravku můžete nastavit dobu, po kterou je rozsvícena jedna pozice. Měli byste vidět, že od určité rychlosti už lidské oko přestane vidět blikání, ale zdá se mu, že všechny pozice svítí stabilně.
 
 ```c
