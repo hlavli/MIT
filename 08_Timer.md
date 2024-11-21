@@ -35,7 +35,7 @@ Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde
 
 Zkusme využít časovač pro blikání LEDkami. Použijeme Timer1 v režimu Normal. Čítač spustíme a budeme čekat, až dojde k přetečení (budeme dokola číst bit TOV1). Až dojde k přetečení, musíme příznakový bit ručně vymazat (zapsáním 1). Pak znegujeme stav LEDek na portu F a opět budeme čekat na další přetečení.
 
-```C
+```c
 #include <avr/io.h>
 
 int main(void)
