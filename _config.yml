@@ -1,3 +1,36 @@
+# Základní informace o webu
+title: Moje stránka
+description: Stránka vytvořená pomocí Jekyllu a GitHub Pages
+baseurl: "" # Pokud je web hostovaný na poddoméně, vlož sem její cestu, např. "/moje-stranka"
+url: "https://uzivatel.github.io" # Adresa tvé stránky
+
+# Autor
+author:
+  name: Jan Novák
+  email: jan.novak@email.com
+
+# Markdown engine
 markdown: kramdown
 kramdown:
-  input: GFM
+  input: GFM # GitHub Flavored Markdown
+
+# Výchozí layout
+defaults:
+  - scope:
+      path: "" # Týká se všech souborů
+    values:
+      layout: default
+
+# Soubory a složky k ignorování
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+# Pluginy
+plugins:
+  - jekyll-feed # Generuje RSS feed
+  - jekyll-seo-tag # SEO tagy
+  - jekyll-sitemap # Generuje sitemap.xml
