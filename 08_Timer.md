@@ -1,6 +1,14 @@
 
 # Časovač
 
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+$$
+t_{\text{tick}} = \frac{64}{16 \times 10^6} = 4 \, \mu\text{s}
+$$
+
 $$
 t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
 $$
