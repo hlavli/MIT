@@ -5,7 +5,7 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-Toto je inline rovnice: \( E = mc^2 \).
+Toto je inline rovnice: \( E = mc^3 \).
 
 Tady je bloková rovnice:
 \[
