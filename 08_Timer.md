@@ -6,15 +6,15 @@
 </script>
 
 $$
-t_{\text{tick}} = \frac{64}{16 \times 10^6} = 4 \, \mu\text{s}
+\huge t_{\text{tick}} = \frac{64}{16 \times 10^6} = 4 \, \mu\text{s}
 $$
 
 $$
-t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
+\huge t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
 $$
 
 $$
-\displaystyle t_{\text{tick}} = \frac{64}{16 \times 10^6} = 4 \, \mu\text{s}
+\Large t_{\text{tick}} = \frac{64}{16 \times 10^6} = 4 \, \mu\text{s}
 $$
 
 $$
