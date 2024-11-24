@@ -5,21 +5,6 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-Toto je inline rovnice: \( E = mc^3 \).
-
-Tady je bloková rovnice:
-\[
-E = mc^2
-\]
-
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']]
-    }
-  };
-</script>
-
 $$
 K(a,b) = \int \mathcal{D}x(t) \exp(2\pi i S[x]/\hbar)
 $$
