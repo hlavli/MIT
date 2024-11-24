@@ -1,6 +1,10 @@
 
 # Časovač
 
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>![image](https://github.com/user-attachments/assets/339e32b1-f2d5-47b9-ab70-f4bc575b6f83)
+
 $$
 t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
 $$
