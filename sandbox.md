@@ -23,3 +23,4 @@ $$
 
 $$
 \Large t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
+$$
