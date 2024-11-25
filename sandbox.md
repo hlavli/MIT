@@ -2,11 +2,11 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-$$Ftimer = CPU Frequency/Prescalar $$
+$$ \Large Ftimer = CPU Frequency/Prescalar $$
 
-$$Ftimer = 16MHz/1024 = 15.625KHz $$
+$$\Large Ftimer = 16MHz/1024 = 15.625KHz $$
 
-$$Ttick = 1/ 15.625K = 64 \mu seconds$$
+$$ \Large Ttick = 1/ 15.625K = 64 \mu seconds$$
 
 $$Ttotal = 64\mu s X 255 = 16ms$$
 
