@@ -1,3 +1,7 @@
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
 $$Ftimer = CPU Frequency/Prescalar $$
 
 $$Ftimer = 16MHz/1024 = 15.625KHz $$
