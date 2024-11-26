@@ -122,7 +122,7 @@ $$
 $$
 
 $$
-\Large TCNT1 = 2^{bits} - \frac {T_{\text{required}}} {T_{\text{tick}}} = 65536 - \frac {100ms}} {4us} = 40 536
+\Large TCNT1 = 2^{bits} - \frac {T_{\text{required}}} {T_{\text{tick}}} = 65536 - \frac {100ms} {4us} = 40 536
 $$
 
 
