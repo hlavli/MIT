@@ -81,16 +81,13 @@ $$
 \Large OCR1A = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1
 $$
 
-
-![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
-
 Kde:
 
-**f<sub>clk</sub>**  - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
+**T<sub>required</sub>**  - požadovaná perioda (čas za který chceme aby časovač přetekl)
 
-**Prescaler** - zvolená hodnota předděličky (/64, /1024 atd) 
+**T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
 
-**𝑓<sub>target</sub>** - žádaná frekvence přetečení čítače
+
 
 
 >### 2. Úkol 
