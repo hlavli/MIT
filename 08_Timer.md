@@ -87,7 +87,7 @@ Kde:
 **bits** - počet bitů v čítacím registru (Timer0 a Timer2 jsou 8bitové, Timer1 16bitový)
 
 >### 1. Úkol
->Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
+>Nastavte jinou vybranou hodnotu prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání a ověřte měřením logickým analyzerem.
 
 ## Časovač Timer1 v režimu CTC
 Nastavením prescaleru můžeme získat pouze několik málo frekvencí přetečení časovače. Pro jemnější nastavení můžeme použít režim CTC (Clear timer on Compare Match). Funguje tak, že nenecháme časovač počítat od nuly do maxima, ale do registru OCR1A nastavíme novou maximální hodnotu časovače. Když časovač "dopočítá" do této hodnoty (hodnota čítacího registru TCNT1 se bude rovnat hodnotě v compare registru OCR1A) dojde k přetečení čítače, nastaví se příznak přetečení OCF1A a čítač se nastaví opět do nuly. VIz obrázek níže.
@@ -108,7 +108,7 @@ Kde:
 ** - 1 ** - K přetečení a nastavení příznakového bitu dojde až při další hraně hodinového signálu, proto aby perioda byla přesná, musíme hodnotu ještě snížit o jedničku
 
 >### 2. Úkol 
->Nastav časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
+>Nastavte časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
 
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
