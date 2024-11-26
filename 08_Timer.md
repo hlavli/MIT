@@ -59,6 +59,9 @@ int main(void)
 }
 
 ```
+
+Periodu, tedy čas, za který časovač přeteče spočítáme takto:
+
 $$
 \Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} 
 $$
@@ -66,6 +69,15 @@ $$
 $$
 \Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} 
 $$
+
+Kde:
+
+**f<sub>time</sub>**  - frekvence s jakou se inkrementuje časovač
+
+**Prescaler** - zvolená hodnota předděličky (/64, /1024 atd) 
+
+**T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
+
 
 >### 1. Úkol
 >Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
@@ -86,8 +98,6 @@ Kde:
 **T<sub>required</sub>**  - požadovaná perioda (čas za který chceme aby časovač přetekl)
 
 **T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
-
-
 
 
 >### 2. Úkol 
