@@ -56,6 +56,13 @@ int main(void)
 }
 
 ```
+$$
+\Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} 
+$$
+
+$$
+\Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} 
+$$
 
 >### 1. Úkol
 >Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
@@ -66,6 +73,11 @@ Nastavením prescaleru můžeme získat pouze několik málo frekvencí přeteč
 ![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
 
 Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
+
+$$
+\Large OCR1A = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1
+$$
+
 
 ![image](https://github.com/user-attachments/assets/fa05b1f2-aba1-4796-b380-07afbf4027fd)
 
