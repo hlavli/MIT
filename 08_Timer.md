@@ -98,8 +98,7 @@ Kde:
 **T<sub>required</sub>**  - požadovaná perioda (čas za který chceme aby časovač přetekl)
 
 **T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
-
-
+** - 1 ** - K přetečení a nastavení příznakového bitu dojde až při další hraně hodinového signálu, proto aby perioda byla přesná, musíme hodnotu ještě snížit o jedničku
 >### 2. Úkol 
 >Nastav časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
 
@@ -110,19 +109,22 @@ Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. 
 
 ![image](https://github.com/user-attachments/assets/065ff747-06ff-49ed-b3b2-4533922b9b37)
 
-Hodnotu pro přednsastavení registru TCNT spočítáme podle vzorce:
+Hodnotu pro přednsastavení registru TCNT spočítáme tak, že od maximální hodnoty čítače (255 pro 8bitový čítač a 65535 pro 16bitový) odečteme takový počet ticků, který odpovídá požadované periodě.
 
-![image](https://github.com/user-attachments/assets/bdaa10f3-8dca-4608-b075-b84bdd6b398c)
+Tedy např. pro periodu 100ms a prescaler 64:
 
-Kde:
+$$
+\Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} = \frac{16MHz}{64} = 250kHz
+$$
 
-**f<sub>clk</sub>**  - frekvence hodin mikrokontroléru (v našem přípravku 16MHz)
+$$
+\Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} = \frac{1}{250kHz} = 4us
+$$
 
-**Prescaler** - zvolená hodnota předděličky (/64, /1024 atd) 
+$$
+\Large TCNT1 = 2^{bits} - \frac {T_{\text{required}}} {T_{\text{tick}}} = 65536 - \frac {100ms}} {4us} = 40 536
+$$
 
-**𝑓<sub>target</sub>** - žádaná frekvence přetečení čítače
-
-**Bits** - počet bitů čítače (8 pro Timer0 a 16 pro Timer1)
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
 
