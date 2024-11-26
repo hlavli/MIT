@@ -60,14 +60,18 @@ int main(void)
 
 ```
 
-Periodu, tedy čas, za který časovač přeteče spočítáme takto:
+V našem přípravku je použit oscilátor o frekvenci 16MHz a v examplu výše jsme použili předděličku 654. Periodu, tedy čas, za který časovač přeteče spočítáme takto:
 
 $$
-\Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} 
+\Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} = \frac{16MHz}{64} = 250kHz
 $$
 
 $$
-\Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} 
+\Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} = \frac{1}{250kHz} = 4us
+$$
+
+$$
+\Large T_{\text{total}} = T_{\text{tick}} * 2^{bits}  = 4us \times 65536 = 262ms
 $$
 
 Kde:
@@ -78,6 +82,9 @@ Kde:
 
 **T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
 
+**T<sub>total</sub>**  - perioda, s jakou časovač přeteče, tj. za jak dlouho projde maximem, nastaví příznakový bit přetečení a začne zase od nuly
+
+**bits** - počet bitů v čítacím registru (Timer0 a Timer2 jsou 8bitové, Timer1 16bitový)
 
 >### 1. Úkol
 >Nastavte jiné hodnoty prescaleru a sledujte jak se změní rychlost blikání LEDek, spočítejte frekvenci blikání (ověříme měřením logickým analyzerem).
@@ -99,6 +106,7 @@ Kde:
 
 **T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
 ** - 1 ** - K přetečení a nastavení příznakového bitu dojde až při další hraně hodinového signálu, proto aby perioda byla přesná, musíme hodnotu ještě snížit o jedničku
+
 >### 2. Úkol 
 >Nastav časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
 
@@ -124,6 +132,19 @@ $$
 $$
 \Large TCNT1 = 2^{bits} - \frac {T_{\text{required}}} {T_{\text{tick}}} = 65536 - \frac {100ms} {4us} = 40 536
 $$
+
+Kde:
+
+**f<sub>time</sub>**  - frekvence s jakou se inkrementuje časovač
+
+**Prescaler** - zvolená hodnota předděličky (/64, /1024 atd) 
+
+**T<sub>tick</sub>**  - délka jednoho "ticku" časovače - doba za kterou se hodnota čítacího registru zvýší o 1
+
+**TCNT1**  - hodnota, kterou přednastavíme do registru TCNT1 po každém přetečení (aby nezačínal počítat on nuly, ale od této hodnoty)
+
+**bits** - počet bitů v čítacím registru (Timer0 a Timer2 jsou 8bitové, Timer1 16bitový)
+
 
 
 Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer přeteče, nastavit opět ručně vypočítanou hodnotu.
