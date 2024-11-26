@@ -71,7 +71,7 @@ $$
 $$
 
 $$
-\Large T_{\text{total}} = T_{\text{tick}} * 2^{bits}  = 4us \times 65536 = 262ms
+\Large T_{\text{total}} = T_{\text{tick}} \times 2^{bits}  = 4us \times 65536 = 262ms
 $$
 
 Kde:
