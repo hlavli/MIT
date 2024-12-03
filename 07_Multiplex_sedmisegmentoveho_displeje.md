@@ -65,9 +65,9 @@ Pozn. Neupravujte příklad výše, ale založte si nový projekt a jen si zkop�
     - Vytvořit pole s číslem, které chceme zobrazit
     - Napsat cyklus, který vždy zapíše číslici na danou pozici a  1ms počká
 
-2. Rozšiřte program tak, aby zobrazoval šesticiferné číslo
+2. Rozšiřte program tak, aby zobrazoval šesticiferné číslo.
 
-3. Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Toto vstupní číslo sama rozloží na jednotlivé číslice a zobrazí je na displeji
+3. Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Funkce toto vstupní číslo rozloží na jednotlivé číslice a zobrazí je na displeji.
 
 
 
