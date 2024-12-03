@@ -10,4 +10,4 @@
 
 5. Nastavte registr TCCR1B tak, abyste použili předděličku 256 a CTC režim. Můžete použít [stránku o časovači na githubu](https://tomaschovanec.github.io/MIT/08_Timer.html)
 
-6. Nastavte časovač Timer1 tak, aby k přetečení došlo jednou za 150ms. Použijte CTC režim. Jako řešení uveďte dva příkazy, jeden nastavení registru TCCR1B (mode, prescaler) a druhý nastavení komparačního registru OCR1A. Můžete použít [stránku o časovači na githubu](https://tomaschovanec.github.io/MIT/08_Timer.html)
+6. Nastavte časovač Timer1 tak, aby k přetečení došlo jednou za 100ms. Použijte CTC režim. Jako řešení uveďte dva příkazy, jeden nastavení registru TCCR1B (mode, prescaler) a druhý nastavení komparačního registru OCR1A. Můžete použít [stránku o časovači na githubu](https://tomaschovanec.github.io/MIT/08_Timer.html)
