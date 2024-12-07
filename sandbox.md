@@ -1,3 +1,50 @@
+# Časovač s přerušením
+
+V minulém cvičení jsme se naučili nastavit časovač v mikroprocesoru tak, aby přetekl například jednou za 100ms. Příznakový bit jsme v hlavním programu neustále sledovali. Když pak časovač přetekl a příznakový bit se nastavil do jedničky, náš program na to zareagoval, např. bliknul LEDkou.
+
+```c
+#include <avr/io.h>
+
+int main(void)
+{
+	DDRF = 0xff; // PORTF nastavíme jako výstupní (LEDky)
+
+	TCCR1B = 0b0000011; // Prescaler 64, Normal mode
+
+	while(1)
+	{
+		while((TIFR1 & (1<<TOV1)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
+		
+		TIFR1 |= (1<<TOV1); // Vynulování příznakového bitu
+		
+		PORTF ^= 0xff; // Negace LEDek
+	}
+}
+```
+
+Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen kontrolou bitu a nemůže dělat nic jiného. Aby 
+
+## Přerušení
+Přerušení je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další.
+
+Například pokud chceme 
+
+![image](https://github.com/user-attachments/assets/bba2d83e-c752-4c72-a31f-fc065e720727)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">https://github.com/TomasChovanec/MIT/blob/main/sandbox.md
 </script>
