@@ -41,22 +41,19 @@ Například pokud chceme
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-unsigned char cislice[]={0xc0,0xf9,0xA4,0xb0,0x99,0x92,0x82,0xd8,0x80,0x90,0x88,0x83,0xc6,0xA1,0x86,0x8e};
+unsigned char cislice[]={0xc0, 0xf9, 0xA4, 0xb0, 0x99, 0x92, 0x82, 0xd8, 0x80, 0x90, 0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e};
 
-unsigned char pozice[3] = {0b11011111,0b11101111,0b11110111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
-unsigned char zobraz[3] = {1,5,8}; // Pole s čísly, která chceme zobrazovat
+unsigned char pozice[3] = {0b11011111, 0b11101111, 0b11110111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
+unsigned char zobraz[3] = {1,5,0}; // Pole s čísly, která chceme zobrazovat
 
 volatile int aktual_poz = 0; // Proměnná s číslem aktuálně zobrazované pozice. Protože do ní zapisujeme během přerušení, musíme použít typ *volatile*
 
+
 ISR(TIMER1_COMPA_vect) // Rutina pro obsluhu přerušení - speciální funkce, která se vykoná při přerušení
 {
-	PORTD = pozice[aktual_poz]; // Zápisem do portu D aktivujeme aktuální pozici displeje
-	PORTB = cislice[zobraz[aktual_poz]];	// Zapíšeme na displej aktuální prvek z pole
-	aktual_poz++;	// Zvýšíme aktuální pozici. Pokud je vyšší než 2, nastavíme ji do nuly
-	if (aktual_poz>2){
-		aktual_poz = 0;
-	}	
+// Zde doplňte kód, který při každém vyvolání přerušení zobrazí jednu číslici
 }
+
 
 int main(void)
 {
@@ -64,11 +61,11 @@ int main(void)
 	DDRB = 0xff; // Nastavíme port B, jako výstup (je připojen k segmentům displeje)
 	DDRD = 0xff; // Nastavíme port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
 
-	TCCR1B = 0b0001010; //Zvolíme CTC režim a požadovanou předděličku
-	OCR1A=2500;	// Zápisem do komaračního registru určíme frekvenci přetečení ćítače
+	TCCR1B = ???; //Zvolíme CTC režim a požadovanou předděličku
+	OCR1A=???;	// Zápisem do komaračního registru určíme frekvenci přetečení ćítače
 	TIMSK1=0x02; // Povolíme přerušení od časovače 1
 	sei(); // Povolíme přerušení
-
+	
 	// Nekonečná smyčka
 	while(1)
 	{
@@ -77,14 +74,8 @@ int main(void)
 }
 ```
 
->### 1. Úkol
->Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
-
->### 2. Úkol
->Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
-
-
->### 3. Úkol
->Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
-
+## Úkoly:
+1. Doplňte kód výše tak, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
+2. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...) 
+3. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160, ...)
 
