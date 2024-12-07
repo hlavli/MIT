@@ -82,9 +82,15 @@ int main(void)
 }
 ```
 
+>### 1. Úkol
+>Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
+
+>### 2. Úkol
+>Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
 
-
+>### 3. Úkol
+>Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
 
 
