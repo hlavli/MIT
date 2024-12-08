@@ -27,16 +27,24 @@ Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavi
 ## Přerušení
 Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další.
 
+Například pokud chceme 
+
+<img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
+
+Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
+
 ```C
 ISR(TIMER1_COMPA_vect) // *ISR* znamená, že tato funkce je obsluha přerušení (interrupt routine). *TIMER1_COMPA_vect* znamená, že tato funkce se vykoná při přerušení od Timeru1 při detekci shody s komparačním registrem
 {
-// Zde bude kód, který se vykoná při přerušení
+PORTF ^= 0xff; // Negace LEDek
 }
 ```
 
+
 V tabulce níže je pro názornost několik vybraných zdrojů přerušení a názvy jejich vektorů. Seznam všech vektorů přerušení můžete najít v datasheetu mikroprocesoru.
 
-Zde je několik příkladů zdrojů přerušení a jejich 
+Zde je několik příkladů zdrojů přerušení a názvů jejich vektorů (které použijeme při definici obslužné funkce):
+
 | Interrupt Definition                 | Vector Name          |
 |:------------------------------------:|:--------------------:|
 | External Interrupt Request 0         | INT0_vect            |
@@ -58,9 +66,7 @@ Zde je několik příkladů zdrojů přerušení a jejich
 |**Hodnota**| **0**    | **0**    | **0**   | **1**   | **1**    | **1**   |  **0**   |  **1**   | 
 |**LEDky**|🟡    | 🟡    | 🟡    | ⚪    | ⚪    | ⚪    | 🟡    | ⚪    | 
 
-Například pokud chceme 
 
-<img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
 ![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
 
