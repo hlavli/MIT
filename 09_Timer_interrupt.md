@@ -22,10 +22,35 @@ int main(void)
 }
 ```
 
-Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen kontrolou bitu a nemůže dělat nic jiného. Aby 
+Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen neustálým kontrolováním příznakového bitu a nedělá nic jiného. Lepší by bylo, kdyby procesor vykonával program a jen v okamžiku, kdy časovač přeteče by se automaticky zastavil, bliknul LEDkou a pak pokračoval v hlavním programu. Takováto funke v mikroprocesorech skutečně je a říkáme jí "přerušení".
 
 ## Přerušení
-Přerušení je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další.
+Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další.
+
+```C
+ISR(TIMER1_COMPA_vect) // *ISR* znamená, že tato funkce je obsluha přerušení (interrupt routine). *TIMER1_COMPA_vect* znamená, že tato funkce se vykoná při přerušení od Timeru1 při detekci shody s komparačním registrem
+{
+// Zde bude kód, který se vykoná při přerušení
+}
+```
+
+V tabulce níže je pro názornost několik vybraných zdrojů přerušení a názvy jejich vektorů. Seznam všech vektorů přerušení můžete najít v datasheetu mikroprocesoru.
+
+Zde je několik příkladů zdrojů přerušení a jejich 
+| Interrupt Definition                 | Vector Name          |
+|--------------------------------------|----------------------|
+| External Interrupt Request 0         | INT0_vect            |
+| Pin Change Interrupt Request 0       | PCINT0_vect          |
+| Timer/Counter1 Capture Event         | TIMER1_CAPT_vect     |
+| Timer/Counter1 Compare Match A       | TIMER1_COMPA_vect    |
+| Timer/Counter1 Compare Match B       | TIMER1_COMPB_vect    |
+| Timer/Counter1 Overflow              | TIMER1_OVF_vect      |
+| SPI Serial Transfer Complete         | SPI_STC_vect         |
+| USART Rx Complete                    | USART_RX_vect        |
+| USART Data Register Empty            | USART_UDRE_vect      |
+| USART Tx Complete                    | USART_TX_vect        |
+| ADC Conversion Complete              | ADC_vect             |
+
 
 Například pokud chceme 
 
