@@ -31,11 +31,11 @@ Například pokud chceme
 
 <img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
-## Obslužná rutina přerušení
+## Obsluha  přerušení
 Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
 
 ```C
-ISR(TIMER1_COMPA_vect) // *ISR* znamená, že tato funkce je obsluha přerušení (interrupt routine). *TIMER1_COMPA_vect* znamená, že tato funkce se vykoná při přerušení od Timeru1 při detekci shody s komparačním registrem
+ISR(TIMER1_COMPA_vect)
 {
 PORTF ^= 0xff; // Negace LEDek
 }
@@ -60,12 +60,16 @@ V tabulce níže je pro názornost několik vybraných zdrojů přerušení a n�
 
 ## Povolení přerušení
 
-Kromě definice obslužné funkce pro dané přerušení, musíme ještě povolit konkrétní přerušení (v našem případě přerušení od časovače najdeme v registru TIMSK) a pak povolit globálně přerušení pomocí funkce sei().
+Kromě definice obslužné funkce pro dané přerušení, musíme ještě povolit konkrétní přerušení (v našem případě přerušení od časovače najdeme v registru TIMSK1) a pak povolit globálně přerušení pomocí funkce sei().
 
 ![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
 
+Příklad kódu pro povolení přerušení OCIE1A.  Output Compare Interrupt Enable for Timer/Counter1, Channel A. Jedná se o přerušení, které je vyvoláno, když hodnota časovače/counteru 1 (Timer/Counter1) dosáhne hodnoty uložené v Output Compare Register A (OCR1A).
 
-
+```C
+TIMSK1 = 0x02; // Povolení přerušení při shodě čítače s komparačním registrem OCR1A
+sei(); // Globální povolení přerušení
+```
 
 
 ## Úkoly:
