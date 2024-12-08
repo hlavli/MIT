@@ -53,7 +53,8 @@ Zde je několik příkladů zdrojů přerušení a jejich
 
 
 Například pokud chceme 
-![Timer_interrupt drawio (1)](https://github.com/user-attachments/assets/6903789d-b672-48ff-96c2-9afc79295508)
+
+<img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
 ![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
 
