@@ -43,8 +43,6 @@ PORTF ^= 0xff; // Negace LEDek
 
 V tabulce níže je pro názornost několik vybraných zdrojů přerušení a názvy jejich vektorů. Seznam všech vektorů přerušení můžete najít v datasheetu mikroprocesoru.
 
-Zde je několik příkladů zdrojů přerušení a názvů jejich vektorů (které použijeme při definici obslužné funkce):
-
 | Interrupt Definition                 | Vector Name          |
 |:------------------------------------:|:--------------------:|
 | External Interrupt Request 0         | INT0_vect            |
@@ -60,8 +58,19 @@ Zde je několik příkladů zdrojů přerušení a názvů jejich vektorů (kter
 | ADC Conversion Complete              | ADC_vect             |
 
 
+## Povolení přerušení
+
+Kromě definice obslužné funkce pro dané přerušení, musíme ještě povolit konkrétní přerušení (v našem případě přerušení od časovače najdeme v registru TIMSK) a pak povolit globálně přerušení pomocí funkce sei().
+
 ![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
 
+
+
+
+
+## Úkoly:
+
+Práci s přerušením si vyzkoušíme na přerušení časovače při obsluze sedmisegmentového displeje. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
 
 ```C
 #include <avr/io.h>
@@ -73,15 +82,6 @@ unsigned char cislice[]={0xc0, 0xf9, 0xA4, 0xb0, 0x99, 0x92, 0x82, 0xd8, 0x80, 0
 
 unsigned char pozice[3] = {0b11011111, 0b11101111, 0b11110111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
 unsigned char zobraz[3] = {1,5,0}; // Pole s čísly, která chceme zobrazovat
-
-volatile int aktual_poz = 0; // Proměnná s číslem aktuálně zobrazované pozice. Protože do ní zapisujeme během přerušení, musíme použít typ *volatile*
-
-
-ISR(TIMER1_COMPA_vect) // Rutina pro obsluhu přerušení - speciální funkce, která se vykoná při přerušení
-{
-// Zde doplňte kód, který při každém vyvolání přerušení zobrazí jednu číslici
-}
-
 
 int main(void)
 {
@@ -98,12 +98,12 @@ int main(void)
 	while(1)
 	{
 	}
-
 }
 ```
 
-## Úkoly:
 1. Doplňte kód výše tak, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
-2. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...) 
-3. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160, ...)
+2. 
+3. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
+4. 
+5. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160, ...)
 
