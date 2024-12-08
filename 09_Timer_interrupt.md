@@ -38,7 +38,7 @@ V tabulce níže je pro názornost několik vybraných zdrojů přerušení a n�
 
 Zde je několik příkladů zdrojů přerušení a jejich 
 | Interrupt Definition                 | Vector Name          |
-|--------------------------------------|----------------------|
+|:------------------------------------:|:--------------------:|
 | External Interrupt Request 0         | INT0_vect            |
 | Pin Change Interrupt Request 0       | PCINT0_vect          |
 | Timer/Counter1 Capture Event         | TIMER1_CAPT_vect     |
@@ -51,6 +51,12 @@ Zde je několik příkladů zdrojů přerušení a jejich
 | USART Tx Complete                    | USART_TX_vect        |
 | ADC Conversion Complete              | ADC_vect             |
 
+
+|Pořadí bitu| 7    | 6    | 5    | 4    | 3    | 2    | 1    | 0    | 
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:| 
+|**Název**|  **PORTF7** | **PORTF6** | **PORTF5** |  **PORTF4** | **PORTF3** | **PORTF2** | **PORTF1** | **PORTF0** | 
+|**Hodnota**| **0**    | **0**    | **0**   | **1**   | **1**    | **1**   |  **0**   |  **1**   | 
+|**LEDky**|🟡    | 🟡    | 🟡    | ⚪    | ⚪    | ⚪    | 🟡    | ⚪    | 
 
 Například pokud chceme 
 
