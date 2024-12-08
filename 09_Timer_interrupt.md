@@ -22,17 +22,15 @@ int main(void)
 }
 ```
 
-Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen neustálým kontrolováním příznakového bitu a nedělá nic jiného. Lepší by bylo, kdyby procesor vykonával program a jen v okamžiku, kdy časovač přeteče by se automaticky zastavil, bliknul LEDkou a pak pokračoval v hlavním programu. Takováto funke v mikroprocesorech skutečně je a říkáme jí "přerušení".
+Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen neustálým kontrolováním příznakového bitu a nedělá nic jiného. Lepší by bylo, kdyby procesor vykonával program a jen v okamžiku, kdy časovač přeteče by se automaticky zastavil, bliknul LEDkou a pak pokračoval v hlavním programu. Takováto funkce v mikroprocesorech skutečně je a říkáme jí "přerušení".
 
 ## Přerušení
 Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další.
 
-Například pokud chceme 
-
 <img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
 ## Obsluha  přerušení
-Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
+Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Pokud procesor detekuje přerušní (např. přetekl časovač) přeruší se aktuálně prováděný program a procesor přeskočí na funkci obsluhy přerušení. Poté, co tato funkce skončí opět procesor pokračuje tam kde přestal - vykonává dál instrukce hlavníh programu. Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
 
 ```C
 ISR(TIMER1_COMPA_vect)
