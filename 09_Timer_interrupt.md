@@ -31,6 +31,7 @@ Například pokud chceme
 
 <img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
+## Obslužná rutina přerušení
 Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
 
 ```C
@@ -39,7 +40,6 @@ ISR(TIMER1_COMPA_vect) // *ISR* znamená, že tato funkce je obsluha přerušen�
 PORTF ^= 0xff; // Negace LEDek
 }
 ```
-
 
 V tabulce níže je pro názornost několik vybraných zdrojů přerušení a názvy jejich vektorů. Seznam všech vektorů přerušení můžete najít v datasheetu mikroprocesoru.
 
