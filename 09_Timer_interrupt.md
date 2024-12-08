@@ -60,14 +60,6 @@ Zde je několik příkladů zdrojů přerušení a názvů jejich vektorů (kter
 | ADC Conversion Complete              | ADC_vect             |
 
 
-|Pořadí bitu| 7    | 6    | 5    | 4    | 3    | 2    | 1    | 0    | 
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:| 
-|**Název**|  **PORTF7** | **PORTF6** | **PORTF5** |  **PORTF4** | **PORTF3** | **PORTF2** | **PORTF1** | **PORTF0** | 
-|**Hodnota**| **0**    | **0**    | **0**   | **1**   | **1**    | **1**   |  **0**   |  **1**   | 
-|**LEDky**|🟡    | 🟡    | 🟡    | ⚪    | ⚪    | ⚪    | 🟡    | ⚪    | 
-
-
-
 ![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
 
 
