@@ -30,7 +30,7 @@ Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje oka
 <img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
 
 ## Obsluha  přerušení
-Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Je to speciální funkce, kterou nazveme ISR (interrupt service routine) a v závorce uvedeme vektor přerušení. Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
+Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Je to speciální funkce, kterou nazveme ISR (Interrupt Service Routine) a v závorce uvedeme vektor přerušení. Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
 
 ```C
 ISR(TIMER1_COMPA_vect)
@@ -70,9 +70,13 @@ sei(); // Globální povolení přerušení
 ```
 
 
-## Úkoly:
+## Úkoly
 
-Práci s přerušením si vyzkoušíme na přerušení časovače při obsluze sedmisegmentového displeje. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
+Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu využijem přerušení. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
+
+1. Doplňte kód tak, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
+2. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
+3. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160 -> 161 -> ...)
 
 ```C
 #include <avr/io.h>
@@ -103,7 +107,5 @@ int main(void)
 }
 ```
 
-1. Doplňte kód výše tak, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
-2. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
-3. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160, ...)
+
 
