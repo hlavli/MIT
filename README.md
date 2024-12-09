@@ -8,4 +8,5 @@
 6. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
 7. [Klávesnice](06_Klavesnice.md)
 8. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
-8. [Časovač](08_Timer.md)
+9. [Časovač](08_Timer.md)
+10. [Časovač s přerušením](09_Timer_interrupt.md)
