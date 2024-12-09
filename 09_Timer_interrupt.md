@@ -96,8 +96,8 @@ int main(void)
 	DDRD = 0xff; // Nastavíme port D, jako výstup (je připojen k anodám, řídí, která číslice je aktivní)
 
 	TCCR1B = ???; //Zvolíme CTC režim a požadovanou předděličku
-	OCR1A=???;	// Zápisem do komaračního registru určíme frekvenci přetečení ćítače
-	TIMSK1=0x02; // Povolíme přerušení od časovače 1
+	OCR1A = ???;	// Zápisem do komparačního registru určíme frekvenci přetečení čítače
+	TIMSK1 = 0x02; // Povolíme přerušení od časovače 1
 	sei(); // Povolíme přerušení
 	
 	// Nekonečná smyčka
