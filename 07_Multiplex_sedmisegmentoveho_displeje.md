@@ -5,6 +5,7 @@ Schéma zapojení displeje v našem přípravku:
 ![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
 
 Zápisem na Port D volíme, které pozice displeje mají být aktivní. Nula danou pozici rozsvítí, jednička zhasne.
+
 <img src="https://github.com/user-attachments/assets/dedd1bf2-0de8-45cc-9172-6d50c9480ca0" width="600"/>
 
 
