@@ -89,8 +89,7 @@ Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu v
 #include <avr/interrupt.h>
 
 unsigned char cislice[]={0xc0, 0xf9, 0xA4, 0xb0, 0x99, 0x92, 0x82, 0xd8, 0x80, 0x90, 0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e};
-
-unsigned char pozice[3] = {0b111101110, 0b11101111, b11011111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
+unsigned char pozice[3] = { 0b11110111,0b11101111, 0b11011111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
 unsigned char zobraz[3] = {1, 5, 0}; // Pole s čísly, která chceme zobrazovat
 
 ??? //definujeme funkci pro obsluhu přerušení
