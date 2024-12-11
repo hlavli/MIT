@@ -72,11 +72,11 @@ sei(); // Globální povolení přerušení
 
 ## Úkoly
 
-Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu využijem přerušení. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
+Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu využijeme přerušení. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
 
-1. Doplňte kód tak, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
-2. Doplňte kód tak, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
-3. Doplňte kód tak, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160 -> 161 -> ...)
+1. Doplňte kód, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
+2. Doplňte kód, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
+3. Doplňte kód, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160 -> 161 -> ...)
 
 ```C
 #include <avr/io.h>
@@ -86,7 +86,7 @@ Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu v
 
 unsigned char cislice[]={0xc0, 0xf9, 0xA4, 0xb0, 0x99, 0x92, 0x82, 0xd8, 0x80, 0x90, 0x88, 0x83, 0xc6, 0xA1, 0x86, 0x8e};
 
-unsigned char pozice[3] = {0b11011111, 0b11101111, 0b11110111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
+unsigned char pozice[3] = { 0b111101110,0b11101111, b11011111}; //Pole s hodnotami pro port D, které zapnou anodu dané pozice
 unsigned char zobraz[3] = {1,5,0}; // Pole s čísly, která chceme zobrazovat
 
 int main(void)
