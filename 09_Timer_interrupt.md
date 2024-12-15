@@ -1,28 +1,6 @@
 # Časovač s přerušením
 
-V minulém cvičení jsme se naučili nastavit časovač v mikroprocesoru tak, aby přetekl například jednou za 100ms. Příznakový bit jsme v hlavním programu neustále sledovali. Když pak časovač přetekl a příznakový bit se nastavil do jedničky, náš program na to zareagoval, např. bliknul LEDkou. Program vypadal třeba takto:
-
-```c
-#include <avr/io.h>
-
-int main(void)
-{
-	DDRF = 0xff; // PORTF nastavíme jako výstupní (LEDky)
-
-	TCCR1B = 0b0000011; // Prescaler 64, Normal mode
-
-	while(1)
-	{
-		while((TIFR1 & (1<<TOV1)) == 0); // Dokud není nastaven bit přetečení časovače, nedělej nic
-		
-		TIFR1 |= (1<<TOV1); // Vynulování příznakového bitu
-		
-		PORTF ^= 0xff; // Negace LEDek
-	}
-}
-```
-
-Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen neustálým kontrolováním příznakového bitu a nedělá nic jiného. Lepší by bylo, kdyby procesor vykonával program a jen v okamžiku, kdy časovač přeteče by se automaticky zastavil, bliknul LEDkou a pak pokračoval v hlavním programu. Takováto funkce v mikroprocesorech skutečně je a říkáme jí "přerušení".
+V minulém cvičení jsme se naučili nastavit časovač v mikroprocesoru tak, aby přetekl například jednou za 100ms. Příznakový bit jsme v hlavním programu neustále sledovali. Když pak časovač přetekl a příznakový bit se nastavil do jedničky, náš program na to zareagoval, např. bliknul LEDkou.  Tomuto přístupu, kdy hlavní program pořád dokola kontroluje, zda se nastavil nějaký bit se říká *polling*. Nevýhoda je, že procesor tráví svůj čas jen neustálým kontrolováním příznakového bitu a nedělá nic jiného. Lepší by bylo, kdyby procesor vykonával program a jen v okamžiku, kdy časovač přeteče by se automaticky zastavil, bliknul LEDkou a pak pokračoval v hlavním programu. Takováto funkce v mikroprocesorech skutečně je a říkáme jí "přerušení".
 
 ## Přerušení
 Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další. Pokud procesor detekuje přerušení (např. přetekl časovač) přeruší se aktuálně prováděný program a procesor přeskočí na funkci obsluhy přerušení. Poté, co tato funkce skončí opět procesor pokračuje tam kde přestal - vykonává dál instrukce hlavního programu.
