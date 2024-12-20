@@ -109,7 +109,7 @@ Kde:
 **-1** - k přetečení a nastavení příznakového bitu dojde až při další hraně hodinového signálu, proto aby perioda byla přesná, musíme hodnotu ještě snížit o jedničku
 
 >### 2. Úkol 
->Nastavte časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms
+>Nastavte časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms. Nezapomeňte nastavit CTC režim v registru TCCR1B.
 
 
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
