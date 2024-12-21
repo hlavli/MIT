@@ -16,3 +16,8 @@ $$
 $$
 \Large t_{\text{tick}} = \frac{N_{\text{prescaler}}}{f_{\text{clk}}}
 $$
+
+<!---
+- [Zadání E3A](Zadani_projektu_E3A.md)
+--->
+  
