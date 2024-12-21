@@ -30,6 +30,10 @@ Vybereme neinvertující režim:
 
 ![image](https://github.com/user-attachments/assets/73045035-97a6-4c02-b3df-2adae6312450)
 
+## Nastavení střídy na jednotlivých pinech
+
+TODO OC1A..PB5,...
+TODO OCR1A vs ICR1....
 
 ## Úkoly
 
