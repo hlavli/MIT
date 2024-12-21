@@ -49,7 +49,9 @@ sei(); // Globální povolení přerušení
 
 ## Použití dalších časovačů
 
-Doteď jsme používali jen časovač Timer1. Mikrokontroler ATmega 2560, který máme v přípravku, ale obsahuje časovačů mnohem více. Čtyři 16bitové: Timer1, Timer3, Timer4, Timer5 a pak ještě dva 8bitové Timer0 a Timer2. Osmibitové čítače se od šestnáctibitových liší nejen počtem bitů, ale mají i méně funkcí a jejich registry vypadají trochu jinak než u šestnáctibitových časovačů. Ovšem ty čtyři 16bitové časovače jsou totožné, liší se jen čísly ve jm=ně registru. Takže pokud si spočítáme a určíme například pro Timer1 hodnoty registrů TCCR1B a OCR1A, můžeme je úplně stejně použít pro Timer3, Timer4 nebo Timer5, pouze index ve jméně registur se změní. Tedy např pro TImer3 by to byly registry TCCR3B a OCR3A.
+Doteď jsme používali jen časovač Timer1. Mikrokontroler ATmega 2560, který máme v přípravku, ale obsahuje časovačů mnohem více. Čtyři 16bitové: Timer1, Timer3, Timer4, Timer5 a pak ještě dva 8bitové Timer0 a Timer2. Osmibitové čítače se od šestnáctibitových liší nejen počtem bitů, ale mají i méně funkcí a jejich registry vypadají trochu jinak než u šestnáctibitových časovačů. 
+
+Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve jméně registru. Takže pokud si spočítáme a určíme například pro Timer1 hodnoty registrů TCCR1B a OCR1A, můžeme je úplně stejně použít pro Timer3, Timer4 nebo Timer5, pouze index ve jméně registur se změní. Tedy např pro TImer3 by to byly registry TCCR3B a OCR3A.
 
 
 ## Úkoly
