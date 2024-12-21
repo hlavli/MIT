@@ -4,6 +4,8 @@ PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rych
 
 <img src="https://github.com/user-attachments/assets/a54b052d-7a31-424e-b982-7bb4a846f13b" width="600"/>
 
+*Zdroj obrázku:https://arduinokitproject.com/pwm-in-arduino/*
+
 ## Výběr režime časovače
 
 V tomto cvičení budeme využívat Timer1, tedy 16bitový čítač. Tento čítač umí generovat PWM signál až na třech vástupech a to zcela automaticky, bez použití jádra procesoru. Tedy časovač jen na začátku programu nastavíme a generování PWM signálu se děje již bez přispění jádra (tj. nemusíme pro něj psát žádný kód). Pouze pokud budeme chtít parametry PWM signálu změnit, např. nastavit jinou střídu, pak musíme samozřejmě použít příkaz pro změnu nastavení časovače.
@@ -32,8 +34,9 @@ Vybereme neinvertující režim:
 
 ## Nastavení střídy na jednotlivých pinech
 
-TODO OC1A..PB5,...
-TODO OCR1A vs ICR1....
+Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro TImer1 je OC1A připojen na pin PB5, 0C1B na PB6 a OC1C na PB7.
+Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Pokud tedy například v registru ICR1 je hodnota 2000 a my nastavíme registry OCR1A = 200, OCR1B = 1000 a OCR1C  = 1500. Pak bude na Pinu PB5 PWM se střídou 10%, na PB6 50% a na PB7 75%.
+
 
 ## Úkoly
 
