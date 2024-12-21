@@ -10,3 +10,5 @@
 8. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
 9. [Časovač](08_Timer.md)
 10. [Časovač s přerušením](09_Timer_interrupt.md)
+11. [Multiplex displeje s přerušením](10_Display_interrupt.md)
+12. [PWM](11_PWM.md)
