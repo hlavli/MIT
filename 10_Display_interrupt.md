@@ -2,6 +2,7 @@
 
 Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu využijeme přerušení. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
 
+## Úkoly
 1. Doplňte kód, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
    - nastavte mód a předděličku časovače
    - spočítejte si hodnotu pro komparační registr, aby se přerušení vyvolalo jednou za milisekundu
@@ -39,3 +40,4 @@ int main(void)
 	{
 	}
 }
+```
