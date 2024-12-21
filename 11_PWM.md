@@ -6,7 +6,7 @@ PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rych
 
 *Zdroj obrázku:https://arduinokitproject.com/pwm-in-arduino/*
 
-## Výběr režime časovače
+## Výběr režimu časovače
 
 V tomto cvičení budeme využívat Timer1, tedy 16bitový čítač. Tento čítač umí generovat PWM signál až na třech vástupech a to zcela automaticky, bez použití jádra procesoru. Tedy časovač jen na začátku programu nastavíme a generování PWM signálu se děje již bez přispění jádra (tj. nemusíme pro něj psát žádný kód). Pouze pokud budeme chtít parametry PWM signálu změnit, např. nastavit jinou střídu, pak musíme samozřejmě použít příkaz pro změnu nastavení časovače.
 
@@ -14,7 +14,7 @@ V datasheetu vidíme, že Timer1 má 15 různých režimů (s režimy normal a C
 
 ![image](https://github.com/user-attachments/assets/46d04634-b54f-4302-9edd-85ca25d63233)
 
-## Fast PWM režim 14
+## Fast PWM mode 14
 
 Jak funguje PWM v módu 14 (a při nastavení neinvertujícího módu) vidíme na obrázku níže. Časovač Timer1 může generowat PWM signál až na 3 výstupních pinech (OC1A, OC1B, OC1C). Časovač čítá v registru TCNT1 od nuly až do maximální hodnoty, která je uložena v registru ICR1. Při přetečení (nastavení čítače zpět do nuly) nastaví výstupní pin na 1. Při shodě čítače s komparačním registrem OCR1A nastaví pin OC1A zpět do nuly. Stejně je to se zbylámi dvěma piny - shoda s registrem OCR1B vynuluje pin OC1B a stejně tak shoda s registrem OCR1C vynuluje pin OC1C.
 
