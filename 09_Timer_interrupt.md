@@ -56,3 +56,8 @@ Doteď jsme používali jen časovač Timer1. Mikrokontroler ATmega 2560, který
 1. Nastavte časovač tak, aby pomocí přerušení blikal spodními čtyřmi LEDkami na portu F s frekvencí 10Hz.
 2. Přidejte k zadání v bodu jedna ještě druhý 16bitový časovač, který bude horními čtyřmi LEDkami portu F blikat s frekvencí 1Hz.
 3. Při stisku tlačítka SW0 zvyště frekvenci blikání horních LEDek na 5Hz.
+
+Pro usnadněí výpočtů hodnot pro časovače můžete použít tabulku s předpočítanými hodnotami:
+
+![image](https://github.com/user-attachments/assets/d021eb3d-52b4-48d5-84a6-604a7a3b8ba0)
+
