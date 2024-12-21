@@ -2,8 +2,8 @@
 
 Co je to PWM:
 
-
 <img src="https://github.com/user-attachments/assets/a54b052d-7a31-424e-b982-7bb4a846f13b" width="600"/>
+
 Vybereme si mód 14, kde můžeme nastavit délku periody registrem ICR1 a střídu jendotlivách signálů pomocí OCR1A, OCR1B a OCR1C
 
 ![image](https://github.com/user-attachments/assets/46d04634-b54f-4302-9edd-85ca25d63233)
@@ -28,3 +28,7 @@ Vybereme neinvertující režim:
 ![image](https://github.com/user-attachments/assets/73045035-97a6-4c02-b3df-2adae6312450)
 
 
+## Úkoly
+
+1. tododo
+2. tpododo
