@@ -3,7 +3,12 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">https://github.com/TomasChovanec/MIT/blob/main/sandbox.md
 </script>
 
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/7segment_multiplexing.gif" width="600"/>
+
+[Markdown table generator](https://react-md-table-generator.vercel.app/)
+
+[LaTeX editor](https://latexeditor.lagrida.com/)
 
 $$
 \Large t_{\text{tick}} = \frac{Frequency}{Prescaler} = \frac{16e6}{64} \, \mu\text{s}
