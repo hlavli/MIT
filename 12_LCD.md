@@ -19,9 +19,14 @@ V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na
 
 Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinných čísel je relativně náročná, defaultně překladač do programu podporu desetinných čísel u funkce sprintf() nepřidává. Pokud však chcete desetinná čísla na displeji používat, lze ji povolit (za cenu zvětšení výsledného kódu a tím i zpomalení flashování).
 
-*Project -> Properties -> Toolchain -> Libraries * a zde přidat ```libprint_flt.a```
+*Project -> Properties -> Toolchain -> Libraries * a zde přidat ```libprintf_flt.a```
 
-![image](https://github.com/user-attachments/assets/dd92d3f1-68a3-4684-94a2-94084ba742b0)
+![image](https://github.com/user-attachments/assets/c45b611f-f7ac-4bb2-8f03-4c535b61194f)
+
+*Project -> Properties -> Toolchain -> AVR/GNU Linker -> General* a zaškrtnout *Use vprintf library(WI,-u,vprintf)*
+
+![image](https://github.com/user-attachments/assets/055a77a5-5b6e-4db0-a893-6c867007efb9)
+
 
 
 
