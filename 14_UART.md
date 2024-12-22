@@ -4,6 +4,9 @@
 ## UART 
 -Rx, Tx, baudrate, startbit, stopbit, parita
 
+## Rušení, ochrana proti němu
+
+
 ## Registry
 
 ## Úkoly
