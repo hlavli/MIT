@@ -1,6 +1,6 @@
 # LCD displej
 
-V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na výukovém přípravku. Abychom si práci s ním zjednodušili, využijeme hotovou knihovnu, pro práci s displjeme, kterou do našeho projektu vložíme.
+V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na výukovém přípravku. Konkrétně je to typ displeje HD44780. Abychom si práci s ním zjednodušili, využijeme hotovou knihovnu, pro práci s displjeme, kterou do našeho projektu vložíme.
 
 1. Stáhněte si následující dva soubory:
 [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h)
@@ -32,23 +32,40 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 
 
-## Funkce knihovny lcd.c
+## Příklady použití funkcí knihovny lcd.c
 
-lcd_home();
+```lcd_init(LCD_DISP_ON);```  Inicializace displeje, zapne displej bez kurzoru. Jiné módy např. LCD_DISP_ON, LCD_DISP_OFF, LCD_DISP_ON_CURSOR, LCD_DISP_ON_CURSOR_BLINK.
 
-sprintf(lcd_buffer,"Uin=%5.3f V",uvstupni);
+```lcd_home();``` Přesune kursor displeje na začátek (první znak, první řádek)
 
-lcd_gotoxy(0,1);
+```lcd_clrscr();``` Smaže celý displej a nastaví kurzor na (0, 0).
 
-lcd_puts(lcd_buffer);
+```lcd_gotoxy(0,1);``` Přesune kursor displeje na danou pozici (x- znak, y- řádek)
 
-lcd_puts(„Posunute“);
+```lcd_puts(„Mam rad MIT!“);``` Zobrazí na displeji řetězec znaků
 
-lcd_clrscr();
+```lcd_command(LCD_SHIFT_LEFT);``` Posune text doleva
 
-## ASCII kód
+
+## ASCII kód, zobrazení hodnoty proměnné
+
+Už umíme pomocí fuknce *lcd_puts* zobrazit konstantní textový řetězec. Ale co když chceme zobrazit např. hodnotu číselné proměnné?
+
 Na displeji se data zobrazují pomocí ASCII kódů.
 
 ![image](https://github.com/user-attachments/assets/ebd7fdb8-ab3d-473b-8a44-4fda306c2422)
 
 *Zdroj obrázku: https://www.sciencebuddies.org/cdn/references/ascii-table.png*
+
+Například textový řetězec ```Ahoj 123``` převedeme do ASCII jako ```0x41 0x68 0x6F 0x6A 0x20 0x31 0x32 0x33```.
+
+Pokud tedy chceme na displeji "vytisknout" hodnotu celočíselné proměnné, musíme každou její číslici převést na ASCII znak. S tím nám pomůže fuknce *sprinf*:
+
+```c
+char lcd_buffer[32];
+int cislo = 156;
+sprintf(lcd_buffer,"%d", cislo);
+lcd_puts(lcd_buffer);
+```
+
+To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "vytiskla" jako dekadické celé číslo. Další formátovací parametry mohou být třeba ```%X``` pro číslo zapsané v hexadecimální soustavě nebo ```%.2f``` pro desetinné číslo.
