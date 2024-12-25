@@ -1,9 +1,16 @@
-# Cvičení z předmětu Mikroprocesorová technika
+# Cvičení z Mikroprocesorové techniky
+<img src="https://github.com/user-attachments/assets/c95d9d14-21a3-4f19-96f6-1478ac2f1095" width="300"/>
 
+###
+Tato stránka obsahuje podpůrné materiály k cvičením předmětu Mikroprocesorová technika, vyučovaném ve 3. ročníku na Gymnáziu a Střední průmyslové škole elektrotechniky a informatiky ve Frenštátě pod Radhoštěm. 
+  
+Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu tomas.chovanec@frengp.cz.
+
+## Cvičení
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
-2. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
-3. [Převody soustav, bitové operace](03_Bitove_operace.md)
-4. [Jazyk C](00_Jazyk_C.md)
+2. [Jazyk C](00_Jazyk_C.md)
+3. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
+4. [Převody soustav, bitové operace](03_Bitove_operace.md)
 5. [Práce s tlačítky](04_Tlacitka_podminky.md)
 6. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
 7. [Klávesnice](06_Klavesnice.md)
