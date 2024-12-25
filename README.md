@@ -1,7 +1,7 @@
 # Cvičení z Mikroprocesorové techniky
 <img src="https://github.com/user-attachments/assets/c95d9d14-21a3-4f19-96f6-1478ac2f1095" width="300"/>
 
-###
+### 
 
 Tato stránka obsahuje podpůrné materiály k cvičením předmětu Mikroprocesorová technika, vyučovaném ve 3. ročníku na Gymnáziu a Střední průmyslové škole elektrotechniky a informatiky ve Frenštátě pod Radhoštěm. 
   
