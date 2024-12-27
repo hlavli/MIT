@@ -63,3 +63,11 @@ Pro usnadněí výpočtů hodnot pro časovače můžete použít tabulku s pře
 
 ![image](https://github.com/user-attachments/assets/d021eb3d-52b4-48d5-84a6-604a7a3b8ba0)
 
+## Další užitečné zdroje informací
+
+[Video k přerušením od časovače](https://www.youtube.com/watch?v=Uv9UeYUsA8A&ab_channel=Electronoobs)
+
+[Přerušení obecně](https://www.renesas.com/en/support/engineer-school/mcu-05?srsltid=AfmBOoopor2K3EEakK9uVCQjMFgDe9IM-vR9Ue96SOFzn6UM89az0LUM)
+
+
+## [Zpět na obsah](README.md)
