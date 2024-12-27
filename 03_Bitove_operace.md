@@ -228,6 +228,4 @@ Na pozice bitů, které nechceme změnit dáme nulu, pozice bitů, které chceme
 | Negace bitu            | PORTF ^= 1 << 3;      |změní 3.bit portu F na opačnou hodnotu   |
 | Otestování bitu        | (PINK & (1<<3) != 0); |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
 
-
-
 ## [Zpět na obsah](README.md)
