@@ -49,3 +49,5 @@ Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru 
 
 *Zdroj obrázku: https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/*
 
+## [Zpět na obsah](README.md)
+
