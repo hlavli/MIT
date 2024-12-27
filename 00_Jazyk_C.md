@@ -14,3 +14,16 @@ Protože na cvičeních z MIT budeme alespoň základní konstrukce jazyka C pot
   
 - [Jak si nadefinovat vlastní fuknci a jak ji pak zavolat](https://mrlvsb.github.io/upr-skripta/c/funkce/funkce.html)
 
+
+## Online compilery
+
+Programovat v jazyce C můžete i přímo v prohlížeči, bez nutnosti cokoli instalovat. Vyzkoušejte některý z dostupných online compilerů.
+
+(Tutorialspoint)[https://www.tutorialspoint.com/compile_c_online.php]
+
+(Onlinegdb)[https://www.onlinegdb.com/]
+
+(Jdoodle)[https://www.jdoodle.com/online-compiler-c++]
+
+
+### [Zpět na obsah](README.md)
