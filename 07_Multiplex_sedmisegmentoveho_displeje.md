@@ -75,5 +75,8 @@ Pozn. Neupravujte příklad výše, ale založte si nový projekt a jen si zkop�
 3. Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Funkce toto vstupní číslo rozloží na jednotlivé číslice a zobrazí je na displeji.
 
 
+## Další zajímavé zdroje informací
+
+[Video](https://www.youtube.com/shorts/Llq0WlhyLzQ)
 
 ### [Zpět na obsah](README.md)
