@@ -143,8 +143,8 @@ int main()
 Pozor, výše uvedený způsob ošetření zákmitů patří k těm nejjednodušším, proto ho zde uvádím pro snadné pochopení. Nicméně hodí se jen pro velmi jednoduché programy, ve kterých nevadí, že procesor 100ms (což je pro něj celá věčnost) jen čeká na na čtení tlačítka a nic jiného nedělá. V praxi se používají různé jiné způsoby, které procesor takto neblokují. Hezký článek je například [tady (EN)](https://makeabilitylab.github.io/physcomp/arduino/debouncing.html).
 
 ## Další zajímavé zdroje informací
-http://www.elektromys.eu/clanky/avr_porty/clanek.html
+[Ovládání portů, debouncing](http://www.elektromys.eu/clanky/avr_porty/clanek.html)
 
-https://makeabilitylab.github.io/physcomp/arduino/debouncing.html
+[Debouncing](https://makeabilitylab.github.io/physcomp/arduino/debouncing.html)
 
 ### [Zpět na obsah](README.md)
