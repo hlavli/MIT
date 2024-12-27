@@ -21,7 +21,7 @@ Kromě samotného mikrokontroleru a nutných obvodů jako napájení, zdroj hodi
 
 ## Dokumentace k přípravku a k mikrokontroleru
 
-[Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
+[Data sheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
 
 [Schema vývojové desky](files/Development_board_schematics.pdf)
 
