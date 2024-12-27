@@ -3,7 +3,15 @@
 
 Tato stránka obsahuje podpůrné materiály k cvičením předmětu Mikroprocesorová technika, vyučovaném ve 3. ročníku na Gymnáziu a Střední průmyslové škole elektrotechniky a informatiky ve Frenštátě pod Radhoštěm. 
   
-Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu tomas.chovanec@frengp.cz.
+Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [tomas.chovanec@frengp.cz](mailto:tomas.chovanec@frengp.cz).
+
+## Dokumentace
+
+[Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
+
+[Schema zapojení výukového přípravku](files/Development_board_schematics.pdf)
+
+
 
 ## Cvičení
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
