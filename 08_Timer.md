@@ -153,5 +153,12 @@ Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer p�
 >### 3. Úkol
 >Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
 
+## Další užitečné zdroje informací
+
+[Časovač](https://www.electronicwings.com/avr-atmega/atmega1632-timer)
+
+[Další časovač](https://bennthomsen.wordpress.com/arduino/peripherals/timers/)
+
+[Všechny módy časovače](https://fabacademy.org/2015/eu/students/gunnarsson.thorarinn_b.b/docs/d7/Timers.pdf)
 
 ### [Zpět na obsah](README.md)
