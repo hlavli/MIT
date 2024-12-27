@@ -81,4 +81,10 @@ int main(void)
 4. Upravte příklad, aby při stisku tlačítka SW0 se zobrazila na displeji nula, při stisku SW1 jednička, atd.
 
 
+## Další zajímavé zdroje informací
+[Sedmisegmentový displej](https://instrumentationtools.com/seven-segment-display-working-principle/)
+
+[Sedmisegmentový displej, multiplex](https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html)
+
+
 ### [Zpět na obsah](README.md)
