@@ -19,11 +19,13 @@ Protože na cvičeních z MIT budeme alespoň základní konstrukce jazyka C pot
 
 Programovat v jazyce C můžete i přímo v prohlížeči, bez nutnosti cokoli instalovat. Vyzkoušejte některý z dostupných online compilerů.
 
-(Tutorialspoint)[https://www.tutorialspoint.com/compile_c_online.php]
+[Tutorialspoint](https://www.tutorialspoint.com/compile_c_online.php)
 
-(Onlinegdb)[https://www.onlinegdb.com/]
+[Onlinegdb](https://www.onlinegdb.com/)
 
-(Jdoodle)[https://www.jdoodle.com/online-compiler-c++]
+[Jdoodle](https://www.jdoodle.com/online-compiler-c++)
+
+[Programiz](https://www.programiz.com/c-programming/online-compiler)
 
 
 ### [Zpět na obsah](README.md)
