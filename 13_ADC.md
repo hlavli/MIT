@@ -1,3 +1,5 @@
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
 # AD převodník
 
 Mikroprocesor jako digitální součástka dokáže pracovat pouze s digitálním signálem. Stav svých pinů čte pouze jako logickou jedničku nebo logickou nulu. Co když ale chceme měřit analogové hodnoty? Například  výstupní napětí z teplotního čidla, nebo napětí baterie, abychom zjistili stav jejícho nabití? K tomu slouží Analogově digtitální převodník - ADC. 
@@ -6,11 +8,20 @@ Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo v�
 
 ## Referenční napětí
 AD převodník funguje poměrově (ratiometric) to znamená že hodnota jeho výstupu udává poměr měřeného napětí  a referenčního napětí. 
-![image](https://github.com/user-attachments/assets/050fee85-155f-4b92-b3e1-3ca688615cb5)
+
+$$
+\Large Digitální_hodnota = Rozlišení_ADC \times \frac{Vin}{Vref}
+$$
+
+Napříkald u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
+
+$$
+\Large 1023 \times \frac{2,5}{5} = 512
+$$
 
 Zdroj referenčního napětí si můžeme zvolit. Může jim být napájecí napětí mikrokontroleru, vnitřní zdroj referenčního napětí či externě připojený zdroj ref. napětí (např. speciální obvody, jako je LM4040 nebo LM336).
 
-## Prescaler
+## Prescaler hodinového signálu
 Podobně jako u časovače, musíme nastavit, s jakou frekvencí hodinového signálu bude AD převodník pracovat. Do jisté míry platí, že čím bude převod rychlejší, tím méně bude přesný a naopak. AD převodník použitý v ATmega 2560 vyžaduje prekvenci mezi 50kHz a 200kHz.
 
 ## Mutliplexer
