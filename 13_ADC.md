@@ -66,6 +66,6 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 
 ## Úkoly
-1. Měřte pomocí ADC hodnotu napětí na potenciometru a zobrazujte ji na LCD displeji.
-2. Rozvěcejte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
+1. Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji.
+2. Rozsvicujte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
 3. Nastavujte potenciometrem rychlost blikání LEDek (1Hz - 50Hz). Frekvenci zobrazujte na LCD displeji.
