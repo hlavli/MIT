@@ -41,11 +41,15 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 ![image](https://github.com/user-attachments/assets/ee141afe-1064-4e5a-af2a-17c9bf33633f)
 
 
-## Spuštění konverze
+## Použití ADC
 Jak spustit, počkat na výsledek, zmínit přerušení
 
-![image](https://github.com/user-attachments/assets/e095c283-b1fd-48c5-9536-54699dae509f)
-
+1.Nastavit multiplexer, podle toho, na kterém pinu chceme měřit
+2.Nastavit předděličku hodinového signálu
+3.Nastavit zdroj referenčního napětí
+4.Spustit konverzi
+5.Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
+6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
 
 
 ## Úkoly
