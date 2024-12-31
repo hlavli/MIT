@@ -10,13 +10,13 @@ Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo v�
 AD převodník funguje poměrově (ratiometric) to znamená že hodnota jeho výstupu udává poměr měřeného napětí  a referenčního napětí. 
 
 $$
-\Large DigitálníHodnota = RozlišeníADC \times \frac{Vin}{Vref}
+DigitálníHodnota = RozlišeníADC \times \frac{Vin}{Vref}
 $$
 
 Napříkald u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
 
 $$
-\Large 1023 \times \frac{2,5}{5} = 512
+1023 \times \frac{2,5}{5} = 512
 $$
 
 Zdroj referenčního napětí si můžeme zvolit. Může jim být napájecí napětí mikrokontroleru, vnitřní zdroj referenčního napětí či externě připojený zdroj ref. napětí (např. speciální obvody, jako je LM4040 nebo LM336).
