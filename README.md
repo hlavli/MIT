@@ -27,3 +27,4 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 11. [Multiplex displeje s přerušením](10_Display_interrupt.md)
 12. [PWM](11_PWM.md)
 13. [LCD displej](12_LCD.md)
+14. [AD převodník](13_ADC.md)
