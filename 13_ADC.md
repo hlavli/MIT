@@ -10,7 +10,7 @@ Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo v�
 AD převodník funguje poměrově (ratiometric) to znamená že hodnota jeho výstupu udává poměr měřeného napětí  a referenčního napětí. 
 
 $$
-\Large Digitální_hodnota = Rozlišení_ADC \times \frac{Vin}{Vref}
+\Large DigitálníHodnota = RozlišeníADC \times \frac{Vin}{Vref}
 $$
 
 Napříkald u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
@@ -35,8 +35,6 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 ![image](https://github.com/user-attachments/assets/5d9e78f5-7b8a-40ef-9b43-b4790e6940f7)
 
 ![image](https://github.com/user-attachments/assets/3110e411-45c2-4292-869f-4fe0f37e1bc9)
-
-![image](https://github.com/user-attachments/assets/048354c4-1092-4b57-9370-897b7a885049)
 
 ![image](https://github.com/user-attachments/assets/ee141afe-1064-4e5a-af2a-17c9bf33633f)
 
