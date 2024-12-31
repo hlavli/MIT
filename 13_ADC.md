@@ -31,13 +31,18 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 ## Důležité registry
 
 ![image](https://github.com/user-attachments/assets/3110e411-45c2-4292-869f-4fe0f37e1bc9)
+
 **ADEN** - Nastavení tohoto bitu zapne AD převodník. Pokud převodník nepoužíváne, jeho vypnutím můžeme snížit spotřebu energie.
 
 **ADSC** - Start AD převodu. Zápisem jedničky spustíme převod. Po dokončení převodu se bit automaticky nastaví do nuly. Toho můžeme využít pro detekci toho, zda už je převod dokončen.
 
 **ADPS0:2** - Nastavení předděličky hodinového signálu viz tabulka níže.
 
-![image](https://github.com/user-attachments/assets/7ca78391-e95f-47b8-a29e-5abd5dee4b28)
+![image](https://github.com/user-attachments/assets/9392a6ad-f674-416a-86ed-7e0ec120e727)
+
+![image](https://github.com/user-attachments/assets/2547caf1-1521-4e2f-a395-a5adde5ea6c6)
+
+![image](https://github.com/user-attachments/assets/fdf72867-e734-4187-98ed-1a396691edee)
 
 ![image](https://github.com/user-attachments/assets/5d9e78f5-7b8a-40ef-9b43-b4790e6940f7)
 
