@@ -40,7 +40,13 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 ![image](https://github.com/user-attachments/assets/9392a6ad-f674-416a-86ed-7e0ec120e727)
 
+**MUX0-5** - Nastavení multiplexeru, tedy výběr pinu, na kterém budeme měřit napětí. Pozor, pátý bit MUX5 je umístěn v registru ADCSRB
+
+**REFS0-1** - Nastavení zdroje referenčního napětí, viz tabulka níže
+
 ![image](https://github.com/user-attachments/assets/2547caf1-1521-4e2f-a395-a5adde5ea6c6)
+
+**MUX5** - nejvyšší bit pro nastavení multiplexeru (zbytek bitů je umístěn v registru ADMUX)
 
 ![image](https://github.com/user-attachments/assets/fdf72867-e734-4187-98ed-1a396691edee)
 
