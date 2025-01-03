@@ -64,10 +64,13 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 5. Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
 6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
 
-### [Zpět na obsah](README.md)
-
 
 ## Úkoly
+
 1. Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji.
 2. Rozsvicujte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
 3. Nastavujte potenciometrem rychlost blikání LEDek (1Hz - 50Hz). Frekvenci zobrazujte na LCD displeji.
+
+
+### [Zpět na obsah](README.md)
+
