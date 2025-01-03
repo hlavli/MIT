@@ -9,7 +9,7 @@ Zápisem na Port D volíme, které pozice displeje mají být aktivní. Nula dan
 <img src="https://github.com/user-attachments/assets/dedd1bf2-0de8-45cc-9172-6d50c9480ca0" width="600"/>
 
 
-## Multiplexování
+## Časový multiplex
 Budeme muset použít techniku, které se říká časový multiplex. Multiplexování je způsob, jak sdílet jeden komunikační kanál mezi více zdroji informací. V našem případě máme na přípravku 6 pozic sedmisegmentového displeje, ale pouze jednu sadu vodičů, které ovládají segmenty. Můžeme ale v čase postupně rozsvěcet a zhasínat jednotlivé pozice displeje. Pokud to budeme dělat dostatečně rychle, díky setrvačnosti lidského oka se nám bude zdát, že všechny pozice displeje svítí zároveň. 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/7segment_multiplexing.gif" width="600"/>
