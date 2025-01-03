@@ -70,6 +70,10 @@ lcd_puts(lcd_buffer);
 
 To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "vytiskla" jako dekadické celé číslo. Další formátovací parametry mohou být třeba ```%X``` pro číslo zapsané v hexadecimální soustavě nebo ```%.2f``` pro desetinné číslo.
 
+
+### [Zpět na obsah](README.md)
+
+
 ## Úkoly
 1. Zobrazte na displeji na jednom řádku své jméno, na druhém příjmení
 2. Zobrazte na displeji odpočet od 10 do 0 po 500ms.
