@@ -40,7 +40,7 @@ Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru 
 
 ## Úkoly
 
-1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku na piny PB5 - PB7. Nastavte PWM výstupo tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, blue = 30%, green = 0%)
+1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku na piny PB5 - PB7. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, blue = 30%, green = 0%)
 2. Měňte ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
 3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou.
 4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
