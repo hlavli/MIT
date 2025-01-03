@@ -64,6 +64,8 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 5. Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
 6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
 
+### [Zpět na obsah](README.md)
+
 
 ## Úkoly
 1. Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji.
