@@ -4,7 +4,7 @@ PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rych
 
 <img src="https://github.com/user-attachments/assets/a54b052d-7a31-424e-b982-7bb4a846f13b" width="600"/>
 
-*Zdroj obrázku:https://arduinokitproject.com/pwm-in-arduino/*
+*Zdroj obrázku: https://arduinokitproject.com/pwm-in-arduino/*
 
 ## Výběr režimu časovače
 
