@@ -34,14 +34,14 @@ Vybereme neinvertující režim:
 
 ## Nastavení střídy na jednotlivých pinech
 
-Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro TImer1 je OC1A připojen na pin PB5, 0C1B na PB6 a OC1C na PB7.
+Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro Timer1 je OC1A připojen na pin PB5, 0C1B na PB6 a OC1C na PB7.
 Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Pokud tedy například v registru ICR1 je hodnota 2000 a my nastavíme registry OCR1A = 200, OCR1B = 1000 a OCR1C  = 1500. Pak bude na Pinu PB5 PWM se střídou 10%, na PB6 50% a na PB7 75%.
 
 
 ## Úkoly
 
 1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku na piny PB5 - PB7. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, blue = 30%, green = 0%)
-2. Měňte ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
+2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
 3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou.
 4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
