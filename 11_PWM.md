@@ -34,8 +34,21 @@ Vybereme neinvertující režim:
 
 ## Nastavení střídy na jednotlivých pinech
 
-Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro Timer1 je OC1A připojen na pin PB5, 0C1B na PB6 a OC1C na PB7.
-Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Pokud tedy například v registru ICR1 je hodnota 2000 a my nastavíme registry OCR1A = 200, OCR1B = 1000 a OCR1C  = 1500. Pak bude na Pinu PB5 PWM se střídou 10%, na PB6 50% a na PB7 75%.
+Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro Timer1 jsou použity tyto piny:
+| Výstup časovače| Pin         |
+|:--------------:|:-----------:|
+| OC1A           | PB5         |
+|OC1B            | PB6         |
+| OC1C           | PB7         |
+
+Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Nastavení střídy jednotlivých kanálů může vypadat například takto: 
+
+**Pro ICR1 = 2000**
+| Compare registr| Hodnota     |Duty cycle |
+|:--------------:|:----------:|:----------:|
+| OCR1A          | 200        |10%         |
+| OCR1B          | 1000       |50%         |
+| OCR1C          | 1500       |75%         |
 
 
 ## Úkoly
