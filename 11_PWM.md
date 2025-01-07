@@ -45,6 +45,7 @@ Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nas
 Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Nastavení střídy jednotlivých kanálů může vypadat například takto: 
 
 **Pro ICR1 = 2000**
+
 | Compare registr| Hodnota     |Duty cycle |
 |:--------------:|:----------:|:----------:|
 | OCR1A          | 200        |10%         |
@@ -67,7 +68,7 @@ Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru 
 3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
 4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
-<img src="https://github.com/user-attachments/assets/2ae722ba-e1da-4518-a15d-ccad1a205a34" width="800"/>
+<img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
 
 *Zdroj obrázku: https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/*
 
