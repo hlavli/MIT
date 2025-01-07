@@ -35,6 +35,7 @@ Vybereme neinvertující režim:
 ## Nastavení střídy na jednotlivých pinech
 
 Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nastavovat PWM signál napevno přiděleny. V datasheetu tak najdeme, že pro Timer1 jsou použity tyto piny:
+
 | Výstup časovače| Pin         |
 |:--------------:|:-----------:|
 | OC1A           | PB5         |
