@@ -48,13 +48,19 @@ Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nas
 
 Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Poku například chceme 10Hz, tedy periodu 100ms: 
 
+Zkusíme zvolit předděličku 64. Pokud by nám na konci vyšlo číslo > 65535, museli bychom zvolit předděličku vyšší.
+
 $$
 \Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} = \frac{16MHz}{64} = 250kHz
 $$
 
+Spočítáme, jak dlouho trvá jeden "tick" tj. navýšení čítacího registru časovače o jedničku:
+
 $$
 \Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} = \frac{1}{250kHz} = 4us
 $$
+
+Spočítáme, koli ticků potřebujeme pro naši požadovanou periodu. Od výslekdu ještě odečteme 1.
 
 $$
 \Large OCR1A = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1 = \frac  {100ms} {4us} -1 = 24999
