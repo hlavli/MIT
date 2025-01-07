@@ -1,3 +1,7 @@
+<script type="text/javascript" id="MathJax-script" async 
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> 
+</script> 
+
 # PWM
 
 PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rychlosti motoru, jasu LEDky nebo k řízení servomotoru. U PWM signálu jsou dvě důležité veličiny - frekvence [Hz] a střída, neboli duty cycle [%] . Střída nám udává poměr času, kdy je signál v log.1 k délce celé periody. Tedy například DC=30% při frekvenci 1kHz znamená, že signál je 0,3ms v  logické jedničce a 0,7ms v logické nule.
@@ -42,15 +46,27 @@ Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nas
 |OC1B            | PB6         |
 | OC1C           | PB7         |
 
-Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Nastavení střídy jednotlivých kanálů může vypadat například takto: 
+Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Poku například chceme 10Hz, tedy periodu 100ms: 
 
-**Pro ICR1 = 2000**
+$$
+\Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} = \frac{16MHz}{64} = 250kHz
+$$
+
+$$
+\Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} = \frac{1}{250kHz} = 4us
+$$
+
+$$
+\Large OCR1A = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1 = \frac  {100ms} {4us} -1 = 24999
+$$
+
+**Pro ICR1 = 24999**
 
 | Compare registr| Hodnota     |Duty cycle |
 |:--------------:|:----------:|:----------:|
-| OCR1A          | 200        |10%         |
-| OCR1B          | 1000       |50%         |
-| OCR1C          | 1500       |75%         |
+| OCR1A          | 2499       |10%         |
+| OCR1B          | 12499      |50%         |
+| OCR1C          | 24999      |100%        |
 
 
 ## Úkoly
