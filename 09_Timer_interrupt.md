@@ -57,7 +57,7 @@ Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve j
 ## Úkoly
 1. Nastavte časovač tak, aby pomocí přerušení blikal spodními čtyřmi LEDkami na portu F s frekvencí 10Hz.
 2. Přidejte k zadání v bodu jedna ještě druhý 16bitový časovač, který bude horními čtyřmi LEDkami portu F blikat s frekvencí 1Hz.
-3. Při stisku tlačítka SW0 zvyšte frekvenci blikání horních LEDek na 5Hz.
+3. Při stisku tlačítka SW7 zvyšte frekvenci blikání horních LEDek na 5Hz.
 
 Pro usnadnění výpočtů hodnot pro časovače můžete použít tabulku s předpočítanými hodnotami:
 
