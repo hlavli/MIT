@@ -57,7 +57,7 @@ Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve j
 ## Úkoly
 1. Vytvořte program, který pomocí fuknce _delay_ms() bliká LED0 a LED1 s frekvencí 2Hz.
 2. Rozšiřte program, aby blikal LED2 a LED3 s frekvencí 10Hz. Použijte k tomu časovač s přerušením.
-3. Přidejte k zadání v bodu jedna ještě druhý 16bitový časovač, který bude LED6 a LED7 blikat s frekvencí 1Hz.
+3. Přidejte ještě druhý 16bitový časovač, který bude LED6 a LED7 blikat s frekvencí 1Hz.
 4. Při stisku tlačítka SW7 zvyšte frekvenci blikání LED6 a LED7 na 5Hz.
 
 Pro usnadnění výpočtů hodnot pro časovače můžete použít tabulku s předpočítanými hodnotami:
