@@ -63,7 +63,7 @@ $$
 Spočítáme, koli ticků potřebujeme pro naši požadovanou periodu. Od výslekdu ještě odečteme 1.
 
 $$
-\Large OCR1A = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1 = \frac  {100ms} {4us} -1 = 24999
+\Large ICR1 = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1 = \frac  {100ms} {4us} -1 = 24999
 $$
 
 **Pro ICR1 = 24999**
@@ -77,7 +77,7 @@ $$
 
 ## Úkoly
 
-1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku podle tabulky níže. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, blue = 30%, green = 0%)
+1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku podle tabulky níže. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
 
     | LED pin | MCU Pin     |
     |:-------:|:-----------:|
