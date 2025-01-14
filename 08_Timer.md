@@ -111,7 +111,7 @@ Kde:
 >### 2. Úkol 
 >Nastavte časovač pomocí CTC režimu, aby došlo k přetečení každých 500ms. Nezapomeňte nastavit CTC režim v registru TCCR1B a dosažení požadované hodnoty kontrolovat čtením bitu OCF1A.
 
-
+<!---
 ## Změna frekvence časovače pomocí přednastavení časovače (preload)
 
 Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. používáme procesor, jehož čítač CTC režium neumí), můžeme změnit frekvenci časovače tím, že nebude začínat od nuly, ale od vyšší hodnoty.
@@ -152,6 +152,7 @@ Narozdíl od CTC režimu, zde musíme do registru TCNT pokaždé, když timer p�
 
 >### 3. Úkol
 >Nastavte časovač do Normal režimu s přednastavením do TCNT aby došlo k přetečení každé 2s.
+--->
 
 ## Další užitečné zdroje informací
 
