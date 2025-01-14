@@ -82,7 +82,7 @@ $$
   - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
   - Spočítejte hodnotu periody a uložte ji do registru ICR1
   - Do registrů OCR1A/B/C nastavujte hodnoty podle požadované střídy
-  - Připojte RGB LEDku podle tabulky níže:
+  - RGB LEDku musíme připojit na výstupní piny časovače:
 
     | LED pin | MCU Pin     |Compare registr|
     |:-------:|:-----------:|:-------------:|
