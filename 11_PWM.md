@@ -68,7 +68,7 @@ $$
 
 **Pro ICR1 = 24999**
 
-| Compare registr| Hodnota     |Duty cycle |
+| Compare registr| Hodnota    |Duty cycle  |
 |:--------------:|:----------:|:----------:|
 | OCR1A          | 2499       |10%         |
 | OCR1B          | 12499      |50%         |
@@ -77,18 +77,26 @@ $$
 
 ## Úkoly
 
-1. Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz. Připojte RGB LEDku podle tabulky níže. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
+1. Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev.
+   - Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz.
+      - Vyberte vhodnou předděličku pro požadovanou frekvenci
+      - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
+      - Spočítejte hodnotu periody a uložte ji do registru ICR1
+      - Do registrů OCR1A/B/C nastavujte hodnoty podle požadované střídy
+   - Připojte RGB LEDku podle tabulky níže:
 
-    | LED pin | MCU Pin     |
-    |:-------:|:-----------:|
-    | Red     | PB5         |
-    | Green   | PB6         |
-    | Blue    | PB7         |
-    | Cathode | GND         |
-
-2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
-3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
-4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
+    | LED pin | MCU Pin     |Compare registr|
+    |:-------:|:-----------:|:-------------:|
+    | Red     | PB5         |OCR1A          |
+    | Green   | PB6         |OCR1B          |
+    | Blue    | PB7         |OCR1C          |
+    | Cathode | GND         |               |
+   
+   - Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
+     
+3. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
+4. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
+5. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
 <img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
 
