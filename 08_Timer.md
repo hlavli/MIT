@@ -12,6 +12,13 @@ Základní jednotkou časovače je čítací registr, který zvýší svou hodno
 
 ![image](https://github.com/user-attachments/assets/c4c13016-1b2d-40f1-81c7-ca5e91862b35)
 
+## Časování pro různé hodnoty prescaleru
+
+V pomocné tabulce níže vidíte frekvence a periody časovače pro různé nastavení předděličky kmitočtu. Pomůže vám zvolit správnou hodnotu předděličky pro požadovanou periodu časovače.
+
+![image](https://github.com/user-attachments/assets/08db6ebf-6a40-42e2-9a84-aeb4996c093c)
+
+
 ## Nastavení časovače
 
 V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz, tedy jeden "tick" trvá 1/f = 1/16*10^6 = 62,5ns . Timer1 je 16bitový, tedy maximální hodnota je 65535. Takže k přetečení čítače by došlo za 65536 *  62,5ns = 4,096ms. Pokud chceme aby perioda časovače byla delší (např. chceme blikat s LEDkou jednou za 500ms) můžeme hodinový signál z krystalu vydělit předděličkou (prescaler). Prescaler můžeme změnit zápisem do bitů CSnx v registru TCCR1B viz tabulka.
