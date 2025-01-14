@@ -28,7 +28,7 @@ Začneme nastavením řídícího registru časovače
 
 ![image](https://github.com/user-attachments/assets/84240a48-cf04-4c65-8369-c9a0bf85c769)
 
-Přehled hodnot předděličky a odpovídajících period časovač:
+Přehled hodnot předděličky a odpovídajících period časovače:
 
 ![image](https://github.com/user-attachments/assets/01d3932f-f769-4452-97d9-7aab6448f6b2)
 
