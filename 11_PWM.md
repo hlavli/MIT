@@ -46,7 +46,7 @@ Mikroprocesor ATmega 2560 má piny, na kterých mohou jednotlivé časovače nas
 |OC1B            | PB6         |
 | OC1C           | PB7         |
 
-Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Poku například chceme 10Hz, tedy periodu 100ms: 
+Již víme, že frekvenci PWM signálu v režimu 14 nastavíme pomocí registru ICR1. Pokud například chceme 10Hz, tedy periodu 100ms: 
 
 Zkusíme zvolit předděličku 64. Pokud by nám na konci vyšlo číslo > 65535, museli bychom zvolit předděličku vyšší.
 
@@ -77,13 +77,12 @@ $$
 
 ## Úkoly
 
-1. Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev.
-   - Nastavte Timer1 tak, aby generoval PWM frekvence 100Hz.
-      - Vyberte vhodnou předděličku pro požadovanou frekvenci
-      - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
-      - Spočítejte hodnotu periody a uložte ji do registru ICR1
-      - Do registrů OCR1A/B/C nastavujte hodnoty podle požadované střídy
-   - Připojte RGB LEDku podle tabulky níže:
+1. Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev. Abychom okem nevnímali blikání, zvolíme frekvenci třeba 100Hz. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
+  - Vyberte vhodnou předděličku pro požadovanou frekvenci
+  - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
+  - Spočítejte hodnotu periody a uložte ji do registru ICR1
+  - Do registrů OCR1A/B/C nastavujte hodnoty podle požadované střídy
+  - Připojte RGB LEDku podle tabulky níže:
 
     | LED pin | MCU Pin     |Compare registr|
     |:-------:|:-----------:|:-------------:|
@@ -91,9 +90,7 @@ $$
     | Green   | PB6         |OCR1B          |
     | Blue    | PB7         |OCR1C          |
     | Cathode | GND         |               |
-   
-   - Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
-     
+        
 3. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
 4. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
 5. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
