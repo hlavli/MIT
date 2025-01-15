@@ -93,7 +93,7 @@ $$
         
 2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou - žlutá -> oranžová -> modrozelená.
 3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
-4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
+4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° a 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
 <img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
 
