@@ -91,7 +91,7 @@ $$
     | Blue    | PB7         |OCR1C          |
     | Cathode | GND         |               |
         
-2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou.
+2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou - žlutá -> oranžová -> modrozelená.
 3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
 4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
