@@ -78,6 +78,7 @@ $$
 ## Úkoly
 
 1. Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev. Abychom okem nevnímali blikání, zvolíme frekvenci třeba 100Hz. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
+  - Nastavte piny, kde je připojena LEDka jako výstupy (registr DDRB, 0 vstup / 1 výstup)
   - Vyberte vhodnou předděličku pro požadovanou frekvenci
   - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
   - Spočítejte hodnotu periody a uložte ji do registru ICR1
@@ -98,6 +99,11 @@ $$
 <img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
 
 *Zdroj obrázku: https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/*
+
+Zem a PWM vstup serva zapojte stejně jako u RGBledky, 5V pro napájení serva najdete na přípravku zde:
+
+![image](https://github.com/user-attachments/assets/e5dff296-7023-495a-8e78-43398c8cf3c0)
+
 
 ## [Zpět na obsah](README.md)
 
