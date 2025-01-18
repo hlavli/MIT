@@ -1,4 +1,4 @@
-### Test na převody číselných soustav a logické funkce
+# Test na převody číselných soustav a logické funkce
 
 Teorii najdete [zde](03_Bitove_operace.md)
 
