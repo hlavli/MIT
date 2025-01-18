@@ -28,3 +28,10 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 12. [PWM](11_PWM.md)
 13. [LCD displej](12_LCD.md)
 14. [AD převodník](13_ADC.md)
+
+## Testy
+Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu. 
+
+1. [Číselné soustavy](files/Test_ciselne_soustavy_logicke_funkce.md)
+2. [Logické funkce](files/Test_bitove_operace.md)
+3. [Jazyk C](files/Test_jazyk_C.md)
