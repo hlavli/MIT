@@ -1,6 +1,6 @@
 # Test na bitové operace s registry
 
-Teorii najdete [zde](03_Bitove_operace.md)
+Teorii najdete [zde](../03_Bitove_operace.md)
 
 Jako odpověďi uvádějte příkaz v jazyce C, např. ``` PORTB |= 0xF;```
 
