@@ -1,6 +1,6 @@
 # Test na jazyk C
 
-Teorii najdete [zde](00_Jazyk_C.md)
+Teorii najdete [zde](../00_Jazyk_C.md)
 
 
 1. Vytvořte celočíselnou proměnnou s názvem „counter“
