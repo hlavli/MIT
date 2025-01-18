@@ -1,6 +1,6 @@
 # Test na převody číselných soustav a logické funkce
 
-Teorii najdete [zde](03_Bitove_operace.md)
+Teorii najdete [zde](../03_Bitove_operace.md)
 
 Všechny výsledky uveďte v hexadecimálním tvaru
 
