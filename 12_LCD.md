@@ -9,7 +9,7 @@ V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na
    
 ![image](https://github.com/user-attachments/assets/b5e0a928-6633-4ed3-82a1-6454d2d3117a)
 
-3.Přidejte include knihovny lcd a knihovny stdio do main.c souboru
+3. Přidejte include knihovny lcd a knihovny stdio do main.c souboru
 ```c
 #include "lcd.h"
 #include <stdio.h>
