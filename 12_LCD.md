@@ -67,6 +67,7 @@ int cislo = 156;
 sprintf(lcd_buffer,"%d", cislo);
 lcd_puts(lcd_buffer);
 ```
+Vytvoříme si pole lcd_buffer, které musí být dostatečně velké, aby se do něj vešel řetězec, který chceme na displeji zobrazit. Funkce sprintf pak nasi číselnou proměnnou převede na ASCII kód a uloží do pole lcd_buffer. Toto pole pak zobrazíme na displeji pomocí funkce lcd_puts, tak jak jsme to dělali u konstantního textu (např. ```lcd_puts(„ahoj“);```)
 
 To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "vytiskla" jako dekadické celé číslo. Další formátovací parametry mohou být třeba ```%X``` pro číslo zapsané v hexadecimální soustavě nebo ```%.2f``` pro desetinné číslo.
 
