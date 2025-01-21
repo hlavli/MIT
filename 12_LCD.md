@@ -59,7 +59,7 @@ Na displeji se data zobrazují pomocí ASCII kódů.
 
 Například textový řetězec ```Ahoj 123``` převedeme do ASCII jako ```0x41 0x68 0x6F 0x6A 0x20 0x31 0x32 0x33```.
 
-Pokud tedy chceme na displeji "vytisknout" hodnotu celočíselné proměnné, musíme každou její číslici převést na ASCII znak. S tím nám pomůže fuknce *sprinf*:
+Pokud tedy chceme na displeji "vytisknout" hodnotu celočíselné proměnné, musíme každou její číslici převést na ASCII znak. S tím nám pomůže fuknce *sprintf*:
 
 ```c
 char lcd_buffer[32];
