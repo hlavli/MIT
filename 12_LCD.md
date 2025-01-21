@@ -34,7 +34,7 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 ## Příklady použití funkcí knihovny lcd.c
 
-```lcd_init(LCD_DISP_ON);```  Inicializace displeje, zapne displej bez kurzoru. Jiné módy např. LCD_DISP_ON, LCD_DISP_OFF, LCD_DISP_ON_CURSOR, LCD_DISP_ON_CURSOR_BLINK.
+```lcd_init(LCD_DISP_ON);```  Inicializace displeje, zapne displej bez kurzoru. Jiné módy jsou např. LCD_DISP_OFF, LCD_DISP_ON_CURSOR, LCD_DISP_ON_CURSOR_BLINK.
 
 ```lcd_home();``` Přesune kursor displeje na začátek (první znak, první řádek)
 
