@@ -80,13 +80,12 @@ int main(void)
     while (1) 
     {
     }
-	
 }
 ```
 
 
 ## Úkoly
-1. Nakonfigurujte na mikrokontroleru UART pro rychlost 9600. Připojte přípravek k počítači přes **USB port, který je na přípravku napravo**. Posílejte každou sekundu zprávu do počítače. V počítači můžete pro komunikaci použít např. serial monitor v Arduino IDE.
+1. Nakonfigurujte na mikrokontroleru UART1 pro rychlost 9600. Posílejte každou sekundu zprávu do počítače. 
 2. Napište program, který přijme 1 bajt na UARTu a zapíše ho na PORT F. Na portu F máme připojeny LEDky, takže ho nadstavte jako výstupní,a ť vidíme přijatý bajt na LEDkách.
 3. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
