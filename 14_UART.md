@@ -75,11 +75,11 @@ int main(void)
 	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
 	UCSR1C = ((0<<USBS0)|(1 << UCSZ01)|(1<<UCSZ00));   // Set frame format: 8data, 1 stop bit
 	UCSR1B = ((1<<RXEN0)|(1<<TXEN0));       // Enable receiver and transmitter
-	
-    /* Replace with your application code */
-    while (1) 
-    {
-    }
+		
+	/* Replace with your application code */
+	while (1) 
+	{
+	}
 }
 ```
 
