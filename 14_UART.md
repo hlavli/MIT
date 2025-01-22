@@ -26,12 +26,10 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 
 
 ## Registry
-1. UDR: USART Data Register
+1. **UDR**: USART Data Register
 It has basically two registers, one is Tx. Byte and the other is Rx Byte. Both share the same UDR register. Do remember that, when we write to the UDR reg. Tx buffer will get written and when we read from this register, Rx Buffer will get read. Buffer uses the FIFO shift register to transmit the data.
 
-2. UCSRA: USART Control and Status Register A. As the name suggests, is used for control and status flags. In a similar fashion, there are two more USART control and status registers, namely UCSRB and UCSRC.
-
-3. UBRR: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
+3. **UBRR**: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
 
 
 ![image](https://github.com/user-attachments/assets/9cbfa471-2743-433b-ae33-8aa2f83c389f)
