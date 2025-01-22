@@ -24,6 +24,10 @@
 
 *Zdroj obrázku: https://docs.madmachine.io/learn/advanced/uart*
 
+## ASCII
+Text je přenášen v ASCII kódu.
+![image](https://github.com/user-attachments/assets/292fbe4b-a43e-4932-87a4-c860fbb6b690)
+
 
 ## Rušení, ochrana proti němu
 
