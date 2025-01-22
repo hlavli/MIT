@@ -16,7 +16,7 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 
 
 ## UART 
--Rx, Tx, baudrate, startbit, stopbit, parita
+UART stands for universal asynchronous receiver / transmitter and defines a protocol, or set of rules, for exchanging serial data between two devices. UART is very simple and only uses two wires between transmitter and receiver to transmit and receive in both directions. Both ends also have a ground connection.
 
 ![image](https://github.com/user-attachments/assets/df3e67e7-d689-404f-a48b-13965745c909)
 
