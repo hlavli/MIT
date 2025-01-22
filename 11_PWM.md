@@ -4,7 +4,7 @@
 
 # PWM
 
-PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rychlosti motoru, jasu LEDky nebo k řízení servomotoru. U PWM signálu jsou dvě důležité veličiny - frekvence [Hz] a střída, neboli duty cycle [%] . Střída nám udává poměr času, kdy je signál v log.1 k délce celé periody. Tedy například DC=30% při frekvenci 1kHz znamená, že signál je 0,3ms v  logické jedničce a 0,7ms v logické nule.
+PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rychlosti motoru, jasu LEDky nebo k řízení servomotoru. U PWM signálu jsou dvě důležité veličiny - frekvence [Hz] a střída, neboli duty cycle [%] . Střída nám udává poměr času, kdy je signál v log.1 k délce celé periody. Tedy například DC=30% při frekvenci 1kHz znamená, že signál je 0,3ms v logické jedničce a 0,7ms v logické nule.
 
 <img src="https://github.com/user-attachments/assets/a54b052d-7a31-424e-b982-7bb4a846f13b" width="600"/>
 
@@ -14,13 +14,13 @@ PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rych
 
 V tomto cvičení budeme využívat Timer1, tedy 16bitový čítač. Tento čítač umí generovat PWM signál až na třech výstupech a to zcela automaticky, bez použití jádra procesoru. Tedy časovač jen na začátku programu nastavíme a generování PWM signálu se děje již bez přispění jádra (tj. nemusíme pro něj psát žádný kód). Pouze pokud budeme chtít parametry PWM signálu změnit, např. nastavit jinou střídu, pak musíme samozřejmě použít příkaz pro změnu nastavení časovače.
 
-V datasheetu vidíme, že Timer1 má 15 různých režimů (s režimy normal a CTC už jsme se setkali v předchozích cvičeních). Tentokrát si vybereme si mód 14, tedy Fast PWM, kde můžeme nastavit délku periody registrem ICR1 a střídu jendotlivách signálů pomocí OCR1A, OCR1B a OCR1C.
+V datasheetu vidíme, že Timer1 má 15 různých režimů (s režimy normal a CTC už jsme se setkali v předchozích cvičeních). Tentokrát si vybereme si mód 14, tedy Fast PWM, kde můžeme nastavit délku periody registrem ICR1 a střídu jendotlivých signálů pomocí OCR1A, OCR1B a OCR1C.
 
 ![image](https://github.com/user-attachments/assets/46d04634-b54f-4302-9edd-85ca25d63233)
 
 ## Nastavení Fast PWM režimu
 
-Jak funguje PWM v módu 14 (a při nastavení neinvertujícího módu) vidíme na obrázku níže. Časovač Timer1 může generovat PWM signál až na 3 výstupních pinech (OC1A, OC1B, OC1C). Časovač čítá v registru TCNT1 od nuly až do maximální hodnoty, která je uložena v registru ICR1. Při přetečení (nastavení čítače zpět do nuly) nastaví výstupní pin na 1. Při shodě čítače s komparačním registrem OCR1A nastaví pin OC1A zpět do nuly. Stejně je to se zbylámi dvěma piny - shoda s registrem OCR1B vynuluje pin OC1B a stejně tak shoda s registrem OCR1C vynuluje pin OC1C.
+Jak funguje PWM v módu 14 (a při nastavení neinvertujícího módu) vidíme na obrázku níže. Časovač Timer1 může generovat PWM signál až na 3 výstupních pinech (OC1A, OC1B, OC1C). Časovač čítá v registru TCNT1 od nuly až do maximální hodnoty, která je uložena v registru ICR1. Při přetečení (nastavení čítače zpět do nuly) nastaví výstupní pin na 1. Při shodě čítače s komparačním registrem OCR1A nastaví pin OC1A zpět do nuly. Stejně je to se zbylými dvěma piny - shoda s registrem OCR1B vynuluje pin OC1B a stejně tak shoda s registrem OCR1C vynuluje pin OC1C.
 
 ![image](https://github.com/user-attachments/assets/a5f092e8-8585-4e9b-a1be-719aa85f66d0)
 
@@ -60,7 +60,7 @@ $$
 \Large T_{\text{tick}} = \frac{1}{f_{\text{timer}}} = \frac{1}{250kHz} = 4us
 $$
 
-Spočítáme, koli ticků potřebujeme pro naši požadovanou periodu. Od výslekdu ještě odečteme 1.
+Spočítáme, kolik ticků potřebujeme pro naši požadovanou periodu. Od výslekdu ještě odečteme 1.
 
 $$
 \Large ICR1 = \frac  {T_{\text{required}}} {T_{\text{tick}}} -1 = \frac  {100ms} {4us} -1 = 24999
@@ -100,7 +100,7 @@ $$
 
 *Zdroj obrázku: https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/*
 
-Zem a PWM vstup serva zapojte stejně jako u RGBledky, 5V pro napájení serva najdete na přípravku zde:
+Zem a PWM vstup serva zapojte stejně jako u RGB LEDky, 5V pro napájení serva najdete na přípravku zde:
 
 ![image](https://github.com/user-attachments/assets/e5dff296-7023-495a-8e78-43398c8cf3c0)
 
