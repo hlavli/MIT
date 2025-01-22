@@ -32,6 +32,59 @@ It has basically two registers, one is Tx. Byte and the other is Rx Byte. Both s
 3. UBRR: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
 
 
+## Použití UARTu
+
+```c
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#define F_CPU 16000000
+#include <util/delay.h>
+
+#define BAUDRATE 9600
+#define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
+
+void USART_send( unsigned char data)
+{
+	//while the transmit buffer is not empty loop
+	while(!(UCSR1A & (1<<UDRE1)));
+	
+	//when the buffer is empty write data to the transmitted
+	UDR1 = data;
+}
+
+void USART_putstring(char* StringPtr)
+// sends the characters from the string one at a time to the USART
+{
+	while(*StringPtr != 0x00)
+	{
+		USART_send(*StringPtr);
+		StringPtr++;
+	}
+}
+
+unsigned char USART_Receive( void )
+{
+	/* Wait for data to be received */
+	while (!(UCSR0A & (1<<RXC0)));
+	/* Get and return received data from buffer */
+	return UDR0;
+}
+
+int main(void)
+{
+	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
+	UCSR1C = ((0<<USBS0)|(1 << UCSZ01)|(1<<UCSZ00));   // Set frame format: 8data, 1 stop bit
+	UCSR1B = ((1<<RXEN0)|(1<<TXEN0));       // Enable receiver and transmitter
+	
+    /* Replace with your application code */
+    while (1) 
+    {
+    }
+	
+}
+```
+
+
 ## Úkoly
 1. Nakonfigurujte na mikrokontroleru UART pro rychlost 9600. Připojte přípravek k počítači přes **USB port, který je na přípravku napravo**. Posílejte každou sekundu zprávu do počítače. V počítači můžete pro komunikaci použít např. serial monitor v Arduino IDE.
 2. Napište program, který přijme 1 bajt na UARTu a zapíše ho na PORT F. Na portu F máme připojeny LEDky, takže ho nadstavte jako výstupní,a ť vidíme přijatý bajt na LEDkách.
