@@ -41,22 +41,25 @@ It has basically two registers, one is Tx. Byte and the other is Rx Byte. Both s
 #include <avr/interrupt.h>
 #define F_CPU 16000000
 #include <util/delay.h>
+#include <stdio.h>
 
 #define BAUDRATE 9600
 #define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
+//Funkce pro odeslání jednoho znaku
 void USART_send( unsigned char data)
 {
-	//while the transmit buffer is not empty loop
+	//čekáme, dokud se nedokončí předchozí vysílání
 	while(!(UCSR1A & (1<<UDRE1)));
 	
-	//when the buffer is empty write data to the transmitted
+	//zapíšeme bajt, který chceme odeslat
 	UDR1 = data;
 }
 
+//Funkce pro odeslání textového řetězce
 void USART_putstring(char* StringPtr)
-// sends the characters from the string one at a time to the USART
 {
+// posílá znaky řetězce jeden po druhém, dokud nenarazí na konec řetězce (null)
 	while(*StringPtr != 0x00)
 	{
 		USART_send(*StringPtr);
@@ -64,6 +67,7 @@ void USART_putstring(char* StringPtr)
 	}
 }
 
+// Funkce pro příjem jednoho znaku
 unsigned char USART_Receive( void )
 {
 	/* Wait for data to be received */
@@ -72,13 +76,13 @@ unsigned char USART_Receive( void )
 	return UDR0;
 }
 
+// Hlavní program
 int main(void)
 {
 	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
 	UCSR1C = ((0<<USBS0)|(1 << UCSZ01)|(1<<UCSZ00));   // Set frame format: 8data, 1 stop bit
 	UCSR1B = ((1<<RXEN0)|(1<<TXEN0));       // Enable receiver and transmitter
-		
-	/* Replace with your application code */
+
 	while (1) 
 	{
 	}
@@ -87,9 +91,11 @@ int main(void)
 
 
 ## Úkoly
-1. Nakonfigurujte na mikrokontroleru UART1 pro rychlost 9600. Posílejte každou sekundu zprávu do počítače. 
-2. Napište program, který přijme 1 bajt na UARTu a zapíše ho na PORT F. Na portu F máme připojeny LEDky, takže ho nadstavte jako výstupní,a ť vidíme přijatý bajt na LEDkách.
-3. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
+1. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
+2. Použijte funkci USART_putstring() k odeslání textového řetězce. Opět posílejte jednou z asekundu a zobrazujte v Terminal window.
+3. Posílejte na UART zprávu "Counter: 0" kde číslo ve zprávě se bude pokaždíé o 1 zvyšovat. Kromě funkce USART_putstring() použijte i funkci sprinf() kterou jsme používali v [lekci s LCD displejem](https://tomaschovanec.github.io/MIT/12_LCD.html#ascii-k%C3%B3d-funkce-sprintf)
+4. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
+5. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
 
 ## Další užitečné zdroje informací:
