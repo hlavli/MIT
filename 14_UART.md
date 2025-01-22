@@ -18,6 +18,8 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 ## UART 
 -Rx, Tx, baudrate, startbit, stopbit, parita
 
+![image](https://github.com/user-attachments/assets/df3e67e7-d689-404f-a48b-13965745c909)
+
 ![image](https://github.com/user-attachments/assets/c544e539-6958-4283-9fec-905060d4e42c)
 
 *Zdroj obrázku: https://docs.madmachine.io/learn/advanced/uart*
