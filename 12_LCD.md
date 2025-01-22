@@ -28,10 +28,6 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 ![image](https://github.com/user-attachments/assets/055a77a5-5b6e-4db0-a893-6c867007efb9)
 
 
-
-
-
-
 ## Příklady použití funkcí knihovny lcd.c
 
 ```lcd_init(LCD_DISP_ON);```  Inicializace displeje, zapne displej bez kurzoru. Jiné módy jsou např. LCD_DISP_OFF, LCD_DISP_ON_CURSOR, LCD_DISP_ON_CURSOR_BLINK.
@@ -76,7 +72,7 @@ To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "v
 ## Úkoly
 1. Zobrazte na displeji na jednom řádku své jméno, na druhém příjmení
 2. Zobrazte na displeji odpočet od 10 do 0 po 500ms.
-3. Zobrazte na displeji číslo klávesy stisknuté na klávesnici.
+3. Zobrazte na prvním řádku číslo klávesy stisknuté na klávesnici, na druhém řádku zobrazujte celkový součet všech stisknutých kláves od startu programu.
 
 
 ### [Zpět na obsah](README.md)
