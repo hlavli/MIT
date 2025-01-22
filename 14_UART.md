@@ -131,7 +131,7 @@ int main(void)
 5. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
 
-## Další užitečné zdroje informací:
+## Další užitečné zdroje informací
 [UART Tutorial](https://www.electronicwings.com/avr-atmega/atmega1632-usart)
 
 [Video UART a digitální komunikace](https://www.youtube.com/watch?feature=shared&v=Af6wO4QX28E)
