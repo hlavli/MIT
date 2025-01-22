@@ -44,15 +44,11 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 ```lcd_command(LCD_MOVE_CURSOR_RIGHT);``` Posune text doprava
 
-## ASCII kód, zobrazení hodnoty proměnné
+## ASCII kód, funkce sprintf()
 
 Už umíme pomocí fuknce *lcd_puts* zobrazit konstantní textový řetězec. Ale co když chceme zobrazit např. hodnotu číselné proměnné?
 
 Na displeji se data zobrazují pomocí ASCII kódů.
-
-![image](https://github.com/user-attachments/assets/ebd7fdb8-ab3d-473b-8a44-4fda306c2422)
-
-*Zdroj obrázku: https://www.sciencebuddies.org/cdn/references/ascii-table.png*
 
 Například textový řetězec ```Ahoj 123``` převedeme do ASCII jako ```0x41 0x68 0x6F 0x6A 0x20 0x31 0x32 0x33```.
 
@@ -68,6 +64,9 @@ Vytvoříme si pole lcd_buffer, které musí být dostatečně velké, aby se do
 
 To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "vytiskla" jako dekadické celé číslo. Další formátovací parametry mohou být třeba ```%X``` pro číslo zapsané v hexadecimální soustavě nebo ```%.2f``` pro desetinné číslo.
 
+![image](https://github.com/user-attachments/assets/ebd7fdb8-ab3d-473b-8a44-4fda306c2422)
+
+*Zdroj obrázku: https://www.sciencebuddies.org/cdn/references/ascii-table.png*
 
 ## Úkoly
 1. Zobrazte na displeji na jednom řádku své jméno, na druhém příjmení
