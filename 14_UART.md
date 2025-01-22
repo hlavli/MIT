@@ -1,5 +1,5 @@
 # Sériový přenos dat přes UART
--sériový vs paralelní přenos, jiné druhy - I2C, SPI, USB,...synchronní vs asynchronní, simplex, half duplex, full duplex
+-sériový vs paralelní přenos, jiné druhy - I2C, SPI, zde https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi
 
 ## Komunikace sériová vs paralelní
 ![image](https://github.com/user-attachments/assets/b722c856-ee3a-4386-9277-d220b1fbb68c)
