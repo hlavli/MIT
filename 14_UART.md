@@ -34,6 +34,13 @@ It has basically two registers, one is Tx. Byte and the other is Rx Byte. Both s
 3. UBRR: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
 
 
+![image](https://github.com/user-attachments/assets/9cbfa471-2743-433b-ae33-8aa2f83c389f)
+
+![image](https://github.com/user-attachments/assets/866889a6-f2ca-461c-ab52-81cf4cb518bb)
+
+![image](https://github.com/user-attachments/assets/945f0ace-4812-4466-b15f-0ce4130af783)
+
+
 ## Použití UARTu
 
 ```c
@@ -71,17 +78,17 @@ void USART_putstring(char* StringPtr)
 unsigned char USART_Receive( void )
 {
 	/* Wait for data to be received */
-	while (!(UCSR0A & (1<<RXC0)));
+	while (!(UCSR1A & (1<<RXC1)));
 	/* Get and return received data from buffer */
-	return UDR0;
+	return UDR1;
 }
 
 // Hlavní program
 int main(void)
 {
 	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
-	UCSR1C = ((0<<USBS0)|(1 << UCSZ01)|(1<<UCSZ00));   // Set frame format: 8data, 1 stop bit
-	UCSR1B = ((1<<RXEN0)|(1<<TXEN0));       // Enable receiver and transmitter
+	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // Set frame format: 8data, 1 stop bit
+	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Enable receiver and transmitter
 
 	while (1) 
 	{
