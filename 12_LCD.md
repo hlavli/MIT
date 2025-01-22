@@ -5,9 +5,9 @@ V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na
 1. Stáhněte si následující dva soubory:
 [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h)
 
-2. Přidejte soubory do projektu
+2. Přidejte soubory do projektu. Klikněte pravým tlačítkem na název projektu -> *Add -> Existing item*
    
-![image](https://github.com/user-attachments/assets/b5e0a928-6633-4ed3-82a1-6454d2d3117a)
+    ![image](https://github.com/user-attachments/assets/b5e0a928-6633-4ed3-82a1-6454d2d3117a)
 
 3. Přidejte include knihovny lcd a knihovny stdio do main.c souboru
 ```c
