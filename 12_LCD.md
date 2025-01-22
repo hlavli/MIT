@@ -42,7 +42,7 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 ```lcd_gotoxy(0,1);``` Přesune kursor displeje na danou pozici (x- znak, y- řádek)
 
-```lcd_puts(„Mam rad MIT!“);``` Zobrazí na displeji řetězec znaků
+```lcd_puts("Mam rad MIT!");``` Zobrazí na displeji řetězec znaků
 
 ```lcd_command(LCD_SHIFT_LEFT);``` Posune text doleva
 
