@@ -44,8 +44,9 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 ```lcd_puts("Mam rad MIT!");``` Zobrazí na displeji řetězec znaků
 
-```lcd_command(LCD_SHIFT_LEFT);``` Posune text doleva
+```lcd_command(LCD_MOVE_CURSOR_LEFT);``` Posune text doleva
 
+```lcd_command(LCD_MOVE_CURSOR_RIGHT);``` Posune text doprava
 
 ## ASCII kód, zobrazení hodnoty proměnné
 
