@@ -34,7 +34,7 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 ```lcd_home();``` Přesune kursor displeje na začátek (první znak, první řádek)
 
-```lcd_clrscr();``` Smaže celý displej a nastaví kurzor na (0, 0).
+```lcd_clrscr();``` Smaže celý displej.
 
 ```lcd_gotoxy(0,1);``` Přesune kursor displeje na danou pozici (x- znak, y- řádek)
 
