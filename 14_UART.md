@@ -26,43 +26,26 @@ UART stands for universal asynchronous receiver / transmitter and defines a prot
 
 
 ## Důležité registry
-1. **UDR**: USART Data Register
-It has basically two registers, one is Tx. Byte and the other is Rx Byte. Both share the same UDR register. Do remember that, when we write to the UDR reg. Tx buffer will get written and when we read from this register, Rx Buffer will get read. Buffer uses the FIFO shift register to transmit the data.
+1. **UDR**: USART Data Register - datový registr, kam ukládáme bajt, který chceme odeslat, popřípadě z něj čteme přijatý bajt. Ve skutečnosti jsou to dva registry, jeden pro vysílání, druhý pro příjem, ale používají jedno označení.
 
 3. **UBRR**: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
 
 
 ![image](https://github.com/user-attachments/assets/9cbfa471-2743-433b-ae33-8aa2f83c389f)
 
-**UDREn**: USART Data Register Empty
-The UDREn Flag indicates if the transmit buffer (UDRn) is ready to receive new data. If UDREn is one, the buffer is
-empty, and therefore ready to be written. The UDREn Flag can generate a Data Register Empty interrupt (see
-description of the UDRIEn bit).
-UDREn is set after a reset to indicate that the Transmitter is ready.
+**UDREn**: USART Data Register Empty- Nastaví se automaticky do jedničky, když se předchozí bajt odeslal a můžeme tak do registru UDRn zapsat další bajt k odeslání
 
-**RXCn**: USART Receive Complete
-This flag bit is set when there are unread data in the receive buffer and cleared when the receive buffer is empty
-(that is, does not contain any unread data). If the Receiver is disabled, the receive buffer will be flushed and consequently the RXCn bit will become zero. The RXCn Flag can be used to generate a Receive Complete interrupt (see
-description of the RXCIEn bit).
+**RXCn**: USART Receive Complete - tento bit se automaticky nastaví do jedničky, když je přijat nový bajt
 
 ![image](https://github.com/user-attachments/assets/866889a6-f2ca-461c-ab52-81cf4cb518bb)
 
-**RXENn**: Receiver Enable n
-Writing this bit to one enables the USART Receiver. The Receiver will override normal port operation for the RxDn
-pin when enabled. Disabling the Receiver will flush the receive buffer invalidating the FEn, DORn, and UPEn
-Flags.
+**RXENn**: Receiver Enable - Zápisem jedničky se aktivuje příjem
 
-**TXENn**: Transmitter Enable n
-Writing this bit to one enables the USART Transmitter. The Transmitter will override normal port operation for the
-TxDn pin when enabled. The disabling of the Transmitter (writing TXENn to zero) will not become effective until
-ongoing and pending transmissions are completed, that is, when the Transmit Shift Register and Transmit Buffer
-Register do not contain data to be transmitted. When disabled, the Transmitter will no longer override the TxDn
-port.
+**TXENn**: Transmitter Enable - Zápisem jedničky se aktivuje vysílání
 
 ![image](https://github.com/user-attachments/assets/945f0ace-4812-4466-b15f-0ce4130af783)
-**UCSZn1:0**: Character Size
-The UCSZn1:0 bits combined with the UCSZn2 bit in UCSRnB sets the number of data bits (Character SiZe) in a
-frame the Receiver and Transmitter use.
+
+**UCSZn1:0**: Kombinace bitů UCSZn1:0 a bitu UCSZn2 v registru UCSRnB nastavuje počet datových bitů (Character Size) v jednom datovém rámci
 
 ![image](https://github.com/user-attachments/assets/bced14bb-1a4e-4121-ba5c-1f0983a2f354)
 
