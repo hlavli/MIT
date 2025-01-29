@@ -2,7 +2,7 @@
 
 V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na výukovém přípravku. Konkrétně je to typ displeje HD44780. Abychom si práci s ním zjednodušili, využijeme hotovou knihovnu, kterou do našeho projektu vložíme.
 
-1. Stáhněte si následující dva soubory:
+1. Stáhněte si následující dva soubory (přes pravé tlačítko a *Uložit odkaz jako*):
 [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h)
 
 2. Přidejte soubory do projektu. Klikněte pravým tlačítkem na název projektu -> *Add -> Existing item*
