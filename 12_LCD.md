@@ -55,7 +55,7 @@ Pokud tedy chceme na displeji "vytisknout" hodnotu celočíselné proměnné, mu
 ```c
 char lcd_buffer[32];
 int cislo = 156;
-sprintf(lcd_buffer,"%d", cislo);
+sprintf(lcd_buffer, "Cislo je: %d", cislo);
 lcd_puts(lcd_buffer);
 ```
 Vytvoříme si pole lcd_buffer, které musí být dostatečně velké, aby se do něj vešel řetězec, který chceme na displeji zobrazit. Funkce sprintf pak nasi číselnou proměnnou převede na ASCII kód a uloží do pole lcd_buffer. Toto pole pak zobrazíme na displeji pomocí funkce lcd_puts, tak jak jsme to dělali u konstantního textu (např. ```lcd_puts(„ahoj“);```)
