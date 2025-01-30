@@ -225,7 +225,7 @@ loops while lcd is busy, returns address counter
 static uint8_t lcd_waitbusy(void)
 
 {
-delay(1000);
+delay(2000);
 return 1;
     
 }/* lcd_waitbusy */
