@@ -2,9 +2,9 @@
 
 # AD převodník
 
-Mikroprocesor jako digitální součástka dokáže pracovat pouze s digitálním signálem. Stav svých pinů čte pouze jako logickou jedničku nebo logickou nulu. Co když ale chceme měřit analogové hodnoty? Například  výstupní napětí z teplotního čidla, nebo napětí baterie, abychom zjistili stav jejího nabití? K tomu slouží analogově digitální převodník - ADC. 
+Mikroprocesor jako digitální součástka dokáže pracovat pouze s digitálním signálem. Stav svých pinů čte pouze jako logickou jedničku nebo logickou nulu. Co když ale chceme měřit analogové hodnoty? Například výstupní napětí z teplotního čidla, nebo napětí baterie, abychom zjistili stav jejího nabití? K tomu slouží analogově digitální převodník - ADC. 
 
-Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo více ADC integrovaný ve svém pouzdře. AD převodník nám převede analogové napětí na vstupním pinu na digitální hodnotu, se kterou pak procesor může dále pracovat.
+Většina mikrokontrolerů, včetně toho v našem přípravku, má jeden nebo více ADC integrovaný ve svém pouzdře. AD převodník nám převede analogové napětí na vstupním pinu na digitální hodnotu, se kterou pak procesor může dále pracovat.
 
 ![image](https://github.com/user-attachments/assets/9ddad58f-58be-4ff6-a891-b58e1e56ce65)
 
@@ -12,32 +12,32 @@ Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo v�
 
 ## Rozlišení AD převodníku
 Rozlišení AD převodníku (analogově-digitálního převodníku) určuje, na kolik diskrétních hodnot může převodník rozdělit vstupní analogový signál. Udává se v bitech a definuje počet možných úrovní výstupu.
-Například 8bitový převodník má  2^8 tedy 256 úrovní, 10bitový převodník má  2^10 tedy 1024 úrovní. Vyšší rozlišení znamená jemnější odstupňování měření, což vede k přesnějším výsledkům.
+Například 8bitový převodník má  2^8 tedy 256 úrovní, 10bitový převodník má 2^10 tedy 1024 úrovní. Vyšší rozlišení znamená jemnější odstupňování měření, což vede k přesnějším výsledkům.
 
 <img src="https://github.com/user-attachments/assets/58372836-da04-4ad6-af1d-8edfe97be725" width="1400"/>
 
 *Zdroj obrázku: https://docs.madmachine.io/learn/peripherals/potentiometer*
 
 ## Referenční napětí
-AD převodník funguje poměrově (ratiometric) to znamená, že hodnota jeho výstupu udává poměr měřeného napětí  a referenčního napětí. 
+AD převodník funguje poměrově (ratiometric) to znamená, že hodnota jeho výstupu udává poměr měřeného napětí a referenčního napětí. 
 
 $$
 DigitálníHodnota = RozlišeníADC \times \frac{Vin}{Vref}
 $$
 
-Napříkald u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
+Například u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
 
 $$
 1023 \times \frac{2,5}{5} = 512
 $$
 
-Zdroj referenčního napětí si můžeme zvolit. Může jim být napájecí napětí mikrokontroleru, vnitřní zdroj referenčního napětí či externě připojený zdroj referenčního napětí (např. speciální obvody, jako je LM4040 nebo LM336).
+Zdroj referenčního napětí si můžeme zvolit. Může jím být napájecí napětí mikrokontroleru, vnitřní zdroj referenčního napětí či externě připojený zdroj referenčního napětí (např. speciální obvody, jako je LM4040 nebo LM336).
 
 ## Prescaler hodinového signálu
 Podobně jako u časovače, musíme nastavit, s jakou frekvencí hodinového signálu bude AD převodník pracovat. Do jisté míry platí, že čím bude převod rychlejší, tím méně bude přesný a naopak. AD převodník použitý v ATmega 2560 vyžaduje frekvenci mezi 50kHz a 200kHz.
 
-## Mutliplexer
-Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné mít možnost měřit analogové napětí na více pinech, lze pomocí multiplexeru připojit AD převodník k různým pinům. Výběr pinu musíme samozřejmě provést dřív, než spustíme měření.
+## Multiplexer
+Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné mít možnost měřit analogové napětí na více pinech, lze pomocí multiplexeru připojit AD převodník k různým pinům. Výběr pinu musíme samozřejmě provést před spuštěním měření.
 
 
 ## Důležité registry
@@ -71,7 +71,7 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 1. Nastavit multiplexer podle toho, na kterém pinu chceme měřit (v našem případě máme potenciometr připojen na pinu PK0 tedy ADC8)
 2. Nastavit předděličku hodinového signálu - čím vyšší hodnota, tím pomalejší, ale přesnější převod. V našem případě můžeme klidně použít nejvyšší hodnotu.
-3. Nastavit zdroj referenčního napětí - napětí na potenciometru se bude pohybovat od 0V do 5V, proto vybereme jako zdroj referenčního nappětí napájecí napětí Vcc, které je také 5V.
+3. Nastavit zdroj referenčního napětí - napětí na potenciometru se bude pohybovat od 0V do 5V, proto vybereme jako zdroj referenčního napětí napájecí napětí Vcc, které je také 5V.
 4. Spustit konverzi zápisem jedničky do pinu ADSC.
 5. Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
 6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
