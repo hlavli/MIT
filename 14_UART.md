@@ -62,31 +62,31 @@ UART stands for universal asynchronous receiver / transmitter and defines a prot
 #define BAUDRATE 9600
 #define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
+// Funkce pro inicializaci UART perferie
+void USART_init( unsigned char data)
+{
+	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
+	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // Set frame format: 8data, 1 stop bit
+	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Enable receiver and transmitter
+}
+
 //Funkce pro odeslání jednoho znaku
 void USART_send( unsigned char data)
 {
-	//čekáme, dokud se nedokončí předchozí vysílání
-	while(!(UCSR1A & (1<<UDRE1)));
-	
-	//zapíšeme bajt, který chceme odeslat
-	UDR1 = data;
+// Doplňte kód
 }
 
 // Funkce pro příjem jednoho znaku
 unsigned char USART_Receive( void )
 {
-	/* Wait for data to be received */
-	while (!(UCSR1A & (1<<RXC1)));
-	/* Get and return received data from buffer */
-	return UDR1;
+// Doplňte kód
 }
+
 
 // Hlavní program
 int main(void)
 {
-	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
-	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // Set frame format: 8data, 1 stop bit
-	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Enable receiver and transmitter
+	USART_init();
 
 	while (1) 
 	{
@@ -96,10 +96,11 @@ int main(void)
 
 
 ## Úkoly
-1. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
-2. Posílejte pomocí funkce USART_send() jednou za 100ms znaky ASCII znaky 'a' až 'z'. Data přijímejte v Microchip studiu v Terminal window.
-3. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
-4. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
+1. Doplňte implementaci funkcí pro odelání a příjem znaku
+2. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
+3. Posílejte pomocí funkce USART_send() jednou za 100ms znaky ASCII znaky 'a' až 'z'. Data přijímejte v Microchip studiu v Terminal window.
+4. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
+5. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
 
 ## Další užitečné zdroje informací
