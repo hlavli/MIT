@@ -6,6 +6,13 @@ Mikroprocesor jako digitální součástka dokáže pracovat pouze s digitální
 
 Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo více ADC integrovaný ve svém pouzdře. AD převodník nám převede analogové napětí na vstupním pinu na digitální hodnotu, se kterou pak procesor může dále pracovat.
 
+![image](https://github.com/user-attachments/assets/9ddad58f-58be-4ff6-a891-b58e1e56ce65)
+
+*Zdroj obrázku: https://www.linkedin.com/pulse/ultimate-adc-guide-everything-you-need-know-hybrique-sg/*
+
+
+<img src="https://github.com/user-attachments/assets/58372836-da04-4ad6-af1d-8edfe97be725" width="1400"/>
+
 ## Referenční napětí
 AD převodník funguje poměrově (ratiometric) to znamená, že hodnota jeho výstupu udává poměr měřeného napětí  a referenčního napětí. 
 
