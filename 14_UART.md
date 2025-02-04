@@ -72,17 +72,6 @@ void USART_send( unsigned char data)
 	UDR1 = data;
 }
 
-//Funkce pro odeslání textového řetězce
-void USART_putstring(char* StringPtr)
-{
-// posílá znaky řetězce jeden po druhém, dokud nenarazí na konec řetězce (null)
-	while(*StringPtr != 0x00)
-	{
-		USART_send(*StringPtr);
-		StringPtr++;
-	}
-}
-
 // Funkce pro příjem jednoho znaku
 unsigned char USART_Receive( void )
 {
@@ -108,10 +97,9 @@ int main(void)
 
 ## Úkoly
 1. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
-2. Použijte funkci USART_putstring() k odeslání textového řetězce. Opět posílejte jednou z asekundu a zobrazujte v Terminal window.
-3. Posílejte na UART zprávu "Counter: 0" kde číslo ve zprávě se bude pokaždíé o 1 zvyšovat. Kromě funkce USART_putstring() použijte i funkci sprinf() kterou jsme používali v [lekci s LCD displejem](https://tomaschovanec.github.io/MIT/12_LCD.html#ascii-k%C3%B3d-funkce-sprintf)
-4. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
-5. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
+2. Posílejte pomocí funkce USART_send() jednou za 100ms znaky ASCII znaky 'a' až 'z'. Data přijímejte v Microchip studiu v Terminal window.
+3. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
+4. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
 
 ## Další užitečné zdroje informací
