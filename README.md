@@ -30,6 +30,11 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 14. [AD převodník](13_ADC.md)
 15. [UART](14_UART.md)
 
+<!---
+16. [Maticový displej](15_Maticovy_displej.md)
+--->
+
+
 ## Testy
 Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu. 
 
