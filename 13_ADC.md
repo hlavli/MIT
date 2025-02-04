@@ -10,6 +10,10 @@ Většina mikrokontrolerů, včetně toho v našem přípravku má jeden nebo v�
 
 *Zdroj obrázku: https://www.linkedin.com/pulse/ultimate-adc-guide-everything-you-need-know-hybrique-sg/*
 
+## Rozlišení AD převodníku
+Rozlišení AD převodníku (analogově-digitálního převodníku) určuje, na kolik diskrétních hodnot může převodník rozdělit vstupní analogový signál. Udává se v bitech a definuje počet možných úrovní výstupu.
+Například 8bitový převodník má  2^8 tedy 256 úrovní, 10bitový převodník má  2^10 tedy 1024 úrovní. Vyšší rozlišení znamená jemnější odstupňování měření, což vede k přesnějším výsledkům.
+
 <img src="https://github.com/user-attachments/assets/58372836-da04-4ad6-af1d-8edfe97be725" width="1400"/>
 
 *Zdroj obrázku: https://docs.madmachine.io/learn/peripherals/potentiometer*
