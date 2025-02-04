@@ -16,4 +16,4 @@ Dvě barvy - červená, zelená
 ## Úkoly:
 1. Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
 2. Zobrazte obrázek na displeji bez použití časovače, pouze s  použitím cyklu for a funkce _delay_ms().
-3. Vytvořte program, který zobrazuje text, písmeno po písmenu. Na obsluhu diplejepoužijte přerušení časovače, změnu písmen pak dělejte v hlavní smyčce programu.
+3. Vytvořte program, který zobrazuje text, písmeno po písmenu. Na obsluhu dipleje použijte přerušení časovače, změnu písmen pak dělejte v hlavní smyčce programu.
