@@ -77,7 +77,7 @@ $$
 
 ## Úkoly
 
-1. Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev. Abychom okem nevnímali blikání, zvolíme frekvenci třeba 100Hz. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
+**1.** Chceme si připojit k procesoru RGB LEDku a nastavovat její barvu tím, jak budeme měnit PWM signál jednotlivých barev. Abychom okem nevnímali blikání, zvolíme frekvenci třeba 100Hz. Nastavte PWM výstup tak, aby RGB LEDka svítila růžovou barvou (tj. např. red = 50%, green = 0%, blue = 30%)
   - Nastavte piny, kde je připojena LEDka jako výstupy (registr DDRB, 0 vstup / 1 výstup)
   - Vyberte vhodnou předděličku pro požadovanou frekvenci
   - Nastavte předděličku a PWM režim v registrech TCCR1A a TCCR1B
@@ -92,9 +92,11 @@ $$
     | Blue    | PB7         |OCR1C          |
     | Cathode | GND         |               |
         
-2. Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou - žlutá -> oranžová -> modrozelená.
-3. Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
-4. Připojte k přípravku servomotor a pohybujte s ním mezi 0° a 90°. Frekvenci a duty cycle nastavte podle obrázku:
+**2.** Nastavujte postupně ve funkci main hodnoty registrů OCR1A, OCR1B a OCR1C tak, aby každou 1s LEDka svítila jinou barvou - žlutá -> oranžová -> modrozelená.
+
+**3.** Pomocí cyklu for měňte plynule barvu LEDky z modré na zelenou a zpět.
+
+**4.** Připojte k přípravku servomotor a pohybujte s ním mezi 0° a 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
 <img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
 
