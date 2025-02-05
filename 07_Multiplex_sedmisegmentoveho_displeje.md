@@ -63,16 +63,16 @@ int main(void)
 ## Úkoly:
 Pozn. Neupravujte příklad výše, ale založte si nový projekt a jen si zkopírujte pole s nastavením segmentů.
 
-1. Napište program, který zobrazí trojciferné číslo
+**1.** Napište program, který zobrazí trojciferné číslo
     - Nastavit vstupy/výstupy pro 7seg displej  
     - Vytvořit pole s kombinacemi segmentů pro jednotlivé číslice  
     - Vytvořit pole s nastavením anod, pro aktivaci jednotlivých číslic
     - Vytvořit pole s číslem, které chceme zobrazit
     - Napsat cyklus, který vždy zapíše číslici na danou pozici a  1ms počká
 
-2. Rozšiřte program tak, aby zobrazoval šesticiferné číslo.
+**2.** Rozšiřte program tak, aby zobrazoval šesticiferné číslo.
 
-3. Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Funkce toto vstupní číslo rozloží na jednotlivé číslice a zobrazí je na displeji.
+**3.** Vytvořte funkci **void zobraz_cislo(int cislo)**, která dostane jako vstup 1-6 ciferné číslo. Funkce toto vstupní číslo rozloží na jednotlivé číslice a zobrazí je na displeji.
 
 
 ## Další zajímavé zdroje informací
