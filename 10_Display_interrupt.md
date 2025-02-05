@@ -3,13 +3,15 @@
 Zkusíme si opět multiplex sedmisegmentového displeje, ale tentokrát k tomu využijeme přerušení. Níže je rozpracovaný (zatím nefunkční) kód pro zobrazování trojciferného čísla na 7segmentovém displeji.
 
 ## Úkoly
-1. Doplňte kód, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
+**1.** Doplňte kód, aby s periodou 1ms zobrazoval postupně tři číslice z pole *zobraz* na třech pozicích 7seg displeje
    - nastavte mód a předděličku časovače
    - spočítejte si hodnotu pro komparační registr, aby se přerušení vyvolalo jednou za milisekundu
    - povolte přerušení od časovače a povolte globální přerušení
    - nadefinujte funkci pro obsluhu přerušení, ve které budete řídit displej (viz cvičení s multiplexováním displeje)
-2. Doplňte kód, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
-3. Doplňte kód, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160 -> 161 -> ...)
+
+**2.** Doplňte kód, aby se **nejnižší číslice** zobrazovaného čísla každých 100ms zvýšila o jedničku (158 -> 159 -> 150 ->151 -> ...)
+
+**3.** Doplňte kód, aby se zobrazované trojciferné číslo každých 100ms zvětšilo o jedničku (tedy displej bude zobrazovat čísla 150 -> 151 ->...-> 159 -> 160 -> 161 -> ...)
 
 ```C
 #include <avr/io.h>
