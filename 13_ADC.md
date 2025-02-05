@@ -72,6 +72,7 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 
 ## Použití ADC
+![image](https://github.com/user-attachments/assets/a8cdc45e-a046-4554-86ca-8952ddaa91bc)
 
 1. Nastavit multiplexer podle toho, na kterém pinu chceme měřit (v našem případě máme potenciometr připojen na pinu PK0 tedy ADC8)
 2. Nastavit předděličku hodinového signálu - čím vyšší hodnota, tím pomalejší, ale přesnější převod. V našem případě můžeme klidně použít nejvyšší hodnotu.
