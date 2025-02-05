@@ -28,12 +28,16 @@ $$
 Například u 10bitového ADC, kde Vref je 5V a měřené napětí je 2,5V:
 
 $$
-1023 \times \frac{2,5}{5} = 512
+DigitálníHodnota = 1023 \times \frac{2,5}{5}
+$$
+
+$$
+DigitálníHodnota = 512
 $$
 
 Zdroj referenčního napětí si můžeme zvolit. Může jím být napájecí napětí mikrokontroleru, vnitřní zdroj referenčního napětí či externě připojený zdroj referenčního napětí (např. speciální obvody, jako je LM4040 nebo LM336).
 
-## Prescaler hodinového signálu
+## Předdělička hodinového signálu
 Podobně jako u časovače, musíme nastavit, s jakou frekvencí hodinového signálu bude AD převodník pracovat. Do jisté míry platí, že čím bude převod rychlejší, tím méně bude přesný a naopak. AD převodník použitý v ATmega 2560 vyžaduje frekvenci mezi 50kHz a 200kHz.
 
 ## Multiplexer
@@ -83,9 +87,10 @@ Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce
 
 ## Úkoly
 
-1. Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji.
-2. Rozsvicujte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
-3. Nastavujte potenciometrem rychlost blikání LEDek (1Hz - 50Hz). Frekvenci zobrazujte na LCD displeji.
+1. Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji (přímo výstup z registru ADC, tedy číslo v rozsahu 0-1023)
+2. Přepočítejte výslednou hodnotu převodu na napětí. Pozor, pokud budete počítat ve voltech, pro správné zobrazení desetinných čísel použijte [návod z minulé lekce](https://tomaschovanec.github.io/MIT/12_LCD.html#p%C5%99id%C3%A1n%C3%AD-podpory-desetinn%C3%BDch-%C4%8D%C3%ADsel).
+3. Zapínejte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
+4. Nastavujte potenciometrem rychlost blikání LEDek (1Hz - 50Hz). Frekvenci zobrazujte na LCD displeji.
 
 
 ### [Zpět na obsah](README.md)
