@@ -76,6 +76,10 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 5. Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
 6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
 
+## Zapojení potenciometru v přípravku
+Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce AD převodníku. Ovšem potenciometr není připojen k mikroprocesoru napevno, ale sdílí pin PK.0 spolu s tlačítkem SW0. TO, jestli je k mikroprocesoru připojen potenciometr nebo tlačítko, ovládáme jumperem EnAD. Jumper v poloze vlevo připojuje na pin PK.0 tlačítko SW0, jumper v poloze vpravo (jako na obrázku níže) připojuje na pin PK.0 potenciometr. Zkontorlujte tedy, že máte jumper zapojen jako na obrázku níže.
+
+![image](https://github.com/user-attachments/assets/d41e6998-efca-4800-b74b-c24066bd38e4)
 
 ## Úkoly
 
