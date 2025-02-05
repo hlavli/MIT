@@ -68,7 +68,7 @@ To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "v
 
 ## Úkoly
 1. Zobrazte na displeji na jednom řádku své jméno, na druhém příjmení
-2. Zobrazte na displeji odpočet od 10 do 0 po 500ms.
+2. Zobrazte na displeji odpočet od 10 do 0 po 500ms. Až dopočítá do 0, začne znovu od 10.
 3. Zobrazte na displeji číslo klávesy stisknuté na klávesnici
 4. Zobrazte na prvním řádku číslo klávesy stisknuté na klávesnici, na druhém řádku zobrazujte celkový součet všech stisknutých kláves od startu programu.
 
