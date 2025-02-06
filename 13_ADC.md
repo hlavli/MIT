@@ -77,7 +77,7 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 1. Nastavit multiplexer podle toho, na kterém pinu chceme měřit (v našem případě máme potenciometr připojen na pinu PK0 tedy ADC8)
 2. Nastavit předděličku hodinového signálu - čím vyšší hodnota, tím pomalejší, ale přesnější převod. V našem případě můžeme klidně použít nejvyšší hodnotu.
 3. Nastavit zdroj referenčního napětí - napětí na potenciometru se bude pohybovat od 0V do 5V, proto vybereme jako zdroj referenčního napětí napájecí napětí Vcc, které je také 5V.
-4. Spustit konverzi zápisem jedničky do pinu ADSC.
+4. Spustit konverzi zápisem jedničky do bitu ADSC.
 5. Čekat, dokud se konverze nedokončí. Buď cyklicky vyčítat, zda je bit ADSC už v nule (polling) nebo použít přerušení.
 6. Po dokončení konverze je výsledek v registru ADC (16bitový registr).
 
