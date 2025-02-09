@@ -90,8 +90,8 @@ Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce
 
 **1.** Měřte pomocí ADC napětí na potenciometru a zobrazujte jej na LCD displeji (přímo výstup z registru ADC, tedy číslo v rozsahu 0-1023)
 - Naprogramujte AD převodník podle flowchartu výše
-- Přidejte do projektu knihovnu pro [LCD displej](https://tomaschovanec.github.io/MIT/12_LCD.html)
-- Pomocí funkce [sprinf](https://tomaschovanec.github.io/MIT/12_LCD.html#ascii-k%C3%B3d-funkce-sprintf) zobrazujte na displeji výsledek převodu
+- Přidejte do projektu knihovnu pro [LCD displej](12_LCD.md)
+- Pomocí funkce [sprinf](12_LCD.md#ascii-k%C3%B3d-funkce-sprintf) zobrazujte na displeji výsledek převodu
 
 **2.** Nastavujte potenciometrem rychlost blikání LEDek. Periodu blikání zobrazujte v milisekundách na LCD displeji.
 
