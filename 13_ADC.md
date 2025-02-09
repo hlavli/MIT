@@ -102,9 +102,9 @@ Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce
     - ```5.0/3``` je desetinné dělení (floating-point division), protože alespoň jeden operand je float. Výsledek je přibližně 1.6667.
     - Pokud chcete, aby 5/3 vrátil desetinné číslo, stačí alespoň jeden operand přetypovat. Např. ```((float)5)/3``` nebo ```5/3.0```. 
 
-**4.** Zapínejte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
+**4.** Změřte multimetrem napětí přímo na potenciometru. Je výsledek změřený multimetrem stejný jako výsledek AD převodu na displeji? Pokud ne, čím je rozdíl způsoben?
 
-
+**5.** Zapínejte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
 
 ### [Zpět na obsah](README.md)
 
