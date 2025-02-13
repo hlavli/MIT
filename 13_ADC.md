@@ -93,16 +93,16 @@ Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce
 - Přidejte do projektu knihovnu pro [LCD displej](12_LCD.md)
 - Pomocí funkce [sprintf](12_LCD.md#ascii-k%C3%B3d-funkce-sprintf) zobrazujte na displeji výsledek převodu
 
-**2.** Nastavujte potenciometrem rychlost blikání LEDek. Periodu blikání zobrazujte v milisekundách na LCD displeji.
-
-**3.** Přepočítejte výslednou hodnotu převodu na napětí ve voltech.
+**2.** Přepočítejte výslednou hodnotu převodu na napětí ve voltech.
 - Pozor, pro správné zobrazení desetinných čísel použijte [návod z minulé lekce](https://tomaschovanec.github.io/MIT/12_LCD.html#p%C5%99id%C3%A1n%C3%AD-podpory-desetinn%C3%BDch-%C4%8D%C3%ADsel). Formátovací parametr ve funkci sprintf pro desetinná čísla můžete použít ```"%.2f"``` (číslo udává počet desetinných míst).
 - Pozor, v jazyce C je rozdíl mezi ```5/3``` a ```5.0/3``` v typu operace:
     - ```5/3``` je celočíselné dělení (integer division), protože oba operandy jsou celá čísla (int). Výsledek je 1, protože desetinná část se ořízne.
     - ```5.0/3``` je desetinné dělení (floating-point division), protože alespoň jeden operand je float. Výsledek je přibližně 1.6667.
     - Pokud chcete, aby 5/3 vrátil desetinné číslo, stačí alespoň jeden operand přetypovat. Např. ```((float)5)/3``` nebo ```5/3.0```. 
 
-**4.** Změřte multimetrem napětí přímo na potenciometru. Je výsledek změřený multimetrem stejný jako výsledek AD převodu na displeji? Pokud ne, čím je rozdíl způsoben?
+**3.** Změřte multimetrem napětí přímo na potenciometru. Je výsledek změřený multimetrem stejný jako výsledek AD převodu na displeji? Pokud ne, čím je rozdíl způsoben?
+
+**4.** Nastavujte potenciometrem rychlost blikání LEDek. Periodu blikání zobrazujte v milisekundách na LCD displeji.
 
 **5.** Zapínejte LEDky podle polohy potenciometru (0V - nesvítí žádná LED, 5V - svítí všechny, 2.5V - svítí 4 LEDky atd).
 
