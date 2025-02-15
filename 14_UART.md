@@ -16,7 +16,7 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 
 
 ## UART 
-UART stands for universal asynchronous receiver / transmitter and defines a protocol, or set of rules, for exchanging serial data between two devices. UART is very simple and only uses two wires between transmitter and receiver to transmit and receive in both directions. Both ends also have a ground connection.
+UART (universal asynchronous receiver / transmitter)  definuje protokol neboli sadu pravidel pro výměnu sériových dat mezi dvěma zařízeními. UART je velmi jednoduchý a používá pouze dva vodiče mezi vysílačem a přijímačem pro obousměrný přenos. Oba konce musí mít také společné uzemnění (GND).
 
 ![image](https://github.com/user-attachments/assets/df3e67e7-d689-404f-a48b-13965745c909)
 
@@ -63,7 +63,7 @@ UART stands for universal asynchronous receiver / transmitter and defines a prot
 #define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
 // Funkce pro inicializaci UART perferie
-void USART_init( unsigned char data)
+void UART_init( unsigned char data)
 {
 	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
 	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // Set frame format: 8data, 1 stop bit
@@ -71,15 +71,25 @@ void USART_init( unsigned char data)
 }
 
 //Funkce pro odeslání jednoho znaku
-void USART_send( unsigned char data)
+void UART_send( unsigned char data)
 {
 // Doplňte kód
 }
 
 // Funkce pro příjem jednoho znaku
-unsigned char USART_Receive( void )
+unsigned char UART_Receive( void )
 {
 // Doplňte kód
+}
+
+// Funkce pro odeslání rětězce znaků
+void USART_putstring(char* StringPtr)
+{
+    while(*StringPtr != 0x00)
+    {
+        USART_send(*StringPtr);
+        StringPtr++;
+    }
 }
 
 
@@ -96,9 +106,9 @@ int main(void)
 
 
 ## Úkoly
-1. Doplňte implementaci funkcí pro odelání a příjem znaku
+1. Doplňte implementaci funkcí pro odeslání a příjem znaku
 2. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
-3. Posílejte pomocí funkce USART_send() jednou za 100ms znaky ASCII znaky 'a' až 'z'. Data přijímejte v Microchip studiu v Terminal window.
+3. Pošlete pomocí funkce USART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 4. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
 5. Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
