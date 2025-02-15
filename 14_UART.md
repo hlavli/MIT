@@ -83,11 +83,11 @@ unsigned char UART_Receive( void )
 }
 
 // Funkce pro odeslání rětězce znaků
-void USART_putstring(char* StringPtr)
+void UART_putstring(char* StringPtr)
 {
     while(*StringPtr != 0x00)
     {
-        USART_send(*StringPtr);
+        UART_send(*StringPtr);
         StringPtr++;
     }
 }
