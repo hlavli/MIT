@@ -50,6 +50,22 @@ UART (universal asynchronous receiver / transmitter)  definuje protokol neboli s
 ![image](https://github.com/user-attachments/assets/bced14bb-1a4e-4121-ba5c-1f0983a2f354)
 
 
+## Přidání Terminal doplňku do Microchip Studia
+Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počítači, potřebujeme k tomu vhodný program. Mohli bychom použít serial monitor v Arduino IDE, ale lepší možnost je doinstalovat do Microchip studia plugin Terminal. Pokud ho ještě v Microchip studiu nemáte, postupujte podle návodu:
+
+1. Stáhněte si plugin [Terminal for Atmel Studio](https://gallery.microchip.com/api/v2/package/EFC4C002-63A3-4BB9-981F-0C1ACAF81E03/2.8.4)
+
+2. Otevřete instalační soubor pomocí programu Microsoft Visual Studio Version selector
+    ![image](https://github.com/user-attachments/assets/918b44e8-5433-4370-9059-d90db87c569c)
+
+3. Zavřete a znovu spusťte Microchip Studio
+
+4. V menu View byste měli mít volbu Terminal
+
+![image](https://github.com/user-attachments/assets/89325ab7-1b79-4545-8a7f-890498b3fdbd)
+
+
+
 ## Použití UARTu
 
 ```c
