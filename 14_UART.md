@@ -54,7 +54,7 @@ USART Baud Rate Register, 16 bitový registr pro nastavení rychlosti přenosu (
 
 
 ## Přidání pluginu Terminal do Microchip Studia
-Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počítači, potřebujeme k tomu vhodný program. Mohli bychom použít Serial Monitor v Arduino IDE, ale lepší možnost je doinstalovat do Microchip Studia plugin Terminal. Pokud ho ještě v Microchip studiu nemáte, postupujte podle návodu:
+Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počítači, potřebujeme k tomu vhodný program. Mohli bychom použít Serial Monitor v Arduino IDE, ale lepší možnost je doinstalovat do Microchip Studia plugin Terminal. Pokud ho v Microchip Studiu ještě nemáte, postupujte podle návodu:
 
 **1.** Stáhněte si plugin [Terminal for Atmel Studio](https://gallery.microchip.com/api/v2/package/EFC4C002-63A3-4BB9-981F-0C1ACAF81E03/2.8.4)
 
@@ -84,7 +84,7 @@ Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počít
 // Funkce pro inicializaci UART perferie
 void UART_init( unsigned char data)
 {
-	UBRR1 = BAUD_PRESCALER;// Nastavit předděličku pro požadovaný baudrate
+	UBRR1 = BAUD_PRESCALER; // Nastavit předděličku pro požadovaný baudrate
 	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // 8 datových bitů, žádná parita, 1 stop bit
 	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Povolit příjem a vysílání
 }
@@ -129,7 +129,7 @@ int main(void)
 
 ![image](https://github.com/user-attachments/assets/f671b965-2fd4-4154-a7ac-1089f3acd899)
 
-**2.** Posílejte pomocí funkce UART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
+**2.** Posílejte pomocí funkce UART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip Studiu v okně Terminal.
 
 **3.** Pošlete pomocí funkce UART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 
