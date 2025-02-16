@@ -26,9 +26,13 @@ UART (universal asynchronous receiver / transmitter)  definuje protokol neboli s
 
 
 ## Důležité registry
-1. **UDR**: USART Data Register - datový registr, kam ukládáme bajt, který chceme odeslat, popřípadě z něj čteme přijatý bajt. Ve skutečnosti jsou to dva registry, jeden pro vysílání, druhý pro příjem, ale používají jedno označení.
+![image](https://github.com/user-attachments/assets/9a27dede-da8f-4820-b290-bea24ab93c3e)
 
-3. **UBRR**: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
+Datový registr, kam ukládáme bajt, který chceme odeslat, popřípadě z něj čteme přijatý bajt. Ve skutečnosti jsou to dva registry, jeden pro vysílání, druhý pro příjem, ale používají jedno označení.
+
+![image](https://github.com/user-attachments/assets/687690ba-6405-40eb-96d5-a907f341005a)
+
+USART Baud Rate Register, 16 bitový registr pro nastavení rychlosti přenosu (baudrate).
 
 ![image](https://github.com/user-attachments/assets/ec57c6d4-c3ef-4196-bfc7-477cc56750ea)
 
