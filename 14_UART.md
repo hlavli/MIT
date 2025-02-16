@@ -81,9 +81,9 @@ Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počít
 // Funkce pro inicializaci UART perferie
 void UART_init( unsigned char data)
 {
-	UBRR1 = BAUD_PRESCALER;// Set the baud rate prescale rate register
-	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // Set frame format: 8data, 1 stop bit
-	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Enable receiver and transmitter
+	UBRR1 = BAUD_PRESCALER;// Nastavit předděličku pro požadovaný baudrate
+	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // 8 datových bitů, žádná parita, 1 stop bit
+	UCSR1B = ((1<<RXEN1)|(1<<TXEN1));       // Povolit příjem a vysílání
 }
 
 //Funkce pro odeslání jednoho znaku
