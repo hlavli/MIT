@@ -30,24 +30,23 @@ UART (universal asynchronous receiver / transmitter)  definuje protokol neboli s
 
 3. **UBRR**: USART Baud Rate Register, this is a 16-bit register used for the setting baud rate.
 
-
-![image](https://github.com/user-attachments/assets/9cbfa471-2743-433b-ae33-8aa2f83c389f)
+![image](https://github.com/user-attachments/assets/ec57c6d4-c3ef-4196-bfc7-477cc56750ea)
 
 **UDREn**: USART Data Register Empty- Nastaví se automaticky do jedničky, když se předchozí bajt odeslal a můžeme tak do registru UDRn zapsat další bajt k odeslání
 
 **RXCn**: USART Receive Complete - tento bit se automaticky nastaví do jedničky, když je přijat nový bajt
 
-![image](https://github.com/user-attachments/assets/866889a6-f2ca-461c-ab52-81cf4cb518bb)
+![image](https://github.com/user-attachments/assets/151d7de2-e425-4be7-b3c1-563f8e9fefe8)
 
 **RXENn**: Receiver Enable - Zápisem jedničky se aktivuje příjem
 
 **TXENn**: Transmitter Enable - Zápisem jedničky se aktivuje vysílání
 
-![image](https://github.com/user-attachments/assets/945f0ace-4812-4466-b15f-0ce4130af783)
+![image](https://github.com/user-attachments/assets/d766fefa-4803-4fb0-9147-dc7e80c0d228)
 
 **UCSZn1:0**: Kombinace bitů UCSZn1:0 a bitu UCSZn2 v registru UCSRnB nastavuje počet datových bitů (Character Size) v jednom datovém rámci
 
-![image](https://github.com/user-attachments/assets/bced14bb-1a4e-4121-ba5c-1f0983a2f354)
+![image](https://github.com/user-attachments/assets/b5e166ab-999c-4a4f-9989-d929c988d689)
 
 
 ## Přidání Terminal pluginu do Microchip Studia
