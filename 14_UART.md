@@ -1,5 +1,5 @@
 # Datová komunikace, UART
-Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkami nebo mikroprocesory, existuje mnoho typů komunikace, které můžeme použít. Liší se rychlostí, počtem použitých vodičů, odolností proti rušením atd. Často používanými komunikačními sběrnicemi jsou [UART, SPI a I2C](https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi). My se v dnešním cvičení budeme věnovat UARTu, ale předtím si ukážeme základní typy dělení komunikačních sběrnic a protokolů.
+Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkami nebo mikroprocesory, existuje mnoho typů komunikace, které můžeme použít. Liší se rychlostí, počtem použitých vodičů, odolností proti rušení atd. Často používanými komunikačními sběrnicemi jsou [UART, SPI a I2C](https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi). My se v dnešním cvičení budeme věnovat UARTu, ale předtím si ukážeme základní typy dělení komunikačních sběrnic a protokolů.
 
 ## Komunikace sériová vs paralelní
 <img src="https://github.com/user-attachments/assets/b722c856-ee3a-4386-9277-d220b1fbb68c" width="600"/>
@@ -16,7 +16,7 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 
 
 ## UART 
-UART (universal asynchronous receiver / transmitter)  definuje protokol neboli sadu pravidel pro výměnu sériových dat mezi dvěma zařízeními. UART je velmi jednoduchý a používá pouze dva vodiče mezi vysílačem a přijímačem pro obousměrný přenos. Oba konce musí mít také společné uzemnění (GND).
+UART (Universal Asynchronous Receiver / Transmitter)  definuje protokol neboli sadu pravidel pro výměnu sériových dat mezi dvěma zařízeními. UART je velmi jednoduchý a používá pouze dva vodiče mezi vysílačem a přijímačem pro obousměrný přenos. Oba konce musí mít také společné uzemnění (GND).
 
 ![image](https://github.com/user-attachments/assets/df3e67e7-d689-404f-a48b-13965745c909)
 
@@ -53,8 +53,8 @@ USART Baud Rate Register, 16 bitový registr pro nastavení rychlosti přenosu (
 ![image](https://github.com/user-attachments/assets/b5e166ab-999c-4a4f-9989-d929c988d689)
 
 
-## Přidání Terminal pluginu do Microchip Studia
-Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počítači, potřebujeme k tomu vhodný program. Mohli bychom použít serial monitor v Arduino IDE, ale lepší možnost je doinstalovat do Microchip studia plugin Terminal. Pokud ho ještě v Microchip studiu nemáte, postupujte podle návodu:
+## Přidání pluginu Terminal do Microchip Studia
+Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počítači, potřebujeme k tomu vhodný program. Mohli bychom použít Serial Monitor v Arduino IDE, ale lepší možnost je doinstalovat do Microchip Studia plugin Terminal. Pokud ho ještě v Microchip studiu nemáte, postupujte podle návodu:
 
 **1.** Stáhněte si plugin [Terminal for Atmel Studio](https://gallery.microchip.com/api/v2/package/EFC4C002-63A3-4BB9-981F-0C1ACAF81E03/2.8.4)
 
@@ -101,7 +101,7 @@ unsigned char UART_Receive( void )
 // Doplňte kód
 }
 
-// Funkce pro odeslání rětězce znaků
+// Funkce pro odeslání řetězce znaků
 void UART_putstring(char* StringPtr)
 {
     while(*StringPtr != 0x00)
@@ -115,7 +115,7 @@ void UART_putstring(char* StringPtr)
 // Hlavní program
 int main(void)
 {
-	USART_init();
+	UART_init();
 
 	while (1) 
 	{
@@ -129,11 +129,11 @@ int main(void)
 
 ![image](https://github.com/user-attachments/assets/f671b965-2fd4-4154-a7ac-1089f3acd899)
 
-**2.** Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
+**2.** Posílejte pomocí funkce UART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
 
-**3.** Pošlete pomocí funkce USART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
+**3.** Pošlete pomocí funkce UART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 
-**4.** Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
+**4.** Pomocí funkce UART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
 
 **5.** Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
