@@ -123,6 +123,9 @@ int main(void)
 
 ## Úkoly
 1. Doplňte implementaci funkcí pro odeslání a příjem znaku
+
+![image](https://github.com/user-attachments/assets/fc405583-d257-412b-9bac-5fce2120cd08)
+
 2. Posílejte pomocí funkce USART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip studiu v Terminal window.
 3. Pošlete pomocí funkce USART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 4. Pomocí funkce USART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
