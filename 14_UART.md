@@ -87,7 +87,7 @@ Abychom mohli data, která z procesoru odesíláme přes UART zobrazit v počít
 #define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
 // Funkce pro inicializaci UART perferie
-void UART_init( unsigned char data)
+void UART_init()
 {
 	UBRR1 = BAUD_PRESCALER; // Nastavit předděličku pro požadovaný baudrate
 	UCSR1C = ((1 << UCSZ11)|(1<<UCSZ10));   // 8 datových bitů, žádná parita, 1 stop bit
@@ -101,7 +101,7 @@ void UART_send( unsigned char data)
 }
 
 // Funkce pro příjem jednoho znaku
-unsigned char UART_Receive( void )
+unsigned char UART_receive( void )
 {
 // Doplňte kód
 }
