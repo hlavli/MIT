@@ -138,7 +138,10 @@ int main(void)
 
 **3.** Pošlete pomocí funkce UART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 
-**4.** Pomocí funkce UART_Receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. 
+**4.** Pomocí funkce UART_receive() přijímejte jeden bajt z počítače. Pokaždé když procesor přijme bajt, zapíše jeho hodnotu na PORT F a tím ho zobrazí na LEDkách. Nezapomeňte nastavit PORTF jako výstup. Přepněte si v okně Terminal posílání HEX namísto ASCII.
+
+![image](https://github.com/user-attachments/assets/b0411a71-8153-41cd-92e5-8128129ca96f)
+
 
 **5.** Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
 
