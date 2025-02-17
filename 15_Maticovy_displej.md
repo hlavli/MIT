@@ -8,6 +8,8 @@ Jedním portem nastavíme data na řádku, druhým portem vybereme řádek.
 
 Dvě barvy - červená, zelená
 
+Zapojení v přípravku
+
 ![image](https://github.com/user-attachments/assets/5215499b-795d-44b5-a037-b70ced5ad1eb)
 
 *Zdroj obrázku: https://randomnerdtutorials.com/guide-for-8x8-dot-matrix-max7219-with-arduino-pong-game/*
