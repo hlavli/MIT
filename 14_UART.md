@@ -25,7 +25,7 @@ UART (Universal Asynchronous Receiver / Transmitter)  definuje protokol neboli s
 *Zdroj obrázku: https://docs.madmachine.io/learn/advanced/uart*
 
 ## Zapojení v přípravku
-Mikrokontroler ATmega 2560 má celkem 4 USART periferie. Dvě z nich jsou připojeny k převodníku na USB. Abychom nemuseli připojovat další kabel, budeme používat stejný USART jako pro programování. Pohledem do schématu zjistíme, že je to USART1 a je připojen k pinům D2 (RXD1) a D3 (TXD1). Proto i všechny registry, které budeme nastavovat, budou mít index 1 (UDR1, UCSR1A, atd.)
+Mikrokontroler ATmega 2560 má celkem 4 USART periferie. Dvě z nich jsou připojeny k převodníku na USB. Abychom nemuseli připojovat další kabel, budeme používat stejný USART jako pro programování. Podle schématu je to USART1, který je připojen k pinům D2 (RXD1) a D3 (TXD1). Proto i všechny registry, které budeme nastavovat, budou mít index 1 (UDR1, UCSR1A, atd.)
 
 ![image](https://github.com/user-attachments/assets/6ad4fa65-9698-469f-8fd6-d1c040f47911)
 
@@ -134,7 +134,7 @@ int main(void)
 
 ![image](https://github.com/user-attachments/assets/f671b965-2fd4-4154-a7ac-1089f3acd899)
 
-**2.** Posílejte pomocí funkce UART_send() střídavě jednou za sekundu znaky 'a' a 'b'. Data přijímejte v Microchip Studiu v okně Terminal.
+**2.** Pomocí funkce UART_send() posílejte střídavě každou sekundu znaky 'a' a 'b'. Přijatá data zobrazte v okně Terminal v Microchip Studiu.
 
 **3.** Pošlete pomocí funkce UART_putstring() textový řetězec. Data přijímejte v Microchip studiu v Terminal window.
 
