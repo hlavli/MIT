@@ -9,9 +9,9 @@ Naprogramujte dva mikrokontroléry ATmega2560, které budou komunikovat přes UA
 - Čeká na vstup z klávesnice.
 - Po stisku určité klávesy pošle odpovídající příkaz přes UART
 - Příkazy:
-    - 'A' – zapne všechny LED
-    - 'B' – zapne polovinu LED
-    - 'C' – vypne všechny LED
+    - 'A' – zapnout všechny LED
+    - 'B' – zapnout polovinu LED
+    - 'C' – vypnout všechny LED
 
 
 ### Jednotka pro ovládání LED (Slave)
