@@ -27,8 +27,7 @@ UART (Universal Asynchronous Receiver / Transmitter)  definuje protokol neboli s
 ## Zapojení v přípravku
 Mikrokontroler ATmega 2560 má celkem 4 USART periferie. Dvě z nich jsou připojeny k převodníku na USB. Abychom nemuseli připojovat další kabel, budeme používat stejný USART jako pro programování. Podle schématu je to USART1, který je připojen k pinům D2 (RXD1) a D3 (TXD1). Proto i všechny registry, které budeme nastavovat, budou mít index 1 (UDR1, UCSR1A, atd.)
 
-![image](https://github.com/user-attachments/assets/6ad4fa65-9698-469f-8fd6-d1c040f47911)
-
+![image](https://github.com/user-attachments/assets/bb4b297b-66aa-44eb-9781-6a5e30dd114a)
 
 ## Důležité registry
 ![image](https://github.com/user-attachments/assets/9a27dede-da8f-4820-b290-bea24ab93c3e)
