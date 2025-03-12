@@ -18,7 +18,7 @@ Pokud potřebujeme, aby si mikroprocesor vyměňoval data s jinými součástkam
 ## UART 
 UART (Universal Asynchronous Receiver / Transmitter)  definuje protokol neboli sadu pravidel pro výměnu sériových dat mezi dvěma zařízeními. UART je velmi jednoduchý a používá pouze dva vodiče mezi vysílačem a přijímačem pro obousměrný přenos. Oba konce musí mít také společné uzemnění (GND).
 
-![image](https://github.com/user-attachments/assets/df3e67e7-d689-404f-a48b-13965745c909)
+![image](https://github.com/user-attachments/assets/3df586bc-b90d-448a-9667-c69dafe67c72)
 
 ![image](https://github.com/user-attachments/assets/c544e539-6958-4283-9fec-905060d4e42c)
 
