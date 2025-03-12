@@ -141,8 +141,11 @@ int main(void)
 
 ![image](https://github.com/user-attachments/assets/b0411a71-8153-41cd-92e5-8128129ca96f)
 
+**5.** Propojte dva přípravky přes UART. V jednom ponechte program z bodu 4. - tedy aby zapínal LEDky podle hodnoty bajtu, který přijme přes UART. Druhý přípravek naprogramujte tak, aby např. každou sekundu posílal přes UART různá data a tím blikal LEDkami na druhém přípravku. Propojte Tx a Rx do kříže a propojte zem (GND) obou přípravků. Piny Rx1 a Tx1 najdete na přípravku s pomocí schématu výše.
 
-**5.** Propojte dva přípravky přes UART. Při stisku klávesy na jednom přípravku se rozsvítí LEDky na druhém přípravku. 
+**6.** Rozšiřte program z příkladu 5. tak, aby se po stisku klávesy na jednom přípravku odeslalo číslo stisknuté klávesy přes UART. Druhý přípravek opět tuto informaci přijme a zobrazí ji pomocí LEDek. Obsluhu klávesnice najdete  [zde](06_Klavesnice.md)
+
+**7.** Propojte dva přípravky přes UART a naprogramujte "UART ping pong" - přípravek vždy přjme bajt z UARTu, navýší ho o jedničku a zase jej odešle přes UART do druhého přípravku. Sledujte komunikaci pomocí logického analyzeru.
 
 
 ## Další užitečné zdroje informací
