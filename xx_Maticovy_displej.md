@@ -6,13 +6,26 @@
 
 Jedním portem nastavíme data na řádku, druhým portem vybereme řádek.
 
-Dvě barvy - červená, zelená
-
-Zapojení v přípravku
-
 ![image](https://github.com/user-attachments/assets/5215499b-795d-44b5-a037-b70ced5ad1eb)
 
 *Zdroj obrázku: https://randomnerdtutorials.com/guide-for-8x8-dot-matrix-max7219-with-arduino-pong-game/*
+
+
+
+## Zapojení v přípravku
+Když se podíváme na maticový displej ve schématu naší výukové desky, vypdá to takto:
+
+Piny **R0** až **R7** znamenají **R**ow 0-7 
+
+Piny **AR0** až **AR7** znamenají **A**node **R**ed 0-7
+
+Piny **AG0** až **AG7** znamenají **A**node **G**reen 0-7
+
+Vidíme, že každý bod displeje je tvořen dvěma LEDkami - červenou a zelenou. Můžeme tedy rozsvítit jednu z nich, žádnou nebo obě.
+
+![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
+
+
 
 
 ## Úkoly:
