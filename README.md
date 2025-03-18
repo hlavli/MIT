@@ -30,7 +30,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 14. [AD převodník](13_ADC.md)
 15. [UART](14_UART.md)
 16. [UART - samostatná úloha](15_UART_2.md)
-17. [Maticový displej](15_Maticovy_displej.md)
+17. [Maticový displej](16_Maticovy_displej.md)
 
 <!---
 
