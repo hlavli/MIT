@@ -45,4 +45,4 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
    ```
 5. Nadefinujte si druhý obrázek a v hlavní smyčce provádějte změnu obrázků. Samotné zobrazování ponechte v rutině přerušení časovače.
 6. Vytvořte program, který zobrazuje text, písmeno po písmenu. Hodnoty k vykreslení jednotlivých písmen můžete použít ze souboru [Font_8x8.h](/files/Font_8x8.h).
-7. Napište program tak, aby po stisku klávesy změnil barvu obrázku na displeji z červené na zelenou.
+7. Napište program tak, aby po stisku tlačítka změnil barvu obrázku na displeji z červené na zelenou.
