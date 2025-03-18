@@ -1,4 +1,5 @@
 # Maticový displej
+Další z periferií, kterou se naučíme ovládat mikrokontrolenrem je maticový displej 8x8. Je tvořen maticí LEDek a dokáže zobrazovat jak text, tak jednoduchou grafiku.
 
 ![image](https://github.com/user-attachments/assets/28cc79c2-ec6c-4f9e-b6d0-0fe4740bd020)
 
