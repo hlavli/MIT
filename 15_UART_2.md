@@ -2,6 +2,8 @@
 
 Naprogramujte dva mikrokontroléry ATmega2560, které budou komunikovat přes UART. Jeden bude sloužit jako ovládací jednotka s klávesnicí, druhý bude přijímat příkazy a podle nich nastavovat LEDky.
 
+![image](https://github.com/user-attachments/assets/e95ffe7d-c199-461f-86b0-b83ea28b15b6)
+
 ## Požadavky na funkci systému
 
 ### Ovládací jednotka
