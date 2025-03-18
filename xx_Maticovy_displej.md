@@ -17,7 +17,7 @@ Zapneme první řádek a rozsvítíme jen ty LEDky, které mají v daném řádk
 
 
 ## Zapojení v přípravku
-Když se podíváme na maticový displej ve schématu naší výukové desky, vypdá to takto:
+Když se podíváme na maticový displej ve schématu naší výukové desky, vypadá to takto:
 
 Piny **R0** až **R7** znamenají **R**ow 0-7 
 
