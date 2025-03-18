@@ -1,4 +1,4 @@
-# Test na čítač/časovač
+# Test na časovač
 Teorii najdete [zde](../08_Timer.md).
 
 1. Nastavte registr TCCR1B tak, abyste použili předděličku 256 a CTC režim.
