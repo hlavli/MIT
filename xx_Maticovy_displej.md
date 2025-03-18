@@ -27,6 +27,8 @@ Piny **AG0** až **AG7** znamenají **A**node **G**reen 0-7
 
 Vidíme, že každý bod displeje je tvořen dvěma LEDkami - červenou a zelenou. Můžeme tedy rozsvítit jednu z nich, žádnou nebo obě.
 
+Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. Piny AR0-AR7 popř AG0-AG7 můžete pomocí plochých kabelů připojit k libovolným volným portům na přípravku (např. PORTA, PORTJ, PORTB,PORTD)
+
 ![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
 
 
