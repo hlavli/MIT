@@ -18,7 +18,7 @@ Zapojení v přípravku
 ## Úkoly:
 1. Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
 2. Zobrazte obrázek na displeji bez použití časovače, pouze s  použitím cyklu for a funkce _delay_ms().
-3. Zobrazte obrázek pomocí přerušení časovače - vykreslení se bude vykonávat v rutině přerušení, hlavní smyčka programu zůstane volná.
+3. Zobrazte obrázek pomocí přerušení časovače - vykreslení se bude vykonávat v obsluze přerušení, hlavní smyčka programu zůstane volná.
 4. Nadefinujte si druhý obrázek a v hlavní smyčce provádějte změnu obrázků. Samotné zobrazování ponechte v rutině přerušení časovače.
 5. Vytvořte program, který zobrazuje text, písmeno po písmenu. Hodnoty k vykreslení jednotlivých písmen můžete použít ze souboru Font_8x8.h.
-6. Po stisku klávesy změňte barvu obrázku z červené na zelenou.
+6. Napište program tak, aby po stisku klávesy změňil barvu obrázku na displeji z červené na zelenou.
