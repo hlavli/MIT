@@ -1,25 +1,25 @@
-# Samostatná úloha - Vzdálené ovládání LED pomocí UART
+# Samostatná úloha - Dálkové ovládání LED světla pomocí UARTu
 
 Naprogramujte dva mikrokontroléry ATmega2560, které budou komunikovat přes UART. Jeden bude sloužit jako ovládací jednotka s klávesnicí, druhý bude přijímat příkazy a podle nich nastavovat LEDky.
 
 ## Požadavky na funkci systému
 
-### Ovládací jednotka (Master)
+### Ovládací jednotka
 
 - Čeká na vstup z klávesnice.
-- Po stisku určité klávesy pošle odpovídající příkaz přes UART
+- Po stisku klávesy pošle odpovídající příkaz (1 bajt) přes UART
 - Příkazy:
     - 'A' – zapnout všechny LED
     - 'B' – zapnout polovinu LED
     - 'C' – vypnout všechny LED
 
 
-### Jednotka pro ovládání LED (Slave)
+### Jednotka pro ovládání LED
 - Přijímá příkazy přes UART
 - Podle přijatého znaku nastavuje LEDky
 - Pokud přijde neplatný znak, ignoruje ho
 
 ### Bonusové úkoly
 - Přidejte možnost zapínat a vypínat LEDky po jedné - klávesa * přidá jednu LEDku, klávesa # zhasne jednu LEDku
-- Pokud přijde neplatný znak, slave jednotka spustí krátký tón bzučáku
+- Pokud přijde neplatný znak, přijímající jednotka spustí krátký tón bzučáku
 - Přidejte možnost LEDky nastavovat otáčením potenciometru 
