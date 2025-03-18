@@ -43,4 +43,4 @@ Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu.
 1. [Číselné soustavy](files/Test_ciselne_soustavy_logicke_funkce.md)
 2. [Logické funkce](files/Test_bitove_operace.md)
 3. [Jazyk C](files/Test_jazyk_C.md)
-4. [Čítač/časovač](files/Test_timer.md)
+4. [Časovač](files/Test_timer.md)
