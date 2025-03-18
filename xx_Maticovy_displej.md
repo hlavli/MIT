@@ -4,7 +4,7 @@
 
 ## Princip funkce
 
-Maticový displej má 8x8 bodů. Pokud bychom chtěli každý bod řídit jedním pinem, potřebovali bychom jich 64, což je příliš mnoho, některé mikroprocesory ani tolik pinů nemají. Používá se tedy stejná technika, jakou jsme si už ukázali u sedmisegmentového displeje - časový multiplex.
+Maticový displej má 8x8 bodů. Pokud bychom chtěli každý bod řídit jedním pinem, potřebovali bychom jich 64, což je příliš mnoho, některé mikroprocesory ani tolik pinů nemají. Používá se tedy stejná technika, jakou jsme si už ukázali u sedmisegmentového displeje - **časový multiplex**.
 
 Multiplexování u 8x8 maticového displeje funguje tak, že se v jeden okamžik rozsvítí **jen jeden řádek**. Řádky se postupně střídjí rychlostí, kterou lidské oko nevnímá — například kolem **100x za sekundu**.
 
@@ -13,7 +13,6 @@ Zapneme první řádek a rozsvítíme jen ty LEDky, které mají v daném řádk
 ![image](https://github.com/user-attachments/assets/5215499b-795d-44b5-a037-b70ced5ad1eb)
 
 *Zdroj obrázku: https://randomnerdtutorials.com/guide-for-8x8-dot-matrix-max7219-with-arduino-pong-game/*
-
 
 
 ## Zapojení v přípravku
@@ -30,8 +29,6 @@ Vidíme, že každý bod displeje je tvořen dvěma LEDkami - červenou a zeleno
 Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. Piny AR0-AR7 popř AG0-AG7 můžete pomocí plochých kabelů připojit k libovolným volným portům na přípravku (např. PORTA, PORTJ, PORTB,PORTD)
 
 ![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
-
-
 
 
 ## Úkoly:
