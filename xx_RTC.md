@@ -1,8 +1,8 @@
 # RTC - real time clock
 
 - co to je, jak funguje, baterie
-- datasheet, funkce (čas, RAM)
+- datasheet, adresy jednotlivých číslic času, RAM
 - I2C komunikace - základy, adresa, master/slave
-- Adresy jednotlivých číslic času
-- I2C knihovna??
+- Přidání knihoven I2C, DS1307
 - Zobrazit čas na LCD
+- Zobrazit I2C čtení sekund na logickém analyzeru
