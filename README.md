@@ -33,7 +33,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 17. [Maticový displej](16_Maticovy_displej.md)
 
 <!---
-
+17. [RTC - modul reálného času](17_RTC.md)
 --->
 
 
