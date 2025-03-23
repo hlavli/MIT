@@ -1,4 +1,4 @@
-# RTC - real time clock
+# RTC - Real time clock
 
 - co to je, jak funguje, baterie
 - [Datasheet DS1307](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf), adresy jednotlivých číslic času, RAM
