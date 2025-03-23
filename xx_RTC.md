@@ -5,7 +5,9 @@ S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (malá knof
 
 ![image](https://github.com/user-attachments/assets/2f3c9eff-5ce0-4b2c-924a-f4c49438c906)
 
-    ![image](https://github.com/user-attachments/assets/0fc05e64-ce7f-473a-a149-af28a7b3443b)
+## Registry DS1307
+
+![image](https://github.com/user-attachments/assets/0fc05e64-ce7f-473a-a149-af28a7b3443b)
 
 - I2C komunikace - základy, adresa, master/slave
   
@@ -15,6 +17,11 @@ S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (malá knof
 
   ![image](https://github.com/user-attachments/assets/8d93955c-0cee-41fa-94fe-6d2272da27a4)
 
-- Přidání knihoven I2C, DS1307.  Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
-- Zobrazit čas na LCD
+
+## Knihovny pro I2C a DS1307
+Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
+
+## Úkoly:
+- Zobrazit čas na LCD displeji
+- Nastavte přesný čas
 - Zobrazit I2C čtení sekund na logickém analyzeru
