@@ -33,7 +33,7 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
 
 
 ## Úkoly:
-1. Napište program, který zobrazí na maticovém displeji čtverec.
+1. Napište program, který zobrazí na maticovém displeji svislou čáru odshora dolů.
 2. Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
 3. Zobrazte obrázek na displeji bez použití časovače, pouze s  použitím cyklu for a funkce _delay_ms().
 4. Zobrazte obrázek pomocí přerušení časovače - vykreslení se bude vykonávat v obsluze přerušení (funkce ```ISR(TIMER1_COMPA_vect){}```) hlavní smyčka programu zůstane volná. Časovač můžete nastavit například takto:
