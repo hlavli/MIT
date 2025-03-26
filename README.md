@@ -31,9 +31,10 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 15. [UART](14_UART.md)
 16. [UART - samostatná úloha](15_UART_2.md)
 17. [Maticový displej](16_Maticovy_displej.md)
+18. [RTC - modul reálného času](17_RTC.md)
 
 <!---
-17. [RTC - modul reálného času](17_RTC.md)
+
 --->
 
 
