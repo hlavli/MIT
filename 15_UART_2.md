@@ -22,8 +22,8 @@ Naprogramujte dva mikrokontroléry ATmega2560, které budou komunikovat přes UA
 - Pokud přijde neplatný znak, ignoruje ho
 
 ### Bonusové úkoly
-- Přidejte možnost zapínat a vypínat LEDky po jedné - klávesa * přidá jednu LEDku, klávesa # zhasne jednu LEDku
 - Pokud přijde neplatný znak, přijímající jednotka spustí krátký tón bzučáku
+- Přidejte možnost zapínat a vypínat LEDky po jedné - klávesa * přidá jednu LEDku, klávesa # zhasne jednu LEDku
 - Přidejte možnost LEDky nastavovat otáčením potenciometru 
 
 ### [Zpět na obsah](README.md)
