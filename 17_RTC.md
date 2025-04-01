@@ -20,13 +20,15 @@ Pomocí I2C sběrnice můžeme vyčítat nebo zapisovat obsah registrů DS1307. 
 ![image](https://github.com/user-attachments/assets/0fc05e64-ce7f-473a-a149-af28a7b3443b)
 
 
+## RAM paměť v DS1307
+RTC čip DS1307 obsahuje kromě obvodu reálného času i 56 bajtů RAM paměti. Ta je sice napěťově závislá (narozdíl od paměti EEPROM) a bez napájení se data ztratí, ale tím, že má modul vlastní baterii, data zůstanou zachována i když odpojíme napájecí adaptér přípravku. Paměť lze libovolně číst a zapisovat přes I²C sběrnici. Využít ji můžeme například k ukládání uživatelských dat a parametrů, které by měly zůstat zachovány i po vypnutí napájení. Adresa RAM v DS1307 začíná od 0x08 a končí na 0x3F.
+
+
 ## Knihovny pro I2C a DS1307
 Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod DS1307. Knihovny přidáte stejně jako knihovnu pro LCD. Projděte si zejména soubor [DS1307.h](files/DS1307.h) kde najdete deklarace funkcí, které knihovna obsahuje.
 
 Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
 
-## RAM paměť v DS1307
-RTC čip DS1307 obsahuje kromě obvodu reálného času i 56 bajtů RAM paměti. Ta je sice napěťově závislá (narozdíl od paměti EEPROM) a bez napájení se data ztratí, ale tím, že má modul vlastní baterii, data zůstanou zachována i když odpojíme napájecí adaptér přípravku. Paměť lze libovolně číst a zapisovat přes I²C sběrnici. Využít ji můžeme například k ukládání uživatelských dat a parametrů, které by měly zůstat zachovány i po vypnutí napájení. Adresa RAM v DS1307 začíná od 0x08 a končí na 0x3F.
 
 ## Úkoly:
 1. Zobrazte na LCD displeji čas a datum
