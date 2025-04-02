@@ -6,7 +6,12 @@ S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (malá knof
 ![image](https://github.com/user-attachments/assets/2f3c9eff-5ce0-4b2c-924a-f4c49438c906)
 
 ## I2C komunikace - základy, adresa, master/slave
-  
+I²C (Inter-Integrated Circuit) je sériová sběrnice pro komunikaci mezi mikrokontroléry a periferiemi. Používá dva signální vodiče:
+SDA (Serial Data) – přenos dat
+SCL (Serial Clock) – hodinový signál
+
+Komunikace probíhá v režimu master-slave, kde master řídí přenos. Každé zařízení má unikátní adresu a lze připojit více zařízení na stejné dvě linky. Hezký článek o I2C komunikaci [zde](http://www.elektromys.eu/clanky/ele_i2c/clanek.html).
+
 ![image](https://github.com/user-attachments/assets/abc6c42b-abeb-4a6f-a850-ca47433e5dd9)
  
 *Zdroj obrázku: https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi*
@@ -30,11 +35,13 @@ Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod D
 Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
 
 
-## Úkoly:
-1. Zobrazte na LCD displeji čas a datum
+## Úkoly
+1. Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) .
 2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
 3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci npomocí logického analyzeru (signál SDA je na pinu PD.1, SCL je na pinu PD.2).
 4. Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
 
+
+Dal
 
 ### [Zpět na obsah](README.md)
