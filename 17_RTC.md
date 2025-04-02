@@ -38,10 +38,7 @@ Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz j
 ## Úkoly
 1. Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) .
 2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
-3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci npomocí logického analyzeru (signál SDA je na pinu PD.1, SCL je na pinu PD.2).
+3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SDA je na pinu PD.1, SCL je na pinu PD.2). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
 4. Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
-
-
-Dal
 
 ### [Zpět na obsah](README.md)
