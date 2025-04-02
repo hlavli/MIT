@@ -29,9 +29,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 13. [LCD displej](12_LCD.md)
 14. [AD převodník](13_ADC.md)
 15. [UART](14_UART.md)
-16. [UART - samostatná úloha](15_UART_2.md)
-17. [Maticový displej](16_Maticovy_displej.md)
-18. [RTC - modul reálného času](17_RTC.md)
+16. [Maticový displej](16_Maticovy_displej.md)
+17. [RTC - modul reálného času](17_RTC.md)
 
 <!---
 
@@ -45,3 +44,4 @@ Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu.
 2. [Logické funkce](files/Test_bitove_operace.md)
 3. [Jazyk C](files/Test_jazyk_C.md)
 4. [Časovač](files/Test_timer.md)
+5. [UART - samostatná úloha](15_UART_2.md)
