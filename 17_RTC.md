@@ -34,6 +34,15 @@ Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod D
 
 Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
 
+Na začátek programu přidejte include všech přidaných knihoven:
+```c
+#include "lcd.h"
+#include <stdio.h>
+#include "i2c.h"
+#include "DS1307.h"
+```
+
+Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu lsouží funkce ```i2c_ini();```.
 
 ## Úkoly
 1. Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) .
