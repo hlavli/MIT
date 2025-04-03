@@ -42,7 +42,7 @@ Na začátek programu přidejte include všech přidaných knihoven:
 #include "DS1307.h"
 ```
 
-Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu lsouží funkce ```i2c_ini();```.
+Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
 
 ## Úkoly
 1. Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) .
