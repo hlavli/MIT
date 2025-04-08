@@ -33,10 +33,22 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
 
 
 ## Úkoly:
-1. Napište program, který zobrazí na maticovém displeji svislou čáru odshora dolů.
-2. Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
-3. Zobrazte obrázek na displeji bez použití časovače, pouze s  použitím cyklu for a funkce _delay_ms().
-4. Zobrazte obrázek pomocí přerušení časovače - vykreslení se bude vykonávat v obsluze přerušení (funkce ```ISR(TIMER1_COMPA_vect){}```) hlavní smyčka programu zůstane volná. Časovač můžete nastavit například takto:
+**1.** Napište program, který rozsvítí na maticovém displeji všechny čtyři rohové body.
+**2.** Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
+   ```c
+   char zobraz[] = {
+   	0b00111100,  //   ████
+   	0b01000010,  //  █    █
+   	0b10100101,  // █ █  █ █
+   	0b10000001,  // █      █
+   	0b10100101,  // █ █  █ █
+   	0b10011001,  // █  ██  █
+   	0b01000010,  //  █    █
+   	0b00111100   //   ████
+   };
+   ```
+**3.** Zobrazte obrázek na displeji bez použití časovače, pouze s  použitím cyklu for a funkce _delay_ms().
+**4.** Zobrazte obrázek pomocí přerušení časovače - vykreslení se bude vykonávat v obsluze přerušení (funkce ```ISR(TIMER1_COMPA_vect){}```) hlavní smyčka programu zůstane volná. Časovač můžete nastavit například takto:
    ```c
    TIMSK1 = 0x02; // Povolení přerušení při shodě čítače s komparačním registrem OCR1A
    sei(); // Globální povolení přerušení
@@ -44,8 +56,8 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
    
    OCR1A = ???; // Dopočítejte počet ticků do přerušení 
    ```
-5. Nadefinujte si druhý obrázek a v hlavní smyčce provádějte změnu obrázků. Samotné zobrazování ponechte v rutině přerušení časovače.
-6. Vytvořte program, který zobrazuje text, písmeno po písmenu. Hodnoty k vykreslení jednotlivých písmen můžete použít ze souboru [Font_8x8.h](/files/Font_8x8.h).
-7. Napište program tak, aby po stisku tlačítka změnil barvu obrázku na displeji z červené na zelenou.
+**5.** Nadefinujte si druhý obrázek a v hlavní smyčce provádějte změnu obrázků. Samotné zobrazování ponechte v rutině přerušení časovače.
+**6.** Vytvořte program, který zobrazuje text, písmeno po písmenu. Hodnoty k vykreslení jednotlivých písmen můžete použít ze souboru [Font_8x8.h](/files/Font_8x8.h).
+**7.** Napište program tak, aby po stisku tlačítka změnil barvu obrázku na displeji z červené na zelenou.
 
 ### [Zpět na obsah](README.md)
