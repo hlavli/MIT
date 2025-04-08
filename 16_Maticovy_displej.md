@@ -56,7 +56,7 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
    sei(); // Globální povolení přerušení
    TCCR1B = 0b0001100; // CTC režim, dělička 256 -> Ttick = 16us
    
-   OCR1A = ???; // Dopočítejte počet ticků do přerušení 
+   OCR1A = ???; // Dopočítejte počet ticků do přerušení (1 tick = 16us)
    ```
 **5.** Nadefinujte si druhý obrázek a napište program tak, aby se oba obrázky po dvou sekundách střídaly. V hlavní smyčce provádějte změnu obrázků, samotné zobrazování ponechte v obsluze přerušení časovače.
 
