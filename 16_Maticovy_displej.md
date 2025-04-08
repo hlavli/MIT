@@ -58,7 +58,7 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
    
    OCR1A = ???; // Dopočítejte počet ticků do přerušení 
    ```
-**5.** Nadefinujte si druhý obrázek a v hlavní smyčce provádějte změnu obrázků. Samotné zobrazování ponechte v rutině přerušení časovače.
+**5.** Nadefinujte si druhý obrázek a napište program tak, aby se oba obrázky po dvou sekundách střídaly. V hlavní smyčce provádějte změnu obrázků, samotné zobrazování ponechte v obsluze přerušení časovače.
 
 **6.** Vytvořte program, který zobrazuje text, písmeno po písmenu. Hodnoty k vykreslení jednotlivých písmen můžete použít ze souboru [Font_8x8.h](/files/Font_8x8.h).
 
