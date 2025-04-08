@@ -19,17 +19,19 @@ Zapneme první řádek a rozsvítíme jen ty LEDky, které mají v daném řádk
 ## Zapojení v přípravku
 Když se podíváme na maticový displej ve schématu naší výukové desky, vypadá to takto:
 
-Piny **R0** až **R7** znamenají **R**ow 0-7 
+Piny **R0** až **R7** znamenají **R**ow 0-7. Jsou na přípravku připojeny na P**ORTL**.
 
-Piny **AR0** až **AR7** znamenají **A**node **R**ed 0-7
+Piny **AR0** až **AR7** znamenají **A**node **R**ed 0-7. Na přípravku jsou vyvedeny na pinovou lištu, můžeme **pomocí plochých kabelů připojit k libovolným volným portům** na přípravku (např. PORTA, PORTJ, PORTB,PORTD).
 
-Piny **AG0** až **AG7** znamenají **A**node **G**reen 0-7
+Piny **AG0** až **AG7** znamenají **A**node **G**reen 0-7 **pomocí plochých kabelů připojit k libovolným volným portům** na přípravku (např. PORTA, PORTJ, PORTB,PORTD)
 
 Vidíme, že každý bod displeje je tvořen dvěma LEDkami - červenou a zelenou. Můžeme tedy rozsvítit jednu z nich, žádnou nebo obě.
 
-Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. Piny AR0-AR7 popř. AG0-AG7 můžete pomocí plochých kabelů připojit k libovolným volným portům na přípravku (např. PORTA, PORTJ, PORTB,PORTD)
-
 ![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
+
+Pokud například použijeme pro řízení sloupců port D, může řízení displeje vypadat třeba takto:
+
+![image](https://github.com/user-attachments/assets/29e48b1b-22d8-427d-85ef-8858d842bafc)
 
 
 ## Úkoly
