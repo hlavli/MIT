@@ -32,7 +32,7 @@ Piny R0-R7 pro výběr řádků jsou propojeny pomocí jumperů s portem PORTL. 
 ![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
 
 
-## Úkoly:
+## Úkoly
 **1.** Napište program, který rozsvítí na maticovém displeji všechny čtyři rohové body.
 
 **2.** Vymyslete si vlastní obrázek 8x8 pixelů (smajlík, srdce, kočka,...) a sestavte si pole s hodnotami pro každý řádek displeje.
