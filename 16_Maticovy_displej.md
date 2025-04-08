@@ -7,7 +7,7 @@ Další z periferií, kterou se naučíme ovládat mikrokontrolerem je maticový
 
 Maticový displej má 8x8 bodů. Pokud bychom chtěli každý bod řídit jedním pinem, potřebovali bychom jich 64, což je příliš mnoho, některé mikroprocesory ani tolik pinů nemají. Používá se tedy stejná technika, jakou jsme si už ukázali u sedmisegmentového displeje - **časový multiplex**.
 
-Multiplexování u 8x8 maticového displeje funguje tak, že se v jeden okamžik rozsvítí **jen jeden řádek**. Řádky se postupně střídají rychlostí, kterou lidské oko nevnímá — například  **100Hz**.
+Multiplexování u 8x8 maticového displeje funguje tak, že se v jeden okamžik rozsvítí **jen jeden řádek**. Řádky se postupně střídají rychlostí, kterou lidské oko nevnímá, například 100Hz.
 
 Zapneme první řádek a rozsvítíme jen ty LEDky, které mají v daném řádku svítit. Pak přepneme na druhý řádek, a tak dál až k osmému.  Po zobrazení všech řádků se proces opakuje znovu a znovu. Čím rychleji cyklus běží, tím plynuleji obraz vypadá. Díky **setrvačnosti lidského oka** se to ale jeví jako by svítily všechny řádky zároveň.
 
