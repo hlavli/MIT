@@ -34,6 +34,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 
 <!---
 18. [Stopky](18_Stopky.md)
+19. [Ultrazvukový senzor vzdálenosti](19_Ultrasonic.md)
 --->
 
 
