@@ -31,10 +31,12 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 15. [UART](14_UART.md)
 16. [Maticový displej](16_Maticovy_displej.md)
 17. [RTC - modul reálného času](17_RTC.md)
-
-<!---
 18. [Stopky](18_Stopky.md)
 19. [Ultrazvukový senzor vzdálenosti](19_Ultrasonic.md)
+
+
+<!---
+
 --->
 
 
