@@ -2,7 +2,7 @@
 S ultrazvukovým senzorem vzdálenosti HC-SR04 jsme už pracovali v rámci předmětu Praxe. Pro měření času, který potřebovala ultrazvuková vlna k cestě k překážce a zpět, jsme v Praxi používali funkci ```pulseIn()```. V předmětu MIT si ale ukazujeme práci s procesorem od základu, proto nepoužijeme hotovou funkci z knihovny, ale pro měření času použijeme čítač/časovač.
 
 ## Princip senzoru
-Pro připomenutí - senzor funguje tak, že po aktivaci měření 10us pulzem na Trig pinu vyšle krátký ultrazvukový impulz a nastaví Echo pin do log. 1. Ve chvíli, kdy se k senzoru vrátí odražená vlna, nastaví Echo pin do log. 0. Proto pomocí délky pulzu na pinu Echo můžeme určit vzdálenost překážky.
+Senzor funguje tak, že po aktivaci měření 10us pulzem na Trig pinu vyšle krátký ultrazvukový impulz a nastaví Echo pin do log. 1. Ve chvíli, kdy se k senzoru vrátí odražená vlna, nastaví Echo pin do log. 0. Proto pomocí délky pulzu na pinu Echo můžeme určit vzdálenost překážky.
 
 ![image](https://github.com/user-attachments/assets/b9491ccf-c2ee-4d43-abfb-c589ddbb5567)
 
