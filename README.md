@@ -36,7 +36,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 
 
 <!---
-
+20. [Animovaný blinker](20_Blinker.md)
 --->
 
 
