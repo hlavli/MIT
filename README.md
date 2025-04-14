@@ -33,7 +33,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 17. [RTC - modul reálného času](17_RTC.md)
 
 <!---
-
+18. [Stopky](18_Stopky.md)
 --->
 
 
