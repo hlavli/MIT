@@ -23,8 +23,12 @@ Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinů
 
 
 ### Úkoly
-1. Připojte k výukovému přípravku ultrazvukový senzor. Zvolte si, kaz zapojíte Trig a Echo pin. Správně je nakonfigurujte jako vstup/výstup.
-2. Napište program, který jednou za sekundu vygeneruje 10us pulz na pin Trig. Ověřte logickým analyzerem, jak vypadají průběhy na pinu Trig a pinu Echo
-3. Dále potřebujeme měřit co nejpřesněji čas, po který je pin Echo v log1 (tedy čas od vyslání ultrazvukové vlny do návratu jejího odrazu. K tomu použijeme časovač v režimu Normal. Vyberte vhodnou hodnotu předděličky (spočítejte, nebo s logickým analyzerem změřte, jaký rozsah času budeme potřebovat).
-4. Přidejte navíc LCD displej a zobrazujte na něm délku pulzu na Echo pinu.
-5. Naměřenou hodnotu na displeji zobrazujte v centimetrech
+
+## [Zpět na obsah](README.md) Připojte k výukovému přípravku ultrazvukový senzor. Zvolte si, kaz zapojíte Trig a Echo pin. Správně je nakonfigurujte jako vstup/výstup.
+**2.** Napište program, který jednou za sekundu vygeneruje 10us pulz na pin Trig. Ověřte logickým analyzerem, jak vypadají průběhy na pinu Trig a pinu Echo
+**3.** Dále potřebujeme měřit co nejpřesněji čas, po který je pin Echo v log1 (tedy čas od vyslání ultrazvukové vlny do návratu jejího odrazu. K tomu použijeme časovač v režimu Normal. Vyberte vhodnou hodnotu předděličky (spočítejte, nebo s logickým analyzerem změřte, jaký rozsah času budeme potřebovat).
+**4.** Přidejte navíc LCD displej a zobrazujte na něm délku pulzu na Echo pinu.
+**5.** Naměřenou hodnotu na displeji zobrazujte v centimetrech
+
+
+## [Zpět na obsah](README.md)
