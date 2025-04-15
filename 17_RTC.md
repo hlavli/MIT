@@ -7,8 +7,8 @@ K RTC obvodu se obvykle připojuje krystal o frekvenci 32,768 kHz. Proč zrovna 
 
 ![image](https://github.com/user-attachments/assets/cce6d9e5-ccb2-46b5-b323-d633d9c3074b)
 
-## I2C komunikace - základy, adresa, master/slave
-I²C (Inter-Integrated Circuit) je sériová sběrnice pro komunikaci mezi mikrokontroléry a periferiemi. Používá dva signální vodiče:
+## I2C (TWI) komunikace - základy, adresa, master/slave
+I²C (Inter-Integrated Circuit, u Atmelu označována TWI) je sériová sběrnice pro komunikaci mezi mikrokontroléry a periferiemi. Používá dva signální vodiče:
 SDA (Serial Data) – přenos dat
 SCL (Serial Clock) – hodinový signál
 
