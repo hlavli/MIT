@@ -1,7 +1,7 @@
 # RTC - Real time clock
 
 RTC modul (Real-Time Clock), je specializovaný integrovaný obvod, který uchovává přesný čas a datum i při výpadku napájení díky zabudované záložní baterii.
-S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (malá knoflíková, v našem případě CR1225) zajišťuje chod i bez hlavního napájení. V našem přípravku máme osazen RTC modul DS1307 [(datasheet zde).](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
+S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (obvykle malá knoflíková, v našem případě CR1225) zajišťuje chod i bez hlavního napájení. V našem přípravku máme osazen RTC modul DS1307 [(datasheet zde).](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
 
 ![image](https://github.com/user-attachments/assets/cce6d9e5-ccb2-46b5-b323-d633d9c3074b)
 
