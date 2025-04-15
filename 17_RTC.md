@@ -32,7 +32,7 @@ RTC čip DS1307 obsahuje kromě obvodu reálného času i 56 bajtů RAM paměti.
 
 
 ## Knihovny pro I2C a DS1307
-Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod DS1307. Knihovny přidáte stejně jako knihovnu pro LCD. Projděte si zejména soubor [DS1307.h](files/DS1307.h) kde najdete deklarace funkcí, které knihovna obsahuje.
+Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod DS1307. Knihovny přidáte stejně jako [knihovnu pro LCD](https://tomaschovanec.github.io/MIT/12_LCD.html). Projděte si zejména soubor [DS1307.h](files/DS1307.h) kde najdete deklarace funkcí, které knihovna obsahuje.
 
 Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h).
 
