@@ -49,7 +49,7 @@ Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K t
 ## Úkoly
 1. Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) . Začněte nejprve zobrazením sekund. Pokud by RTC modul vracel hodnotu sekund 80, znamená to, že je RTC modul zastaven (bit Clock Hold (CH) na adrese 0x00 je nastaven v log. 1. To napravíte tak, že bit CH vynulujete, např. takto: ``` DS1307_set_seconds(0);```.
 2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
-3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SDA je na pinu PD.0, SCL je na pinu PD.1). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
+3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SCL je na pinu PD.0, SDA je na pinu PD.1). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
 4. Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
 
 ### [Zpět na obsah](README.md)
