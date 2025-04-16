@@ -38,10 +38,10 @@ Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz j
 
 Na začátek programu přidejte include všech přidaných knihoven:
 ```c
-#include "lcd.h"
-#include <stdio.h>
-#include "i2c.h"
-#include "DS1307.h"
+#include "lcd.h" // knihovna pro práci s LCD displejem
+#include <stdio.h> // tato knihovna obsahuje funkci sprintf()
+#include "i2c.h" // knihovna pro práci s I2C sběrnicí
+#include "DS1307.h" // knihovna pro ovládání RTC obvodu DS1307
 ```
 
 Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
