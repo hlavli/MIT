@@ -47,4 +47,4 @@ Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu.
 2. [Logické funkce](files/Test_bitove_operace.md)
 3. [Jazyk C](files/Test_jazyk_C.md)
 4. [Časovač](files/Test_timer.md)
-5. [UART - samostatná úloha](15_UART_2.md)
+5. [Sériová komunikace](15_UART_2.md)
