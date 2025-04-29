@@ -30,6 +30,14 @@ Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinů
 
 **3.** Dále potřebujeme měřit co nejpřesněji čas, po který je pin Echo v log. 1 (tedy čas od vyslání ultrazvukové vlny do návratu jejího odrazu. K tomu použijeme časovač v režimu Normal. Vyberte vhodnou hodnotu předděličky (spočítejte, nebo s logickým analyzerem změřte, jaký rozsah času budeme potřebovat). Hodnoty předděličky najdete [v lekci s časovačem](https://tomaschovanec.github.io/MIT/08_Timer.html#%C4%8Dasov%C3%A1n%C3%AD-pro-r%C5%AFzn%C3%A9-hodnoty-prescaleru).
 
+Důležité registry pro časovač:
+
+```c
+TCNT1 = 0; // vynulování čítače (TCNT1 je čítací registr)
+TCCR1A = 0; // normální režim
+TCCR1B = ???; // nastavení předděličky a spuštění časovače
+TCCR1B = 0;  // zastavení časovače
+```
 **4.** Přidejte navíc [LCD displej](https://tomaschovanec.github.io/MIT/12_LCD.html) a zobrazujte na něm délku pulzu na Echo pinu.
 
 **5.** Naměřenou hodnotu na displeji zobrazujte v milimetrech. Pozor, pokud pro výpočet používáte desetinná čísla (např. násobíte 0.34) tak překladač automaticky číslo přetypuje na typ s desetinnou čárkou (float nebo double). Pokud chceme výsledek zobrazit na LCD displeji pomocí formátovacího znaku ```%d```, musíme číslo přetypovat na integer např: ```int vysledek = (int)(delka*0.34)```.
