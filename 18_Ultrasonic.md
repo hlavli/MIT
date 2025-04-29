@@ -32,7 +32,7 @@ Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinů
 
 **4.** Přidejte navíc [LCD displej](https://tomaschovanec.github.io/MIT/12_LCD.html) a zobrazujte na něm délku pulzu na Echo pinu.
 
-**5.** Naměřenou hodnotu na displeji zobrazujte v milimetrech. Pozor, pokud pro výpočet používáte desetinná čísla (např. násobíte 0.34) tak překladač automaticky číslo přetypuje na typ s desetinnou čárkou (float nebo double). Pokud chceme výsledek zobrazit na LCD displeji pomocí formátovacího znaku ```%d```, musíme číslo přetypovat na integer ```(int)(delka*0.34)```.
+**5.** Naměřenou hodnotu na displeji zobrazujte v milimetrech. Pozor, pokud pro výpočet používáte desetinná čísla (např. násobíte 0.34) tak překladač automaticky číslo přetypuje na typ s desetinnou čárkou (float nebo double). Pokud chceme výsledek zobrazit na LCD displeji pomocí formátovacího znaku ```%d```, musíme číslo přetypovat na integer ```int vysledek = (int)(delka*0.34)```.
 
 
 ## [Zpět na obsah](README.md)
