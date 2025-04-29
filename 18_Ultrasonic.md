@@ -26,7 +26,7 @@ Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinů
 
 **1.** Připojte k výukovému přípravku ultrazvukový senzor. Zvolte si piny, kam zapojíte signály Trig a Echo. Správně je nakonfigurujte - Echo jako vstup, Trig jako výstup.
 
-**2.** Napište program, který jednou za sekundu vygeneruje 10us pulz na pin Trig. Jak manipulovat s jednotlivými bity portu najdete [zde]. Ověřte logickým analyzerem, jak vypadají průběhy na pinu Trig a pinu Echo. (https://tomaschovanec.github.io/MIT/03_Bitove_operace.html#negace-jednotliv%C3%BDch-bit%C5%AF-toggle-bit)
+**2.** Napište program, který jednou za sekundu vygeneruje 10us pulz na pin Trig. Jak manipulovat s jednotlivými bity portu najdete [zde](https://tomaschovanec.github.io/MIT/03_Bitove_operace.html#negace-jednotliv%C3%BDch-bit%C5%AF-toggle-bit). Ověřte logickým analyzerem, jak vypadají průběhy na pinu Trig a pinu Echo. 
 
 **3.** Dále potřebujeme měřit co nejpřesněji čas, po který je pin Echo v log. 1 (tedy čas od vyslání ultrazvukové vlny do návratu jejího odrazu. K tomu použijeme časovač v režimu Normal. Vyberte vhodnou hodnotu předděličky (spočítejte, nebo s logickým analyzerem změřte, jaký rozsah času budeme potřebovat). Hodnoty předděličky najdete [v lekci s časovačem](https://tomaschovanec.github.io/MIT/08_Timer.html#%C4%8Dasov%C3%A1n%C3%AD-pro-r%C5%AFzn%C3%A9-hodnoty-prescaleru).
 
