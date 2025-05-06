@@ -8,9 +8,9 @@ Senzor funguje tak, že po aktivaci měření 10us pulzem na Trig pinu vyšle kr
 
 *Zdroj obrázku: https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/*
 
-![image](https://lastminuteengineers.com/wp-content/uploads/arduino/HC-SR04-Ultrasonic-Sensor-Working-Echo-reflected-from-Obstacle.gif)
+![image](https://github.com/user-attachments/assets/a929329a-320f-4a6d-aeca-b4092caa1869)
 
-*Zdroj obrázků: https://lastminuteengineers.com/arduino-sr04-ultrasonic-sensor-tutorial/*
+*Zdroj obrázků: https://medium.com/@robotamateur123/understanding-ultrasonic-sensor-e3791f883061*
 
 ### Zapojení
 Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinům mikroprocesoru. **Pin Trig** slouží ke spuštění měření (vyslání ultrazvukového pulzu), musíme jej tedy v mikroprocesoru nastavit jako výstup. **Pin Echo** je výstup senzoru (tedy z pohledu mikroprocesoru vstup), na kterém senzor generuje puls, jehož délka odpovídá době od vyslání signálu do návratu odražené vlny.
