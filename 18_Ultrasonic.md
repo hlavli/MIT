@@ -42,5 +42,8 @@ TCCR1B = 0;  // zastavení časovače
 
 **5.** Naměřenou hodnotu na displeji zobrazujte v milimetrech. Pozor, pokud pro výpočet používáte desetinná čísla (např. násobíte 0.34) tak překladač automaticky číslo přetypuje na typ s desetinnou čárkou (float nebo double). Pokud chceme výsledek zobrazit na LCD displeji pomocí formátovacího znaku ```%d```, musíme číslo přetypovat na integer např: ```int vysledek = (int)(delka*0.34)```.
 
+**6.**  Pomocí LED diod indikujte vzdálenost v krocích po 10 cm: 0–10 cm → 1 LED, 10–20 cm → 2 LED, …, 90 cm a více → 10 LED.
+
+**7.** Pokud je vzdálenost nižší než 10cm, zapněte bzučák (na kteém pinu je zapojen najdete ve [schematu](files/Development_board_schematics.pdf).
 
 ## [Zpět na obsah](README.md)
