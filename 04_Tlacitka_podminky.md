@@ -59,7 +59,7 @@ if((PINK & (1<<7)) != 0){
 Pokud chceme někde náš program zastavit a pokračovat až po stisku tlačítka, můžeme použít prázdný cyklu while:
 
  ```c
-while(PINK & (1<<7) != 0){ 
+while((PINK & (1<<7)) != 0){ 
 // čekej, dokud je na PK7 log.1 tedy čekej, dokud tlačítko není stisknuto
 // po stisku tlačítka tato smyčka končí a vykoná se program pod ní
 }
@@ -68,7 +68,7 @@ while(PINK & (1<<7) != 0){
 Nebo naopak, můžeme něco dělat pouze po dobu, kdy je tlačítko stisknuto. Když tlačítko pustíme,cyklus skončí
 
  ```c
-while(PINK & (1<<7) == 0){ 
+while((PINK & (1<<7)) == 0){ 
 // příkazy v cyklu se budou vykonávat dokud je pin 7 portu K v logické nule (tlačítko stisknuto)
 // po uvolnění tlačítka tato smyčka končí a vykoná se program pod ní
 }
