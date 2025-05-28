@@ -2,7 +2,7 @@
 
 Vytvořte na výukovém přípravku stopky. 
 
-![image](https://github.com/user-attachments/assets/fc7ba275-656b-448f-9df5-7d8b9a2ae141)
+<img src="https://github.com/user-attachments/assets/fc7ba275-656b-448f-9df5-7d8b9a2ae141" width="600"/>
 
 ## Požadavky na funkci
 
