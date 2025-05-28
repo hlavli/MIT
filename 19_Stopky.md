@@ -20,6 +20,7 @@ Vytvořte na výukovém přípravku stopky.
 5. Ověřte pomocí stopek na telefonu, zda je měření času přesné. Pokud ne, zkuste přijít na to proč?
 6. Abyste dosáhli přesného měření času, použijte časovač s přerušením.
     - Do funkce main přidejte nastavení časovače. hodnotu registru OCR1A si spočítejte tak, aby se přerušení vyvolalo jednou za 10ms.
+
     ```c
     TIMSK1 = 0x02; // Povolení přerušení při shodě čítače s komparačním registrem OCR1A
     sei(); // Globální povolení přerušení
@@ -37,9 +38,9 @@ Vytvořte na výukovém přípravku stopky.
     }
     ```
 
-7. Ověřte, že nyní stopky běží přesně
+8. Ověřte, že nyní stopky běží přesně
 
-8. Přidejte funkcionalitu tlačítek Start/Stop a Reset
+9. Přidejte funkcionalitu tlačítek Start/Stop a Reset
 
 
 
