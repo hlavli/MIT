@@ -27,7 +27,9 @@ Vytvořte na výukovém přípravku stopky.
     
     OCR1A = ???; // Dopočítejte počet ticků do přerušení 10ms (1 tick = 16us)
     ```
+    
     - Nad funkcí ```main()``` nadefinujte fuknci obsluhy přerušení časovače:
+      
     ```c
     ISR(TIMER1_COMPA_vect)
     {
