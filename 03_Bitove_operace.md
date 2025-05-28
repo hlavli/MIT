@@ -226,6 +226,6 @@ Na pozice bitů, které nechceme změnit dáme nulu, pozice bitů, které chceme
 | Nastavení bitu do 1    | PORTF \|= 1 << 3;     | nastaví 3.bit portu F do 1   |
 | Nastavení bitu do 0    | PORTF &= ~(1 << 3);   |nastaví 3.bit portu F do 0   |
 | Negace bitu            | PORTF ^= 1 << 3;      |změní 3.bit portu F na opačnou hodnotu   |
-| Otestování bitu        | if (PINK & (1<<3)) {příkaz}   |vyhodnotí se jako true nebo false, podle toho jaký je stav 3. bitu portu K |
+| Otestování bitu        | if ((PINK>>3 & 0x01)==0) {příkaz}   |příkaz se provede, pokud je 3. bitu portu K logická nula|
 
 ## [Zpět na obsah](README.md)
