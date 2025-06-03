@@ -26,22 +26,22 @@ Vytvořte na výukovém přípravku stopky.
 **6.** Abyste dosáhli přesného měření času, použijte časovač s přerušením.
     - Do funkce main přidejte nastavení časovače. Hodnotu registru OCR1A si spočítejte tak, aby se přerušení vyvolalo jednou za 10ms.
 
-    ```c
-    TIMSK1 = 0x02; // Povolení přerušení při shodě čítače s komparačním registrem OCR1A
-    sei(); // Globální povolení přerušení
-    TCCR1B = 0b0001100; // CTC režim, dělička 256 -> Ttick = 16us
-    
-    OCR1A = ???; // Dopočítejte počet ticků do přerušení 10ms (1 tick = 16us)
-    ```
-    
-    - Nad funkcí ```main()``` nadefinujte funkci obsluhy přerušení časovače:
-      
-    ```c
-    ISR(TIMER1_COMPA_vect)
-    {
-    // Zde přidejte zvyšování proměnných s milisekundami, sekundami a minutami
-    }
-    ```
+```c
+TIMSK1 = 0x02; // Povolení přerušení při shodě čítače s komparačním registrem OCR1A
+sei(); // Globální povolení přerušení
+TCCR1B = 0b0001100; // CTC režim, dělička 256 -> Ttick = 16us
+
+OCR1A = ???; // Dopočítejte počet ticků do přerušení 10ms (1 tick = 16us)
+```
+
+- Nad funkcí ```main()``` nadefinujte funkci obsluhy přerušení časovače:
+  
+```c
+ISR(TIMER1_COMPA_vect)
+{
+// Zde přidejte zvyšování proměnných s milisekundami, sekundami a minutami
+}
+```
 
 **7.** Ověřte, že nyní stopky běží přesně
 
