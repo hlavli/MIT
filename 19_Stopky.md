@@ -34,7 +34,7 @@ TCCR1B = 0b0001100; // CTC režim, dělička 256 -> Ttick = 16us
 OCR1A = ???; // Dopočítejte počet ticků do přerušení 10ms (1 tick = 16us)
 ```
 
-- Nad funkcí ```main()``` nadefinujte funkci obsluhy přerušení časovače:
+Nad funkcí ```main()``` nadefinujte funkci obsluhy přerušení časovače:
   
 ```c
 ISR(TIMER1_COMPA_vect)
