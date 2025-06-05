@@ -12,7 +12,7 @@ I²C (Inter-Integrated Circuit, u Atmelu označována TWI) je sériová sběrnic
 SDA (Serial Data) – přenos dat
 SCL (Serial Clock) – hodinový signál
 
-Komunikace probíhá v režimu master-slave, kde master řídí přenos. Každé zařízení má unikátní adresu a lze připojit více zařízení na stejné dvě linky. Hezký článek o I2C komunikaci [zde](http://www.elektromys.eu/clanky/ele_i2c/clanek.html).
+Komunikace probíhá v režimu master-slave, kde master řídí přenos. Každé zařízení má unikátní adresu a lze připojit více zařízení na stejné dvě linky. Hezký článek o I2C komunikaci [zde](http://www.elektromys.eu/clanky/ele_i2c/clanek.html). A další článek o různých dalších [sběrnicích](https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi)
 
 ![image](https://github.com/user-attachments/assets/abc6c42b-abeb-4a6f-a850-ca47433e5dd9)
  
