@@ -39,7 +39,7 @@ Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod D
 Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
 
 ## Úkoly
-**1.** Zobrazte na LCD displeji čas a datum. 
+1. Zobrazte na LCD displeji čas a datum. 
     - Přidejte si do projektu potřebné knihovny. Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h), [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h).
     - Na začátek programu přidejte include všech přidaných knihoven:
     
@@ -52,11 +52,11 @@ Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K t
 
     - Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) . Začněte nejprve zobrazením sekund. Pokud by RTC modul vracel hodnotu sekund 80, znamená to, že je RTC modul zastaven (bit Clock Hold (CH) na adrese 0x00 je nastaven v log. 1. To napravíte tak,     že bit CH vynulujete, např. takto: ``` DS1307_set_seconds(0);```.
 
-**2.** Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
+2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
 
-**3.** Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SCL je na pinu PD.0, SDA je na pinu PD.1). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
+3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SCL je na pinu PD.0, SDA je na pinu PD.1). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
 
-**4.** Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
+4. Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
 
 
 ### [Zpět na obsah](README.md)
