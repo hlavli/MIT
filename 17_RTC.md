@@ -36,7 +36,7 @@ Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod D
 
 
 
-Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
+
 
 ## Úkoly
 1. Zobrazte na LCD displeji čas a datum. 
@@ -49,7 +49,8 @@ Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K t
     #include "i2c.h" // knihovna pro práci s I2C sběrnicí
     #include "DS1307.h" // knihovna pro ovládání RTC obvodu DS1307
     ```
-
+    
+    - Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
     - Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) . Začněte nejprve zobrazením sekund. Pokud by RTC modul vracel hodnotu sekund 80, znamená to, že je RTC modul zastaven (bit Clock Hold (CH) na adrese 0x00 je nastaven v log. 1. To napravíte tak,     že bit CH vynulujete, např. takto: ``` DS1307_set_seconds(0);```.
 
 2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
