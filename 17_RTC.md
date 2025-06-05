@@ -34,20 +34,24 @@ RTC čip DS1307 obsahuje kromě obvodu reálného času i 56 bajtů RAM paměti.
 ## Knihovny pro I2C a DS1307
 Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod DS1307. Knihovny přidáte stejně jako [knihovnu pro LCD](https://tomaschovanec.github.io/MIT/12_LCD.html). Projděte si zejména soubor [DS1307.h](files/DS1307.h) kde najdete deklarace funkcí, které knihovna obsahuje.
 
-Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h), [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h).
 
-Na začátek programu přidejte include všech přidaných knihoven:
-```c
-#include "lcd.h" // knihovna pro práci s LCD displejem
-#include <stdio.h> // tato knihovna obsahuje funkci sprintf()
-#include "i2c.h" // knihovna pro práci s I2C sběrnicí
-#include "DS1307.h" // knihovna pro ovládání RTC obvodu DS1307
-```
 
 Na začátku funkce ```main()``` také musíte inicializovat I2C komunikaci. K tomu slouží funkce ```i2c_ini();```.
 
 ## Úkoly
-**1.** Zobrazte na LCD displeji čas a datum. Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) . Začněte nejprve zobrazením sekund. Pokud by RTC modul vracel hodnotu sekund 80, znamená to, že je RTC modul zastaven (bit Clock Hold (CH) na adrese 0x00 je nastaven v log. 1. To napravíte tak, že bit CH vynulujete, např. takto: ``` DS1307_set_seconds(0);```.
+**1.** Zobrazte na LCD displeji čas a datum. 
+
+    - Přidejte si do projektu potřebné knihovny. Stáhněte si následující soubory (přes pravé tlačítko a *Uložit odkaz jako*): [i2c.c](files/i2c.c),  [i2c.h](files/i2c.h), [DS1307.c](files/DS1307.c), [DS1307.h](files/DS1307.h), [lcd.c](files/lcd.c) a [lcd.h](files/lcd.h).
+
+    - Na začátek programu přidejte include všech přidaných knihoven:
+    ```c
+    #include "lcd.h" // knihovna pro práci s LCD displejem
+    #include <stdio.h> // tato knihovna obsahuje funkci sprintf()
+    #include "i2c.h" // knihovna pro práci s I2C sběrnicí
+    #include "DS1307.h" // knihovna pro ovládání RTC obvodu DS1307
+    ```
+
+    - Funkce pro získání času najdete v souboru [DS1307.h](files/DS1307.h) . Začněte nejprve zobrazením sekund. Pokud by RTC modul vracel hodnotu sekund 80, znamená to, že je RTC modul zastaven (bit Clock Hold (CH) na adrese 0x00 je nastaven v log. 1. To napravíte tak,     že bit CH vynulujete, např. takto: ``` DS1307_set_seconds(0);```.
 
 **2.** Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
 
