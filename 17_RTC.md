@@ -52,7 +52,7 @@ Pro usnadnění práce můžeme použít hotové knihovny pro I2C a  RTC obvod D
 
 2. Pokud není na RTC přesný čas, nastavte jej funkcemi ```DS1307_set_xx()```.
 
-3. Napište program, který čte z RTC jen sekundy. Změřte I2C komunikaci pomocí logického analyzeru (signál SCL je na pinu PD.0, SDA je na pinu PD.1). Zkuste v sw logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
+3. Napište program, který čte z RTC pouze sekundy (jednou za sekundu). Změřte I2C komunikaci pomocí logického analyzeru (signál SCL je na pinu PD.0, SDA je na pinu PD.1). Zkuste v softwaru logického analyzeru nastavit dekódování I2C sběrnice a rozlišit v datech informaci o sekundách.
 
 4. Na displeji zobrazujte počet stisknutí tlačítka. Po odpojení a opětovném připojení napájení by se tento počet neměl vynulovat, ale pokračovat od poslední zaznamenané hodnoty. Pro ukládání počtu stisků použijte RAM v modulu DS1307 a při startu programu hodnotu načtěte zpět.
 
