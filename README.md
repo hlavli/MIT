@@ -33,7 +33,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím na mailu [t
 1. [RTC - modul reálného času](17_RTC.md)
 1. [Ultrazvukový senzor vzdálenosti](18_Ultrasonic.md)
 1. [Stopky](19_Stopky.md)
-
+1. [Dotazník pro zpětnou vazbu](https://docs.google.com/forms/d/e/1FAIpQLSdIXFZvRu9Z2ADun7K1oTpcLKGQxfCdcJAuD0ojpDmDnaxQSg/viewform?usp=header)
 
 <!---
 20. [Animovaný blinker](20_Blinker.md)
