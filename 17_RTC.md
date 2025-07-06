@@ -5,7 +5,7 @@ S mikroprocesorem komunikuje přes I2C sběrnici. Záložní baterie (obvykle ma
 
 K RTC obvodu se obvykle připojuje krystal o frekvenci 32,768 kHz. Proč zrovna tato hodnota? Protože 32 768  je mocnina dvou (2¹⁵ = 32 768), to znamená, že RTC obvod může tuto frekvenci 15krát vydělit dvěma a dostane přesně 1 Hz – tedy jeden puls za sekundu. Díky tomu není potřeba složitý dělicí obvod, stačí jednoduchý binární čítač.
 
-![image](https://github.com/user-attachments/assets/cce6d9e5-ccb2-46b5-b323-d633d9c3074b)
+![image](img/17_RTC_1.png)
 
 ## I2C (TWI) komunikace - základy, adresa, master/slave
 I²C (Inter-Integrated Circuit, u Atmelu označována TWI) je sériová sběrnice pro komunikaci mezi mikrokontroléry a periferiemi. Používá dva signální vodiče:
@@ -14,17 +14,17 @@ SCL (Serial Clock) – hodinový signál
 
 Komunikace probíhá v režimu master-slave, kde master řídí přenos. Každé zařízení má unikátní adresu a lze připojit více zařízení na stejné dvě linky. Hezký článek o I2C komunikaci [zde](http://www.elektromys.eu/clanky/ele_i2c/clanek.html). A další článek o různých dalších [sběrnicích](https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi)
 
-![image](https://github.com/user-attachments/assets/abc6c42b-abeb-4a6f-a850-ca47433e5dd9)
+![image](img/17_RTC_2.png)
  
 *Zdroj obrázku: https://www.hibit.dev/posts/102/communication-protocols-uart-i2c-and-spi*
 
-![image](https://github.com/user-attachments/assets/8d93955c-0cee-41fa-94fe-6d2272da27a4)
+![image](img/17_RTC_3.png)
 
 
 ## Registry DS1307
 Pomocí I2C sběrnice můžeme vyčítat nebo zapisovat obsah registrů DS1307. V datasheetu najdeme rozložení jednotlivých časových údajů:
 
-![image](https://github.com/user-attachments/assets/0fc05e64-ce7f-473a-a149-af28a7b3443b)
+![image](img/17_RTC_4.png)
 
 
 ## RAM paměť v DS1307
