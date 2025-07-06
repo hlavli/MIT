@@ -4,22 +4,22 @@ S ultrazvukovým senzorem vzdálenosti HC-SR04 jsme už pracovali v rámci před
 ## Princip senzoru
 Senzor funguje tak, že po aktivaci měření 10us pulzem na Trig pinu vyšle krátký ultrazvukový impulz a nastaví Echo pin do log. 1. Ve chvíli, kdy se k senzoru vrátí odražená vlna, nastaví Echo pin do log. 0. Proto pomocí délky pulzu na pinu Echo můžeme určit vzdálenost překážky.
 
-![image](https://github.com/user-attachments/assets/b9491ccf-c2ee-4d43-abfb-c589ddbb5567)
+![image](img/18_Ultrasonic_4.png)
 
 *Zdroj obrázku: https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/*
 
-![image](https://github.com/user-attachments/assets/a929329a-320f-4a6d-aeca-b4092caa1869)
+![image](img/18_Ultrasonic_4.png)
 
 *Zdroj obrázků: https://medium.com/@robotamateur123/understanding-ultrasonic-sensor-e3791f883061*
 
 ### Zapojení
 Kromě +5V napájení a GND musíme čidlo připojit ke dvěma libovolným pinům mikroprocesoru. **Pin Trig** slouží ke spuštění měření (vyslání ultrazvukového pulzu), musíme jej tedy v mikroprocesoru nastavit jako výstup. **Pin Echo** je výstup senzoru (tedy z pohledu mikroprocesoru vstup), na kterém senzor generuje puls, jehož délka odpovídá době od vyslání signálu do návratu odražené vlny.
 
-![image](https://github.com/user-attachments/assets/97bf9bf2-9d66-4816-bda1-f13b5380f0e9)
+![image](img/18_Ultrasonic_4.png)
 
 5V pro napájení čidla najdete na přípravku například zde:
 
-![image](https://github.com/user-attachments/assets/e5dff296-7023-495a-8e78-43398c8cf3c0)
+![image](img/18_Ultrasonic_4.png)
 
 
 ### Úkoly
