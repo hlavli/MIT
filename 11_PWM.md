@@ -6,7 +6,7 @@
 
 PWM (pulzně šířkovou modulaci) můžeme využít například k regulaci rychlosti motoru, jasu LEDky nebo k řízení servomotoru. U PWM signálu jsou dvě důležité veličiny - frekvence [Hz] a střída, neboli duty cycle [%] . Střída nám udává poměr času, kdy je signál v log.1 k délce celé periody. Tedy například DC=30% při frekvenci 1kHz znamená, že signál je 0,3ms v logické jedničce a 0,7ms v logické nule.
 
-<img src="https://github.com/user-attachments/assets/a54b052d-7a31-424e-b982-7bb4a846f13b" width="600"/>
+<img src="img/11_PWM_1.png" width="600"/>
 
 *Zdroj obrázku: https://arduinokitproject.com/pwm-in-arduino/*
 
@@ -16,25 +16,25 @@ V tomto cvičení budeme využívat Timer1, tedy 16bitový čítač. Tento čít
 
 V datasheetu vidíme, že Timer1 má 15 různých režimů (s režimy normal a CTC už jsme se setkali v předchozích cvičeních). Tentokrát si vybereme si mód 14, tedy Fast PWM, kde můžeme nastavit délku periody registrem ICR1 a střídu jendotlivých signálů pomocí OCR1A, OCR1B a OCR1C.
 
-![image](https://github.com/user-attachments/assets/46d04634-b54f-4302-9edd-85ca25d63233)
+![image](img/11_PWM_2.png)
 
 ## Nastavení Fast PWM režimu
 
 Jak funguje PWM v módu 14 (a při nastavení neinvertujícího módu) vidíme na obrázku níže. Časovač Timer1 může generovat PWM signál až na 3 výstupních pinech (OC1A, OC1B, OC1C). Časovač čítá v registru TCNT1 od nuly až do maximální hodnoty, která je uložena v registru ICR1. Při přetečení (nastavení čítače zpět do nuly) nastaví výstupní pin na 1. Při shodě čítače s komparačním registrem OCR1A nastaví pin OC1A zpět do nuly. Stejně je to se zbylými dvěma piny - shoda s registrem OCR1B vynuluje pin OC1B a stejně tak shoda s registrem OCR1C vynuluje pin OC1C.
 
-![image](https://github.com/user-attachments/assets/a5f092e8-8585-4e9b-a1be-719aa85f66d0)
+![image](img/11_PWM_3.png)
 
 Začneme nastavením řídícího registru časovače
 
-![image](https://github.com/user-attachments/assets/84240a48-cf04-4c65-8369-c9a0bf85c769)
+![image](img/11_PWM_4.png)
 
 Přehled hodnot předděličky a odpovídajících period časovače:
 
-![image](https://github.com/user-attachments/assets/01d3932f-f769-4452-97d9-7aab6448f6b2)
+![image](img/11_PWM_5.png)
 
 Vybereme neinvertující režim:
 
-![image](https://github.com/user-attachments/assets/73045035-97a6-4c02-b3df-2adae6312450)
+![image](img/11_PWM_6.png)
 
 ## Nastavení střídy na jednotlivých pinech
 
@@ -98,13 +98,13 @@ $$
 
 **4.** Připojte k přípravku servomotor a pohybujte s ním mezi 0° a 90°. Frekvenci a duty cycle nastavte podle obrázku:
 
-<img src="https://github.com/user-attachments/assets/f9004e44-23f5-40cc-a510-c78ed7ba0522" width="800"/>
+<img src="img/11_PWM_7.png" width="800"/>
 
 *Zdroj obrázku: https://howtomechatronics.com/how-it-works/how-servo-motors-work-how-to-control-servos-using-arduino/*
 
 Zem a PWM vstup serva zapojte stejně jako u RGB LEDky, 5V pro napájení serva najdete na přípravku zde:
 
-![image](https://github.com/user-attachments/assets/e5dff296-7023-495a-8e78-43398c8cf3c0)
+![image](img/11_PWM_8.png)
 
 
 ## [Zpět na obsah](README.md)

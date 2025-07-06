@@ -2,12 +2,12 @@
 
 Další periferií, kterou se naučíme využívat spolu s mikroprocesorem je klávesnice. Už umíme pracovat s jednotlivými tlačítky. Mohli bychom si tedy jednoduchou 4x4 klávesnici vyrobit tak, že bychom k procesoru připojili 16 tlačítek. To by šlo, ale zabrali bychom tím 16 vstupních pinů procesoru, což je hodně. V praxi se používá maticové uspořádání klávesnice, kde si vystačíme jen s polovičním počtem pinů.
 
-![image](https://github.com/user-attachments/assets/7f1f2a6a-74f0-4c21-ab8a-52dabbe3db41)
+![image](img/06_Klavesnice_1.png)
 
 ## Elektrické schéma klávesnice
 Tlačítka na klávesnici, kterou máme na našem přípravku jsou elektricky zapojena jako na obrázku níže. Každá klávesa je vlastně tlačítko. Všechna tlačítka jsou zapojena tak, že jedna strana všech tlačítek ve stejném řádku je spojena. A podobně druhá strana všech tlačítek ve stejném sloupci je spojena. Pokud tlačítko stiskneme, spojíme tak vlastně jeho řádek (row) a sloupec (column).
 
-![image](https://github.com/user-attachments/assets/0a66df32-db48-4a86-8e6b-3db6a08fab85)
+![image](img/06_Klavesnice_2.png)
 
 *Zdroj obrázku: https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/*
 
@@ -18,21 +18,21 @@ Klávesnici máme připojenu k mikrokontroleru pomocí osmi pinů. Piny R1-R4 kt
 
 Na obrázku je zobrazen stav, kdy testujeme první řádek - zapíšeme do pinu R1 logickou 0 a přečteme stav všech sloupců. Protože jsou všechny sloupce v logické 1, víme, že není v daném řádku stisknuta žádná klávesa.
 
-![image](https://github.com/user-attachments/assets/7c8b29f0-6e94-4dac-a319-7170a987fe7b)
+![image](img/06_Klavesnice_3.png)
 
 
 ### Stav při stisknu klávesy
 
 Opět testujeme první řádek zapsáním nuly do R1. Tentokrát ale na pinu sloupce C3 přečteme logickou 0. Víme tedy, že klávesa na prvním řádku a třetím sloupci je stisknuta.
 
-![image](https://github.com/user-attachments/assets/a8ab22fb-e91f-460c-a935-10f00090eb9a)
+![image](img/06_Klavesnice_4.png)
 
 
 ## Program pro detekci stisknuté klávesy
 
 Nejprve se podíváme, jak máme klávesnici v našem přípravku zapojenu, pohledem do schématu vidíme, že je připojena na port E. Spodní čtyři bity (0-3) jsou připojeny k řádkům, horní čtyři bity (4-7) ke sloupcům. 
 
-<img src="https://github.com/user-attachments/assets/0b3bf3f7-2e96-4640-97b6-f54a5a5763b9" width="250"/>
+<img src="img/06_Klavesnice_5.png" width="250"/>
 
 Víme, že do řádků chceme zapisovat, zatímco ze sloupců chceme číst. Proto spodní polovinu portu E nastavíme jako výstup, horní jako vstup:
 

@@ -2,11 +2,11 @@
 Na našem přípravku máme celkem 6 pozic sedmisegmentového displeje. Řídit jednu pozici displeje už umíme, nyní bychom chtěli pokročit a zobrazovat víceciferná čísla. Ze schématu ale víme, že sada vodičů pro řízení jednotlivých segmentů je jen jedna. Jak to tedy udělat, abychom mohli na různých pozicích zobrazovat různá čísla?
 
 Schéma zapojení displeje v našem přípravku:
-![image](https://github.com/user-attachments/assets/d7519c09-32a6-4c2c-b350-a08d664351e7)
+![image](img/07_Multiplex_sedmisegmentoveho_displeje_1.png)
 
 Zápisem na Port D volíme, které pozice displeje mají být aktivní. Nula danou pozici rozsvítí, jednička zhasne.
 
-<img src="https://github.com/user-attachments/assets/dedd1bf2-0de8-45cc-9172-6d50c9480ca0" width="600"/>
+<img src="img/07_Multiplex_sedmisegmentoveho_displeje_2.png" width="600"/>
 
 
 ## Časový multiplex

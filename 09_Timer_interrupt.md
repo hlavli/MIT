@@ -5,7 +5,7 @@ V minulém cvičení jsme se naučili nastavit časovač v mikroprocesoru tak, a
 ## Přerušení
 Přerušení (interrupt) je mechanismus mikroprocesoru, který mu umožňuje okamžitě reagovat na nějakou událost. Například na stisk tlačítka, přijetí dat na sériovém portu, přetečení časovače a mnohá další. Pokud procesor detekuje přerušení (např. přetekl časovač) přeruší se aktuálně prováděný program a procesor přeskočí na funkci obsluhy přerušení. Poté, co tato funkce skončí opět procesor pokračuje tam kde přestal - vykonává dál instrukce hlavního programu.
 
-<img src="https://github.com/user-attachments/assets/143db4f3-b39f-427e-9634-3a00c36686ef" width="600"/>
+<img src="img/09_Timer_interrupt_1.png" width="600"/>
 
 ## Obsluha  přerušení
 Kód, který se vykoná po detekci přerušení se nazývá obsluha přerušení (interrupt routine). Je to speciální funkce, kterou nazveme ISR (Interrupt Service Routine) a v závorce uvedeme vektor přerušení. Například, pokud budeme chtít pomocí časovače v CTC režimu blikat LEDkou, použijeme přerušení *Timer/Counter1 Compare Match A* a obslužnou funkci nadefinujeme takto:
@@ -38,7 +38,7 @@ V tabulce níže je pro názornost několik vybraných zdrojů přerušení a n�
 
 Kromě definice obslužné funkce pro dané přerušení, musíme ještě povolit konkrétní přerušení (v našem případě přerušení od časovače najdeme v registru TIMSK1) a pak povolit globálně přerušení pomocí funkce sei().
 
-![image](https://github.com/user-attachments/assets/d318174c-cbe7-4fe9-9a21-7af3dff00903)
+![image](img/09_Timer_interrupt_2.png)
 
 Příklad kódu pro povolení přerušení OCIE1A.  Output Compare Interrupt Enable for Timer/Counter1, Channel A. Jedná se o přerušení, které je vyvoláno, když hodnota časovače/counteru 1 (Timer/Counter1) dosáhne hodnoty uložené v Output Compare Register A (OCR1A).
 
@@ -69,7 +69,7 @@ Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve j
 
 Pro usnadnění výpočtů hodnot pro časovače můžete použít tabulku s předpočítanými hodnotami:
 
-![image](https://github.com/user-attachments/assets/d021eb3d-52b4-48d5-84a6-604a7a3b8ba0)
+![image](img/09_Timer_interrupt_3.png)
 
 ## Další užitečné zdroje informací
 

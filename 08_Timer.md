@@ -10,35 +10,35 @@
 
 Základní jednotkou časovače je čítací registr, který zvýší svou hodnotu o 1 při každé nástupné hraně hodinového signálu. Pokud dosáhne maximální hodnoty (255 pro 8bitový čítač a 65535 pro 16bitový) při další hraně hodin "přeteče" ->nastaví se opět do 0 a nastaví příznakový bit do 1.
 
-![image](https://github.com/user-attachments/assets/c4c13016-1b2d-40f1-81c7-ca5e91862b35)
+![image](img/08_Timer_1.png)
 
 ## Časování pro různé hodnoty prescaleru
 
 V pomocné tabulce níže vidíte frekvence a periody časovače pro různé nastavení předděličky kmitočtu. Pomůže vám zvolit správnou hodnotu předděličky pro požadovanou periodu časovače.
 
-![image](https://github.com/user-attachments/assets/08db6ebf-6a40-42e2-9a84-aeb4996c093c)
+![image](img/08_Timer_2.png)
 
 
 ## Nastavení časovače
 
 V našem přípravku je zdrojem hodinového signálu krystal s frekvencí 16 MHz, tedy jeden "tick" trvá 1/f = 1/16*10^6 = 62,5ns . Timer1 je 16bitový, tedy maximální hodnota je 65535. Takže k přetečení čítače by došlo za 65536 *  62,5ns = 4,096ms. Pokud chceme aby perioda časovače byla delší (např. chceme blikat s LEDkou jednou za 500ms) můžeme hodinový signál z krystalu vydělit předděličkou (prescaler). Prescaler můžeme změnit zápisem do bitů CSnx v registru TCCR1B viz tabulka.
 
-![image](https://github.com/user-attachments/assets/1aa90833-aa8f-49f3-bf8b-b20401c2be39)
+![image](img/08_Timer_3.png)
 
 V registru TCCR1B najdeme můžeme nastavit režim časovače (v této lekci budeme používat Normal mode a CTC mode) a nastavení prescaleru (předděličky hodinového signálu) .
 
-![image](https://github.com/user-attachments/assets/03858294-1551-4f8e-a3e9-1179efdfa39f)
+![image](img/08_Timer_4.png)
 
 Podle toho, jaký chceme použít režim (mode) časovače, nastavíme jednotlivé bity WGMxx. Pozn. bity  WGM11 a WGM10 v tomto cvičení nastavovat nepotřebujeme, stačí nám je nechat v defaultní hodnotě, což je 0. Pokud bychom chtěli ale zvolit další režimy, najdeme je v registru TCCR1A. 
 
-![image](https://github.com/user-attachments/assets/1686f100-b836-415c-a0d4-cf21dd0fff0c)
+![image](img/08_Timer_5.png)
 
 
 
 ## Příznakové bity
 Hodnota čítače se zvyšuje s každou hranou hodinového signálu. Když dojde až do maxima, při dalším hraně hodin přeteče (overflow) a nastaví se opět do nuly. Při přetečení se nastaví příznakový bit TOV v registru TIFR1. Registr TIFR1 obsahuje i další příznaky, např v tomto cvičení použijeme ještě příznak OCF1A, který se používá v CTC režimu a nastaví se, když se hodnota čítače rovná hodnotě v compare registru OCR1A. 
 
-![image](https://github.com/user-attachments/assets/7e6b6389-acac-4013-b738-894638c304be)
+![image](img/08_Timer_6.png)
 
 
 
@@ -99,7 +99,7 @@ Kde:
 ## Časovač Timer1 v režimu CTC
 Nastavením prescaleru můžeme získat pouze několik málo frekvencí přetečení časovače. Pro jemnější nastavení můžeme použít režim CTC (Clear timer on Compare Match). Funguje tak, že nenecháme časovač počítat od nuly do maxima, ale do registru OCR1A nastavíme novou maximální hodnotu časovače. Když časovač "dopočítá" do této hodnoty (hodnota čítacího registru TCNT1 se bude rovnat hodnotě v compare registru OCR1A) dojde k vynulování čítače a nastavení příznakového bitu shody s komparačním registrem OCF1A. Viz obrázek níže.
 
-![image](https://github.com/user-attachments/assets/8d2910e8-3add-4462-b892-426b771df6f6)
+![image](img/08_Timer_7.png)
 
 Hodnotu pro nastavení registru OCR1 spočítáme podle vzorce:
 
@@ -123,7 +123,7 @@ Kde:
 
 Pokud z nějakého důvodu nechceme nebo nemůžeme použít CTC režim (např. používáme procesor, jehož čítač CTC režium neumí), můžeme změnit frekvenci časovače tím, že nebude začínat od nuly, ale od vyšší hodnoty.
 
-![image](https://github.com/user-attachments/assets/065ff747-06ff-49ed-b3b2-4533922b9b37)
+![image](img/08_Timer_8.png)
 
 Hodnotu pro přednsastavení registru TCNT spočítáme tak, že od maximální hodnoty čítače (255 pro 8bitový čítač a 65535 pro 16bitový) odečteme takový počet ticků, který odpovídá požadované periodě.
 

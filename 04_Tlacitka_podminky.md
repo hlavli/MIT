@@ -8,7 +8,7 @@ Pokud ovšem tlačítko stiskneme, pin tím připojíme bez odporu přímo na ze
 ### Pull-up odpory
 Těm 4.7kΩ rezistorům se říká pull-up odpory. Jsou důležité proto, aby i v případě, že tlačítko není stisknuto, byla na pinu jasně definovaná úroveň. Bez těchto odporů by v nestisknutém stavu pin nebyl k ničemu připojen a jeho stav by byl nedefinovaný (mohl by být snadno ovlivněn jakýmkoli náhodným blízkým elektrickým polem, rušením atd.) Hodnota odporu pullup rezistoru není nijak kritická. Pouze pokud ji zvolíte moc nízkou, při stisknutí tlačítka vám poteče do země zbytečně vysoký proud.Pokud zvolíte odpor příliš vysoký, je pak klidová úroveň "slabá" tedy dokáže ji ovlivnit rušení nebo např svodový odpor vzniklý vlhkostí. Proto se obvykle používají jednotky kiloohmů.
 
-![image](https://github.com/user-attachments/assets/6151bb0e-39b5-4151-88ce-77ba36529f5d)
+![image](img/04_Tlacitka_podminky_1.png)
 
 
 ## Čtení stavu pinu
@@ -31,11 +31,11 @@ Tento výraz nám vynuluje všechny bity, které nás nezajímají (tedy všechn
 
 Pokud je bit 7 jednička (tlačítko není stisknuto), tak výsledek bude:
 
-![image](https://github.com/user-attachments/assets/db1853ff-8b55-4edf-9e26-98cb1f7b5c27)
+![image](img/04_Tlacitka_podminky_2.png)
 
 Pokud je bit 7 nula (tlačítko je stisknuto), tak výsledek bude:
 
-![image](https://github.com/user-attachments/assets/da47d9f7-70a0-4cb3-bc16-10656fd655df)
+![image](img/04_Tlacitka_podminky_3.png)
 
 Všimněte si, že pokud je tlačíko stisknuto, výsledek výrazu je vždy nula. Ale pokud tlačítko stisknuto není, hodnota výsledku závisí na tom, který bit testujeme. Např. kdybychom testovali bit 3 tak výraz bude ```PINK & (1<<3)``` a pokud bude bit 3 jednička, tak výsledek bude 0b0000 1000. Proto při psaní podmínky používáme buď ```PINK & (1<<x) == 0``` a nebo ```PINK & (1<<x) != 0```
 

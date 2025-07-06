@@ -16,7 +16,7 @@ Pozn. pokud používáte českou klávesnici, budou se vám hodit následující
 
 V hexadecimální soustavě může každá číslice nabývat hodnot od nuly do patnácti. Číslice 0-9 jsou stejné jako jsme zvyklí z desítkové soustavy, dále pak 10 píšeme jako A, 11 jako B, atd až 15 jako F.
 
-![image](https://github.com/user-attachments/assets/07eff5d5-d405-4caa-a664-ae9a075abdff)
+![image](img/03_Bitove_operace_1.png)
 
 Při převodu z binární do hexadecimální soustavy si binární číslo rozdělíme na čtveřice (začneme zprava. Nad číslice v každé čtveřici si napíšeme "váhy" jednotlivých cifer, 8-4-2-1. Každá bitová čtveřice nám vytvoří jednu hexadecimální číslici. Abychom ji získali, sečteme jen ty váhy, pod kterými je jednička. V příkladu níže tedy sečteme váhy 1 + 4. Výsledek je 0x5.
 
@@ -80,7 +80,7 @@ Bitový posun (anglicky bit shift) nám binární číslo "posune" o daný poče
 0x8C >> 2 =  0010 0011
 ```
 
-![image](https://github.com/user-attachments/assets/59e0e6ec-3ca1-44f2-bdc5-428ca1057cc1)
+![image](img/03_Bitove_operace_2.png)
 
 
 
@@ -95,7 +95,7 @@ Při logickém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmet
 | 1   | 0   | 1      | 
 | 1   | 1   | 1      | 
 
-![image](https://github.com/user-attachments/assets/46fdfcb4-a01c-49ec-9f11-6813471c3cad)
+![image](img/03_Bitove_operace_3.png)
 
 ```
   0x15   =>  0001 0101
@@ -115,7 +115,7 @@ Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alesp
 | 1   | 1   | 1     | 
 
 
-![image](https://github.com/user-attachments/assets/78be4130-0ed2-4fa6-be46-073bf29692d8)
+![image](img/03_Bitove_operace_4.png)
 
 
 ```
@@ -136,7 +136,7 @@ Logická nonekvivalence XOR vrací jedničku, pokud jsou oba operandy vzájemně
 | 1   | 1   | 0     | 
 
 
-![image](https://github.com/user-attachments/assets/9dadc75d-81ae-40b2-9056-95909a60a69a)
+![image](img/03_Bitove_operace_5.png)
 
 
 ```

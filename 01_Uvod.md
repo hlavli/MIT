@@ -17,7 +17,7 @@ Kromě samotného mikrokontroleru a nutných obvodů jako napájení, zdroj hodi
 
 *Vývojová deska používaná na cvičeních*
 
-<img src="https://github.com/user-attachments/assets/de16f7ad-a684-4414-b524-4fa95ec349ab" width="600"/>
+<img src="img/01_Uvod_1.png" width="600"/>
 
 ## Dokumentace k přípravku a k mikrokontroleru
 
@@ -39,7 +39,7 @@ File ->Import -> Project Template a vyberte stažený zip. soubor. Pokud ve vaš
 
 Pokud pak kliknete na File -> New -> Project tak byste měli v nabídce vidět i "MIT AVR Project". Když ho zvolíte tak všechny níže popsané natsavení budete mít automaticky.
 
-![image](https://github.com/user-attachments/assets/e6b57f76-c244-42da-83e2-a8e1f39aa02f)
+![image](img/01_Uvod_2.png)
 
 
 ## Vytvoření projektu v Microchip studiu, nahrání programu
@@ -48,16 +48,16 @@ Stáhněte do počítače [program pro flashování přípravku](https://github.
 
 Spusťe Microchip Studio (dříve Atmel Studio), v menu v horní liště zvolte File -> New -> Project
 
-![image](https://github.com/user-attachments/assets/aa919c1f-594a-49fd-a912-9b61d87441b2)
+![image](img/01_Uvod_3.png)
 
 Budeme zpravidla tvořit spustitelný program v C, zvolte tedy "GCC C Executable Project". 
 **Pojmenujte si svůj projekt** (tématem cvičení nebo alespoň pořadovým číslem cvičení) **V názvu nepoužívejte diakritiku**, způsobuje to pak problémy při překladu kódu..
 
-![image](https://github.com/user-attachments/assets/5c640afd-3f97-4828-8b5d-d5ffea3616b7)
+![image](img/01_Uvod_4.png)
 
 Dále musíme vybrat,  pro jaký mikrokontroler budeme program psát. My máme na přípravku osazen ATmega 2560. Nejsnažší je zadat číslo do vyhledávacího pole, a vyfiltruje se nám náš procesor.
 
-![image](https://github.com/user-attachments/assets/97a953d3-25b5-4d0a-97a5-5d5c021d3f8e)
+![image](img/01_Uvod_5.png)
 
 Dále nastavíme způsob nahrávání programu do mikroprocesoru. Stiskněte na horní liště tlačítko se symbolem kladívka. Pak vyberte **"Custom Programming Tool"** a do políčka Coémmand zkopírujte následující příkaz.
 
@@ -65,17 +65,17 @@ Dále nastavíme způsob nahrávání programu do mikroprocesoru. Stiskněte na 
 "D:\Programy\MIT_uploader\MIT_uploader.exe" "$(OutputDirectory)\$(OutputFileName).hex"
 ```
 
-![image](https://github.com/user-attachments/assets/1ff0f475-73e1-4d79-b0c5-620359463e6e)
+![image](img/01_Uvod_6.png)
 
-![image](https://github.com/user-attachments/assets/d367a7fe-4eb9-4ac8-8374-db870ae08fb2)
+![image](img/01_Uvod_7.png)
 
 Než začneme nahrávat program, musíme přípravek přepnout do bootloaderu - módu kdy nevykonává program, ale očekává po USB nahrání nového programu. To provedeme současnám stiskem tlačítka **RESET** a tlačítka **SW7**. Že se přepnutí do bootloaderu podařilo poznáme podle blikajícíh LEDek a inforemace na LCD displeji. USB kabel musí být na přípravku připojen do portu s označením **BOOTLOADER**. 
 
-![image](https://github.com/user-attachments/assets/6de86f22-5bb2-4a9c-ba01-39f1d94888cb)
+![image](img/01_Uvod_8.png)
 
 Nahrání programu provedeme stiskem tlačítka **Start without debugging** s ikonou zeleného "play" bez výplně. Nepoužívejte zelené tlačítko s výplní, to slouží k práci s debuggerem, který teď nemáme připojen.
 
-![image](https://github.com/user-attachments/assets/5e312a0f-b14d-48ef-bf75-16c202befd94)
+![image](img/01_Uvod_9.png)
 
 Po stisku tlačítka **Start without debugging** se program nejprve přeloží. Pokud máte v programu nějaké syntaktické chyby, Michrochip studio vám vypíše seznam chyb a program se nenahraje. 
 
