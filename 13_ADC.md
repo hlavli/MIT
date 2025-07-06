@@ -6,7 +6,7 @@ Mikroprocesor jako digitální součástka dokáže pracovat pouze s digitální
 
 Většina mikrokontrolerů, včetně toho v našem přípravku, má jeden nebo více ADC integrovaný ve svém pouzdře. AD převodník nám převede analogové napětí na vstupním pinu na digitální hodnotu, se kterou pak procesor může dále pracovat.
 
-![image](https://github.com/user-attachments/assets/9ddad58f-58be-4ff6-a891-b58e1e56ce65)
+![image](img/13_ADC_1.png)
 
 *Zdroj obrázku: https://www.linkedin.com/pulse/ultimate-adc-guide-everything-you-need-know-hybrique-sg/*
 
@@ -14,7 +14,7 @@ Většina mikrokontrolerů, včetně toho v našem přípravku, má jeden nebo v
 Rozlišení AD převodníku (analogově-digitálního převodníku) určuje, na kolik diskrétních hodnot může převodník rozdělit vstupní analogový signál. Udává se v bitech a definuje počet možných úrovní výstupu.
 Například 8bitový převodník má  2^8 tedy 256 úrovní, 10bitový převodník má 2^10 tedy 1024 úrovní. Vyšší rozlišení znamená jemnější odstupňování měření, což vede k přesnějším výsledkům.
 
-<img src="https://github.com/user-attachments/assets/58372836-da04-4ad6-af1d-8edfe97be725" width="1400"/>
+<img src="img/13_ADC_2.png" width="1400"/>
 
 *Zdroj obrázku: https://docs.madmachine.io/learn/peripherals/potentiometer*
 
@@ -46,7 +46,7 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 ## Důležité registry
 
-![image](https://github.com/user-attachments/assets/3110e411-45c2-4292-869f-4fe0f37e1bc9)
+![image](img/13_ADC_3.png)
 
 **ADEN** - Nastavení tohoto bitu zapne AD převodník. Pokud převodník nepoužíváme, jeho vypnutím můžeme snížit spotřebu energie.
 
@@ -54,25 +54,25 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 
 **ADPS0:2** - Nastavení předděličky hodinového signálu viz tabulka níže.
 
-![image](https://github.com/user-attachments/assets/9392a6ad-f674-416a-86ed-7e0ec120e727)
+![image](img/13_ADC_4.png)
 
 **MUX0-5** - Nastavení multiplexeru, tedy výběr pinu, na kterém budeme měřit napětí. Pozor, pátý bit MUX5 je umístěn v registru ADCSRB
 
 **REFS0-1** - Nastavení zdroje referenčního napětí, viz tabulka níže
 
-![image](https://github.com/user-attachments/assets/2547caf1-1521-4e2f-a395-a5adde5ea6c6)
+![image](img/13_ADC_5.png)
 
 **MUX5** - nejvyšší bit pro nastavení multiplexeru (zbytek bitů je umístěn v registru ADMUX)
 
-![image](https://github.com/user-attachments/assets/fdf72867-e734-4187-98ed-1a396691edee)
+![image](img/13_ADC_6.png)
 
-![image](https://github.com/user-attachments/assets/5d9e78f5-7b8a-40ef-9b43-b4790e6940f7)
+![image](img/13_ADC_7.png)
 
-![image](https://github.com/user-attachments/assets/ee141afe-1064-4e5a-af2a-17c9bf33633f)
+![image](img/13_ADC_8.png)
 
 
 ## Použití ADC
-![image](https://github.com/user-attachments/assets/a8cdc45e-a046-4554-86ca-8952ddaa91bc)
+![image](img/13_ADC_9.png)
 
 1. Nastavit multiplexer podle toho, na kterém pinu chceme měřit (v našem případě máme potenciometr připojen na pinu PK0 tedy ADC8)
 2. Nastavit předděličku hodinového signálu - čím vyšší hodnota, tím pomalejší, ale přesnější převod. V našem případě můžeme klidně použít nejvyšší hodnotu.
@@ -84,7 +84,7 @@ Protože AD převodník je v čipu mikrokontroleru jen jeden, ale je užitečné
 ## Zapojení potenciometru v přípravku
 Na našem přípravku je osazen potenciometr, který využijeme k ukázce funkce AD převodníku. Ovšem potenciometr není připojen k mikroprocesoru napevno, ale sdílí pin PK.0 spolu s tlačítkem SW0. TO, jestli je k mikroprocesoru připojen potenciometr nebo tlačítko, ovládáme jumperem EnAD. Jumper v poloze vlevo připojuje na pin PK.0 tlačítko SW0, jumper v poloze vpravo (jako na obrázku níže) připojuje na pin PK.0 potenciometr. Zkontorlujte tedy, že máte jumper zapojen jako na obrázku níže.
 
-![image](https://github.com/user-attachments/assets/d41e6998-efca-4800-b74b-c24066bd38e4)
+![image](img/13_ADC_10.png)
 
 ## Úkoly
 

@@ -7,7 +7,7 @@ V této lekci si ukážeme, jak zobrazovat data na LCD displeji, který máme na
 
 2. Přidejte soubory do projektu. Klikněte pravým tlačítkem na název projektu -> *Add -> Existing item*
    
-    ![image](https://github.com/user-attachments/assets/b5e0a928-6633-4ed3-82a1-6454d2d3117a)
+    ![image](img/12_LCD_1.png)
 
 3. Přidejte include knihovny lcd a knihovny stdio do main.c souboru
 ```c
@@ -21,11 +21,11 @@ Protože AVR mikrokontrolery mají relativně málo paměti a podpora desetinný
 
 *Project -> Properties -> Toolchain -> Libraries* a zde přidat ```libprintf_flt.a```
 
-![image](https://github.com/user-attachments/assets/c45b611f-f7ac-4bb2-8f03-4c535b61194f)
+![image](img/12_LCD_2.png)
 
 *Project -> Properties -> Toolchain -> AVR/GNU Linker -> General* a zaškrtnout *Use vprintf library(WI,-u,vprintf)*
 
-![image](https://github.com/user-attachments/assets/055a77a5-5b6e-4db0-a893-6c867007efb9)
+![image](img/12_LCD_3.png)
 
 
 ## Příklady použití funkcí knihovny lcd.c
@@ -62,7 +62,7 @@ Vytvoříme si pole lcd_buffer, které musí být dostatečně velké, aby se do
 
 To ```%d```je tzv. formátovací parametr, který funkci říká, aby číslo "vytiskla" jako dekadické celé číslo. Další formátovací parametry mohou být třeba ```%X``` pro číslo zapsané v hexadecimální soustavě nebo ```%.2f``` pro desetinné číslo.
 
-![image](https://github.com/user-attachments/assets/ebd7fdb8-ab3d-473b-8a44-4fda306c2422)
+![image](img/12_LCD_4.png)
 
 *Zdroj obrázku: https://www.sciencebuddies.org/cdn/references/ascii-table.png*
 

@@ -1,7 +1,7 @@
 # Maticový displej
 Další z periferií, kterou se naučíme ovládat mikrokontrolerem je maticový displej 8x8. Je tvořen maticí LEDek a dokáže zobrazovat jak text, tak jednoduchou grafiku.
 
-![image](https://github.com/user-attachments/assets/28cc79c2-ec6c-4f9e-b6d0-0fe4740bd020)
+![image](img/16_Maticovy_displej_1.png)
 
 ## Princip funkce
 
@@ -11,7 +11,7 @@ Multiplexování u 8x8 maticového displeje funguje tak, že se v jeden okamžik
 
 Zapneme první řádek a rozsvítíme jen ty LEDky, které mají v daném řádku svítit. Pak přepneme na druhý řádek, a tak dál až k osmému.  Po zobrazení všech řádků se proces opakuje znovu a znovu. Čím rychleji cyklus běží, tím plynuleji obraz vypadá. Díky **setrvačnosti lidského oka** se to ale jeví jako by svítily všechny řádky zároveň.
 
-![image](https://github.com/user-attachments/assets/5215499b-795d-44b5-a037-b70ced5ad1eb)
+![image](img/16_Maticovy_displej_2.png)
 
 *Zdroj obrázku: https://randomnerdtutorials.com/guide-for-8x8-dot-matrix-max7219-with-arduino-pong-game/*
 
@@ -27,11 +27,11 @@ Piny **AG0** až **AG7** znamenají **A**node **G**reen 0-7 **pomocí plochých 
 
 Vidíme, že každý bod displeje je tvořen dvěma LEDkami - červenou a zelenou. Můžeme tedy rozsvítit jednu z nich, žádnou nebo obě.
 
-![image](https://github.com/user-attachments/assets/d012b838-8fce-415b-8ce0-09f92d8b69c3)
+![image](img/16_Maticovy_displej_3.png)
 
 Pokud například použijeme pro řízení sloupců port D, může řízení displeje vypadat třeba takto:
 
-![image](https://github.com/user-attachments/assets/29e48b1b-22d8-427d-85ef-8858d842bafc)
+![image](img/16_Maticovy_displej_4.png)
 
 
 ## Úkoly
