@@ -4,7 +4,7 @@ Vytvořte na výukovém přípravku stopky.
 
 <img src="https://github.com/user-attachments/assets/fc7ba275-656b-448f-9df5-7d8b9a2ae141" width="400"/>
 
-<img src="img\Test_timer_1.png" width="400"/>
+<img src="img/Test_timer_1.png" width="400"/>
 
 ## Požadavky na funkci
 
