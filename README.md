@@ -16,7 +16,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 ## Cvičení
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
-<!--
+{% comment %}
 1. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
 1. [Práce s tlačítky](04_Tlacitka_podminky.md)
@@ -44,4 +44,4 @@ Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu.
 3. [Jazyk C](files/Test_jazyk_C.md)
 4. [Časovač](files/Test_timer.md)
 5. [Sériová komunikace](15_UART_2.md)
--->
+{% endcomment %}
