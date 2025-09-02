@@ -16,8 +16,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 ## Cvičení
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
-{% comment %}
 1. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
+2. {% comment %}
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
 1. [Práce s tlačítky](04_Tlacitka_podminky.md)
 1. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
