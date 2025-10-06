@@ -84,9 +84,9 @@ Bitový posun (anglicky bit shift) nám binární číslo "posune" o daný poče
 
 
 
-## Logický součet OR |
+## Bitový součet OR |
 
-Při logickém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmetického součtu, který znáte z matematiky tady není žádný převod do vyššího řádu. Podle pravdivostní tabulky vidíme, že pokud je alespoň jeden z bitů 1, výsledek je 1.
+Při bitovém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmetického součtu, který znáte z matematiky tady není žádný převod do vyššího řádu. Podle pravdivostní tabulky vidíme, že pokud je alespoň jeden z bitů 1, výsledek je 1.
 
 | A   | B   | A \| B | 
 |:---:|:---:|:------:| 
@@ -104,8 +104,8 @@ Při logickém součtu vždy spolu sčítáme jen dva bity. Narozdíl od aritmet
   0xF5   <=  1111 0101 
 ```
 
-## Logický součin AND &
-Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alespoň jeden z bitů 0, výsledek je nula.
+## Bitový součin AND &
+Při bitovém součinu opět vždy pracujeme jen se dvěma bity, pokud je alespoň jeden z bitů 0, výsledek je nula.
 
 | A   | B   | A & B | 
 |:---:|:---:|:-----:| 
@@ -125,8 +125,8 @@ Při logickém součinu opět vždy pracujeme jen se dvěma bity, pokud je alesp
   0x10   <=  0001 0000 
 ```
 
-## Logická nonekvivalence XOR ^
-Logická nonekvivalence XOR vrací jedničku, pokud jsou oba operandy vzájemně různé. Pokud jsou oba stejné, vrací nulu. Dá se dobře použít, když chceme nějaký bit znegovat (změnit na opačnou hodnotu). 
+## Bitová nonekvivalence XOR ^
+Bitová nonekvivalence XOR vrací jedničku, pokud jsou oba operandy vzájemně různé. Pokud jsou oba stejné, vrací nulu. Dá se dobře použít, když chceme nějaký bit znegovat (změnit na opačnou hodnotu). 
 
 | A   | B   | A ^ B | 
 |:---:|:---:|:-----:| 
@@ -162,9 +162,9 @@ Nevýhoda ale je, že kromě pinu 0 ovlivňujeme i všechny ostatní piny. A pok
 
 ### Nastavení jednotlivých bitů do 1 (set bit)
 
-Pokud chceme nastavit bit 2 do jedničky, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický součet. 
+Pokud chceme nastavit bit 2 do jedničky, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít bitový součet. 
 
-K pozicím bitů. které nechceme změnit přičteme 0, k těm, které chceme nastavit do 1 přičteme jedničku.
+K pozicím bitů, které nechceme změnit přičteme 0, k těm, které chceme nastavit do 1 přičteme jedničku.
 
 Všechny tři zápisy níže jsou ekvivaletní, ale v praxi používáme ten poslední, protože je krátký a přehledný
 
@@ -175,20 +175,20 @@ Všechny tři zápisy níže jsou ekvivaletní, ale v praxi používáme ten pos
 ``` PORTF |= 1<<2; ``` Tento zápis je v praxi nejčastější.
 
 
-Číslu, které logický součtem přičítáme k hodnotě registru se říká maska. Masku můžeme vytvořit pomocí operátoru << tedy bitového posuvu doleva. 
+Číslu, jež bitově sčítáme s hodnotou registru se říká maska. Masku můžeme vytvořit pomocí operátoru << tedy bitového posuvu doleva. 
 
 V našem případě chceme nastavit bit 2, tedy vezmeme jedničku a posuneme ji dvakrát doleva:
 
 ``` 1<<2 = 0b00000100```
 
-Když tuto hodnotu logicky přičteme k registru PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 1.
+Když provedeme s touto maskou bitový součet s registrem PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 1.
 
 
 ### Nastavení jednotlivých bitů do 0 (clear bit)
 
-Pokud chceme nastavit bit 2 do nuly, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický součin. 
+Pokud chceme nastavit bit 2 do nuly, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít operaci bitového součinu. 
 
-Pozice bitů, které nechceme změnit vynásobíme jedničkou, pozice bitů, které chceme vynulovat vynásobíme nulou.
+Pozice bitů, které nechceme změnit vynásobíme jedničkou, pozice bitů, které chceme vynulovat, vynásobíme nulou.
 
 ``` PORTF = PORTF & 0b11111011; ``` Můžeme v jazyce C napsat kratší formou:
 
@@ -206,11 +206,11 @@ Když tuto hodnotu bitově znegujeme, získáme masku, kterou potřebujeme.
 
 ``` ~(1<<2) = 0b11111011; ```
 
-Když touto hodnotou logicky vynásobíme registr PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 0.
+Když touto hodnotou bitově vynásobíme registr PORTF, všechny bity zůstanou nezměněny, pouze bit 2 se nastaví do 0.
 
 ### Negace jednotlivých bitů (toggle bit)
 
-Pokud chceme znegovat bit 2, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít logický exkluzivní součet XOR. 
+Pokud chceme znegovat bit 2, ale neovlivnit přitom ostatní bity registru, můžeme pro to použít bitový exkluzivní součet XOR. 
 
 Na pozice bitů, které nechceme změnit dáme nulu, pozice bitů, které chceme znegovat dáme jako jedničku.
 
