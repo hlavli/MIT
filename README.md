@@ -20,8 +20,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
 1. [Práce s tlačítky](04_Tlacitka_podminky.md)
 1. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
-{% comment %}
 1. [Klávesnice](06_Klavesnice.md)
+2. {% comment %}
 1. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
 1. [Časovač](08_Timer.md)
 1. [Časovač s přerušením](09_Timer_interrupt.md)
