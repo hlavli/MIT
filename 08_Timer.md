@@ -67,7 +67,7 @@ int main(void)
 
 ```
 
-V našem přípravku je použit oscilátor o frekvenci 16MHz a v examplu výše jsme použili předděličku 654. Periodu, tedy čas, za který časovač přeteče spočítáme takto:
+V našem přípravku je použit oscilátor o frekvenci 16MHz a v examplu výše jsme použili předděličku 64. Periodu, tedy čas, za který časovač přeteče spočítáme takto:
 
 $$
 \Large f_{\text{timer}} = \frac{f_{\text{osc}}}{Prescaler} = \frac{16MHz}{64} = 250kHz
