@@ -51,21 +51,21 @@ sei(); // Globální povolení přerušení
 
 Doteď jsme používali jen časovač Timer1. Mikrokontroler ATmega 2560, který máme v přípravku, ale obsahuje časovačů mnohem více. Čtyři 16bitové: Timer1, Timer3, Timer4, Timer5 a pak ještě dva 8bitové Timer0 a Timer2. Osmibitové čítače se od šestnáctibitových liší nejen počtem bitů, ale mají i méně funkcí a jejich registry vypadají trochu jinak než u šestnáctibitových časovačů. 
 
-Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve jméně registru. Takže pokud si spočítáme a určíme například pro Timer1 hodnoty registrů TCCR1B a OCR1A, můžeme je úplně stejně použít pro Timer3, Timer4 nebo Timer5, pouze index ve jméně registur se změní. Tedy např pro Timer3 by to byly registry TCCR3B a OCR3A.
+Ovšem 16bitové časovače jsou navzájem totožné, liší se jen čísly ve jméně registru. Takže pokud si spočítáme a určíme například pro Timer1 hodnoty registrů TCCR1B a OCR1A, můžeme je úplně stejně použít pro Timer3, Timer4 nebo Timer5, pouze index ve jméně registru se změní. Tedy např pro Timer3 by to byly registry TCCR3B a OCR3A.
 
 
 ## Úkoly
-**1.** Vytvořte program, který pomocí fuknce _delay_ms() bliká LED0 a LED1 s frekvencí 2Hz.
+**1.** Vytvořte program, který pomocí fuknce _delay_ms() bliká LED0 a LED1 s frekvencí 2 Hz.
 
-**2.** Rozšiřte program, aby blikal LED2 a LED3 s frekvencí 10Hz. Použijte k tomu časovač s přerušením.
+**2.** Rozšiřte program, aby blikal LED2 a LED3 s frekvencí 5 Hz. Použijte k tomu časovač s přerušením.
    - V registru TTCR1B nastavte předděličku a CTC režim
-   - Do registru OCR1A nastavte takovou hodnotu, aby přerušení nastávalo s frekvencí 10Hz
+   - Do registru OCR1A nastavte takovou hodnotu, aby přerušení nastávalo s frekvencí 10 Hz (2x 5 Hz)
    - Povolte přerušení od časovače a globální přerušení
    - Nadefinujte funkci pro obsluhu přerušení časovače, která bude blikat požadovanými LEDkami.
 
-**3.** Přidejte ještě druhý 16bitový časovač, který bude LED6 a LED7 blikat s frekvencí 1Hz.
+**3.** Přidejte ještě druhý 16bitový časovač, který bude LED6 a LED7 blikat s frekvencí 1 Hz.
 
-**4.** Při stisku tlačítka SW7 zvyšte frekvenci blikání LED6 a LED7 na 5Hz.
+**4.** Při stisku tlačítka SW7 zvyšte frekvenci blikání LED6 a LED7 na 10 Hz.
 
 Pro usnadnění výpočtů hodnot pro časovače můžete použít tabulku s předpočítanými hodnotami:
 
