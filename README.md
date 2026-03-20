@@ -24,9 +24,9 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
 1. [Časovač](08_Timer.md)
 1. [Časovač s přerušením](09_Timer_interrupt.md)
-1. [Multiplex displeje s přerušením](10_Display_interrupt.md)
-   {% comment %}
+1. [Multiplex displeje s přerušením](10_Display_interrupt.md)  
 1. [PWM](11_PWM.md)
+    {% comment %}
 1. [LCD displej](12_LCD.md)
 1. [AD převodník](13_ADC.md)
 1. [UART](14_UART.md)
