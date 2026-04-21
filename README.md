@@ -27,9 +27,9 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Multiplex displeje s přerušením](10_Display_interrupt.md)  
 1. [PWM](11_PWM.md)
 1. [LCD displej](12_LCD.md)
-1. [AD převodník](13_ADC.md)
-       {% comment %}
+1. [AD převodník](13_ADC.md)       
 1. [UART](14_UART.md)
+   {% comment %}
 1. [Maticový displej](16_Maticovy_displej.md)
 1. [RTC - modul reálného času](17_RTC.md)
 1. [Ultrazvukový senzor vzdálenosti](18_Ultrasonic.md)
