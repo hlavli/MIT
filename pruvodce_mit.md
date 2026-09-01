@@ -41,24 +41,50 @@ Abychom snížili finanční zátěž, využijeme střídavou výuku skupin A a 
 Laboratorní cvičení má přísný, ale efektivní průběh:
 1.  **Předvedení (prvních 10 minut):** Zapojíte svůj domácí kit a ukážete funkční domácí úkol (např. blikání LED řízené časovačem Timer 1).
 2.  **Ústní obhajoba (Vstupenka):** Vyučující se vás zeptá na princip fungování (např. *„Který registr nastavuje děličku časovače?“* nebo *„Jak funguje toto bitové maskování?“*). Pokud nebudete vědět, kód je považován za opsaný.
-3.  **Školní přípravek:** Po obhajobě dostanete školní desku a kód přemapujete na školní periferie.
-4.  **Nepřipravenost:** Pokud domácí úkol neodevzdáte, nesmíte pracovat se školní deskou. Celé cvičení strávíte zapojováním základu na Unu v rohu laboratoře, což znamená nedostatečnou známku z cvičení za nepřipravenost.
+3.  **Školní přípravek:** Po obhajobě dostanete [školní desku](01_Uvod.md) a kód přemapujete na školní periferie.
+4.  **Nepřipravenost:** Pokud domácí úkol neodevzdáte, nesmíte pracovat se školní deskou. Celé cvičení strávíte zapojováním základu na Unu a vaše **nepřipravenost bude penalizována**.
 
 ---
 
-## 5. Pololetní projekt: Kombinační matice
+## 5. Pololetní projekt: Výběr vývojové cesty a pravidla
 
 V průběhu pololetí zpracujete samostatný (nebo ve sdílené dvojici) praktický projekt. Hodnotí se technické řešení, čistota kódu v C, dokumentace a úroveň prezentace.
+Abychom vyřešili logistiku domácí přípravy a motivovali vás k samostatné práci, platí pro projekt tato pravidla:
 
-Nechceme omezovat vaši kreativitu zadáváním konkrétních témat, proto si svůj projekt sestavíte sami jako skládačku z těchto **stavebních kamenů**:
+### A) Volba formátu práce (Jednotlivec vs. Dvojice)
+Můžete pracovat samostatně, nebo ve dvojici utvořené napříč skupinami A/B (parťák, se kterým sdílíte domácí kit). Podmínky se však liší:
 
-### Povinné stavební kameny projektu:
-Pro úspěšné schválení musí váš projekt v čistém C využívat:
-1.  **Software:** Minimálně **1× hardwarový časovač (Timer)** (např. CTC režim, generování tónu či časování) + **1× vnější přerušení (Interrupt)**.
-2.  **Hardware:** Minimálně **2 odlišné periferie** ze sady (např. bzučák + fotorezistor, nebo tlačítka + multiplexovaný displej).
-3.  **Unikátnost:** Projekt každého studenta/dvojice musí mít jedinečnou kombinaci zapojení a logiky. Kombinaci si necháte schválit vyučujícím do konce 6. týdne.
+*   **Samostatná práce (Doporučeno):**
+    *   **Jednodušší zadání:** Stačí splnit základní minimum z kombinační matice stavebních kamenů.
+    *   **Snazší obhajoba:** Obhajujete pouze svůj vlastní kód, kterému plně rozumíte.
+    *   **Plná kontrola:** Vaše hodnocení nezávisí na (ne)zodpovědnosti druhého spolužáka.
+    *   **Hardware pro sebe:** Domácí kit máte v týdnu před svým cvičením plně k dispozici.
+*   **Práce ve dvojici:**
+    *   **Složitější zadání:** Projekt musí mít vyšší komplexnost (např. složitější stavový automat, souběh více časovačů či pokročilejší logiku).
+    *   **Kolektivní odpovědnost při obhajobě:** U zkoušení se mohu zeptat kteréhokoliv z dvojice na jakoukoliv část společného kódu. Pokud jeden z vás kód neobhájí, hodnocení jde dolů oběma.
 
-### Umělá inteligence (AI) jako partner:
-V souladu s rozvojem digitálních kompetencí ŠVP je **povoleno využívat AI (ChatGPT atd.) jako konzultanta a generátor nápadů**.
-*   *Co je povoleno:* Nechat si od AI vygenerovat tipy na zajímavé projekty pro danou kombinaci součástek (např. *„Navrhni nápad na projekt s tlačítkem na přerušení, bzučákem a fotorezistorem“*).
-*   *Co je zakázáno:* Slepě zkopírovat kód. Při ústní obhajobě projektu musíte do detailu vysvětlit každý řádek kódu, konfiguraci registrů i fyzické zapojení. **Pokud kód neobhájíte, projekt nebude uznán**.
+---
+
+### B) Volba realizační cesty (Jak projekt postavit?)
+Aby zapojení pololetního projektu doma nekolidovalo s týdenními domácími úkoly (které musíte na nepájivém poli průběžně stavět a rozebírat pro cvičení), zvolíte si jednu ze dvou vývojářských cest:
+
+*   **Cesta „Bastlíř“ (Fyzická stavba doma):**
+    *   Projekt máte fyzicky zapojený na svém nepájivém poli doma.
+    *   **Podmínka:** K sadě si dobrovolně dokoupíte jedno malé nepájivé pole (cca 40–50 Kč). Na velkém poli máte trvale sestavený projekt, na malém poli stavíte průběžné domácí úkoly. Desku Arduino UNO pouze přepojujete několika vodiči.
+*   **Cesta „Kodér“ (Vývoj na školním HW):**
+    *   Doma nepájivé pole po každém úkolu bez problému rozeberete.
+    *   **Podmínka:** Svůj pololetní projekt vyvíjete doma čistě softwarově v Microchip Studiu. Fyzicky ho zapojujete, ladíte a odevzdáváte **výhradně v laboratoři na školním integrovaném přípravku**, který má všechny periferie (LED, tlačítka, bzučák, displeje) již pevně zapájené.
+
+---
+### C) Stavební kameny projektu (Minimální požadavky konfigurace)
+Své téma si sestavíte jako skládačku z těchto prvků a necháte si ho **schválit vyučujícím do konce 6. týdne**:
+1.  **Software:** Minimálně **1× hardwarový časovač (Timer)** (generování tónů, odměřování času) + **1× vnější přerušení (Interrupt)**.
+2.  **Hardware:** Minimálně **2 odlišné periferie** ze sady (bzučák, fotorezistor, tlačítka, displeje, otřesové čidlo).
+3.  **Unikátnost:** Každý projekt (nebo dvojice) musí mít jedinečnou kombinaci zapojení a logiky.
+
+---
+
+### D) Umělá inteligence (AI) jako partner
+V souladu s ŠVP je **povoleno využívat AI (ChatGPT atd.) jako konzultanta a generátor nápadů**.
+*   **Co je povoleno:** Nechat si od AI navrhnout originální koncepty na základě vaší kombinace součástek (*„Vymysli mi zajímavou hru s tlačítkem na přerušení a pasivním bzučákem...“*).
+*   **Co je zakázáno:** Slepé kopírování vygenerovaného kódu. Při obhajobě musíte do detailu vysvětlit každý řádek kódu, konfiguraci registrů i zapojení. **Pokud kód neobhájíte, projekt nebude uznán**.
