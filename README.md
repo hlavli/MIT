@@ -7,6 +7,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 ## Dokumentace
 
+[Průvodce předmětem mikroprocesorová technika](pruvodce_mit.md)
+
 [Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
 
 [Schéma zapojení výukového přípravku](files/Development_board_schematics.pdf)
@@ -16,6 +18,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 ## Cvičení
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
+{% comment %}
 1. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
 1. [Práce s tlačítky](04_Tlacitka_podminky.md)
@@ -30,7 +33,6 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [AD převodník](13_ADC.md)       
 1. [UART](14_UART.md)
 1. [RTC - modul reálného času](17_RTC.md)
-   {% comment %}
 1. [Maticový displej](16_Maticovy_displej.md)
 1. [RTC - modul reálného času](17_RTC.md)
 1. [Ultrazvukový senzor vzdálenosti](18_Ultrasonic.md)
