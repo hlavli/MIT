@@ -9,6 +9,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 [Průvodce předmětem mikroprocesorová technika](pruvodce_mit.md)
 
+[Prezentace předmětu (Canva)](https://bit.ly/e3amit1)
+
 [Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
 
 [Schéma zapojení výukového přípravku](files/Development_board_schematics.pdf)
@@ -20,9 +22,9 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Úvod do cvičení MIT, dokumentace k přípravku](01_Uvod.md)
 1. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
-1. [Práce s tlačítky](04_Tlacitka_podminky.md)
-   {% comment %}
+1. [Práce s tlačítky](04_Tlacitka_podminky.md)   
 1. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
+   {% comment %}
 1. [Klávesnice](06_Klavesnice.md)
 1. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
 1. [Časovač](08_Timer.md)
