@@ -9,7 +9,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 [Průvodce předmětem mikroprocesorová technika](pruvodce_mit.md)
 
-[Prezentace předmětu (Canva)](https://bit.ly/e3amit1)
+[Prezentace předmětu (Canva)](https://www.canva.com/design/DAHUr0QM_ZE/xZRwSxJ-9yiOi803dhwTIQ/view?utm_content=DAHUr0QM_ZE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbbebb2d3f7)
 
 [Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
 
