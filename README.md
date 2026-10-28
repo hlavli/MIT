@@ -15,6 +15,8 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 [Schéma zapojení výukového přípravku](files/Development_board_schematics.pdf)
 
+[Nastavení nahrávání z Microchip Studio do Arduino UNO (ATmega328P)](51_navod-microchip-studio-avrdude.md)
+
 [Schéma Arduino Uno](files/Arduino_Uno_Rev3-schematic.pdf)
 
 [Jazyk C](00_Jazyk_C.md)
