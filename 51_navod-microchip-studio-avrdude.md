@@ -74,7 +74,8 @@ Pro první testovací nahrání v **Microchip Studiu** je nejlepší použít je
 ![image](img/51_Navod_3.png)
 
 1. Vytvořte v Microchip Studiu nový projekt (GCC C Executable Project) dle [standardního postupu](01_Uvod.md), zvolte mikrokontrolér **ATmega328P** a do souboru main.c vložte tento kód:
-```C
+
+```c
 #ifndef F_CPU
 #define F_CPU 16000000UL    // Definice taktovací frekvence 16 MHz (nutné pro _delay_ms)
 #endif
@@ -98,6 +99,7 @@ int main(void)
     }
 }
 ```
+
 2. Přeložte projekt stisknutím klávesy **F7** (nebo menu *Build* &rarr; *Build Solution*). V dolním okně se musí objevit `Build succeeded`.
 3. V horním menu klikněte na **Tools** &rarr; **Nahrát do Arduino Uno**.
 4. V dolním okně *Output* uvidíte průběh nahrávání ukončený hláškou `avrdude done. Thank you.`.
