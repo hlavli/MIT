@@ -60,6 +60,7 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 * **Initial directory (Výchozí adresář):**  
   `$(TargetDir)`
 * Zaškrtněte políčko **Use Output window** (Použít okno výstupu).
+
 ![image](img/51_Navod_2.png)
 
 4. Potvrďte kliknutím na tlačítko **OK**.
