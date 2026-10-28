@@ -4,11 +4,11 @@ Předmět Mikroprocesorová technika (3. ročník, obor Elektrotechnika) má ča
 
 ---
 
-## 1. Koncepce výuky: Uno (doma) ──► Mega (škola)
+## 1. Koncepce výuky: Uno (doma) &rarr; Mega (škola)
 
-*   **Domácí příprava (Arduino UNO):** Doma zapojíte obvod na nepájivém poli a v prostředí **Microchip Studio** napíšete a odladíte program v **čistém jazyce C** (přímá manipulace s registry a bitové operace).
-*   **Práce v laboratoři (Školní deska ATmega2560):** Předvedete funkční domácí zapojení a získáte „vstupenku“ ke školnímu přípravku. Vaším úkolem bude kód adaptovat (přemapovat piny a registry) pro mikrokontrolér ATmega2560 podle školních schémat.
-*   **Proč to děláme?** Rozdílné čipy vás donutí číst elektrotechnická schémata a datasheet, namísto slepého opisování kódu.
+*   **Domácí příprava (Arduino UNO - ATmega328P):** Doma zapojíte obvod na nepájivém poli a v prostředí **Microchip Studio** napíšete a odladíte program v **čistém jazyce C** (přímá manipulace s registry a bitové operace).
+*   **Práce v laboratoři (Školní deska ATmega2560):** Předvedete funkční domácí zapojení a získáte „vstupenku“ ke školnímu přípravku. Vaším úkolem bude kód adaptovat (přemapovat piny a registry) pro mikrokontrolér ATmega2560 podle [schématu školního přípravku](files/Development_board_schematics.pdf).
+*   **Proč takový postup?** Rozdílné čipy vás donutí číst elektrotechnická schémata a datasheet, namísto slepého opisování kódu.
 
 ---
 
@@ -19,18 +19,18 @@ Povinnou pomůckou pro každého žáka (nebo střídavou dvojici) je tato start
 *   **E-shop:** [dratek.cz](https://dratek.cz/)
 *   **Cena:** cca 636 Kč (při sdílení ve dvojici **318 Kč na žáka**), (při koupi 2 a více kusů doprava zdarma)
 
-### Proč vyžadujeme právě tuto sadu?
+### Proč právě tato sada?
 1.  **Opravitelnost (DIP28 patice):** Procesor ATmega328P lze z desky vyjmout. Pokud neopatrností zničíte pin, čip vyměníme za nový (cca 80 Kč). U levných SMD klonů se musí vyhodit celá deska.
 2.  **Spolehlivost připojení (ATmega16U2):** Levné klony používají USB převodník CH340, se kterým jsou kritické problémy pod Windows 11 (nahrávání často končí chybami). Tato sada obsahuje čip ATmega16U2, který Windows 11 detekují okamžitě a bez ovladačů.
-3.  **Vazba na ŠVP:** Obsahuje posuvný registr 74HC595, multiplexované 7segmentové displeje, LED matici, teplotní čidlo LM35DZ a bzučáky – to vše jsou témata našeho ŠVP.
+3.  **Vazba na ŠVP:** Obsahuje posuvný registr 74HC595, multiplexované 7segmentové displeje, LED matici, teplotní čidlo LM35DZ a bzučáky – to vše jsou témata ŠVP.
 
 ---
 
 ## 3. Pravidla sdílení (1 kit do dvojice ob týden)
 
-Abychom snížili finanční zátěž, využijeme střídavou výuku skupin A a B:
-*   **Utvoření dvojic:** Vytvoříte dvojici napříč skupinami (žák ze skupiny A + žák ze skupiny B). Na sadu se složíte rovným dílem (318 Kč na osobu).
-*   **Pravidlo předávání:** K předání kitu parťákovi musí dojít **každý pátek během společné teoretické hodiny**.
+Pro snížení finanční zátěže využijeme střídání skupin 1 a 2:
+*   **Utvoření dvojic:** Vytvoříte dvojici napříč skupinami (žák ze skupiny 1 + žák ze skupiny 2). Na sadu se složíte rovným dílem (318 Kč na osobu).
+*   **Pravidlo předávání:** K předání kitu parťákovi musí dojít **každou středu během společné teoretické hodiny**.
 *   **Odpovědnost:** Součástí krabičky je evidenční arch. Při předání oba podepíší, že je sada kompletní. Za neohlášené poškození odpovídá ten, kdo měl kit doma.
 *   **Záloha:** V případě nemoci nebo zapomenutí zapůjčí škola na cvičení jednu ze svých 3 záložních sad.
 
@@ -39,7 +39,7 @@ Abychom snížili finanční zátěž, využijeme střídavou výuku skupin A a 
 ## 4. Průběh cvičení: „Vstupenka na přípravek“
 
 Laboratorní cvičení má přísný, ale efektivní průběh:
-1.  **Předvedení (prvních 10 minut):** Zapojíte svůj domácí kit a ukážete funkční domácí úkol (např. blikání LED řízené časovačem Timer 1).
+1.  **Předvedení (prvních 15 minut):** Zapojíte svůj domácí kit a ukážete funkční domácí úkol (např. blikání LED řízené časovačem Timer 1).
 2.  **Ústní obhajoba (Vstupenka):** Vyučující se vás zeptá na princip fungování (např. *„Který registr nastavuje děličku časovače?“* nebo *„Jak funguje toto bitové maskování?“*). Pokud nebudete vědět, kód je považován za opsaný.
 3.  **Školní přípravek:** Po obhajobě dostanete [školní desku](01_Uvod.md) a kód přemapujete na školní periferie.
 4.  **Nepřipravenost:** Pokud domácí úkol neodevzdáte, nesmíte pracovat se školní deskou. Celé cvičení strávíte zapojováním základu na Unu a vaše **nepřipravenost bude penalizována**.
@@ -77,7 +77,7 @@ Aby zapojení pololetního projektu doma nekolidovalo s týdenními domácími �
 
 ---
 ### C) Stavební kameny projektu (Minimální požadavky konfigurace)
-Své téma si sestavíte jako skládačku z těchto prvků a necháte si ho **schválit vyučujícím do konce 6. týdne**:
+Své téma si sestavíte jako skládačku z těchto prvků a necháte si ho **schválit vyučujícím do konce listopadu**:
 1.  **Software:** Minimálně **1× hardwarový časovač (Timer)** (generování tónů, odměřování času) + **1× vnější přerušení (Interrupt)**.
 2.  **Hardware:** Minimálně **2 odlišné periferie** ze sady (bzučák, fotorezistor, tlačítka, displeje, otřesové čidlo).
 3.  **Unikátnost:** Každý projekt (nebo dvojice) musí mít jedinečnou kombinaci zapojení a logiky.
@@ -85,6 +85,8 @@ Své téma si sestavíte jako skládačku z těchto prvků a necháte si ho **sc
 ---
 
 ### D) Umělá inteligence (AI) jako partner
-V souladu s ŠVP je **povoleno využívat AI (ChatGPT atd.) jako konzultanta a generátor nápadů**.
+V souladu s ŠVP je **povoleno využívat AI (ChatGPT, Claude, Gemini atd.) jako konzultanta a generátor nápadů**.
 *   **Co je povoleno:** Nechat si od AI navrhnout originální koncepty na základě vaší kombinace součástek (*„Vymysli mi zajímavou hru s tlačítkem na přerušení a pasivním bzučákem...“*).
 *   **Co je zakázáno:** Slepé kopírování vygenerovaného kódu. Při obhajobě musíte do detailu vysvětlit každý řádek kódu, konfiguraci registrů i zapojení. **Pokud kód neobhájíte, projekt nebude uznán**.
+
+## [Zpět na obsah](README.md)

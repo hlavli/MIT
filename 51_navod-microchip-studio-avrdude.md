@@ -46,6 +46,8 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 
 1. Spusťte **Microchip Studio**.
 2. V hlavní horní liště klikněte na **Tools** &rarr; **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
+![image](img/51_Navod_1.png)
+
 3. V okně klikněte na tlačítko **Add** a vyplňte následující políčka:
 
 * **Title (Název):**  
@@ -53,11 +55,12 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 * **Command (Příkaz):**  
   `C:\avrdude\avrdude.exe` *(případně cesta, kde máte avrdude uložený)*
 * **Arguments (Argumenty):**  
-  `-C"C:\avrdude\avrdude.conf" -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:"$(ProjectDir)Debug\$(TargetName).hex":i`
-  *(Poznámka: Hodnotu `-PCOM3` upravte podle čísla vašemu portu ze Správce zařízení!)*
+  `-C "C:\avrdude\avrdude.conf" -v -p atmega328p -c arduino -P COM3 -b 115200 -D -U flash:w:"$(ProjectDir)Debug\$(TargetName).hex":i`
+  *(Poznámka: Hodnotu `-P COM3` upravte podle čísla vašeho portu ze Správce zařízení!)*
 * **Initial directory (Výchozí adresář):**  
   `$(TargetDir)`
 * Zaškrtněte políčko **Use Output window** (Použít okno výstupu).
+![image](img/51_Navod_2.png)
 
 4. Potvrďte kliknutím na tlačítko **OK**.
 
@@ -65,7 +68,35 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 
 ## 4. Postup nahrání programu do Arduina
 
-1. Otevřete váš projekt v Microchip Studiu.
+Pro první testovací nahrání v **Microchip Studiu** je nejlepší použít jednoduchý kód v čistém C, který změní frekvenci blikání vestavěné LED diody (označené jako **L** na pinu **PB5 / pin 13** Arduina Uno, viz [schéma](files/Arduino_Uno_Rev3-schematic.pdf)). Poznáte tak okamžitě, že se tovární kód přepsal vaším vlastním programem.
+
+![image](img/51_Navod_3.png)
+
+1. Vytvořte v Microchip Studiu nový projekt (GCC C Executable Project) dle [standardního postupu](01_Uvod.md), zvolte mikrokontrolér **ATmega328P** a do souboru main.c vložte tento kód:
+```C
+#ifndef F_CPU
+#define F_CPU 16000000UL    // Definice taktovací frekvence 16 MHz (nutné pro _delay_ms)
+#endif
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main(void)
+{
+    // Nastavení pinu PB5 (vestavěná LED 'L') jako VÝSTUPNÍ
+    // Registr DDRB otevírá port B (1 = výstup/otevřeno, 0 = vstup/zavřeno)
+    DDRB |= (1 << DDB5);
+
+    while (1) 
+    {
+        // Překlopení stavu LED (TOGGLE) pomocí XOR operátoru na registru PORTB
+        PORTB ^= (1 << PORTB5);
+        
+        // Zpoždění 200 ms (rychlé blikání)
+        _delay_ms(200);
+    }
+}
+```
 2. Přeložte projekt stisknutím klávesy **F7** (nebo menu *Build* &rarr; *Build Solution*). V dolním okně se musí objevit `Build succeeded`.
 3. V horním menu klikněte na **Tools** &rarr; **Nahrát do Arduino Uno**.
 4. V dolním okně *Output* uvidíte průběh nahrávání ukončený hláškou `avrdude done. Thank you.`.
@@ -75,6 +106,8 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 ## ⚠️ Důležitá upozornění a řešení problémů
 
 * **Chyba `avrdude: stk500_getsync(): not in sync`:**  
-  Máte špatně nastavené číslo COM portu v řádku *Arguments* (`-PCOMx`), nebo nemáte Arduino zapojené v USB. Zkontrolujte Správce zařízení.
+  Máte špatně nastavené číslo COM portu v řádku *Arguments* (`-P COMx`), nebo nemáte Arduino zapojené v USB. Zkontrolujte Správce zařízení.
 * **Nezapomeňte na parametr `-D`:**  
   Parametr `-D` zakazuje celkové smazání čipu před zápisem. **Nikdy ho nevynechávejte!** Bez něj by došlo ke smazání továrního zaváděcího programu (bootloaderu) v Arduinu.
+
+## [Zpět na obsah](README.md)

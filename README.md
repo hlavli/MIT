@@ -7,13 +7,15 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 
 ## Dokumentace
 
-[Průvodce předmětem mikroprocesorová technika](pruvodce_mit.md)
+[Průvodce předmětem mikroprocesorová technika](50_pruvodce_mit.md)
 
 [Prezentace předmětu (Canva)](https://www.canva.com/design/DAHUr0QM_ZE/xZRwSxJ-9yiOi803dhwTIQ/view?utm_content=DAHUr0QM_ZE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbbebb2d3f7)
 
 [Datasheet procesoru ATMEGA 2560](files/Atmel-AVR-2560_datasheet.pdf)
 
 [Schéma zapojení výukového přípravku](files/Development_board_schematics.pdf)
+
+[Schéma Arduino Uno](files/Arduino_Uno_Rev3-schematic.pdf)
 
 [Jazyk C](00_Jazyk_C.md)
 
