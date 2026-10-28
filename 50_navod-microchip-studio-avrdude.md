@@ -8,7 +8,7 @@ Tento návod slouží k nastavení automatického nahrávání zkompilovaného k
 
 Než začnete nastavovat nahrávání, ujistěte se, že máte připraveny následující věci:
 
-1. **Microchip Studio (v7.0):** Nainstalované vývojové prostředí pro AVR.
+1. **Microchip Studio (v7.0):** Nainstalované vývojové prostředí pro AVR ([ke stažení na tomto webu])(https://www.microchip.com/en-us/tools-resources/develop/microchip-studio).
 2. **Arduino UNO + USB kabel:**
    * **Precizní klon (např. ze sady dratek.cz s čipem ATmega16U2) nebo originál:** Ve Windows 10/11 **není potřeba ručně instalovat žádné ovladače** – systém desku rozpozná sám automaticky po zapojení do USB.
    * *(Poznámka: Pouze u levných čínských klonů s USB převodníkem CH340 je nutné mít nainstalovaný ovladač CH340).*
@@ -45,7 +45,7 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 ## 3. Nastavení v Microchip Studio (External Tools)
 
 1. Spusťte **Microchip Studio**.
-2. V hlavní horní liště klikněte na **Tools** $rightarrow$ **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
+2. V hlavní horní liště klikněte na **Tools** &rarr; **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
 3. V okně klikněte na tlačítko **Add** a vyplňte následující políčka:
 
 * **Title (Název):**  
@@ -66,8 +66,8 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 ## 4. Postup nahrání programu do Arduina
 
 1. Otevřete váš projekt v Microchip Studiu.
-2. Přeložte projekt stisknutím klávesy **F7** (nebo menu *Build* $\rightarrow$ *Build Solution*). V dolním okně se musí objevit `Build succeeded`.
-3. V horním menu klikněte na **Tools** $\rightarrow$ **Nahrát do Arduino Uno**.
+2. Přeložte projekt stisknutím klávesy **F7** (nebo menu *Build* &rarr; *Build Solution*). V dolním okně se musí objevit `Build succeeded`.
+3. V horním menu klikněte na **Tools** &rarr; **Nahrát do Arduino Uno**.
 4. V dolním okně *Output* uvidíte průběh nahrávání ukončený hláškou `avrdude done. Thank you.`.
 
 ---
