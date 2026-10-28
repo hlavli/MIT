@@ -1,0 +1,68 @@
+# Návod: Nastavení nahrávání z Microchip Studio do Arduino UNO (ATmega328P)
+
+Tento návod slouží k nastavení automatického nahrávání zkompilovaného kód z **Microchip Studio** přímo do desky **Arduino UNO** přes sériovou linku (USB) pomocí nástroje `avrdude`.
+
+---
+
+## 1. Kde získat `avrdude` (bez instalace Arduino IDE)?
+
+Pokud na svém počítači nemáte a nechcete instalovat celé prostředí Arduino IDE, stačí si stáhnout samostatný nástroj `avrdude`:
+
+1. Stáhněte si samostatný balíček **AVRDUDE pro Windows** (např. ze schváleného školního odkazu v Teams nebo z oficiálního repozitáře GitHub `avrdudes/avrdude`).
+2. Balíček rozbalte do jednoduché složky na disku `C:\`, například:
+   `C:\avrdude\`
+3. Ve složce musíte vidět dva klíčové soubory:
+   * `avrdude.exe` (samotný spouštěcí program)
+   * `avrdude.conf` (konfigurační soubor)
+
+---
+
+## 2. Zjištění čísla COM portu ve Windows
+
+Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše Arduino připojeno:
+
+1. Zapojte Arduino UNO USB kabelem do počítače.
+2. Stiskněte klávesy **Win + X** a zvolte **Správce zařízení** (nebo stiskněte klávesu Windows, napište *Správce zařízení* a otevřete jej).
+3. Rozbalte sekci **Porty (COM a LPT)**.
+4. Najděte své zařízení – uvidíte například:  
+   `Arduino Uno (COM4)` nebo `USB Serial Device (COM3)`.
+5. Zapamatujte si číslo portu (např. **COM3** nebo **COM4**).
+
+---
+
+## 3. Nastavení v Microchip Studio (External Tools)
+
+1. Spusťte **Microchip Studio**.
+2. V hlavní horní liště klikněte na **Tools** $\rightarrow$ **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
+3. V okně klikněte na tlačítko **Add** a vyplňte následující políčka:
+
+* **Title (Název):**  
+  `Nahrát do Arduino Uno`
+* **Command (Příkaz):**  
+  `C:\avrdude\avrdude.exe` *(případně cesta, kde máte avrdude uložený)*
+* **Arguments (Argumenty):**  
+  `-C"C:\avrdude\avrdude.conf" -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:"$(ProjectDir)Debug\$(TargetName).hex":i`
+  *(Poznámka: Hodnotu `-PCOM3` upravte podle čísla vašemu portu ze Správce zařízení!)*
+* **Initial directory (Výchozí adresář):**  
+  `$(TargetDir)`
+* Zaškrtněte políčko **Use Output window** (Použít okno výstupu).
+
+4. Potvrďte kliknutím na tlačítko **OK**.
+
+---
+
+## 4. Postup nahrání programu do Arduina
+
+1. Otevřete váš projekt v Microchip Studiu.
+2. Přeložte projekt stisknutím klávesy **F7** (nebo menu *Build* $\rightarrow$ *Build Solution*). V dolním okně se musí objevit `Build succeeded`.
+3. V horním menu klikněte na **Tools** $\rightarrow$ **Nahrát do Arduino Uno**.
+4. V dolním okně *Output* uvidíte průběh nahrávání ukončený hláškou `avrdude done. Thank you.`.
+
+---
+
+## ⚠️ Důležitá upozornění a řešení problémů
+
+* **Chyba `avrdude: stk500_getsync(): not in sync`:**  
+  Máte špatně nastavené číslo COM portu v řádku *Arguments* (`-PCOMx`), nebo nemáte Arduino zapojené v USB. Zkontrolujte Správce zařízení.
+* **Nezapomeňte na parametr `-D`:**  
+  Parametr `-D` zakazuje celkové smazání čipu před zápisem. **Nikdy ho nevynechávejte!** Bez něj by došlo ke smazání továrního zaváděcího programu (bootloaderu) v Arduinu.
