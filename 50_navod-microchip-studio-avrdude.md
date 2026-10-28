@@ -8,7 +8,7 @@ Tento návod slouží k nastavení automatického nahrávání zkompilovaného k
 
 Než začnete nastavovat nahrávání, ujistěte se, že máte připraveny následující věci:
 
-1. **Microchip Studio (v7.0):** Nainstalované vývojové prostředí pro AVR ([ke stažení na tomto webu])(https://www.microchip.com/en-us/tools-resources/develop/microchip-studio).
+1. **Microchip Studio (v7.0):** Nainstalované vývojové prostředí pro AVR ([ke stažení na tomto webu](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio)).
 2. **Arduino UNO + USB kabel:**
    * **Precizní klon (např. ze sady dratek.cz s čipem ATmega16U2) nebo originál:** Ve Windows 10/11 **není potřeba ručně instalovat žádné ovladače** – systém desku rozpozná sám automaticky po zapojení do USB.
    * *(Poznámka: Pouze u levných čínských klonů s USB převodníkem CH340 je nutné mít nainstalovaný ovladač CH340).*
