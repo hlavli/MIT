@@ -4,11 +4,23 @@ Tento návod slouží k nastavení automatického nahrávání zkompilovaného k
 
 ---
 
+## 0. Prerekvizity (Co musíte mít připraveno)
+
+Než začnete nastavovat nahrávání, ujistěte se, že máte připraveny následující věci:
+
+1. **Microchip Studio (v7.0):** Nainstalované vývojové prostředí pro AVR.
+2. **Arduino UNO + USB kabel:**
+   * **Precizní klon (např. ze sady dratek.cz s čipem ATmega16U2) nebo originál:** Ve Windows 10/11 **není potřeba ručně instalovat žádné ovladače** – systém desku rozpozná sám automaticky po zapojení do USB.
+   * *(Poznámka: Pouze u levných čínských klonů s USB převodníkem CH340 je nutné mít nainstalovaný ovladač CH340).*
+3. **Nástroj AVRDUDE:** Samostatný balíček pro nahrávání (postup stažení a rozbalení viz kapitola 1 níže).
+
+---
+
 ## 1. Kde získat `avrdude` (bez instalace Arduino IDE)?
 
 Pokud na svém počítači nemáte a nechcete instalovat celé prostředí Arduino IDE, stačí si stáhnout samostatný nástroj `avrdude`:
 
-1. Stáhněte si samostatný balíček **AVRDUDE pro Windows** (např. ze schváleného školního odkazu v Teams nebo z oficiálního repozitáře GitHub `avrdudes/avrdude`).
+1. Stáhněte si samostatný balíček **AVRDUDE pro Windows** (např. z oficiálního [repozitáře GitHub](https://github.com/avrdudes/avrdude/releases), kde můžete vybrat balíček pro konkrétní systém, pokud používáte 64-bit Windows, můžete stáhnout avrdude [tímto přímým odkazem](https://github.com/avrdudes/avrdude/releases/download/v8.3/avrdude-v8.3-windows-x64.zip)).
 2. Balíček rozbalte do jednoduché složky na disku `C:\`, například:
    `C:\avrdude\`
 3. Ve složce musíte vidět dva klíčové soubory:
@@ -33,7 +45,7 @@ Před nastavením v Microchip Studiu musíte zjistit, na kterém portu je vaše 
 ## 3. Nastavení v Microchip Studio (External Tools)
 
 1. Spusťte **Microchip Studio**.
-2. V hlavní horní liště klikněte na **Tools** $\rightarrow$ **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
+2. V hlavní horní liště klikněte na **Tools** $rightarrow$ **External Tools...** (Pozor: Neotevírejte vlastnosti projektu, ale nabídku v horním menu!).
 3. V okně klikněte na tlačítko **Add** a vyplňte následující políčka:
 
 * **Title (Název):**  
