@@ -113,4 +113,10 @@ int main(void)
 * **Nezapomeňte na parametr `-D`:**  
   Parametr `-D` zakazuje celkové smazání čipu před zápisem. **Nikdy ho nevynechávejte!** Bez něj by došlo ke smazání továrního zaváděcího programu (bootloaderu) v Arduinu.
 
+## Video návod
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://youtu.be/geIcCHvqJ3o" title="Arduino in Microchip Studio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## [Zpět na obsah](README.md)
