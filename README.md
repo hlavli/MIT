@@ -27,9 +27,19 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Blikání LEDkou, práce s registry](02_Blikani_LED.md)
 1. [Převody soustav, bitové operace](03_Bitove_operace.md)
 1. [Práce s tlačítky](04_Tlacitka_podminky.md)   
-1. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)
-   {% comment %}
+1. [Sedmisegmentový displej](05_Sedmisegmentovy_displej.md)   
 1. [Klávesnice](06_Klavesnice.md)
+
+## Testy
+Ukázkové testy s podobným typem otázek, jaké mohou být v ostrém testu. 
+
+1. [Číselné soustavy](files/Test_ciselne_soustavy_logicke_funkce.md)
+2. [Logické funkce](files/Test_bitove_operace.md)
+3. [Jazyk C](files/Test_jazyk_C.md)
+
+
+{% comment %}
+toto jsou témata cvičení
 1. [Multiplex sedmisegmentového displeje](07_Multiplex_sedmisegmentoveho_displeje.md)
 1. [Časovač](08_Timer.md)
 1. [Časovač s přerušením](09_Timer_interrupt.md)
@@ -45,12 +55,7 @@ Pokud máte dotaz k materiálům či výuce, kontaktujte mě prosím e-mailem [l
 1. [Stopky](19_Stopky.md)
 
 
-## Testy
-Ukázkové testy s podobným typem otázek, jaké budou v ostrém testu. 
-
-1. [Číselné soustavy](files/Test_ciselne_soustavy_logicke_funkce.md)
-2. [Logické funkce](files/Test_bitove_operace.md)
-3. [Jazyk C](files/Test_jazyk_C.md)
+toto jsou testy
 4. [Časovač](files/Test_timer.md)
 5. [Sériová komunikace](15_UART_2.md)
 {% endcomment %}

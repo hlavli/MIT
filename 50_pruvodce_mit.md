@@ -4,10 +4,12 @@ Předmět Mikroprocesorová technika (3. ročník, obor Elektrotechnika) má ča
 
 ---
 
-## 1. Koncepce výuky: Uno (doma) &rarr; Mega (škola)
+## 1. Koncepce výuky: Mega (škola) &rarr; Uno (doma) &rarr; Uno (škola)
 
-*   **Domácí příprava (Arduino UNO - ATmega328P):** Doma zapojíte obvod na nepájivém poli a v prostředí **Microchip Studio** napíšete a odladíte program v **čistém jazyce C** (přímá manipulace s registry a bitové operace).
-*   **Práce v laboratoři (Školní deska ATmega2560):** Předvedete funkční domácí zapojení a získáte „vstupenku“ ke školnímu přípravku. Vaším úkolem bude kód adaptovat (přemapovat piny a registry) pro mikrokontrolér ATmega2560 podle [schématu školního přípravku](files/Development_board_schematics.pdf).
+*   **Práce v laboratoři (nová látka na školní desce ATmega2560):** Vyzkoušíte si úlohy na školním přípravku dle TÉMATICKÉHO CELKU konkrétního cvičení pod vedením učitele. 
+*   **Domácí příprava (procvičování na Arduino UNO - ATmega328P):** Doma zapojíte obdobnou úlohu (zadanou prostřednictvím zadání v MS Teams) na nepájivém poli a v prostředí **Microchip Studio** napíšete a odladíte program v **čistém jazyce C** (přímá manipulace s registry a bitové operace).
+*   **Prokázání osvojení učiva v laboratoři (Arduino UNO - ATmega328P):** Před učitelem předvedete zapojení a nahrání vámi vytvořeného SW do vývojového KITu Arduino Uno a prokážete znalosti zodpovězením doplňujících otázek a úpravou kódu a funkcionality vašeho KITu dle instrukcí učitele. 
+* **Řešení nové úlohy na školním přípravku (ATmega 2560)** bude možné až po zvládnutí předchozího tématu a jeho předvedení na vlastním vývojovém KITu. 
 *   **Proč takový postup?** Rozdílné čipy vás donutí číst elektrotechnická schémata a datasheet, namísto slepého opisování kódu.
 
 ---
